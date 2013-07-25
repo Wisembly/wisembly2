@@ -1,0 +1,18 @@
+<?php
+
+return array(
+    'fr'    =>  array(
+        'driver'    =>  'pdo_mysql',
+        'dbname'    =>  'wisembly_fr',
+        'host'      =>  'localhost',
+        'user'      =>  'root',
+        'password'  =>  'root',
+    ),
+    'en'    =>  array(
+        'driver'    =>  'pdo_mysql',
+        'dbname'    =>  'wisembly_en',
+        'host'      =>  'localhost',
+        'user'      =>  'root',
+        'password'  =>  'root',
+    ),
+);

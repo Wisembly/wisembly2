@@ -1,0 +1,6 @@
+app/cache
+app/config
+!app/config/*.dist
+vendor
+web/vendor
+.DS_Store

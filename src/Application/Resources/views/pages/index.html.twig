@@ -1,0 +1,9 @@
+{% extends 'layouts/main.html.twig' %}
+
+{% block page_css %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <strong>hello world ! {{ 'foo' | trans }}</strong>
+{% endblock %}
