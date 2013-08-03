@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "003e316f7cc29b4dc9d53497623d22ee",
+    "hash": "d0d01eba27fa5ed9c9bc5507040de3d7",
     "packages": [
         {
             "name": "doctrine/common",
@@ -295,16 +295,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "dev-master",
+            "version": "v5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "ea7f76bddf95d24ef58aa32905da8451c3ba5c1d"
+                "reference": "v5.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/ea7f76bddf95d24ef58aa32905da8451c3ba5c1d",
-                "reference": "ea7f76bddf95d24ef58aa32905da8451c3ba5c1d",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/v5.0.1",
+                "reference": "v5.0.1",
                 "shasum": ""
             },
             "require": {
@@ -340,7 +340,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2013-07-16 08:46:20"
+            "time": "2013-06-17 13:32:32"
         },
         {
             "name": "symfony/browser-kit",
@@ -446,12 +446,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Debug.git",
-                "reference": "f1c1b48cfee238f21a6b11b8efec12cb59f55353"
+                "reference": "a0c8c08341a7a572f4e9c71555e70c7b032557f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/f1c1b48cfee238f21a6b11b8efec12cb59f55353",
-                "reference": "f1c1b48cfee238f21a6b11b8efec12cb59f55353",
+                "url": "https://api.github.com/repos/symfony/Debug/zipball/a0c8c08341a7a572f4e9c71555e70c7b032557f8",
+                "reference": "a0c8c08341a7a572f4e9c71555e70c7b032557f8",
                 "shasum": ""
             },
             "require": {
@@ -493,7 +493,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "http://symfony.com",
-            "time": "2013-07-08 13:37:01"
+            "time": "2013-07-28 20:44:44"
         },
         {
             "name": "symfony/dom-crawler",
@@ -657,12 +657,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "b4b8939d76345ea07d528fc725ce6e1caa0d4553"
+                "reference": "38d706e8d615cb8c453a5b7911c0eb913582d83c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/b4b8939d76345ea07d528fc725ce6e1caa0d4553",
-                "reference": "b4b8939d76345ea07d528fc725ce6e1caa0d4553",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/38d706e8d615cb8c453a5b7911c0eb913582d83c",
+                "reference": "38d706e8d615cb8c453a5b7911c0eb913582d83c",
                 "shasum": ""
             },
             "require": {
@@ -698,7 +698,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2013-07-21 12:12:18"
+            "time": "2013-08-02 20:53:38"
         },
         {
             "name": "symfony/http-kernel",
@@ -707,12 +707,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "491ab88785aa42e5115a8b619e0640ed56c40395"
+                "reference": "db40d3dd68f606f8ec0e73c057594b575360c846"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/491ab88785aa42e5115a8b619e0640ed56c40395",
-                "reference": "491ab88785aa42e5115a8b619e0640ed56c40395",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/db40d3dd68f606f8ec0e73c057594b575360c846",
+                "reference": "db40d3dd68f606f8ec0e73c057594b575360c846",
                 "shasum": ""
             },
             "require": {
@@ -723,15 +723,16 @@
                 "symfony/http-foundation": "~2.2"
             },
             "require-dev": {
-                "symfony/browser-kit": "2.2.*",
+                "symfony/browser-kit": "~2.2",
                 "symfony/class-loader": "~2.1",
                 "symfony/config": "~2.0",
-                "symfony/console": "2.2.*",
+                "symfony/console": "~2.2",
                 "symfony/dependency-injection": "~2.0",
                 "symfony/finder": "~2.0",
                 "symfony/process": "~2.0",
                 "symfony/routing": "~2.2",
-                "symfony/stopwatch": "~2.2"
+                "symfony/stopwatch": "~2.2",
+                "symfony/templating": "~2.2"
             },
             "suggest": {
                 "symfony/browser-kit": "",
@@ -768,7 +769,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
-            "time": "2013-07-21 12:12:18"
+            "time": "2013-08-02 23:18:34"
         },
         {
             "name": "symfony/locale",
@@ -869,12 +870,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "036c990041abd2c03f31db1171def40715f2afb2"
+                "reference": "25eb4f846382877a3547d70dae9ea35439d81305"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/036c990041abd2c03f31db1171def40715f2afb2",
-                "reference": "036c990041abd2c03f31db1171def40715f2afb2",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/25eb4f846382877a3547d70dae9ea35439d81305",
+                "reference": "25eb4f846382877a3547d70dae9ea35439d81305",
                 "shasum": ""
             },
             "require": {
@@ -918,7 +919,7 @@
             ],
             "description": "Symfony Routing Component",
             "homepage": "http://symfony.com",
-            "time": "2013-07-21 12:12:18"
+            "time": "2013-08-02 20:53:38"
         },
         {
             "name": "symfony/translation",
@@ -1176,12 +1177,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "0e63ef04a00fb238ee457708f8b4e8918aa51d7e"
+                "reference": "120518d80336efdb1641f9e61f5c2b46d13988de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/0e63ef04a00fb238ee457708f8b4e8918aa51d7e",
-                "reference": "0e63ef04a00fb238ee457708f8b4e8918aa51d7e",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/120518d80336efdb1641f9e61f5c2b46d13988de",
+                "reference": "120518d80336efdb1641f9e61f5c2b46d13988de",
                 "shasum": ""
             },
             "require": {
@@ -1190,7 +1191,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.13-dev"
+                    "dev-master": "1.14-dev"
                 }
             },
             "autoload": {
@@ -1217,20 +1218,20 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-07-24 03:16:45"
+            "time": "2013-08-03 16:48:19"
         },
         {
             "name": "wisembly/silexcms",
-            "version": "dev-master",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Wisembly/SilexCMS.git",
-                "reference": "888a54ece02366f4a1ff7b26185ec596e6c75010"
+                "reference": "0.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Wisembly/SilexCMS/zipball/888a54ece02366f4a1ff7b26185ec596e6c75010",
-                "reference": "888a54ece02366f4a1ff7b26185ec596e6c75010",
+                "url": "https://api.github.com/repos/Wisembly/SilexCMS/zipball/0.2.1",
+                "reference": "0.2.1",
                 "shasum": ""
             },
             "require": {
@@ -1244,8 +1245,12 @@
                 "symfony/twig-bridge": "2.1.*",
                 "symfony/validator": "2.1.*",
                 "symfony/yaml": "2.1.*",
-                "twig/extensions": "dev-master",
+                "twig/extensions": "1.0.*",
                 "twig/twig": ">=1.8,<2.0-dev"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7.0",
+                "symfony/debug": "2.4.*"
             },
             "type": "library",
             "autoload": {
@@ -1255,6 +1260,9 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "description": "Ultra lightweight CMS based on top of Silex",
             "keywords": [
                 "cms",
@@ -1262,7 +1270,7 @@
                 "library",
                 "silex"
             ],
-            "time": "2013-07-24 07:25:26"
+            "time": "2013-08-03 16:58:38"
         }
     ],
     "packages-dev": [
@@ -1272,10 +1280,9 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "wisembly/silexcms": 20,
-        "swiftmailer/swiftmailer": 20
-    },
+    "stability-flags": [
+
+    ],
     "platform": {
         "php": ">=5.3.3"
     },

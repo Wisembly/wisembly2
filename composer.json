@@ -1,6 +1,6 @@
 {
-    "name" : "wisembly/wisembly",
-    "description" : "Wisembly corporate website made with SilexCMS",
+    "name" : "wisembly/wisembly2",
+    "description" : "Wisembly v2 corporate website made with Wisembly/SilexCMS",
 
     "autoload" : {
         "psr-0" : {
@@ -10,8 +10,8 @@
 
     "require" : {
         "php"                       : ">=5.3.3",
-        "wisembly/silexcms"         : "dev-master",
-        "swiftmailer/swiftmailer"   : "dev-master"
+        "wisembly/silexcms"         : "0.2.*",
+        "swiftmailer/swiftmailer"   : "5.0.*"
     },
 
     "minimum-stability" : "dev"
