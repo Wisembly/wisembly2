@@ -40,7 +40,7 @@ $app['translator.domains'] = array(
 
 // add usefull extensions / providers
 $app['twig']->addExtension(new SilexCMS\Twig\Extension\ForeignKeyExtension($app));
-$app['twig']->addExtension(new Application\Twig\Extension\AssetsExtension());
+$app['twig']->addExtension(new Application\Twig\Extension\AssetsExtension($config['global']['host']));
 
 if ($config['global']['debug']) {
     $app['debug'] = true;
@@ -50,7 +50,7 @@ if ($config['global']['debug']) {
 
 // swiftmailer
 $app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
-    'swiftmailer.options'   => require_once __DIR__ . '/config/mailer.php',
+    'swiftmailer.options'   => $config['mailer'],
 ));
 
 unset($config);

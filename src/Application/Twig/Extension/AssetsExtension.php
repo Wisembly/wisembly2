@@ -8,9 +8,9 @@ class AssetsExtension extends \Twig_Extension
 {
     private $basePath;
 
-    function __construct()
+    function __construct($host)
     {
-        $this->basePath = 'http://' . $_SERVER['HTTP_HOST'] ;
+        $this->basePath = $host;
     }
 
     public function getName() {
@@ -20,7 +20,7 @@ class AssetsExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            "asset"        => new \Twig_Function_Method($this, "asset"),
+            "asset" => new \Twig_Function_Method($this, "asset"),
         );
     }
 

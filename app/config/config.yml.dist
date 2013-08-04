@@ -2,6 +2,7 @@ global:
  debug: true
  locale: en
  locale_fallback: en
+ host: http://wisembly.com
 
 silexcms.cache:
   active: true
