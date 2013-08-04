@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "d0d01eba27fa5ed9c9bc5507040de3d7",
+    "hash": "cc5ce6ab1a44ce3894756c5571b49f5b",
     "packages": [
         {
             "name": "doctrine/common",
@@ -1317,16 +1317,16 @@
         },
         {
             "name": "wisembly/silexcms",
-            "version": "0.2.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Wisembly/SilexCMS.git",
-                "reference": "0.2.2"
+                "reference": "f84b47a2311d3d6c643baec0ea468afb351a3e22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Wisembly/SilexCMS/zipball/0.2.2",
-                "reference": "0.2.2",
+                "url": "https://api.github.com/repos/Wisembly/SilexCMS/zipball/f84b47a2311d3d6c643baec0ea468afb351a3e22",
+                "reference": "f84b47a2311d3d6c643baec0ea468afb351a3e22",
                 "shasum": ""
             },
             "require": {
@@ -1366,7 +1366,7 @@
                 "library",
                 "silex"
             ],
-            "time": "2013-08-04 13:27:21"
+            "time": "2013-08-04 17:29:06"
         }
     ],
     "packages-dev": [
@@ -1376,9 +1376,9 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "wisembly/silexcms": 20
+    },
     "platform": {
         "php": ">=5.3.3"
     },

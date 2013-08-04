@@ -6,12 +6,14 @@ use Symfony\Component\Yaml\Yaml;
 use SilexCMS\Repository\GenericRepository;
 
 $config = Yaml::parse(__DIR__.'/config/config.yml');
-$locale = isset($locale) ? $locale : $config['global']['locale'];
+$locale = isset($locale) ? $locale : $config['global']['locale_fallback'];
 
-// instanciate our SilexCMS
+// instanciate our SilexCMS Application
 $app = new SilexCMS\Application(array_merge(
     $config,
     array(
+        'locale'            => $locale,
+        'locale_fallback'   => $config['global']['locale_fallback'],
         'twig.path'         => __DIR__ . '/../src/Application/Resources/views',
         'twig.options'      => array(
             'debug'         => $config['global']['debug'],
@@ -40,7 +42,7 @@ $app['translator.domains'] = array(
 
 // add usefull extensions / providers
 $app['twig']->addExtension(new SilexCMS\Twig\Extension\ForeignKeyExtension($app));
-$app['twig']->addExtension(new Application\Twig\Extension\AssetsExtension($config['global']['host']));
+$app['twig']->addExtension(new Application\Twig\Extension\AssetsExtension($config['global']['host'], $config['global']['assets_version']));
 
 if ($config['global']['debug']) {
     $app['debug'] = true;
