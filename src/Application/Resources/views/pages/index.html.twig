@@ -5,5 +5,7 @@
 {% endblock %}
 
 {% block content %}
-    <strong>hello world ! {{ 'foo_key' | trans }}</strong>
+    <strong>hello {{ 'hello' | trans }} ! {{ 'foo' | trans }}</strong>
+    <br/>
+    <a href="{{ path('features') }}">home</a>
 {% endblock %}
