@@ -1,5 +1,110 @@
 {% extends 'layouts/main.html.twig' %}
 
 {%  block content %}
-	<a href="{{ path('index') }}">home</a>
+	<div class='section header'>
+		<div class='container'>
+			<h1>Cours et formations</h1>
+			<h2>Wisembly vous permet de rythmer vos formations. Vos élèves s'approprient le contenu. Vous suivez leur évolution.
+			<ul class='list'>
+				<li>
+					<a href='#documents-management'>
+						<i class='picto'></i>
+						<span>Gestion des documents</span>
+					</a>
+				</li>
+				<li>
+					<a href='#quiz'>
+						<i class='picto'></i>
+						<span>Quizz</span>
+					</a>
+				</li>
+				<li>
+					<a href='#'>
+						<i class='picto'></i>
+						<span>Evaluation</span>
+					</a>
+				</li>
+				<li>
+					<a href='#'>
+						<i class='picto'></i>
+						<span>Q&A</span>
+					</a>
+				</li>
+				<li>
+					<a href='#'>
+						<i class='picto'></i>
+						<span>Statistiques</span>
+					</a>
+				</li>
+				<li>
+					<a href='#'>
+						<i class='picto'></i>
+						<span>Multi-devices</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='section documents-management' id='documents-management'>
+		<div class='container'>
+			<h3>Tous les supports de votre formation centralisés à un même endroit</h3>
+			<p>Arrêtez de jongler entre vos différentes présentations PowerPoint et les documents à distribuer aux élèves. Tout est centralisé sur une seule interface. Projetez les ou partagez les avec vos élèves en un seul clic.</p>
+		</div>
+	</div>
+	<div class='section students-evaluation' id='students-evaluation'>
+		<div class='container'>
+			<h3>Vos évaluations sont corrigées immédiatement</h3>
+			<div class='row'>
+				<div class='column'>
+					<p>Il n’est pas normal que vous que vous perdiez un temps précieux à corriger vos QCM d'évaluation. Grâce à Wisembly, tout est automatique.</p>
+					<p>Vous concevez simplement vos évaluations: questions ouvertes, questions à choix multiples, questions à choix unique...</p>
+					<p>Vos élèves y répondent directement depuis leur téléphone, tablette ou PC.</p>
+				</div>
+				<div class='column'>
+					<p>La correction est effectuée automatiquement.</p>
+					<p>Vos étudiants accèdent immédiatement à leurs résultats ainsi qu’à la liste de bonnes réponses.</p>
+					<p>Vous avez accès aux réponses et aux notes de chacun ainsi qu’aux résultats de l’ensemble de la classe.</p>
+				</div>
+		</div>
+	</div>
+	<div class='section training-evaluation' id='training-evaluation'>
+		<div class='container'>
+			<h3>Améliorez vos formations avec vos élèves</h3>
+			<p>Vous pouvez demander à vos élèves de donner leur opinion sur votre cours.</p>
+			<p>Les résultats sont directement compilés sur la plateforme et vous n’avez pas à les retranscrire depuis des formulaires papiers. Tous les résultats sont exportables sous excel.</p>
+			<p>Vous avez ainsi une vision d’ensemble sur votre cours et pouvez adapter le contenu aux attentes et profils des particpants.</p>
+		</div>
+	</div>
+	<div class='section quizzes' id='quizzes'>
+		<div class='container'>
+			<h3>Assurez-vous que tout le monde suit</h3>
+			<p>Ponctuez votre cours à l’aide de questions rapides. Assurez que les notions présentées ont bien été comprises et que tout le monde suit. Préparées à l’avance, ces questions sont très efficaces pour booster l’attention et rythmer votre formation.</p>
+		</div>
+	</div>
+	<div class='section q-a' id='q-a'>
+		<div class='container'>
+			<h3>Répondez à toutes les questions de vos élèves</h3>
+			<p>Il n’y a pas de commentaire ou de question bête. Chaque question devrait être traitée.</p>
+			<p>Avec Wisembly, vos élèves peuvent à tout moment poser leurs questions sans interrompre le cours.</p>
+			<p>Ils peuvent aussi réagir aux présentations des autres stagiaires et éventuellement partager des informations complémentaires.</p>
+			<p>Vous pouvez traiter les questions en direct, à la fin du cours, ou bien après le cours directement sur votre Wiz.</p>
+		</div>
+	</div>
+	<div class='section stats-reporting' id='stats-reporting'>
+		<div class='container'>
+			<h3>La mémoire de vos formations</h3>
+			<p>Après chaque session, vous avez accès à une analyse détaillée de votre formation: volume et type d’interactions, contenus, classement des élèves, notes moyenne etc.</p>
+			<p>Il devient facile de retrouver les questions, les slides et les notes d’une formation vieille d’il y a plusieurs mois en quelques secondes et de “rejouer” le cours.</p>
+			<p>Wisembly devient la mémoire de toutes vos formations</p>
+		</div>
+	</div>
+	<div class='section multi-device' id='multi-device'>
+		<div class='container'>
+			<h3>Vos élèves sont déjà équipés</h3>
+			<p>Pourquoi changer les habitudes de vos élèves en leur distribuant des boîtiers ou autres appareils encombrants ?</p>
+			<p>Web, mobile, tablette, Twitter, email, SMS...</p>
+			<p>Wisembly fonctionne depuis tous les appareils nés après le minitel.</p>
+			<p>Vos élèves peuvent utiliser le device avec lequel ils se sentent à l’aise c’est à dire celui qu’ils ont sur eux.</p>
+		</div>
+	</div>
 {% endblock %}
