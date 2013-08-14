@@ -14,7 +14,8 @@
     <base href="{{ app.request.basePath }}/" />
 
     {% block page_css %}
-        <link rel="stylesheet" href="{{ asset('web/static/sass/wisembly.css') }}">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,500,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ asset('static/sass/wisembly.css') }}">
     {% endblock %}
 </head>
 <body class='{% block bodyclass %}{% endblock %}'>

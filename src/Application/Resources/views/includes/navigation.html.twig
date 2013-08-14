@@ -1,63 +1,86 @@
-<div class='navbar'>
-	<div class='brand'>
-	 {{ 'wisembly' | trans }}
-	</div>
-	<div class='top-drawer'>
-		<ul class='list'>
-			<li>
-				<div class='dropdown'>
-					<label>{{ 'Francais' | trans }}</label>
-					<ul class='list'>
-						<li>
-							{{ 'english' | trans }}
-						</li>
-						<li>
-							{{ 'german' | trans }}
-						</li>
-						<li>
-							{{ 'italian' | trans }}
-						</li>
-						<li>
-							{{ 'spanish' | trans }}
-						</li>
-					</ul>
+<div class='top-bar'>
+	<div class='container'>
+		<div class='row top-header hide'>
+			<div class='column last'>
+				<div class='column-inner'>
+					<div class='top-drawer'>
+						<ul class='list'>
+							<li class='last'>
+								<div class='dropdown'>
+									<label class='dropdown-toggle'>
+										<img src='images/flags/fr.png'>
+									</label>
+									<ul class='list dropdown-list'>
+										<li>
+											<img src='images/flags/gb.png'>
+										</li>
+										<li>
+											<img src='images/flags/it.png'>
+										</li>
+										<li>
+											<img src='images/flags/de.png'>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href=''>Access</a>
+							</li>
+							<li>
+								<a href=''>Login</a>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</li>
-			<li>
-				<a href=''>{{ 'Access' | trans }}</a>
-			</li>
-			<li>
-				<a href=''>{{ 'Login' | trans }}</a>
-			</li>
-		</ul>
-	</div>
-	<div class='contact-nav'>
-		<ul class='list'>
-			<li>
-				{{ '01 42 61 59 47' | trans }}
-			</li>
-			<li>
-				<a href=''>{{ 'Contacter' | trans }}</a>
-			</li>
-			<li>
-				<a href=''>{{ 'Essai gratuit' | trans }}</a>
-			</li>
-		</ul>
-	</div>
-	<div class='navigation'>
-		<ul class='list'>
-			<li>
-				<a href=''>{{ 'Cours et formations' | trans }}</a>
-			</li>
-			<li>
-				<a href=''>{{ 'Réunions et conf-calls' | trans }}</a>
-			</li>
-			<li>
-				<a href=''>{{ 'Evenements' | trans }}</a>
-			</li>
-			<li>
-				<a href=''>{{ 'Essai gratuit' | trans }}</a>
-			</li>
-		</ul>
+			</div>
+			<div class='column last'>
+				<div class='column-inner'>
+					<div class='second-drawer'>
+						<ul class='list'>
+							<li class='first'>
+								<ul class='list contact-nav'>
+									<li>
+										<span class='inline label'>01 42 61 59 47</span>
+									</li>
+									<li>
+										<a href='' class='button button-validate'>Contact</a>
+									</li>
+								</ul>
+							</li>
+							<li class='last'>
+								<a href='' class='button button-attention'>Essai gratuit</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='row bottom-header'>
+			<div class='column'>
+				<div class='column-inner'>
+					<div class='brand'>wisembly</div>
+				</div>
+			</div>
+			<div class='column last'>
+				<div class='column-inner'>
+					<div class='navigation'>
+						<ul class='list'>
+							<li class='first active'>
+								<a href=''>Pour les cours et formations</a>
+							</li>
+							<li class='second'>
+								<a href=''>Pour les réunions et conf-calls</a>
+							</li>
+							<li class='third'>
+								<a href=''>Pour les événements</a>
+							</li>
+							<li class='last'>
+								<a href=''>Etudes de cas</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
