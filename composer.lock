@@ -541,12 +541,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Debug.git",
-                "reference": "a0c8c08341a7a572f4e9c71555e70c7b032557f8"
+                "reference": "3d3e055600a87ad39f60ac49f4af2166770adf15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/a0c8c08341a7a572f4e9c71555e70c7b032557f8",
-                "reference": "a0c8c08341a7a572f4e9c71555e70c7b032557f8",
+                "url": "https://api.github.com/repos/symfony/Debug/zipball/3d3e055600a87ad39f60ac49f4af2166770adf15",
+                "reference": "3d3e055600a87ad39f60ac49f4af2166770adf15",
                 "shasum": ""
             },
             "require": {
@@ -588,7 +588,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "http://symfony.com",
-            "time": "2013-07-28 20:44:44"
+            "time": "2013-08-14 13:08:25"
         },
         {
             "name": "symfony/dom-crawler",
@@ -1321,12 +1321,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Wisembly/SilexCMS.git",
-                "reference": "6ba5e11673e5d5dce5d3e8f516dde688399ce1d5"
+                "reference": "0.2.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Wisembly/SilexCMS/zipball/6ba5e11673e5d5dce5d3e8f516dde688399ce1d5",
-                "reference": "6ba5e11673e5d5dce5d3e8f516dde688399ce1d5",
+                "url": "https://api.github.com/repos/Wisembly/SilexCMS/zipball/0.2.4",
+                "reference": "0.2.4",
                 "shasum": ""
             },
             "require": {
@@ -1366,7 +1366,7 @@
                 "library",
                 "silex"
             ],
-            "time": "2013-08-14 09:20:30"
+            "time": "2013-08-14 16:33:03"
         }
     ],
     "packages-dev": [
