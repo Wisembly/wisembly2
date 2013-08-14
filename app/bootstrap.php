@@ -15,10 +15,7 @@ $app = new SilexCMS\Application(array_merge(
         'debug'             => $config['global']['debug'],
         'locale'            => $locale,
         'locale_fallback'   => $config['global']['locale_fallback'],
-        'twig.path'         => array(
-            __DIR__ . '/../src/Application/Resources/views',
-            __DIR__ . '/../vendor/wisembly/silexcms/src/SilexCMS/Resources/views',
-        ),
+        'twig.path'         => __DIR__ . '/../src/Application/Resources/views',
         'twig.options'      => array(
             'debug'         => $config['global']['debug'],
             'cache'         => __DIR__ . '/cache',
