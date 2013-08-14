@@ -4,9 +4,7 @@
     {{ parent() }}
 {% endblock %}
 
-
-
 {% block content %}
-    <strong>hello {{ 'hello' | trans }} ! {{ 'foo' | trans }}</strong>
+    <strong>hello {{ 'hello' | trans }} ! {{ 'foo_key' | trans }}</strong>
     <br/>
 {% endblock %}

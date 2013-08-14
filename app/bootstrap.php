@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Symfony\Component\Yaml\Yaml;
-use SilexCMS\Repository\GenericRepository;
+use SilexCMS\Set\KeyValueSet;
 
 $config = Yaml::parse(__DIR__.'/config/config.yml');
 $locale = isset($locale) ? $locale : $config['global']['locale_fallback'];
@@ -12,6 +12,7 @@ $locale = isset($locale) ? $locale : $config['global']['locale_fallback'];
 $app = new SilexCMS\Application(array_merge(
     $config,
     array(
+        'debug'             => $config['global']['debug'],
         'locale'            => $locale,
         'locale_fallback'   => $config['global']['locale_fallback'],
         'twig.path'         => __DIR__ . '/../src/Application/Resources/views',
@@ -28,24 +29,20 @@ $app['country'] = isset($country) ? $country : 'fr';
 $app['phone_number'] = $config['phone.numbers'][$app['country']];
 
 // ** load DB messages **
-$repo = new GenericRepository($app['db'], 'messages');
-$messages = $repo->findAll();
-
-foreach ($messages as $key => $message) {
-    $messages[$locale][$message['message_key']] = $message['message_value'];
-    unset($messages[$key]);
-}
-
+$messagesSet = new KeyValueSet('messages', 'messages', 'message_key');
+$app->register($messagesSet);
 $app['translator.domains'] = array(
-  'messages' => $messages
+    'messages' => array(
+        $locale => $messagesSet->getSet(),
+    )
 );
 
 // add usefull extensions / providers
 $app['twig']->addExtension(new SilexCMS\Twig\Extension\ForeignKeyExtension($app));
+$app['twig']->addExtension(new SilexCMS\Twig\Extension\MapExtension($app));
 $app['twig']->addExtension(new Application\Twig\Extension\AssetsExtension($config['global']['host'], $config['global']['assets_version']));
 
-if ($config['global']['debug']) {
-    $app['debug'] = true;
+if ($app['debug']) {
     $app['twig']->addExtension(new Twig_Extensions_Extension_Debug());
     $app['twig']->enableDebug();
 }
