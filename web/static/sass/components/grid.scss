@@ -1,0 +1,31 @@
+.container {
+	width: $container-width;
+	margin: 0 auto;
+}
+.row {
+	margin: 0 -15px;
+	@include clearfix;
+}
+.column {
+	float: left;
+	
+	&.last {
+		float: right;
+	}
+}
+.centered {
+	margin: auto;
+	float: none;
+}
+.column-inner {
+	padding: 0 15px;
+}
+.three {
+	width: 25%;
+}
+.four {
+	width: 33.33%;
+}
+.six {
+	width: 50%;
+}

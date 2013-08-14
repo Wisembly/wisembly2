@@ -1,0 +1,19 @@
+.dropdown {
+	position: relative;
+	border: 1px solid $lightGrey;
+}
+.dropdown-toggle {
+	display: block;
+	padding: 7px 30px 7px 10px;
+	cursor: pointer;
+	background-image: url(../images/down-pointing-arrow.png);
+	background-repeat: no-repeat;
+	background-position: 37px center;
+}
+.dropdown-list {
+	display: none;
+	position: absolute;
+}
+.dropdown-list.active {
+	display: block;
+}

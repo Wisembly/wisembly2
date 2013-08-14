@@ -4,8 +4,9 @@
     {{ parent() }}
 {% endblock %}
 
+
+
 {% block content %}
     <strong>hello {{ 'hello' | trans }} ! {{ 'foo' | trans }}</strong>
     <br/>
-    <a href="{{ path('features') }}">home</a>
 {% endblock %}

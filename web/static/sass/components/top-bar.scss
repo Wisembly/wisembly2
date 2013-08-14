@@ -1,0 +1,112 @@
+.top-bar {
+	background-color: $white;
+	@include clearfix;
+	//border-bottom: 1px solid rgba($lightGrey, .6);
+	box-shadow: 0 0 2px 0 rgba(0,0,0, .5);
+	font-family: $header-font-family;
+}
+
+.top-bar .container {
+	position: relative;	
+}
+
+.brand {
+	float: left;
+	width: 135px;
+	height: 30px;
+	background-image: url(../images/logo-218x50.png);
+	background-size: 135px;
+	@include image-replacement;
+	margin-top: 20px;
+}
+
+.top-header {
+	padding: 10px 0;
+}
+.top-drawer {
+	float: right;
+	font-size: 13px;	
+	
+	.list {
+		margin-right: -5px;
+	}
+	
+	& > .list li {
+		float: left;
+		padding: 0 5px;
+	}
+	.list > li > a {
+		display: block;
+		border: 1px solid $lightGrey;
+		text-decoration: none;
+		padding: 6px 10px;
+		color: $grey;
+	}
+}
+.bottom-header {
+	padding: 0;
+}
+
+.second-drawer {
+	float: right;
+	
+	& > .list li {
+		float: left;
+	}
+	
+	.last {
+		padding-left: 10px;
+	}
+}
+
+.contact-nav {
+	background-color: $brandBlueExtraExtraLight;
+	@include clearfix;
+	
+	.label {
+		padding: 0 10px;
+	}
+}
+
+.navigation {
+	@include clearfix;
+	margin: 0 -10px;
+	
+	ul {
+		float: right;
+		height: 70px;
+	}
+	ul li {
+		float: left;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 13px;
+		padding: 0 10px;
+		font-weight: 600;
+		color: $grey;
+		line-height: 70px;
+	}
+	a:hover,
+	.active a {
+		border-style: solid;
+		border-width: 0 0 2px;
+		padding-top: 2px;
+		line-height: 66px;
+	}
+	// colors
+	.first a {
+		border-color: $brandRed;
+	}
+	.second a {
+		border-color: $brandGreen;
+	}
+	.third a {
+		border-color: $brandBlue;
+	}
+	.last a {
+		border-color: $brandOrange;
+	}
+}
