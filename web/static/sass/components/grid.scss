@@ -3,7 +3,7 @@
 	margin: 0 auto;
 }
 .row {
-	margin: 0 -15px;
+	margin: 0 -20px;
 	@include clearfix;
 }
 .column {
@@ -18,7 +18,7 @@
 	float: none;
 }
 .column-inner {
-	padding: 0 15px;
+	padding: 0 20px;
 }
 .three {
 	width: 25%;
