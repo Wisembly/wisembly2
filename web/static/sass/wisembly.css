@@ -678,6 +678,7 @@ h4 {
   position: relative; }
 
 .brand {
+  display: block;
   float: left;
   width: 135px;
   height: 30px;
@@ -749,17 +750,25 @@ h4 {
     font-weight: 600;
     color: #999999;
     line-height: 70px; }
-  .navigation a:hover,
-  .navigation .active a {
+  .navigation a:hover {
     border-style: solid;
     border-width: 0 0 2px;
     padding-top: 2px;
     line-height: 66px; }
-  .navigation .first a {
+  .navigation .nav-classes-trainings a {
     border-color: #fd5364; }
-  .navigation .second a {
+  .navigation .nav-meetings-confcalls a {
     border-color: #66bc58; }
-  .navigation .third a {
+  .navigation .nav-events-seminaries a {
     border-color: #0786cd; }
-  .navigation .last a {
+  .navigation .nav-case-studies a {
     border-color: #ff6539; }
+
+.classes-trainings .nav-classes-trainings a,
+.meetings-confcalls .nav-meetings-confcalls a,
+.events-seminaries .nav-events-seminaries a,
+.case-studies .nav-case-studies a {
+  border-style: solid;
+  border-width: 0 0 2px;
+  padding-top: 2px;
+  line-height: 66px; }

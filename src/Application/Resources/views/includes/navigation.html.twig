@@ -58,24 +58,24 @@
 		<div class='row bottom-header'>
 			<div class='column'>
 				<div class='column-inner'>
-					<div class='brand'>wisembly</div>
+					<a href='{{ path('index') }}' class='brand'>wisembly</a>
 				</div>
 			</div>
 			<div class='column last'>
 				<div class='column-inner'>
 					<div class='navigation'>
 						<ul class='list'>
-							<li class='first active'>
-								<a href=''>Pour les cours et formations</a>
+							<li class='nav-classes-trainings'>
+								<a href='{{ path('trainings') }}'>Pour les cours et formations</a>
 							</li>
-							<li class='second'>
-								<a href=''>Pour les réunions et conf-calls</a>
+							<li class='nav-meetings-confcalls '>
+								<a href='{{ path('meetings') }}'>Pour les réunions et conf-calls</a>
 							</li>
-							<li class='third'>
-								<a href=''>Pour les événements</a>
+							<li class='nav-events-seminaries'>
+								<a href='{{ path('events') }}'>Pour les événements</a>
 							</li>
-							<li class='last'>
-								<a href=''>Etudes de cas</a>
+							<li class='nav-case-studies'>
+								<a href='{{ path('case-studies') }}'>Etudes de cas</a>
 							</li>
 						</ul>
 					</div>

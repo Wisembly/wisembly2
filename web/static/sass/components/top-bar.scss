@@ -11,6 +11,7 @@
 }
 
 .brand {
+	display: block;
 	float: left;
 	width: 135px;
 	height: 30px;
@@ -89,24 +90,34 @@
 		color: $grey;
 		line-height: 70px;
 	}
-	a:hover,
-	.active a {
+	a:hover {
 		border-style: solid;
 		border-width: 0 0 2px;
 		padding-top: 2px;
 		line-height: 66px;
 	}
 	// colors
-	.first a {
+	.nav-classes-trainings a {
 		border-color: $brandRed;
 	}
-	.second a {
+	.nav-meetings-confcalls a {
 		border-color: $brandGreen;
 	}
-	.third a {
+	.nav-events-seminaries a {
 		border-color: $brandBlue;
 	}
-	.last a {
+	.nav-case-studies a {
 		border-color: $brandOrange;
+	}
+}
+.classes-trainings .nav-classes-trainings,
+.meetings-confcalls .nav-meetings-confcalls,
+.events-seminaries .nav-events-seminaries,
+.case-studies .nav-case-studies {
+	a {
+		border-style: solid;
+		border-width: 0 0 2px;
+		padding-top: 2px;
+		line-height: 66px;
 	}
 }
