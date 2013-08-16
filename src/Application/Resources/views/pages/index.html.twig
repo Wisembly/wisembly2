@@ -1,10 +1,166 @@
 {% extends 'layouts/main.html.twig' %}
 
-{% block page_css %}
-    {{ parent() }}
-{% endblock %}
-
 {% block content %}
-    <strong>hello {{ 'hello' | trans }} ! {{ 'foo_key' | trans }}</strong>
-    <br/>
+    <div class='section headline'>
+        <div class='container'>
+            <div class='row'>
+                <div class='column six'>
+                    <div class='column-inner'>
+                        <h1>Collaborez en réunion</h1>
+                        <h2>Wisembly est une solution web & mobile qui vous permet de préparer, d’animer et d’assurer le suivi de vos réunions.</h2>
+                        <div class='try-me'>
+                            <div class='try-me-label'>Découvrez comment Wisembly fonctionne pour les :</div>
+                            <ul class='list try-me-choices'>
+                                <li class='first'>
+                                    <a href='{{ path('trainings') }}'>
+                                        Formations
+                                    </a>
+                                </li>
+                                <li class='second'>
+                                    <a href='{{ path('meetings') }}'>
+                                        Réunions
+                                    </a>
+                                </li>
+                                <li class='last'>
+                                    <a href='{{ path('events') }}'>
+                                        Evénements
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class='column six'>
+                    <div class='column-inner'>
+                        <div class='browser'>
+                            <div class='browser-bar'>
+                                <span>http://app.wisembly.com/demo</span>
+                            </div>
+                            <div class='browser-window'>
+                                <div class='mocked-app'>
+                                    <div class='app-header'>
+                                        <div class='app-logo'>wisembly</div>
+                                    </div>
+                                    <div class='app-body'>
+                                       Nothing.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='section clients'>
+        <div class='container'>
+            <div class='row'>
+                <div class='column six'>
+                    <div class='column-inner'>
+                        <h3>Témoignages</h3>
+                        <ul class='list testimonials'>
+                            <li>
+                                <div class='media'>
+                                    <div class='hd'>
+                                        <img src='/static/images/edito/dias.jpg'>
+                                    </div>
+                                    <div class='bd'>
+                                        <p>Tout le monde a adoré : c'est une manière d'intervenir qui n'existait pas avant [...] Wisembly permet d'aller au-delà de la présentation et d'ouvrir le dialogue.</p>
+                                        <p><small>Georges-Edouard Dias, L'Oréal</small></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class='media'>
+                                    <div class='hd'>
+                                        <img>
+                                    </div>
+                                    <div class='bd'>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='column six last'>
+                    <div class='column-inner'>
+                        <h3>Clients</h3>
+                        <ul class='list clients-list'>
+                            <li>
+                                <div class='inner'>
+                                    <i style='background-image:url(/static/images/clients/accenture.gif);'></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class='inner'>
+                                    <i style='background-image:url(/static/images/clients/air-liquide.jpg);'></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class='inner'>
+                                    <i style='background-image:url(/static/images/clients/auchan.png);'></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class='inner'>
+                                    <i style='background-image:url(/static/images/clients/banque-populaire.gif);'></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class='inner'>
+                                    <i style='background-image:url(/static/images/clients/bnp-paribas.jpg);'></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class='inner'>
+                                    <i style='background-image:url(/static/images/clients/bouygues-telecom.gif);'></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class='inner'>
+                                    <i style='background-image:url(/static/images/clients/carrefour.png);'></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class='inner'>
+                                    <i style='background-image:url(/static/images/clients/credit-agricole.jpg);'></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class='inner'>
+                                    <i style='background-image:url(/static/images/clients/danone.jpg);'></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class='inner'>
+                                    <i style='background-image:url(/static/images/clients/dcns.png);'></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class='inner'>
+                                    <i style='background-image:url(/static/images/clients/france-televisions.jpg);'></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class='inner'>
+                                    <i style='background-image:url(/static/images/clients/loreal.jpg);'></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='section press'>
+        <div class='container'>
+            <ul class='list'>
+                <li>
+                    <a href=''>
+                        <i style='background-image:url('>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 {% endblock %}
