@@ -3,6 +3,10 @@ html {
 	font-family: $default-font-family;
 	//background-color: $brandBlueHover;
 }
+html,
+body {
+	height: 100%;
+}
 img {
 	display: block;
 }
@@ -269,14 +273,15 @@ h4 {
 		width: 25%;
 		float: left;
 	}
-	li:hover i {
-		-webkit-filter: none;
-		opacity: 1;
-	}
 	.inner {
 		padding: 20px;
 		text-align: center;
 		line-height: 30px;
+		transition: background-color 1s linear;
+		
+		&:hover {
+			background-color: $brandOrange;
+		}
 	}
 	i {
 		display: block;
@@ -332,22 +337,26 @@ img {
 }
 
 .headline {
+	height: 100%;
 	background-color: $brandBlueExtraLight;
-	background-image: url(../images/edito/headline-graph.png);
+	background-image: url(../images/edito/headline-graph-alt.png);
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	-webkit-animation: mute 10s infinite;
 	color: $white;
 	text-shadow: 0 1px 2px rgba($brandBlue, .9);
 	overflow: hidden;
+	padding: 0;
 	
 	.container {
+		height: 100%;
 		position: relative;
 	}
 	
 	h1 {
 		font-weight: 400;
 		font-size: 40px;
+		margin-top: 0;
 	}
 	h2 {
 		font-size: 30px;
@@ -363,6 +372,19 @@ img {
 		padding: 80px;
 		text-align: center;
 	}
+}
+.jump-after-fold {
+	display: block;
+	width: 82px;
+	height: 39px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -41px;
+	background-image: url(../images/fold-target.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
 }
 
 .clients {
@@ -383,7 +405,7 @@ img {
 	font-family: $header-font-family;
 	text-align: center;
 	text-shadow: 0 -1px 1px rgba(0,0,0,.5);
-	margin: 40px 0 20px;
+	margin: 20px 0;
 }
 .try-me-label {
 	padding: 20px 20px 0 20px;
@@ -424,7 +446,102 @@ img {
 		}
 	}
 }
-
+.relative {
+	position: relative;
+}
+.headline {
+	.container {
+		display: table;
+		height: 100%;
+	}
+	& > .container > .row {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.container-shadow {
+		position: absolute;
+		right: 0;
+		bottom: -50px;
+		left: 0;
+		height: 20px;
+		width: 100%;
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.075));
+		
+		&:before {
+			content: '';
+			width: 30px;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			background-image: -webkit-linear-gradient(left, #78bad6, rgba(#78bad6, 0));
+		}
+		&:after {
+			content: '';
+			width: 30px;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			background-image: -webkit-linear-gradient(right, #78bad6, rgba(#78bad6, 0));
+		}
+	}
+	.legend,
+	.with {
+		display: block;
+		padding: 5px;
+		background-color: $brandOrangeLight;
+		color: $white;
+		font-size: 11px;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+		text-shadow: none;
+	}
+	.legend {
+		width: 65px;
+		margin: 20px auto;
+	}
+	.with {
+		position: absolute;
+		right: -17px;
+		bottom: 20px;
+	}
+	.browser {
+		position: relative;
+		bottom: 0;
+		width: 100%;
+		//top: 206px;
+		box-shadow: 0 2px 2px rgba(0,0,0,.1);
+	}
+	.browser.first {
+		left: 0;
+		right: auto;
+	}
+	.browser.last {
+		right: 0;
+		left: auto;
+	}
+	.browser-wrapper {
+		padding-top: 150px;
+	}
+}
+.browser-wrapper.first {
+	background-image: url(../images/edito/smiling.png);
+	background-position: -85px -30px;
+	background-repeat: no-repeat;
+	background-size: 400px;
+}
+.browser-wrapper.last {
+	background-image: url(../images/edito/young.png);
+	background-position: -51px -40px;
+	background-repeat: no-repeat;
+	background-size: 320px;
+}
+.browsers {
+	position: relative;
+	height: 100%;
+}
 // browser
 .browser {
 	position: absolute;
@@ -434,6 +551,7 @@ img {
 	transition: all .3s ease-in;
 }
 .browser-bar {
+	display: none;
 	background-image: url(../images/browser-bar.png);
 	background-position: -1px 0;
 	background-repeat: no-repeat;
@@ -444,13 +562,15 @@ img {
 		display: block;
 		padding: 13px 70px;
 		font-size: 12px;
+		line-height: 20px;
 	}
 }
 .browser-window {
 	height: 330px;
-	border-width: 0 1px;
+	border-width: 0 1px 1px;
 	border-color: #979797;
 	border-style: solid;
+	border-radius: 0 0 3px 3px;
 	background-color: $white;
 	overflow: hidden;
 }
