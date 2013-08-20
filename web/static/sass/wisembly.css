@@ -697,7 +697,10 @@ img {
 
 .headline .container {
   display: table;
-  height: 100%; }
+  height: 100%;
+  width: 1064px; }
+.headline .row-bump {
+  margin-top: 70px; }
 .headline > .container > .row {
   display: table-cell;
   vertical-align: middle; }

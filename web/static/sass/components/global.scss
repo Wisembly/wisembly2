@@ -453,6 +453,10 @@ img {
 	.container {
 		display: table;
 		height: 100%;
+		width: 1064px;
+	}
+	.row-bump {
+		margin-top: $topbarHeight;
 	}
 	& > .container > .row {
 		display: table-cell;
