@@ -3,11 +3,15 @@
 {% block body_class %}frontpage{% endblock %}
 
 {% block content %}
-    <div class='section headline'>
+    <div class='section headline' id='headline'>
         <div class='container'>
             <div class='row'>
                 <div class='row-bump'>
-                    <a href='#' class='jump-after-fold'>Jump to the rest</a>
+                    <a href='#clients' class='jump-after-fold'>
+                        <i class='picto down-chevron first'></i>
+                        <i class='picto down-chevron last'></i>
+                        <span>Découvrez nos <strong>400</strong> heureux clients et leurs avis</span>
+                    </a>
                     <div class='column five'>
                         <div class='column-inner'>
                             <h1>Collaborez en réunion</h1>
@@ -37,9 +41,11 @@
                     <div class='column six last'>
                         <div class='column-inner'>
                             <div class='row'>
-                                <div class='column six relative'>
+                                <div class='column six'>
                                     <div class='column-inner'>
                                         <div class='browser-wrapper first'>
+                                            <b></b>
+                                            <i></i>
                                             <div class='browser'>
                                                 <div class='browser-bar'>
                                                     <span>http://app.wisembly.com/demo</span>
@@ -63,7 +69,8 @@
                                 <div class='column six'>
                                     <div class='column-inner'>
                                         <div class='browser-wrapper last'>
-                                            <div class='browser last'>
+                                            <b></b>
+                                            <div class='browser'>
                                                 <div class='browser-bar'>
                                                     <span>http://app.wisembly.com/demo</span>
                                                 </div>
@@ -90,9 +97,14 @@
             <div class='container-shadow'></div>
         </div>
     </div>
-    <div class='section clients'>
+    <div class='section clients' id='clients'>
         <div class='container'>
             <div class='row'>
+                <a href='#footer' class='jump-after-fold'>
+                    <i class='picto down-chevron first'></i>
+                    <i class='picto down-chevron last'></i>
+                    <span>Ensuite il y a le footer</span>
+                </a>
                 <div class='column six'>
                     <div class='column-inner'>
                         <h3>Témoignages</h3>
