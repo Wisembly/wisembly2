@@ -669,7 +669,7 @@ img {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
-  margin: 20px 0; }
+  margin: 20px -20px; }
 
 .try-me-label {
   padding: 20px 20px 0 20px; }
@@ -830,6 +830,34 @@ img {
   background-repeat: no-repeat;
   text-indent: -1000%; }
 
+.cases-clients {
+  padding: 0; }
+
+.cases-list {
+  *zoom: 1; }
+  .cases-list:before, .cases-list:after {
+    content: " ";
+    display: table; }
+  .cases-list:after {
+    clear: both; }
+  .cases-list li {
+    float: left; }
+  .cases-list.four li {
+    width: 25%; }
+  .cases-list .first {
+    background-color: #ff8c6b; }
+  .cases-list .second {
+    background-color: #fce96b; }
+  .cases-list .third {
+    background-color: #8ccd82; }
+  .cases-list .fourth {
+    background-color: #45a4da; }
+  .cases-list a {
+    display: block;
+    padding: 50px;
+    color: white;
+    text-decoration: none; }
+
 .container {
   width: 1024px;
   margin: 0 auto; }
@@ -855,19 +883,15 @@ img {
 .column-inner {
   padding: 0 20px; }
 
-.three {
+.column.three {
   width: 25%; }
-
-.four {
+.column.four {
   width: 33.33%; }
-
-.five {
+.column.five {
   width: 41.67%; }
-
-.six {
+.column.six {
   width: 50%; }
-
-.seven {
+.column.seven {
   width: 58.33%; }
 
 .button {

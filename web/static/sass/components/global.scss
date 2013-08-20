@@ -418,7 +418,7 @@ img {
 	font-family: $header-font-family;
 	text-align: center;
 	text-shadow: 0 -1px 1px rgba(0,0,0,.5);
-	margin: 20px 0;
+	margin: 20px -20px;
 }
 .try-me-label {
 	padding: 20px 20px 0 20px;
@@ -604,4 +604,41 @@ img {
 	background-image: url(../images/wisembly-w-372x85.png);
 	background-size: 90px;
 	@include image-replacement;
+}
+
+// Use cases
+.cases-clients {
+	padding: 0;
+}
+.cases-list {
+	@include clearfix;
+	
+	li {
+		float: left;
+	}
+	// four clients
+	&.four {
+		li {
+			width: 25%;
+		}
+	}
+	// backgrounds
+	.first {
+		background-color: $brandOrangeLight;
+	}
+	.second {
+		background-color: $brandYellowLight;
+	}
+	.third {
+		background-color: $brandGreenLight;
+	}
+	.fourth {
+		background-color: $brandBlueLight;
+	}
+	a {
+		display: block;
+		padding: 50px;
+		color: $white;
+		text-decoration: none;
+	}
 }
