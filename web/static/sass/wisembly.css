@@ -346,6 +346,9 @@ html,
 body {
   height: 100%; }
 
+body {
+  padding-top: 70px; }
+
 img {
   display: block; }
 
@@ -363,6 +366,9 @@ a {
 .hide {
   display: none; }
 
+.relative {
+  position: relative; }
+
 .clearfix {
   *zoom: 1; }
   .clearfix:before, .clearfix:after {
@@ -376,6 +382,9 @@ h2,
 h3,
 h4 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.frontpage {
+  padding: 0; }
 
 .section {
   padding: 50px 0;
@@ -691,9 +700,6 @@ img {
     background-color: #66bc58; }
   .try-me-choices .last a {
     background-color: #0786cd; }
-
-.relative {
-  position: relative; }
 
 .headline .container {
   display: table;

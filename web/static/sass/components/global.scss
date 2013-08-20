@@ -7,6 +7,9 @@ html,
 body {
 	height: 100%;
 }
+body {
+	padding-top: $topbarHeight;
+}
 img {
 	display: block;
 }
@@ -23,6 +26,9 @@ a {
 }
 .hide {
 	display: none;
+}
+.relative {
+	position: relative;
 }
 
 // clear floats with clearfix
@@ -53,6 +59,13 @@ h2,
 h3,
 h4 {
 	font-family: $header-font-family;
+}
+
+// pages
+
+// frontpage 
+.frontpage {
+	padding: 0;
 }
 
 // sections
@@ -445,9 +458,6 @@ img {
 			background-color: $brandBlue;
 		}
 	}
-}
-.relative {
-	position: relative;
 }
 .headline {
 	.container {
