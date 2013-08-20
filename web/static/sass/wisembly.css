@@ -657,7 +657,7 @@ img {
   .headline .container-shadow {
     position: absolute;
     right: 0;
-    bottom: -50px;
+    bottom: 0;
     left: 0;
     height: 20px;
     width: 100%;
@@ -1122,3 +1122,12 @@ img {
   padding-top: 2px;
   line-height: 66px;
   color: #666; }
+
+.footer {
+  padding: 50px;
+  background-color: #f1f1f1;
+  font-size: 14px; }
+  .footer h5 {
+    text-transform: uppercase; }
+  .footer li {
+    line-height: 1.4em; }
