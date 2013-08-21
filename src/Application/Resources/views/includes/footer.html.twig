@@ -1,56 +1,80 @@
 <footer class='footer' id='footer'>
 	<div class='container'>
 		<div class='row'>
-			<div class='column three'>
+			<div class='column two'>
 				<div class='column-inner'>
 					<h5>Wisembly</h5>
-					<ul class='list'>
-						<li>Pour les cours et formations</li>
-						<li>Pour les réunions et conf-calls</li>
-						<li>Pour les événements et séminaires</li>
-						<li>Etudes de cas</li>
-						<li>Plans</li>
+					<ul class='list page-list'>
+						<li><a href='{{ path('trainings') }}'>Pour les cours et formations</a></li>
+						<li><a href='{{ path('meetings') }}'>Pour les réunions et conf-calls</a></li>
+						<li><a href='{{ path('events') }}'>Pour les événements et séminaires</a></li>
+						<li><a href='{{ path('case-studies') }}'>Etudes de cas</a></li>
+						<li><a href='{{ path('plans') }}'>Plans</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class='column three'>
+			<div class='column two'>
 				<div class='column-inner'>
-					<h5>A propos de Wisembly</h5>
-					<ul class='list'>
-						<li>A propos</li>
-						<li>Recrutement</li>
-						<li>Contact</li>
-						<li>Ressources</li>
+					<h5>A propos</h5>
+					<ul class='list page-list'>
+						<li><a href='{{ path('about') }}'>A propos</a></li>
+						<li><a href='{{ path('about') }}#jobs'>Recrutement</a></li>
+						<li><a href='#'>Contact</a></li>
+						<li><a href='#'>Ressources</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class='column three'>
+			<div class='column two'>
 				<div class='column-inner'>
 					<h5>Développeurs</h5>
-					<ul class='list'>
-						<li>Widgets</li>
-						<li>APIs</li>
-						<li>Github</li>
+					<ul class='list page-list'>
+						<li><a href='http://wisembly.com/fr/widget'>Widgets</a></li>
+						<li><a href='http://wisembly.com/fr/api'>APIs</a></li>
+						<li><a href='http://github.com/wisembly'>Github</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class='column last'>
+			<div class='column two'>
 				<div class='column-inner'>
-					<div class='dropdown'>
-						<label class='dropdown-toggle'>
-							<img src='images/flags/fr.png'>
-						</label>
-						<ul class='list dropdown-list'>
-							<li>
-								<img src='/static/images/flags/gb.png'>
-							</li>
-							<li>
-								<img src='/static/images/flags/it.png'>
-							</li>
-							<li>
-								<img src='/static/images/flags/de.png'>
-							</li>
-						</ul>
+					<h5>Communauté</h5>
+					<ul class='list page-list'>
+						<li><a href='https://twitter.com/wisembly'>Twitter</a></li>
+						<li><a href='https://www.facebook.com/wisembly'>Facebook</a></li>
+						<li><a href='http://www.linkedin.com/company/wisembly'>Linkedin</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class='column four last'>
+				<div class='column-inner'>
+					<div class='clearfix'>
+						<div class='dropdown'>
+							<label class='dropdown-toggle'>
+								<img src='/static/images/flags/fr.png'>
+							</label>
+							<ul class='list dropdown-list'>
+								<li>
+									<a href='http://wisembly.com/en/'>
+										<img src='/static/images/flags/gb.png'>
+									</a>
+								</li>
+								<li>
+									<a href='http://wisembly.com/it/'>
+										<img src='/static/images/flags/it.png'>
+									</a>
+								</li>
+								<li class='last'>
+									<a href='http://wisembly.com/de/'>
+										<img src='/static/images/flags/de.png'>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class='subscribe'>
+							<a href='' class='button button-validate'>S'abonner</a>
+						</div>
+						<div class='trial'>
+							<a href='' class='button button-call'>Essai gratuit</a>
+						</div>
 					</div>
 				</div>
 			</div>

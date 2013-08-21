@@ -947,6 +947,8 @@ img {
 .column-inner {
   padding: 0 20px; }
 
+.column.two {
+  width: 16.66%; }
 .column.three {
   width: 25%; }
 .column.four {
@@ -960,9 +962,9 @@ img {
 
 .button {
   display: block;
-  padding: 4px 7px;
+  padding: 7px 10px;
   background-color: #f5f5f5;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 2px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.05);
   color: #666;
   text-align: center;
@@ -978,7 +980,11 @@ img {
   color: white; }
 
 .button-validate {
-  background-color: #0786cd;
+  background-color: #45a4da;
+  color: white; }
+
+.button-call {
+  background-color: #ff8c6b;
   color: white; }
 
 .button-large {
@@ -989,7 +995,8 @@ img {
 
 .dropdown {
   position: relative;
-  border: 1px solid #e0e0e0; }
+  border: 1px solid #e0e0e0;
+  width: 58px; }
 
 .dropdown-toggle {
   display: block;
@@ -1001,7 +1008,19 @@ img {
 
 .dropdown-list {
   display: none;
-  position: absolute; }
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  border: 1px solid #e0e0e0;
+  margin-top: 2px; }
+  .dropdown-list li {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0; }
+    .dropdown-list li.last {
+      border-bottom: 0; }
+  .dropdown-list a {
+    display: block;
+    padding: 7px 10px; }
 
 .dropdown-list.active {
   display: block; }
@@ -1125,9 +1144,25 @@ img {
 
 .footer {
   padding: 50px;
-  background-color: #f1f1f1;
   font-size: 14px; }
+  .footer .button-call {
+    margin-bottom: 20px; }
+  .footer .dropdown {
+    float: right;
+    margin-left: 20px; }
+  .footer .subscribe {
+    float: right; }
+  .footer .trial {
+    float: right;
+    margin-right: 20px; }
   .footer h5 {
-    text-transform: uppercase; }
-  .footer li {
-    line-height: 1.4em; }
+    text-transform: uppercase;
+    color: #999999;
+    margin-top: 0; }
+
+.page-list li {
+  line-height: 1.3em;
+  margin-bottom: 5px; }
+  .page-list li a {
+    color: #999999;
+    text-decoration: none; }

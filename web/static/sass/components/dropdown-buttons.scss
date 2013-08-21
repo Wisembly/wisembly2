@@ -1,6 +1,9 @@
+$dropdownWidth: 58px;
+
 .dropdown {
 	position: relative;
 	border: 1px solid $lightGrey;
+	width: $dropdownWidth;
 }
 .dropdown-toggle {
 	display: block;
@@ -13,6 +16,23 @@
 .dropdown-list {
 	display: none;
 	position: absolute;
+	left: -1px;
+	right: -1px;
+	border: 1px solid $lightGrey;
+	margin-top: 2px;
+	
+	li {
+		border-bottom: 1px solid $lightGrey;
+		margin-bottom: 0;
+		
+		&.last {
+			border-bottom: 0;
+		}
+	}
+	a {
+		display: block;
+		padding: 7px 10px;
+	}
 }
 .dropdown-list.active {
 	display: block;

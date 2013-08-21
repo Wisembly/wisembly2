@@ -1,13 +1,35 @@
 .footer {
 	padding: 50px;
-	background-color: #f1f1f1;
 	font-size: 14px;
 	
+	.button-call {
+		margin-bottom: 20px;
+	}
+	.dropdown {
+		float: right;
+		margin-left: 20px;
+	}
+	.subscribe {
+		float: right;
+	}
+	.trial {
+		float: right;
+		margin-right: 20px;
+	}
 	h5 {
 		text-transform: uppercase;
+		color: $grey;
+		margin-top: 0;
 	}
-	
+}
+.page-list {
 	li {
-		line-height: 1.4em;
+		line-height: 1.3em;
+		margin-bottom: 5px;
+		
+		a {
+			color: $grey;
+			text-decoration: none;
+		}
 	}
 }
