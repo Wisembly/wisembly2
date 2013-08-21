@@ -15,3 +15,4 @@ $app->register(new StaticPage('meetings', '/for-meetings-and-confcalls', 'pages/
 $app->register(new StaticPage('events', '/for-events-and-seminaries', 'pages/events.html.twig'));
 $app->register(new StaticPage('case-studies', '/case-studies', 'pages/casestudies.html.twig'));
 $app->register(new StaticPage('plans', '/plans', 'pages/plans.html.twig'));
+$app->register(new StaticPage('about', '/about', 'pages/about.html.twig'));
