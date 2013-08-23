@@ -11,6 +11,10 @@
 	text-decoration: none;
 	text-shadow: 0 1px 0 rgba(0,0,0,.2);
 	appearance: none;
+	-webkit-user-select: none;  
+	-moz-user-select: none;    
+	-ms-user-select: none;      
+	user-select: none;
 }
 .button-default {
 	text-shadow: none;
@@ -29,4 +33,7 @@
 }
 .button-large {
 	padding: $form-large-element-padding;
+}
+.button-processing {
+	display: none;
 }

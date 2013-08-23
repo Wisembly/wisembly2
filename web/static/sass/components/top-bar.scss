@@ -1,3 +1,5 @@
+$topHeaderHeight: 29px;
+
 .top-bar {
 	position: absolute;
 	top: 0;
@@ -28,7 +30,6 @@
 
 .top-header {
 	background-color: #fafafa;
-	//background-color: $brandBlueExtraExtraDark;
 	border-bottom: 1px solid #f1f1f1;
 	font-size: 14px;
 	
@@ -44,10 +45,10 @@
 			text-decoration: none;
 			color: $grey;
 			box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
-			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.05));
 			
 			&:hover {
 				background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0), rgba(0,0,0,0.05));
+				color: $darkGrey;
 			}
 			&:active {
 				padding-top: 6px;
@@ -55,18 +56,18 @@
 			}
 		}
 		a,
-		span {
+		.item-text {
 			display: block;
 			padding: 5px 10px;
 		}
-		span {
+		.item-text {
 			color: #666;
 		}
 	}
 }
-.app-nav {
+.app-nav .list {
+	height: $topHeaderHeight;
 }
-
 .bottom-header {
 	padding: 0;
 }
@@ -89,6 +90,7 @@
 		padding: 0 7px;
 		font-weight: 600;
 		color: $grey;
+		color: $brandBlueLight;
 		line-height: 70px;
 	}
 	a:hover {
@@ -114,7 +116,7 @@
 	li.last {
 		margin: 19px 0 19px 20px;
 		a {
-			background-color: $brandOrange;
+			background-color: $brandBlue;
 			display: block;
 			padding: 7px 10px;
 			border: 1px solid rgba(0,0,0,.05);
