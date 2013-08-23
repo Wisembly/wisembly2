@@ -684,39 +684,44 @@ img {
 	}
 }
 
-// Use cases
-.cases-clients {
-	padding: 0;
+// case studies
+.case-study-la-poste {
+	background-color: $brandGreenExtraLight;
+	text-shadow: 0 2px 0 $brandGreenLight;
+	border-color: $brandGreenExtraExtraLight;
 }
-.cases-list {
-	@include clearfix;
+.case-study-sncf {
+	background-color: $brandOrangeExtraLight;
+	text-shadow: 0 2px 0 $brandOrangeLight;
+	border-color: $brandOrangeExtraExtraLight;
+}
+.case-study-hec {
+	background-color: $brandBlueExtraLight;
+	border-color: $brandBlueExtraExtraLight;
+	text-shadow: 0 2px 0 $brandBlueLight;
+}
+.case-study-auchan {
+	background-color: $brandRedExtraLight;
+	border-color: $brandRedExtraExtraLight;
+	text-shadow: 0 2px 0 $brandRedLight;
+}
+.case-study {
+	text-align: center;
+	color: $white;
 	
-	li {
-		float: left;
+	h3 {
+		font-size: 30px;
 	}
-	// four clients
-	&.four {
-		li {
-			width: 25%;
-		}
-	}
-	// backgrounds
-	.first {
-		background-color: $brandOrangeLight;
-	}
-	.second {
-		background-color: $brandYellowLight;
-	}
-	.third {
-		background-color: $brandGreenLight;
-	}
-	.fourth {
-		background-color: $brandBlueLight;
+	.img {
+		width: 200px;
+		margin: 0 auto 20px;
 	}
 	a {
-		display: block;
-		padding: 50px;
+		display: inline-block;
+		padding: 10px;
 		color: $white;
 		text-decoration: none;
+		border: 1px solid $white;
+		border-radius: 2px;
 	}
 }

@@ -905,33 +905,41 @@ img {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     padding: 1px; }
 
-.cases-clients {
-  padding: 0; }
+.case-study-la-poste {
+  background-color: #b0ddb1;
+  text-shadow: 0 2px 0 #8ccd82;
+  border-color: #d5eed6; }
 
-.cases-list {
-  *zoom: 1; }
-  .cases-list:before, .cases-list:after {
-    content: " ";
-    display: table; }
-  .cases-list:after {
-    clear: both; }
-  .cases-list li {
-    float: left; }
-  .cases-list.four li {
-    width: 25%; }
-  .cases-list .first {
-    background-color: #ff8c6b; }
-  .cases-list .second {
-    background-color: #fce96b; }
-  .cases-list .third {
-    background-color: #8ccd82; }
-  .cases-list .fourth {
-    background-color: #45a4da; }
-  .cases-list a {
-    display: block;
-    padding: 50px;
+.case-study-sncf {
+  background-color: #ffb19f;
+  text-shadow: 0 2px 0 #ff8c6b;
+  border-color: #ffd6ce; }
+
+.case-study-hec {
+  background-color: #7fc4e2;
+  border-color: #bfe1f0;
+  text-shadow: 0 2px 0 #45a4da; }
+
+.case-study-auchan {
+  background-color: #ffa8b2;
+  border-color: #ffd3d8;
+  text-shadow: 0 2px 0 #fe7e8b; }
+
+.case-study {
+  text-align: center;
+  color: white; }
+  .case-study h3 {
+    font-size: 30px; }
+  .case-study .img {
+    width: 200px;
+    margin: 0 auto 20px; }
+  .case-study a {
+    display: inline-block;
+    padding: 10px;
     color: white;
-    text-decoration: none; }
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 2px; }
 
 .container {
   width: 1024px;
@@ -1245,7 +1253,6 @@ form[data-status='testing'] .button-processing {
     padding: 0 7px;
     font-weight: 600;
     color: #999999;
-    color: #45a4da;
     line-height: 70px; }
   .navigation a:hover {
     border-style: solid;

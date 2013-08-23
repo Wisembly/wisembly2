@@ -15,34 +15,64 @@
 			</div>
 		</div>
 	</div>
-	<div class='section cases-clients'>
+	<div class='section case-study case-study-la-poste'>
 		<div class='container'>
-			<ul class='list cases-list four'>
-				<li class='first'>
-					<a href='{{ path('case-la-poste') }}'>
-						<div>Séminaire</div>
-						<div>La poste</div>
-					</a>
-				</li>
-				<li class='second'>
-					<a href='{{ path('case-sncf') }}'>
-						<div>Le Tchat du président</div>
-						<div>SNCF</div>
-					</a>
-				</li>
-				<li class='third'>
-					<a href='{{ path('case-auchan') }}'>
-						<div>Conference Calls</div>
-						<div>Auchan</div>
-					</a>
-				</li>
-				<li class='fourth last'>
-					<a href='{{ path('case-hec') }}'>
-						<div>Formation</div>
-						<div>HEC</div>
-					</a>
-				</li>
-			</ul>
+			<div class='row'>
+				<div class='column six centered'>
+					<div class='column-inner'>
+						<div class='img'>
+							<img src='/static/images/clients/la-poste.png'>
+						</div>
+						<h3>Séminaires à La Poste</h3>
+						<a href='{{ path('case-la-poste') }}'>Lire l'étude de cas de La Poste</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section case-study case-study-sncf'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column six centered'>
+					<div class='column-inner'>
+						<div class='img'>
+							<img src='/static/images/clients/sncf.png'>
+						</div>
+						<h3>Le Tchat du président à la SNCF</h3>
+						<a href='{{ path('case-sncf') }}'>Lire l'étude de cas de la SNCF</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>			
+	<div class='section case-study case-study-auchan'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column six centered'>
+					<div class='column-inner'>
+						<div class='img'>
+							<img src='/static/images/clients/auchan.png'>
+						</div>
+						<h3>Conference Calls chez Auchan</h3>
+						<a href='{{ path('case-auchan') }}'>Lire l'étude de cas d'Auchan</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section case-study case-study-hec'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column six centered'>
+					<div class='column-inner'>
+						<div class='img'>
+							<img src='/static/images/clients/hec.png'>
+						</div>
+						<h3>Formations à HEC</h3>
+						<a href='{{ path('case-hec') }}'>Lire l'étude de cas d'HEC</a>
+					</div>
+				</div>	
+			</div>
 		</div>
 	</div>
 {% endblock %}
