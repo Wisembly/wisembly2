@@ -21,9 +21,6 @@ a {
 	padding: 0;
 	list-style: none;
 }
-.pvs {
-	padding: 5px 0;
-}
 .hide {
 	display: none;
 }
@@ -52,13 +49,6 @@ a {
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	text-indent: -1000%;
-}
-
-h1,
-h2,
-h3,
-h4 {
-	font-family: $header-font-family;
 }
 
 // pages
@@ -97,9 +87,6 @@ h4 {
 	h2 {
 		font-weight: 300;
 	}
-}
-.try-now {
-	background-color: #fafafa;
 }
 .features-list {
 	padding: 0;
@@ -559,7 +546,9 @@ img {
 	}
 }
 
-
+.try-now {
+	background-color: #fafafa;
+}
 .try-me {
 	background-color: $brandBlueLight;
 	border-radius: 5px;
@@ -674,6 +663,25 @@ img {
 	background-image: url(../images/wisembly-w-372x85.png);
 	background-size: 90px;
 	@include image-replacement;
+}
+
+// jobs
+
+.gallery-list {
+	@include clearfix;
+	margin: -10px -20px;
+	
+	li {
+		float: left;
+		width: 33.333%;
+	}
+	.item {
+		padding: 10px 20px;
+	}
+	.img {
+		box-shadow: 0 1px 3px rgba(0,0,0, .3);
+		padding: 1px;
+	}
 }
 
 // Use cases

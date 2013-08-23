@@ -360,9 +360,6 @@ a {
   padding: 0;
   list-style: none; }
 
-.pvs {
-  padding: 5px 0; }
-
 .hide {
   display: none; }
 
@@ -376,12 +373,6 @@ a {
     display: table; }
   .clearfix:after {
     clear: both; }
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .frontpage {
   padding: 0; }
@@ -404,9 +395,6 @@ h4 {
   font-weight: 300; }
 .header h2 {
   font-weight: 300; }
-
-.try-now {
-  background-color: #fafafa; }
 
 .features-list {
   padding: 0;
@@ -791,6 +779,9 @@ img {
     font-weight: 600;
     margin-bottom: 30px; }
 
+.try-now {
+  background-color: #fafafa; }
+
 .try-me {
   background-color: #45a4da;
   border-radius: 5px;
@@ -897,6 +888,23 @@ img {
   background-repeat: no-repeat;
   text-indent: -1000%; }
 
+.gallery-list {
+  *zoom: 1;
+  margin: -10px -20px; }
+  .gallery-list:before, .gallery-list:after {
+    content: " ";
+    display: table; }
+  .gallery-list:after {
+    clear: both; }
+  .gallery-list li {
+    float: left;
+    width: 33.333%; }
+  .gallery-list .item {
+    padding: 10px 20px; }
+  .gallery-list .img {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    padding: 1px; }
+
 .cases-clients {
   padding: 0; }
 
@@ -966,6 +974,15 @@ img {
   width: 66.66%; }
 .column.nine {
   width: 75%; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.text-centered {
+  text-align: center; }
 
 .button {
   display: block;
