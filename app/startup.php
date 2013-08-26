@@ -23,7 +23,10 @@ $app->register(new StaticPage('case-auchan', '/case-studies/auchan', 'pages/case
 $app->register(new StaticPage('case-hec', '/case-studies/hec', 'pages/case-hec.html.twig'));
 
 $app->register(new StaticPage('plans', '/plans', 'pages/plans.html.twig'));
+
 $app->register(new StaticPage('about', '/about', 'pages/about.html.twig'));
+$app->register(new StaticPage('about-team', '/about-team', 'pages/about-team.html.twig'));
+$app->register(new StaticPage('about-press', '/about-press', 'pages/about-press.html.twig'));
 
 $app->register(new StaticPage('resources', '/about/resources', 'pages/resources.html.twig'));
 $app->register(new StaticPage('jobs', '/jobs', 'pages/jobs.html.twig'));
