@@ -1070,6 +1070,45 @@ img {
     font-size: 14px;
     color: #999999; }
 
+.hey-press {
+  background-color: #fffdf4;
+  padding: 20px 20px 0;
+  border-right: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  background-image: url(../images/patterns/tiny_grid.png);
+  line-height: 1.5em;
+  position: relative; }
+  .hey-press p {
+    margin-top: 0; }
+  .hey-press .button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px; }
+
+.press-list {
+  margin-bottom: 50px;
+  width: 100%;
+  table-layout: fixed;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0; }
+  .press-list tr:nth-child(2n) {
+    background-color: #eff8fb; }
+  .press-list td {
+    padding: 20px 20px;
+    vertical-align: top;
+    line-height: 1.5em;
+    border-bottom: 1px solid #e0e0e0; }
+  .press-list .src,
+  .press-list .date {
+    width: 20%; }
+  .press-list .date {
+    color: #999999; }
+  .press-list a {
+    text-decoration: none;
+    color: #444444; }
+    .press-list a:hover {
+      color: #006697; }
+
 .container {
   width: 1024px;
   margin: 0 auto; }

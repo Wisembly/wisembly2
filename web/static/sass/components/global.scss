@@ -860,3 +860,55 @@ img {
 		color: $grey;
 	}
 }
+
+.hey-press {
+	background-color: $brandYellowExtraExtraExtraLight;
+	padding: 20px 20px 0;
+	border-right: 1px solid #efefef;
+	border-bottom: 1px solid #efefef;
+	background-image: url(../images/patterns/tiny_grid.png);
+	line-height: 1.5em;
+	position: relative;
+	
+	p {
+		margin-top: 0;
+	}
+	.button {
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+	}
+}
+
+.press-list {
+	margin-bottom: 50px;
+	width: 100%;
+	table-layout: fixed;
+	border-top: 1px solid $lightGrey;
+	border-bottom: 1px solid $lightGrey;
+	
+	tr:nth-child(2n) {
+		background-color: $brandBlueExtraExtraExtraLight;
+	}
+	td {
+		padding: 20px 20px;
+		vertical-align: top;
+		line-height: 1.5em;
+		border-bottom: 1px solid $lightGrey;
+	}
+	.src,
+	.date {
+		width: 20%;
+	}
+	.date {
+		color: $grey;
+	}
+	a {
+		text-decoration: none;
+		color: $black;
+		
+		&:hover {
+			color: $brandBlueHover;
+		}
+	}
+}
