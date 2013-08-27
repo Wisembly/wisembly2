@@ -1070,20 +1070,39 @@ img {
     font-size: 14px;
     color: #999999; }
 
-.hey-press {
+.hero {
   background-color: #fffdf4;
   padding: 20px 20px 0;
-  border-right: 1px solid #efefef;
-  border-bottom: 1px solid #efefef;
-  background-image: url(../images/patterns/tiny_grid.png);
+  border: 1px solid #efefef;
   line-height: 1.5em;
   position: relative; }
-  .hey-press p {
+  .hero p {
     margin-top: 0; }
+
+.hey-press {
+  background-image: url(../images/patterns/tiny_grid.png);
+  border-width: 0 1px 1px 0; }
   .hey-press .button {
     position: absolute;
     right: 20px;
     bottom: 20px; }
+
+.phone-sheet {
+  padding: 30px; }
+  .phone-sheet p {
+    margin-bottom: 0; }
+  .phone-sheet .label {
+    display: block;
+    color: #999;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold; }
+  .phone-sheet .phone,
+  .phone-sheet .hours {
+    font-size: 22px;
+    line-height: 26px;
+    color: #ff6539;
+    font-weight: bold; }
 
 .press-list {
   margin-bottom: 50px;
@@ -1108,6 +1127,33 @@ img {
     color: #444444; }
     .press-list a:hover {
       color: #006697; }
+
+.contact .section {
+  background-color: #efefef; }
+.contact .phone-sheet {
+  margin-bottom: 20px;
+  border: 1px solid white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
+
+.contact-form {
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 30px; }
+  .contact-form .textarea-container,
+  .contact-form .input-container {
+    margin-bottom: 30px; }
+  .contact-form .textarea {
+    height: 277px; }
+  .contact-form .button {
+    width: 100%; }
+  .contact-form .label {
+    margin-bottom: 8px;
+    display: block;
+    color: #666;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold; }
 
 .container {
   width: 1024px;
@@ -1163,12 +1209,12 @@ h4 {
 .button {
   display: block;
   padding: 7px 10px;
-  background-color: #f5f5f5;
-  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  background-color: whitesmoke;
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 1px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
-  color: #666;
+  color: #666666;
   text-align: center;
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
@@ -1207,6 +1253,87 @@ h4 {
 
 .label.inline {
   line-height: 32px; }
+
+.textarea-container,
+.input-container {
+  display: block;
+  position: relative;
+  padding: 6px 10px;
+  background-color: white;
+  cursor: text; }
+
+.textarea-container .textarea,
+.input-container .input {
+  position: relative;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  appearance: none;
+  border: 0;
+  line-height: 1.3em;
+  outline: none;
+  z-index: 6; }
+  .textarea-container .textarea::-webkit-input-placeholder,
+  .input-container .input::-webkit-input-placeholder {
+    line-height: 1.4em;
+    transition: color .2s ease-in; }
+  .textarea-container .textarea:-moz-placeholder,
+  .input-container .input:-moz-placeholder {
+    line-height: 1.4em; }
+  .textarea-container .textarea::-moz-placeholder,
+  .input-container .input::-moz-placeholder {
+    line-height: 1.4em; }
+  .textarea-container .textarea:-ms-input-placeholder,
+  .input-container .input:-ms-input-placeholder {
+    line-height: 1.4em; }
+  .textarea-container .textarea:focus::-webkit-input-placeholder,
+  .input-container .input:focus::-webkit-input-placeholder {
+    line-height: 1.4em;
+    color: #ccc; }
+  .textarea-container .textarea:focus:-moz-placeholder,
+  .input-container .input:focus:-moz-placeholder {
+    line-height: 1.4em;
+    color: #ccc; }
+  .textarea-container .textarea:focus::-moz-placeholder,
+  .input-container .input:focus::-moz-placeholder {
+    line-height: 1.4em;
+    color: #ccc; }
+  .textarea-container .textarea:focus:-ms-input-placeholder,
+  .input-container .input:focus:-ms-input-placeholder {
+    line-height: 1.4em;
+    color: #ccc; }
+
+.textarea-container .textarea {
+  resize: none; }
+
+.textarea-container .textarea:focus + .textarea-background,
+.input-container .input:focus + .input-background {
+  background-color: #fffdf4;
+  border: 1px solid #c0c0c0; }
+
+.textarea-container .textarea-background,
+.input-container .input-background {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0; }
+
+select {
+  width: 100%;
+  padding: 6px 10px;
+  background-color: whitesmoke;
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 1px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  -webkit-appearance: none;
+  color: #666666; }
 
 .dropdown {
   position: relative; }
@@ -1302,41 +1429,6 @@ form[data-status='testing'] .button-processing {
     float: right; }
   .login .input-container {
     margin-bottom: 10px; }
-
-.input-container {
-  position: relative;
-  padding: 6px;
-  background-color: white; }
-  .input-container .input {
-    position: relative;
-    background-color: transparent;
-    display: block;
-    width: 100%;
-    appearance: none;
-    border: 0;
-    line-height: 1;
-    outline: none;
-    z-index: 6; }
-    .input-container .input::-webkit-input-placeholder {
-      line-height: 1.4em; }
-    .input-container .input:-moz-placeholder {
-      line-height: 1.4em; }
-    .input-container .input::-moz-placeholder {
-      line-height: 1.4em; }
-    .input-container .input:-ms-input-placeholder {
-      line-height: 1.4em; }
-  .input-container .input-background {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 5;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e0e0e0; }
-  .input-container .input:focus + .input-background {
-    background-color: #fffdf4;
-    border: 1px solid #c0c0c0; }
 
 .top-bar {
   position: absolute;
