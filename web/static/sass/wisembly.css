@@ -923,29 +923,12 @@ img {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     padding: 1px; }
 
-.case-study-la-poste {
-  background-color: #b0ddb1;
-  text-shadow: 0 2px 0 #8ccd82;
-  border-color: #d5eed6; }
-
-.case-study-sncf {
-  background-color: #ffb19f;
-  text-shadow: 0 2px 0 #ff8c6b;
-  border-color: #ffd6ce; }
-
+.case-study-sncf,
 .case-study-hec {
-  background-color: #7fc4e2;
-  border-color: #bfe1f0;
-  text-shadow: 0 2px 0 #45a4da; }
-
-.case-study-auchan {
-  background-color: #ffa8b2;
-  border-color: #ffd3d8;
-  text-shadow: 0 2px 0 #fe7e8b; }
+  background-color: #efefef; }
 
 .case-study {
-  text-align: center;
-  color: white; }
+  text-align: center; }
   .case-study h3 {
     font-size: 30px; }
   .case-study .img {
@@ -954,9 +937,9 @@ img {
   .case-study a {
     display: inline-block;
     padding: 10px;
-    color: white;
     text-decoration: none;
-    border: 1px solid white;
+    color: #999;
+    border: 1px solid #e0e0e0;
     border-radius: 2px; }
 
 .history-stream {

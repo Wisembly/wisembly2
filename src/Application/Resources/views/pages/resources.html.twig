@@ -6,6 +6,37 @@
 	<div class='section header' style='background-image: url(http://cdn0.stocksy.com/a/f3A000/z0/38667.jpg)'>
 		<div class='container'>
 			<h1>Ressources</h1>
+			<h2>Pour vos besoins de journalisme</h2>
+		</div>
+	</div>
+	<div class='section'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column three'>
+					{% include 'includes/about-navigation.html.twig' %}
+				</div>
+				<div class='column eight last'>
+					<div class='column-inner'>
+						<h3>Logo</h3>
+						<h3>Photos</h3>
+						<div class='hero hey-press'>
+							<div class='row'>
+								<div class='column seven'>
+									<div class='column-inner'>
+										<p>Vous recherchez quelque chose d'autre que ce qui est ici ?</p>
+									</div>
+								</div>
+								<div class='column four last'>
+									<div class='column-inner'>
+										<a href='{{ path('resources') }}' class='button button-call'>Contactez-nous</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 {% endblock %}

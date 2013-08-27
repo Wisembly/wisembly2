@@ -704,29 +704,12 @@ img {
 }
 
 // case studies
-.case-study-la-poste {
-	background-color: $brandGreenExtraLight;
-	text-shadow: 0 2px 0 $brandGreenLight;
-	border-color: $brandGreenExtraExtraLight;
-}
-.case-study-sncf {
-	background-color: $brandOrangeExtraLight;
-	text-shadow: 0 2px 0 $brandOrangeLight;
-	border-color: $brandOrangeExtraExtraLight;
-}
+.case-study-sncf,
 .case-study-hec {
-	background-color: $brandBlueExtraLight;
-	border-color: $brandBlueExtraExtraLight;
-	text-shadow: 0 2px 0 $brandBlueLight;
-}
-.case-study-auchan {
-	background-color: $brandRedExtraLight;
-	border-color: $brandRedExtraExtraLight;
-	text-shadow: 0 2px 0 $brandRedLight;
+	background-color: #efefef;
 }
 .case-study {
 	text-align: center;
-	color: $white;
 	
 	h3 {
 		font-size: 30px;
@@ -738,9 +721,9 @@ img {
 	a {
 		display: inline-block;
 		padding: 10px;
-		color: $white;
 		text-decoration: none;
-		border: 1px solid $white;
+		color: #999;
+		border: 1px solid $lightGrey;
 		border-radius: 2px;
 	}
 }
