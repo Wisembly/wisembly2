@@ -11,9 +11,9 @@ $app->register(new DataSet('main', 'main'));
 // Pages
 $app->register(new StaticPage('index', '/', 'pages/index.html.twig'));
 
-$app->register(new StaticPage('trainings', '/for-classes-and-trainings', 'pages/trainings.html.twig'));
-$app->register(new StaticPage('meetings', '/for-meetings-and-confcalls', 'pages/meetings.html.twig'));
-$app->register(new StaticPage('events', '/for-events-and-seminaries', 'pages/events.html.twig'));
+$app->register(new StaticPage('classes-trainings', '/for-classes-and-trainings', 'pages/classes-trainings.html.twig'));
+$app->register(new StaticPage('meetings-confcalls', '/for-meetings-and-conf-calls', 'pages/meetings-confcalls.html.twig'));
+$app->register(new StaticPage('events-seminaries', '/for-events-and-seminaries', 'pages/events-seminaries.html.twig'));
 
 $app->register(new StaticPage('case-studies', '/case-studies', 'pages/casestudies.html.twig'));
 
