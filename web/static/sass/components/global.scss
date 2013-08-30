@@ -64,10 +64,13 @@ a {
 
 // sections
 .section {
-	padding: 50px 0;
-	//background-image: -webkit-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,1) 50%, rgba(255,255,255,0));
 	border-bottom: 1px solid $lightGrey;
 	box-shadow: inset 0 -1px 5px 0 rgba(0,0,0, .06);
+	
+	.container {
+		padding: 80px 0;
+		position: relative;
+	}
 	
 	h3 {
 		font-size: 30px;
@@ -85,10 +88,33 @@ a {
 	background-size: cover;
 	color: $white;
 	text-shadow: 0 0 6px rgba(0,0,0,.2);
+	padding: 60px 0;
+	border-bottom: 0;
+	
+	.container {
+		height: 240px;
+		padding: 0;
+	}
+	
+	.id {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
 	
 	h1 {
 		font-size: 40px;
 		font-weight: 300;
+	}
+	h1,
+	h2 {
+		margin: 0 0 2px;
+		span {
+			background-color: rgba($brandBlue, .9);
+			line-height: 1.5em;
+			padding: 2px 5px;
+			margin-bottom: 2px;
+		}
 	}
 	h2 {
 		font-weight: 300;
@@ -108,10 +134,15 @@ a {
 	}
 }
 .features-list {
-	padding: 0;
-	@include clearfix;
 	box-shadow: 0 0 2px 0 rgba(0,0,0, .1);
-	font-family: $header-font-family;
+	
+	.container {
+		padding: 0;
+	}
+	
+	ul {
+		@include clearfix;
+	}
 
 	li {
 		float: left;
@@ -119,19 +150,34 @@ a {
 
 		&.first {
 			a {
-				border-left: 1px solid $lightGrey;
+				//border-left: 1px solid $lightGrey;
 			}
 		}
 	}
+	.picto {
+		margin: 0 auto 20px;
+	}
 	a {
 		display: block;
-		padding: 15px 10px;
+		padding: 20px 20px;
 		text-align: center;
 		text-decoration: none;
-		font-size: 14px;
-		//color: $grey;
-		border-right: 1px solid $lightGrey;
-		min-height: 38px;
+		//border-right: 1px solid $lightGrey;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 20px;
+		color: $grey;
+		height: 120px;
+		text-transform: uppercase;
+		
+		.short {
+			line-height: 35px;
+		}
+		
+		&:hover {
+			background-color: $brandBlue;
+			color: $white;
+		}
 	}
 	&.docked {
 		position: fixed;
@@ -142,28 +188,35 @@ a {
 	}
 }
 .documents-management {
-	background-color: $brandYellowExtraExtraExtraLight;
-}
-.students-evaluation {
-	background-color: $brandBlueExtraExtraExtraLight;
-	background-image: url(../images/edito/woman.jpg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: contain;
+	background-image: -webkit-linear-gradient(top, rgba($brandBlueExtraExtraExtraLight, 0), rgba($brandBlueExtraExtraExtraLight, 0) 80%, rgba($brandBlueExtraExtraExtraLight, 1));
 	
-	h3 {
-		text-align: center;
+	.container {
+		background-image: url(/static/images/illustrations/managing-documents.png);
+		background-position: right center;
+		background-repeat: no-repeat;
 	}
 }
-.quizzes {
-	background-color: $brandGreen;
-	color: $white;
+.students-evaluation {
+	background-image: -webkit-linear-gradient(top, rgba($brandBlueExtraExtraExtraLight, 0), rgba($brandBlueExtraExtraExtraLight, 0) 80%, rgba($brandBlueExtraExtraExtraLight, 1));
+	
+	/* h3 span {
+		padding: 2px 5px;
+		background-color: $brandBlueLight;
+		color: $white;
+	} */
+	
+	.container {
+		background-image: url(/static/images/edito/students-evaluation.png);
+		background-position: right center;
+		background-repeat: no-repeat;
+	}
 }
 .training-evaluation {
-	background-color: $brandGreenExtraExtraExtraLight;
-	background-image: url(../images/edito/grid-dots-alt.png);
-	background-repeat: no-repeat;
-	background-position: left bottom;
+	.container {
+		background-image: url(/static/images/illustrations/training-evaluation.png);
+		background-position: left center;
+		background-repeat: no-repeat;
+	}
 }
 .quiz-demo {
 	background-color: $white;
@@ -210,8 +263,7 @@ a {
 	}
 }
 .q-a {
-	background-color: $brandGreenExtraExtraLight;
-	background-image: url(../images/edito/training.jpg);
+	background-image: url(/static/images/edito/training.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: contain;
@@ -280,12 +332,6 @@ a {
 			font-size: 11px;
 		}
 	}
-}
-.stats-reporting {
-	background-color: $brandRedExtraExtraExtraLight;
-}
-.multi-device {
-	background-color: $brandOrangeExtraExtraExtraLight;
 }
 
 .clients-list {
@@ -375,7 +421,7 @@ img {
 }
 .headline {
 	background-color: $brandBlueExtraLight;
-	background-image: url(../images/edito/headline-graph-alt.png);
+	background-image: url(/static/images/edito/headline-graph-alt.png);
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	-webkit-animation: mute 10s infinite;
@@ -472,7 +518,7 @@ img {
 		position: absolute;
 		right: -92px;
 		top: 15px;
-		background-image: url(../images/doodles/arrow.png);
+		background-image: url(/static/images/doodles/arrow.png);
 		opacity: 0.5;
 	}
 	.browser-wrapper.first i {
@@ -482,7 +528,7 @@ img {
 		position: absolute;
 		right: -68px;
 		top: -60px;
-		background-image: url(../images/doodles/doodle.png);
+		background-image: url(/static/images/doodles/doodle.png);
 		background-repeat: no-repeat;
 		opacity: 0.5;
 		-webkit-transform: rotate(-5deg);
@@ -494,7 +540,7 @@ img {
 		position: absolute;
 		left: -92px;
 		top: 50px;
-		background-image: url(../images/doodles/arrow-left.png);
+		background-image: url(/static/images/doodles/arrow-left.png);
 		opacity: 0.5;
 	}
 }
@@ -542,14 +588,6 @@ img {
 			top: 1px;
 		}
 	}
-}
-.picto.down-chevron {
-	display: inline-block;
-	width: 21px;
-	height: 13px;
-	background-image: url(../images/down-chevron.png);
-	background-position: 0 0;
-	background-repeat: no-repeat;
 }
 
 .clients {	
@@ -619,13 +657,13 @@ img {
 	}
 }
 .browser-wrapper.first {
-	background-image: url(../images/edito/smiling.png);
+	background-image: url(/static/images/edito/smiling.png);
 	background-position: -85px -30px;
 	background-repeat: no-repeat;
 	background-size: 400px;
 }
 .browser-wrapper.last {
-	background-image: url(../images/edito/young.png);
+	background-image: url(/static/images/edito/young.png);
 	background-position: -51px -40px;
 	background-repeat: no-repeat;
 	background-size: 320px;
@@ -644,7 +682,7 @@ img {
 }
 .browser-bar {
 	display: none;
-	background-image: url(../images/browser-bar.png);
+	background-image: url(/static/images/browser-bar.png);
 	background-position: -1px 0;
 	background-repeat: no-repeat;
 	width: 375px;
@@ -679,7 +717,7 @@ img {
 	width: 90px;
 	height: 20px;
 	margin: 0 auto;
-	background-image: url(../images/wisembly-w-372x85.png);
+	background-image: url(/static/images/wisembly-w-372x85.png);
 	background-size: 90px;
 	@include image-replacement;
 }
@@ -856,7 +894,7 @@ img {
 	}
 }
 .hey-press {
-	background-image: url(../images/patterns/tiny_grid.png);
+	background-image: url(/static/images/patterns/tiny_grid.png);
 	border-width: 0 1px 1px 0;
 
 	.button {

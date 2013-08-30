@@ -97,25 +97,22 @@ $topHeaderHeight: 29px;
 		line-height: 70px;
 	}
 	a:hover {
-		border-style: solid;
-		border-width: 0 0 2px;
-		padding-top: 2px;
-		line-height: 66px;
-		color: #666;
+		background-color: $brandBlue;
+		color: $white;
 	}
 	// colors
-	.nav-classes-trainings a {
-		border-color: $brandRed;
+	/* .nav-classes-trainings a:hover {
+		background-color: $brandRed;
 	}
-	.nav-meetings-confcalls a {
-		border-color: $brandGreen;
+	.nav-meetings-confcalls a:hover {
+		background-color: $brandGreen;
 	}
-	.nav-events-seminaries a {
-		border-color: $brandBlue;
+	.nav-events-seminaries a:hover {
+		background-color: $brandBlue;
 	}
-	.nav-case-studies a {
-		border-color: $brandOrange;
-	}
+	.nav-case-studies a:hover {
+		background-color: $brandOrange;
+	} */
 	li.last {
 		margin: 19px 0 19px 20px;
 		a {
@@ -139,15 +136,22 @@ $topHeaderHeight: 29px;
 		}
 	}
 }
-.classes-trainings .nav-classes-trainings,
-.meetings-confcalls .nav-meetings-confcalls,
-.events-seminaries .nav-events-seminaries,
-.case-studies .nav-case-studies {
-	a {
-		border-style: solid;
-		border-width: 0 0 2px;
-		padding-top: 2px;
-		line-height: 66px;
-		color: #666;
-	}
+.classes-trainings .nav-classes-trainings a {
+	background-color: $brandRed;
+}
+.meetings-confcalls .nav-meetings-confcalls a {
+	background-color: $brandGreen;
+}
+.events-seminaries .nav-events-seminaries a {
+	background-color: $brandBlue;
+}
+.case-studies .nav-case-studies a {
+	background-color: $brandOrange;
+}
+.classes-trainings .nav-classes-trainings a,
+.meetings-confcalls .nav-meetings-confcalls a,
+.events-seminaries .nav-events-seminaries a,
+.case-studies .nav-case-studies a {
+	background-color: $brandBlue;
+	color: $white;
 }
