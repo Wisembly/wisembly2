@@ -1,5 +1,6 @@
 {% extends 'layouts/main.html.twig' %}
 
+{# load features localization keys #}
 {% block features %}{% endblock %}
 
 {% block body_class %}classes-trainings{% endblock %}
@@ -11,9 +12,9 @@
 				<div class='column'>
 					<div class='column-inner'>
 						<div class='id'>
-							<h1><span>{{ app.features.classes_trainings_title }}</span></h1>
-							<h2><span>{{ app.features.classes_trainings_desc1 }}</span></h2>
-							<h2><span>{{ app.features.classes_trainings_desc2 }}</span></h2>
+							<h1><span>{{ 'classes_trainings_title' | trans }}</span></h1>
+							<h2><span>{{ 'classes_trainings_desc1' | trans }}</span></h2>
+							<h2><span>{{ 'classes_trainings_desc2' | trans }}</span></h2>
 						</div>
 					</div>
 				</div>
@@ -26,43 +27,43 @@
 				<li class='one first'>
 					<a href='#documents-management'>
 						<i class='picto picto-documents-management'></i>
-						<span>{{ app.features.documents_management_title }}</span>
+						<span>{{ 'documents_management_title' | trans }}</span>
 					</a>
 				</li>
 				<li class='two'>
 					<a href='#quiz'>
 						<i class='picto picto-students-evaluation'></i>
-						<span>{{ app.features.students_evaluation_title }}</span>
+						<span>{{ 'students_evaluation_title' | trans }}</span>
 					</a>
 				</li>
 				<li class='three'>
 					<a href='#'>
 						<i class='picto picto-trainings-evaluation'></i>
-						<span>{{ app.features.trainings_evaluation_title }}</span>
+						<span>{{ 'trainings_evaluation_title' | trans }}</span>
 					</a>
 				</li>
 				<li class='four'>
 					<a href='#quizzes'>
 						<i class='picto picto-quiz'></i>
-						<span class='short'>{{ app.features.quiz_title }}</span>
+						<span class='short'>{{ 'quiz_title' | trans }}</span>
 					</a>
 				</li>
 				<li class='five'>
 					<a href='#'>
 						<i class='picto picto-qa'></i>
-						<span class='short'>{{ app.features.qna_title }}</span>
+						<span class='short'>{{ 'qna_title' | trans }}</span>
 					</a>
 				</li>
 				<li class='six'>
 					<a href='#'>
 						<i class='picto picto-stats-reporting'></i>
-						<span>{{ app.features.stats_reporting_title }}</span>
+						<span>{{ 'stats_reporting_title' | trans }}</span>
 					</a>
 				</li>
 				<li class='seven'>
 					<a href='#'>
 						<i class='picto picto-multi-devices'></i>
-						<span class='short'>{{ app.features.multi_devices_title }}</span>
+						<span class='short'>{{ 'multi_devices_title' | trans }}</span>
 					</a>
 				</li>
 			</ul>

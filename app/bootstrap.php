@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Symfony\Component\Yaml\Yaml;
-use SilexCMS\Set\KeyValueSet;
+use SilexCMS\Set\LocalizationSet;
 
 use Application\Command\DatabaseCommand;
 
@@ -30,18 +30,12 @@ $app = new SilexCMS\Application(array_merge(
 $app['country'] = isset($country) ? $country : 'fr';
 $app['phone_number'] = $config['phone.numbers'][$app['country']];
 
-// ** load DB messages **
-$messagesSet = new KeyValueSet('messages', 'messages', 'message_key');
-$app->register($messagesSet);
-$app['translator.domains'] = array(
-    'messages' => array(
-        $locale => $messagesSet->getSet(),
-    )
-);
+// ** load DB messages through LocalizationsSet **
+$messages = new LocalizationSet('messages', 'messages', 'key');
+$app->register($messages);
+$messages->injectLocalizations();
 
-// add usefull extensions / providers
-$app['twig']->addExtension(new SilexCMS\Twig\Extension\ForeignKeyExtension($app));
-$app['twig']->addExtension(new SilexCMS\Twig\Extension\MapExtension($app));
+// add useful extensions / providers
 $app['twig']->addExtension(new Application\Twig\Extension\AssetsExtension($config['global']['host'], $config['global']['assets_version']));
 
 if ($app['debug']) {

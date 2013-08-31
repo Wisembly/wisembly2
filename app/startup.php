@@ -2,11 +2,14 @@
 
 use Silex\Application;
 
-use SilexCMS\Set\KeyValueSet,
+use SilexCMS\Set\LocalizationSet,
     SilexCMS\Page\StaticPage;
 
-// DataSets for translations
-$app->register(new KeyValueSet('features', 'features', 'key'));
+/**
+ * LocalizationsSets
+ */
+// features pages localization keys
+$app->register(new LocalizationSet('features', 'features', 'key'));
 
 // Pages
 $app->register(new StaticPage('index', '/', 'pages/index.html.twig'));
