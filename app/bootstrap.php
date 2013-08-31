@@ -5,6 +5,8 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use Symfony\Component\Yaml\Yaml;
 use SilexCMS\Set\KeyValueSet;
 
+use Application\Command\DatabaseCommand;
+
 $config = Yaml::parse(__DIR__.'/config/config.yml');
 $locale = isset($locale) ? $locale : $config['global']['locale_fallback'];
 
@@ -54,5 +56,8 @@ $app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
 
 unset($config);
 require_once __DIR__ . '/startup.php';
+
+// register console commands
+$app['console']->add(new DatabaseCommand());
 
 return $app;

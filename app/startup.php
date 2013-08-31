@@ -2,11 +2,11 @@
 
 use Silex\Application;
 
-use SilexCMS\Set\DataSet,
+use SilexCMS\Set\KeyValueSet,
     SilexCMS\Page\StaticPage;
 
-// DataSets
-$app->register(new DataSet('main', 'main'));
+// DataSets for translations
+$app->register(new KeyValueSet('features', 'features', 'key'));
 
 // Pages
 $app->register(new StaticPage('index', '/', 'pages/index.html.twig'));

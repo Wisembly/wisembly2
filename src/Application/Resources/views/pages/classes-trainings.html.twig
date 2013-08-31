@@ -1,5 +1,7 @@
 {% extends 'layouts/main.html.twig' %}
 
+{% block features %}{% endblock %}
+
 {% block body_class %}classes-trainings{% endblock %}
 
 {%  block content %}
@@ -9,9 +11,9 @@
 				<div class='column'>
 					<div class='column-inner'>
 						<div class='id'>
-							<h1><span>Cours et formations</span></h1>
-							<h2><span>Wisembly vous permet de rythmer vos formations.</span></h2>
-							<h2><span>Vos élèves s'approprient le contenu. Vous suivez leur évolution.</span></h2>
+							<h1><span>{{ app.features.classes_trainings_title }}</span></h1>
+							<h2><span>{{ app.features.classes_trainings_desc1 }}</span></h2>
+							<h2><span>{{ app.features.classes_trainings_desc2 }}</span></h2>
 						</div>
 					</div>
 				</div>
@@ -24,43 +26,43 @@
 				<li class='one first'>
 					<a href='#documents-management'>
 						<i class='picto picto-documents-management'></i>
-						<span>Gestion des documents</span>
+						<span>{{ app.features.documents_management_title }}</span>
 					</a>
 				</li>
 				<li class='two'>
 					<a href='#quiz'>
 						<i class='picto picto-students-evaluation'></i>
-						<span>Evaluations des élèves</span>
+						<span>{{ app.features.students_evaluation_title }}</span>
 					</a>
 				</li>
 				<li class='three'>
 					<a href='#'>
 						<i class='picto picto-trainings-evaluation'></i>
-						<span>Evaluation des formations</span>
+						<span>{{ app.features.trainings_evaluation_title }}</span>
 					</a>
 				</li>
 				<li class='four'>
 					<a href='#quizzes'>
 						<i class='picto picto-quiz'></i>
-						<span class='short'>Quiz</span>
+						<span class='short'>{{ app.features.quiz_title }}</span>
 					</a>
 				</li>
 				<li class='five'>
 					<a href='#'>
 						<i class='picto picto-qa'></i>
-						<span class='short'>Q&A</span>
+						<span class='short'>{{ app.features.qna_title }}</span>
 					</a>
 				</li>
 				<li class='six'>
 					<a href='#'>
 						<i class='picto picto-stats-reporting'></i>
-						<span>Stats & reporting</span>
+						<span>{{ app.features.stats_reporting_title }}</span>
 					</a>
 				</li>
 				<li class='seven'>
 					<a href='#'>
 						<i class='picto picto-multi-devices'></i>
-						<span class='short'>Multi-device</span>
+						<span class='short'>{{ app.features.multi_devices_title }}</span>
 					</a>
 				</li>
 			</ul>

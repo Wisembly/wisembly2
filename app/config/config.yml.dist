@@ -3,6 +3,7 @@ global:
  locale_fallback: en
  host: http://wisembly.com
  assets_version: 42
+ mysqldump: /Applications/MAMP/Library/bin/mysqldump
 
 silexcms.cache:
   enable: false
