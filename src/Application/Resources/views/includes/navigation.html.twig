@@ -9,7 +9,7 @@
 								<li class='first'>
 									<ul class='list contact-nav'>
 										<li class='item'>
-											<span class='item-text'>{{ 'contact_us_number' | trans({'%number%': '01 42 61 59 47'}) | raw }}</span>
+											<span class='item-text'>{{ 'contact_us_number' | trans({ '%number%': app.phone_number }) | raw }}</span>
 										</li>
 										<li class='item'>
 											<a href='{{ path('contact') }}' class='item-text'>{{ 'write_to_us' | trans }}</a>
