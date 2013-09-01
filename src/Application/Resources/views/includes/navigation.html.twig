@@ -9,10 +9,10 @@
 								<li class='first'>
 									<ul class='list contact-nav'>
 										<li class='item'>
-											<span class='item-text'>Contactez nous au <strong>01 42 61 59 47</strong></span>
+											<span class='item-text'>{{ 'contact_us_number' | trans({'%number%': '01 42 61 59 47'}) | raw }}</span>
 										</li>
 										<li class='item'>
-											<a href='{{ path('contact') }}' class='item-text'>Ecrivez-nous</a>
+											<a href='{{ path('contact') }}' class='item-text'>{{ 'write_to_us' | trans }}</a>
 										</li>
 									</ul>
 								</li>
@@ -26,14 +26,14 @@
 							<ul class='list'>
 								<li>
 									<div class='dropdown'>
-										<a href='' class='dropdown-toggle'>Join an event</a>
+										<a href='' class='dropdown-toggle'>{{ 'join_an_event' | trans }}</a>
 										<div class='dropdown-bottom'>
 											<form class='join-event' data-status='none'>
 												<div class='row'>
 													<div class='column eight'>
 														<div class='column-inner'>
 																<div class='input-container'>
-																	<input class='input' placeholder='Event keyword' />
+																	<input class='input' placeholder='{{ 'event_keyword' | trans }}' />
 																	<span class='input-background'></span>
 																</div>
 														</div>
@@ -41,7 +41,7 @@
 													<div class='column four'>
 														<div class='column-inner'>
 															<button class='button'>
-																<span class='button-text'>Join</span>
+																<span class='button-text'>{{ 'join_event_button' | trans }}</span>
 																<span class='button-processing'>...</span>
 															</button>
 														</div>
@@ -53,19 +53,19 @@
 								</li>
 								<li>
 									<div class='dropdown'>
-										<a href='' class='dropdown-toggle'>Login</a>
+										<a href='' class='dropdown-toggle'>{{ 'login' | trans }}</a>
 										<div class='dropdown-bottom'>
 											<form class='login clearfix' data-status='none'>
 												<div class='input-container'>
-													<input class='input' placeholder='E-mail' />
+													<input class='input' placeholder='{{ 'email' | trans }}' />
 													<span class='input-background'></span>
 												</div>
 												<div class='input-container'>
-													<input class='input' placeholder='Password' />
+													<input class='input' placeholder='{{ 'password' | trans }}' />
 													<span class='input-background'></span>
 												</div>
 												<button class='button'>
-													<span class='button-text'>Login</span>
+													<span class='button-text'>{{ 'login_button' | trans }}</span>
 													<span class='button-processing'>...</span>
 												</button>
 											</form>
@@ -91,16 +91,16 @@
 					<div class='navigation'>
 						<ul class='list'>
 							<li class='nav-classes-trainings'>
-								<a href='{{ path('classes-trainings') }}'>Pour les cours et formations</a>
+								<a href='{{ path('classes-trainings') }}'>{{ 'classes_an_trainings_menu_title' | trans }}</a>
 							</li>
 							<li class='nav-meetings-confcalls '>
-								<a href='{{ path('meetings-confcalls') }}'>Pour les réunions et conf-calls</a>
+								<a href='{{ path('meetings-confcalls') }}'>{{ 'meetings_and_confcalls_menu_title' | trans }}</a>
 							</li>
 							<li class='nav-events-seminaries'>
-								<a href='{{ path('events-seminaries') }}'>Pour les événements</a>
+								<a href='{{ path('events-seminaries') }}'>{{ 'events_and_seminaries_menu_title' | trans }}</a>
 							</li>
 							<li class='nav-case-studies'>
-								<a href='{{ path('case-studies') }}'>Etudes de cas</a>
+								<a href='{{ path('case-studies') }}'>{{ 'case_studies_menu_title' | trans }}</a>
 							</li>
 						</ul>
 					</div>
@@ -108,7 +108,7 @@
 			</div>
 			<div class='column last'>
 				<div class='column-inner'>
-					<a href='{{ path('plans') }}' class='button button-attention button-small button-light'>Essai gratuit</a>
+					<a href='{{ path('plans') }}' class='button button-attention button-small button-light'>{{ 'free_trial' | trans }}</a>
 				</div>
 			</div>
 		</div>

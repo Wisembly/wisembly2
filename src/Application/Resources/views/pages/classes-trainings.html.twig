@@ -27,43 +27,43 @@
 				<li class='one first'>
 					<a href='#documents-management'>
 						<i class='picto picto-documents-management'></i>
-						<span>{{ 'documents_management_title' | trans }}</span>
+						<span>{{ 'documents_management_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='two'>
 					<a href='#quiz'>
 						<i class='picto picto-students-evaluation'></i>
-						<span>{{ 'students_evaluation_title' | trans }}</span>
+						<span>{{ 'students_evaluation_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='three'>
 					<a href='#'>
 						<i class='picto picto-trainings-evaluation'></i>
-						<span>{{ 'trainings_evaluation_title' | trans }}</span>
+						<span>{{ 'trainings_evaluation_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='four'>
 					<a href='#quizzes'>
 						<i class='picto picto-quiz'></i>
-						<span class='short'>{{ 'quiz_title' | trans }}</span>
+						<span class='short'>{{ 'quiz_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='five'>
 					<a href='#'>
 						<i class='picto picto-qa'></i>
-						<span class='short'>{{ 'qna_title' | trans }}</span>
+						<span class='short'>{{ 'qna_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='six'>
 					<a href='#'>
 						<i class='picto picto-stats-reporting'></i>
-						<span>{{ 'stats_reporting_title' | trans }}</span>
+						<span>{{ 'stats_reporting_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='seven'>
 					<a href='#'>
 						<i class='picto picto-multi-devices'></i>
-						<span class='short'>{{ 'multi_devices_title' | trans }}</span>
+						<span class='short'>{{ 'multi_devices_link' | trans }}</span>
 					</a>
 				</li>
 			</ul>
@@ -74,8 +74,8 @@
 			<div class='row'>
 				<div class='column six'>
 					<div class='column-inner'>
-						<h3>Tous les supports de votre formation centralisés à un même endroit</h3>
-						<p>Arrêtez de jongler entre vos différentes présentations PowerPoint et les documents à distribuer aux élèves. Tout est centralisé sur une seule interface. Projetez les ou partagez les avec vos élèves en un seul clic.</p>
+						<h3>{{ 'documents_management_title' | trans }}</h3>
+						<p>{{ 'documents_management_desc' | trans }}</p>
 					</div>
 				</div>
 				<div class='column four last'>
@@ -108,20 +108,16 @@
 			<div class='row'>
 				<div class='column five'>
 					<div class='column-inner'>
-						<h3><span>Vos évaluations sont corrigées immédiatement</span></h3>
+						<h3><span>{{ 'students_evaluation_title' | trans }}</span></h3>
 						<div class='row'>
 							<div class='column six'>
 								<div class='column-inner'>
-									<p>Il n’est pas normal que vous que vous perdiez un temps précieux à corriger vos QCM d'évaluation. Grâce à Wisembly, tout est automatique.</p>
-									<p>Vous concevez simplement vos évaluations: questions ouvertes, questions à choix multiples, questions à choix unique...</p>
-									<p>Vos élèves y répondent directement depuis leur téléphone, tablette ou PC.</p>
+									{{ 'students_evaluation_desc1' | trans | raw }}
 								</div>
 							</div>
 							<div class='column six'>
 								<div class='column-inner'>
-									<p>La correction est effectuée automatiquement.</p>
-									<p>Vos étudiants accèdent immédiatement à leurs résultats ainsi qu’à la liste de bonnes réponses.</p>
-									<p>Vous avez accès aux réponses et aux notes de chacun ainsi qu’aux résultats de l’ensemble de la classe.</p>
+									{{ 'students_evaluation_desc2' | trans | raw }}
 								</div>
 							</div>
 						</div>
@@ -135,7 +131,7 @@
 			<div class='row'>
 				<div class='column three last'>
 					<div class='column-inner'>
-						<a href='{{ path('plans') }}' class='button button-large button-attention'>Essayez gratuitement</a>
+						<a href='{{ path('plans') }}' class='button button-large button-attention'>{{ 'try_for_free' | trans }}</a>
 					</div>
 				</div>
 			</div>
