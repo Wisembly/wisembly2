@@ -1,5 +1,8 @@
 {% extends 'layouts/main.html.twig' %}
 
+{# load features localization keys #}
+{% block features_meeting %}{% endblock %}
+
 {% block body_class %}meetings-confcalls{% endblock %}
 
 {% block content %}
@@ -9,8 +12,8 @@
 				<div class='column'>
 					<div class='column-inner'>
 						<div class='id'>
-							<h1><span>Boostez vos réunions</span></h1>
-							<h2><span>Wisembly aide des centaines d’entreprises à mieux préparer, animer et assurer le suivi de leurs réunions & conf-call.</span></h2>
+							<h1><span>{{ 'meeting_confcalls_title' | trans }}</span></h1>
+							<h2><span>{{ 'meeting_confcalls_desc' | trans }}</span></h2>
 						</div>
 					</div>
 				</div>
@@ -23,43 +26,43 @@
 				<li class='one first'>
 					<a href='#schedule'>
 						<i class='picto'></i>
-						<span>Ordre du jour</span>
+						<span>{{ 'schedule_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='two'>
 					<a href='#quiz'>
 						<i class='picto'></i>
-						<span>Partage et visualisation de documents</span>
+						<span>{{ 'documents_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='three'>
 					<a href='#'>
 						<i class='picto'></i>
-						<span>Remontée de questions & idées</span>
+						<span>{{ 'questions_and_ideas_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='four'>
 					<a href='#quizzes'>
 						<i class='picto'></i>
-						<span>Votes / prise de décision</span>
+						<span>{{ 'decision_taking_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='five'>
 					<a href='#'>
 						<i class='picto'></i>
-						<span>Enquête de satisfaction</span>
+						<span>{{ 'feedback_survey_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='six'>
 					<a href='#'>
 						<i class='picto'></i>
-						<span>Statistiques & comptes-rendus</span>
+						<span>{{ 'statistics_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='seven'>
 					<a href='#'>
 						<i class='picto'></i>
-						<span>Multi-devices</span>
+						<span>{{ 'multi_devices_link' | trans }}</span>
 					</a>
 				</li>
 			</ul>
@@ -70,10 +73,8 @@
 			<div class='row'>
 				<div class='column six'>
 					<div class='column-inner'>
-						<h3>Organisez vos réunions point par point</h3>
-						<p>Préparez l’agenda de votre réunion en fonction des sujets à traiter.</p>
-						<p>Partagez l’ordre du jour avec l’ensemble des personnes qui participent à la réunion.</p>
-						<p>Retrouvez facilement les idées, propositions et décisions prises sur les différents sujets traités.</p>
+						<h3>{{ 'schedule_meetings_title' | trans }}</h3>
+						{{ 'schedule_meetings_desc' | trans | raw }}
 					</div>
 				</div>
 				<div class='column four last'>
@@ -88,7 +89,7 @@
 			<div class='row'>
 				<div class='column three last'>
 					<div class='column-inner'>
-						<a href='{{ path('plans') }}' class='button button-large button-attention'>Essayez gratuitement</a>
+						<a href='{{ path('plans') }}' class='button button-large button-attention'>{{ 'try_for_free' | trans }}</a>
 					</div>
 				</div>
 			</div>
@@ -96,16 +97,16 @@
 	</div>
 	<div class='section' id=''>
 		<div class='container'>
-			<h3 class='text-centered'>Tous les supports de votre réunion centralisés à un même endroit</h3>
+			<h3 class='text-centered'>{{ 'documents_title' | trans }}</h3>
 			<div class='row'>
 				<div class='column three'>
 					<div class='column-inner'>
-						<p>Arrêtez de jongler entre vos différentes présentations PowerPoint et les documents à envoyer par mail aux participants.</p>
+						<p>{{ 'documents_desc1' | trans }}</p>
 					</div>
 				</div>
 				<div class='column three last'>
 					<div class='column-inner'>
-						<p>Tout est rassemblé sur votre interface Wisembly, décidez en un clic de les projeter ou de les mettre à disposition de tous. Votre contenu est totalement sécurisé. Seuls les utilisaturs accrédités peuvent y accéder.</p>
+						<p>{{ 'documents_desc2' | trans }}</p>
 					</div>
 				</div>
 			</div>
@@ -116,7 +117,7 @@
 			<div class='row'>
 				<div class='column three last'>
 					<div class='column-inner'>
-						<a href='{{ path('plans') }}' class='button button-large button-attention'>Essayez gratuitement</a>
+						<a href='{{ path('plans') }}' class='button button-large button-attention'>{{ 'try_for_free' | trans }}</a>
 					</div>
 				</div>
 			</div>
@@ -127,18 +128,16 @@
 			<div class='row'>
 				<div class='column six'>
 					<div class='column-inner'>
-						<h3>Vos participants sont impliqués et restent concentrés</h3>
+						<h3>{{ 'questions_and_ideas_title' | trans }}</h3>
 						<div class='row'>
 							<div class='column six'>
 								<div class='column-inner'>
-									<p>Chaque participant peut à tout moment poser réagir ou poser une question sur le sujet traité sans interrompre la présentation.</p>
-									<p>Vous ne passez à côté d’aucune idée pertinente.</p>
+									{{ 'questions_and_ideas_desc1' | trans | raw }}
 								</div>
 							</div>
 							<div class='column six'>
 								<div class='column-inner'>
-									<p>Les participants se sentent impliqués et écoutés lors de vos réunions.</p>
-									<p>Tout le monde suit la réunion et reste impliqué.</p>
+									{{ 'questions_and_ideas_desc2' | trans | raw }}
 								</div>
 							</div>
 						</div>
@@ -156,7 +155,7 @@
 			<div class='row'>
 				<div class='column three last'>
 					<div class='column-inner'>
-						<a href='{{ path('plans') }}' class='button button-large button-attention'>Essayez gratuitement</a>
+						<a href='{{ path('plans') }}' class='button button-large button-attention'>{{ 'try_for_free' | trans }}</a>
 					</div>
 				</div>
 			</div>
@@ -172,18 +171,16 @@
 				</div>
 				<div class='column six last'>
 					<div class='column-inner'>
-						<h3>Prenez de vraies décisions durant vos réunions</h3>
+						<h3>{{ 'decision_taking_title' | trans }}</h3>
 						<div class='row'>
 							<div class='column six'>
 								<div class='column-inner'>
-									<p>Les réunions sont de parfaits moments pour prendre des décisions communes.</p>
-									<p>Pas la peine de faire un tour de table interminable sans arriver à une décision claire. Un simple clic sur Wisembly vous permet d’organiser un vote.</p>
+									{{ 'decision_taking_desc1' | trans | raw }}
 								</div>
 							</div>
 							<div class='column six'>
 								<div class='column-inner'>
-									<p>Le résultat est immédiat.</p>
-									<p>Vous gardez une trace de chacune des décisions prises dans vos différentes réunions.</p>
+									{{ 'decision_taking_desc2' | trans | raw }}
 								</div>
 							</div>
 						</div>
@@ -197,7 +194,7 @@
 			<div class='row'>
 				<div class='column three last'>
 					<div class='column-inner'>
-						<a href='{{ path('plans') }}' class='button button-large button-attention'>Essayez gratuitement</a>
+						<a href='{{ path('plans') }}' class='button button-large button-attention'>{{ 'try_for_free' | trans }}</a>
 					</div>
 				</div>
 			</div>
@@ -205,21 +202,21 @@
 	</div>
 	<div class='section' id=''>
 		<div class='container'>
-			<h3 class='text-centered'>Améliorez vos réunions au fur et à mesure</h3>
+			<h3 class='text-centered'>{{ 'feedback_survey_title' | trans }}</h3>
 			<div class='row'>
 				<div class='column four'>
 					<div class='column-inner'>
-						<p>Pourquoi ne pas profiter de vos participants pour continuer à récolter du feedback à la fin de votre réunion ?</p>
+						<p>{{ 'feedback_survey_desc1' | trans }}</p>
 					</div>
 				</div>
 				<div class='column four'>
 					<div class='column-inner'>
-						<p>Avec Wisembly, vous pouvez très rapidement récolter leur opinion sur le déroulé de la réunion, sur les sujets abordés et les décisions qui ont été prises.</p>
+						<p>{{ 'feedback_survey_desc2' | trans }}</p>
 					</div>
 				</div>
 				<div class='column four last'>
 					<div class='column-inner'>
-						<p>Quelques clics suffisent à identifier les points encore flous et à améliorer vos prochaines réunions.</p>
+						<p>{{ 'feedback_survey_desc3' | trans }}</p>
 					</div>
 				</div>
 			</div>
@@ -230,7 +227,7 @@
 			<div class='row'>
 				<div class='column three last'>
 					<div class='column-inner'>
-						<a href='{{ path('plans') }}' class='button button-large button-attention'>Essayez gratuitement</a>
+						<a href='{{ path('plans') }}' class='button button-large button-attention'>{{ 'try_for_free' | trans }}</a>
 					</div>
 				</div>
 			</div>
@@ -246,10 +243,8 @@
 				</div>
 				<div class='column six'>
 					<div class='column-inner'>
-						<h3>Gardez une trace de chacune de vos réunions</h3>
-						<p>Wisembly garde en mémoire tout ce qui s’est passé durant votre réunion.</p>
-						<p>Retrouvez rapidement les sujets traités, les documents partagés, les questions soulevées et les décisions qui ont été prises.</p>
-						<p>Wisembly devient la mémoire de vos réunions.</p>
+						<h3>{{ 'statistics_title' | trans }}</h3>
+						{{ 'statistics_desc' | trans | raw }}
 					</div>
 				</div>
 				<div class='column three last'>
@@ -265,7 +260,7 @@
 			<div class='row'>
 				<div class='column three last'>
 					<div class='column-inner'>
-						<a href='{{ path('plans') }}' class='button button-large button-attention'>Essayez gratuitement</a>
+						<a href='{{ path('plans') }}' class='button button-large button-attention'>{{ 'try_for_free' | trans }}</a>
 					</div>
 				</div>
 			</div>
@@ -280,10 +275,8 @@
 				</div>
 				<div class='column six last'>
 					<div class='column-inner'>
-						<h3>Vos participants sont déjà équipés</h3>
-						<p>Pourquoi perdre du temps avec des explications interminables en début de réunion?</p>
-						<p>Vos participants se connectent avec le device de leur choix (téléphone, smartphone, tablette, PC). Aucun compte à créer, pas de logiciel à télécharger.</p>
-						<p>L’accès est immédiat et intuitif.</p>
+						<h3>{{ 'multi_devices_title' | trans }}</h3>
+						{{ 'multi_devices_desc' | trans | raw }}
 					</div>
 				</div>
 			</div>
@@ -294,7 +287,7 @@
 			<div class='row'>
 				<div class='column three last'>
 					<div class='column-inner'>
-						<a href='{{ path('plans') }}' class='button button-large button-attention'>Essayez gratuitement</a>
+						<a href='{{ path('plans') }}' class='button button-large button-attention'>{{ 'try_for_free' | trans }}</a>
 					</div>
 				</div>
 			</div>

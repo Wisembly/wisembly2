@@ -10,6 +10,9 @@ use SilexCMS\Set\LocalizationSet,
  */
 // features_training page localization keys
 $app->register(new LocalizationSet('features_training', 'features_training', 'key'));
+// features_training page localization keys
+$app->register(new LocalizationSet('features_meeting', 'features_meeting', 'key'));
+
 
 // Pages
 $app->register(new StaticPage('index', '/', 'pages/index.html.twig'));
