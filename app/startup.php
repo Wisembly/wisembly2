@@ -8,13 +8,10 @@ use SilexCMS\Set\LocalizationSet,
 /**
  * LocalizationsSets
  */
-// features_training page localization keys
 $app->register(new LocalizationSet('features_training', 'features_training', 'key'));
-// features_meeting page localization keys
 $app->register(new LocalizationSet('features_meeting', 'features_meeting', 'key'));
-// features_event page localization keys
 $app->register(new LocalizationSet('features_event', 'features_event', 'key'));
-
+$app->register(new LocalizationSet('homepage', 'homepage', 'key'));
 
 // Pages
 $app->register(new StaticPage('index', '/', 'pages/index.html.twig'));

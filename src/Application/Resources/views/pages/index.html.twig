@@ -1,5 +1,8 @@
 {% extends 'layouts/main.html.twig' %}
 
+{# load homepage localization keys #}
+{% block homepage %}{% endblock %}
+
 {% block body_class %}frontpage{% endblock %}
 
 {% block content %}
@@ -10,28 +13,28 @@
                     <a href='#clients' class='jump-after-fold'>
                         <i class='picto down-chevron first'></i>
                         <i class='picto down-chevron last'></i>
-                        <span>Découvrez nos <strong>400</strong> heureux clients et leurs avis</span>
+                        <span>{{ 'discover_our_happy_clients' | trans | raw }}</span>
                     </a>
                     <div class='column five'>
                         <div class='column-inner'>
-                            <h1>Collaborez en réunion</h1>
-                            <h2>Wisembly est une solution web & mobile qui vous permet de préparer, d’animer et d’assurer le suivi de vos réunions.</h2>
+                            <h1>{{ 'homepage_title' | trans }}</h1>
+                            <h2>{{ 'homepage_baseline' | trans }}</h2>
                             <div class='try-me'>
-                                <div class='try-me-label'>Découvrez Wisembly pour les :</div>
+                                <div class='try-me-label'>{{ 'discover_wisembly_for' | trans }}</div>
                                 <ul class='list try-me-choices'>
                                     <li class='first'>
                                         <a href='{{ path('classes-trainings') }}'>
-                                            Formations
+                                            {{ 'formations' | trans }}
                                         </a>
                                     </li>
                                     <li class='second'>
                                         <a href='{{ path('meetings-confcalls') }}'>
-                                            Réunions
+                                            {{ 'meetings' | trans }}
                                         </a>
                                     </li>
                                     <li class='last'>
                                         <a href='{{ path('events-seminaries') }}'>
-                                            Evénements
+                                            {{ 'events' | trans }}
                                         </a>
                                     </li>
                                 </ul>
@@ -107,7 +110,7 @@
                 </a>
                 <div class='column six'>
                     <div class='column-inner'>
-                        <h3>Témoignages</h3>
+                        <h3>{{ 'testimonials' | trans }}</h3>
                         <ul class='list testimonials'>
                             <li>
                                 <div class='media'>
@@ -115,7 +118,7 @@
                                         <img src='/static/images/edito/dias.JPG'>
                                     </div>
                                     <div class='bd'>
-                                        <p class='quote'>Tout le monde a adoré : c'est une manière d'intervenir qui n'existait pas avant [...] Wisembly permet d'aller au-delà de la présentation et d'ouvrir le dialogue.</p>
+                                        <p class='quote'>{{ 'quote_dias' | trans }}</p>
                                         <p class='author'><small>Georges-Edouard Dias, L'Oréal</small></p>
                                     </div>
                                 </div>
@@ -126,7 +129,7 @@
                                         <img src='/static/images/edito/dias.JPG'>
                                     </div>
                                     <div class='bd'>
-                                        <p class='quote'>Tout le monde a adoré : c'est une manière d'intervenir qui n'existait pas avant [...] Wisembly permet d'aller au-delà de la présentation et d'ouvrir le dialogue.</p>
+                                        <p class='quote'>{{ 'quote_dias' | trans }}</p>
                                         <p class='author'><small>Georges-Edouard Dias, L'Oréal</small></p>
                                     </div>
                                 </div>
@@ -136,7 +139,7 @@
                 </div>
                 <div class='column six last'>
                     <div class='column-inner'>
-                        <h3>Clients</h3>
+                        <h3>{{ 'clients' | trans }}</h3>
                         <ul class='list clients-list'>
                             <li>
                                 <div class='inner'>
