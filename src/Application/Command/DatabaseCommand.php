@@ -17,13 +17,14 @@ class DatabaseCommand extends Command
         $this->setName('wisembly2:database')
             ->setDescription('Export and import DB utilities')
             ->addOption('dump', null, InputOption::VALUE_NONE, 'Dump current DB tables and store them in db/ folder')
-            ->addOption('import', null, InputOption::VALUE_NONE, 'Load saved DB tables in db/ folder in database');
+            ->addOption('import', null, InputOption::VALUE_NONE, 'Load saved DB tables in db/ folder in database')
+            ->addOption('clone', null, InputOption::VALUE_REQUIRED, 'Clone a db from dump file to all other languages databases');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        if (!$input->getOption('dump') && !$input->getOption('import')) {
-            $output->writeln('<error>You must add --dump or --import option to do something</error>');
+        if (!$input->getOption('dump') && !$input->getOption('import') && !$input->getOption('clone')) {
+            $output->writeln('<error>You must add --dump, --import or --clone=lang option to do something</error>');
             return;
         }
 
@@ -41,6 +42,10 @@ class DatabaseCommand extends Command
         if ($input->getOption('import')) {
             return $this->import($config, $output);
         }
+
+        if ($input->getOption('clone')) {
+            return $this->cloneDb($config, $input, $output);
+        }
     }
 
     private function dump(array $config, OutputInterface $output)
@@ -56,7 +61,7 @@ class DatabaseCommand extends Command
             $db = array_merge($database, $default);
             $command = $mysqldump ." --add-drop-database -u ". $db['user'] ." -p". $db['password'] ." ". $db['dbname'] ." | gzip > ". __DIR__ . "/../../../db/" . $db['dbname'] .".sql.gz";
 
-            $output->writeln('<info>Dumping '. $db['dbname'] .' database..</info>');
+            $output->writeln("<info>Dumping {$name} database..</info>");
             $process = new Process($command);
             $process->setTimeout(3600);
             $process->run();
@@ -80,7 +85,7 @@ class DatabaseCommand extends Command
             $db = array_merge($database, $default);
             $mysql = 'mysql -u ' . $db['user'] . ' -p' . $db['password'];
 
-            $output->writeln('<info>Dumping '. $db['dbname'] .' database if exists..</info>');
+            $output->writeln("<info>Dumping {$name} database if exists..</info>");
             $command = 'echo "DROP DATABASE IF EXISTS '. $db['dbname'] . '" | ' . $mysql . ' && echo "CREATE DATABASE ' . $db['dbname'] . '" | ' . $mysql;
             $process = new Process($command);
             $process->run();
@@ -90,8 +95,46 @@ class DatabaseCommand extends Command
                 return;
             }
 
-            $output->writeln('<info>Importing '. $db['dbname'] .' database..</info>');
+            $output->writeln("<info>Importing {$name} database..</info>");
             $command = 'gunzip < ' . __DIR__ . '/../../../db/' . $db['dbname'] . '.sql.gz | ' . $mysql . ' ' . $db['dbname'];
+            $process = new Process($command);
+            $process->setTimeout(3600);
+            $process->run();
+
+            if (!$process->isSuccessful()) {
+                $output->writeln('<error>'. $process->getErrorOutput() .'</error>');
+                return;
+            }
+        }
+
+        $output->writeln('<info>Done!</info>');
+    }
+
+    private function cloneDb(array $config, InputInterface $input, OutputInterface $output)
+    {
+        $reference = $input->getOption('clone');
+
+        foreach ($config['databases'] as $name => $database) {
+            if ('default' === $name) {
+                $default = $database;
+                continue;
+            }
+
+            $db = array_merge($database, $default);
+            $mysql = 'mysql -u ' . $db['user'] . ' -p' . $db['password'];
+
+            $output->writeln("<info>Dumping {$name} database if exists..</info>");
+            $command = 'echo "DROP DATABASE IF EXISTS '. $db['dbname'] . '" | ' . $mysql . ' && echo "CREATE DATABASE ' . $db['dbname'] . '" | ' . $mysql;
+            $process = new Process($command);
+            $process->run();
+
+            if (!$process->isSuccessful()) {
+                $output->writeln('<error>'. $process->getErrorOutput() .'</error>');
+                return;
+            }
+
+            $output->writeln("<info>Cloning {$name} database with {$reference}.sql.gz dump file..</info>");
+            $command = 'gunzip < ' . __DIR__ . '/../../../db/' . $reference . '.sql.gz | ' . $mysql . ' ' . $db['dbname'];
             $process = new Process($command);
             $process->setTimeout(3600);
             $process->run();
