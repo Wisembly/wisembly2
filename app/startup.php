@@ -10,8 +10,10 @@ use SilexCMS\Set\LocalizationSet,
  */
 // features_training page localization keys
 $app->register(new LocalizationSet('features_training', 'features_training', 'key'));
-// features_training page localization keys
+// features_meeting page localization keys
 $app->register(new LocalizationSet('features_meeting', 'features_meeting', 'key'));
+// features_event page localization keys
+$app->register(new LocalizationSet('features_event', 'features_event', 'key'));
 
 
 // Pages
