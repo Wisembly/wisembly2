@@ -1,0 +1,28 @@
+{% extends 'layouts/main.html.twig' %}
+
+{% block body_class %}administration-edit{% endblock %}
+
+{% block content %}
+<div class="section">
+    <div class="container">
+        <div class="bread-crumb">
+            <a class="catcher btn btn-small" href="{{path('logout')}}">Logout</a>
+            <a href="/">Home</a> > <a href="{{path('administration_hub') }}">Administration Hub</a> > <a href="{{ path('administration_table', {'table': table}) }}">{{ table|title }}</a> > #{{ primaryKey }}
+        </div>
+        <div class="row content-wrapper">
+            <div class="main-content contact">
+                <div class="row">
+                    <div class="span12">
+                        <form method="post">
+                            {{ form_widget(form) }}
+                            <div class="form-actions">
+                                <input type="submit" class="btn btn-large btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
