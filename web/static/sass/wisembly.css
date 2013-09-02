@@ -742,35 +742,6 @@ img {
   .headline .browser-wrapper {
     padding-top: 150px;
     position: relative; }
-  .headline .browser-wrapper.first b {
-    display: block;
-    width: 149px;
-    height: 41px;
-    position: absolute;
-    right: -92px;
-    top: 15px;
-    background-image: url(/static/images/doodles/arrow.png);
-    opacity: 0.5; }
-  .headline .browser-wrapper.first i {
-    display: block;
-    width: 132px;
-    height: 56px;
-    position: absolute;
-    right: -68px;
-    top: -60px;
-    background-image: url(/static/images/doodles/doodle.png);
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    -webkit-transform: rotate(-5deg); }
-  .headline .browser-wrapper.last b {
-    display: block;
-    width: 149px;
-    height: 41px;
-    position: absolute;
-    left: -92px;
-    top: 50px;
-    background-image: url(/static/images/doodles/arrow-left.png);
-    opacity: 0.5; }
 
 .jump-after-fold {
   display: block;
@@ -1574,10 +1545,8 @@ form[data-status='testing'] .button-processing {
   .navigation a {
     display: block;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 13px;
-    padding: 0 6px;
-    font-weight: 600;
+    font-size: 16px;
+    padding: 0 12px;
     color: #999999;
     line-height: 70px; }
   .navigation a:hover {
