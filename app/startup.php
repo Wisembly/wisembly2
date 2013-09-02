@@ -19,6 +19,7 @@ $app->register(new LocalizationSet('homepage', 'homepage', 'key'));
  * DataSets
  */
 $app->register(new DataSet('cases', 'cases'));
+$app->register(new DataSet('history', 'history'));
 
 // Pages
 $app->register(new StaticPage('index', '/', 'pages/index.html.twig'));

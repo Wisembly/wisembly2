@@ -30,10 +30,12 @@ $app = new SilexCMS\Application(array_merge(
 $app['country'] = isset($country) ? $country : 'fr';
 $app['phone_number'] = $config['phone.numbers'][$app['country']];
 
-// ** load DB messages through LocalizationsSet **
-$messages = new LocalizationSet('messages', 'messages', 'key');
-$app->register($messages);
-$messages->injectLocalizations();
+// ** load DB messages through LocalizationsSet if message table exist**
+try {
+    $messages = new LocalizationSet('messages', 'messages', 'key');
+    $app->register($messages);
+    $messages->injectLocalizations();
+} catch (\Exception $e) {}
 
 // add useful extensions / providers
 $app['twig']->addExtension(new Application\Twig\Extension\AssetsExtension($config['global']['host'], $config['global']['assets_version']));
