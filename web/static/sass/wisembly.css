@@ -1133,6 +1133,51 @@ img {
     font-size: 12px;
     font-weight: bold; }
 
+.plan {
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden; }
+  .plan h3 {
+    font-size: 16px;
+    font-weight: 400;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    background-color: #fafbfc;
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); }
+  .plan h3,
+  .plan h4 {
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 0; }
+  .plan h4 {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #999999; }
+  .plan ul {
+    border-bottom: 1px solid #e0e0e0; }
+  .plan li {
+    padding: 15px 20px; }
+    .plan li:nth-child(even) {
+      background-color: #eff8fb; }
+  .plan .list-dot {
+    display: inline-block;
+    background-color: #ff6539;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px; }
+  .plan .button {
+    margin: 20px; }
+
+.plan-meetings-conf-calls h3 {
+  border-color: #66bc58; }
+
+.plan-teaching-training h3 {
+  border-color: #ff6539; }
+
+.plan-events-seminaries h3 {
+  border-color: #0786cd; }
+
 .container {
   width: 1024px;
   margin: 0 auto; }
