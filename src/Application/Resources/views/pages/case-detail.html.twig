@@ -1,0 +1,29 @@
+{% extends 'layouts/main.html.twig' %}
+
+{% block body_class %}case-detail{% endblock %}
+
+{# automatically get case in app.set provided by slug in url #}
+{% set case = app.set %}
+
+{% block content %}
+    <a href='{{ path('case-studies') }}'>{{ 'back' | trans }}</a>
+	<div class='section hec' id='hec'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column six'>
+					<div class='column-inner'>
+						<h3>{{ case.title }}</h3>
+						<h4>{{ 'case_context_title' | trans }}</h4>
+						{{ case.context | raw }}
+						<h4>{{ 'case_usage_title' | trans }}</h4>
+						{{ case.usage | raw }}
+						<h4>{{ 'case_results_title' | trans }}</h4>
+						{{ case.results | raw }}
+                        <blockquote>{{ case.blockquote }}</blockquote>
+						<p>{{ case.interviewed }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

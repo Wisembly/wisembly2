@@ -1,5 +1,8 @@
 {% extends 'layouts/main.html.twig' %}
 
+{# load cases DataSet #}
+{% block cases %}{% endblock %}
+
 {% block body_class %}case-studies{% endblock %}
 
 {% block content %}
@@ -8,71 +11,29 @@
 			<div class='row'>
 				<div class='column'>
 					<div class='column-inner'>
-						<h1>Comme nos clients: gagnez en productivité durant vos meetings</h1>
-						<h2>Wisembly aide des centaines d’entreprise à collaborer en réunion et à booster leur productivité.</h2>
+						<h1>{{ 'case_studies_global_page_title' | trans }}</h1>
+						<h2>{{ 'case_studies_global_page_desc' | trans }}</h2>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class='section case-study case-study-la-poste'>
-		<div class='container'>
-			<div class='row'>
-				<div class='column six centered'>
-					<div class='column-inner'>
-						<div class='img'>
-							<img src='/static/images/clients/la-poste.png'>
-						</div>
-						<h3>Séminaires à La Poste</h3>
-						<a href='{{ path('case-la-poste') }}'>Lire l'étude de cas de La Poste</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class='section case-study case-study-sncf'>
-		<div class='container'>
-			<div class='row'>
-				<div class='column six centered'>
-					<div class='column-inner'>
-						<div class='img'>
-							<img src='/static/images/clients/sncf.png'>
-						</div>
-						<h3>Le Tchat du président à la SNCF</h3>
-						<a href='{{ path('case-sncf') }}'>Lire l'étude de cas de la SNCF</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>			
-	<div class='section case-study case-study-auchan'>
-		<div class='container'>
-			<div class='row'>
-				<div class='column six centered'>
-					<div class='column-inner'>
-						<div class='img'>
-							<img src='/static/images/clients/auchan.png'>
-						</div>
-						<h3>Conference Calls chez Auchan</h3>
-						<a href='{{ path('case-auchan') }}'>Lire l'étude de cas d'Auchan</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class='section case-study case-study-hec'>
-		<div class='container'>
-			<div class='row'>
-				<div class='column six centered'>
-					<div class='column-inner'>
-						<div class='img'>
-							<img src='/static/images/clients/hec.png'>
-						</div>
-						<h3>Formations à HEC</h3>
-						<a href='{{ path('case-hec') }}'>Lire l'étude de cas d'HEC</a>
-					</div>
-				</div>	
-			</div>
-		</div>
-	</div>
+
+    {% for case in app.cases %}
+        <div class='section case-study case-study-{{ case.slug }}'>
+    		<div class='container'>
+    			<div class='row'>
+    				<div class='column six centered'>
+    					<div class='column-inner'>
+    						<div class='img'>
+    							<img src='{{ case.client_logo }}'>
+    						</div>
+    						<h3>{{ case.title }}</h3>
+    						<a href='{{ path('case-detail', { slug: "la-poste"}) }}'>{{ 'read_case_study_link' | trans }}</a>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    {% endfor %}
 {% endblock %}
