@@ -479,15 +479,17 @@ a {
     left: 0;
     background-color: white; }
 
-.documents-management {
+.documents-management,
+.stats-reporting,
+.students-evaluation {
   background-image: -webkit-linear-gradient(top, rgba(239, 248, 251, 0), rgba(239, 248, 251, 0) 80%, #eff8fb); }
-  .documents-management .container {
-    background-image: url(/static/images/illustrations/managing-documents.png);
-    background-position: right center;
-    background-repeat: no-repeat; }
+
+.documents-management .container {
+  background-image: url(/static/images/illustrations/managing-documents.png);
+  background-position: right center;
+  background-repeat: no-repeat; }
 
 .students-evaluation {
-  background-image: -webkit-linear-gradient(top, rgba(239, 248, 251, 0), rgba(239, 248, 251, 0) 80%, #eff8fb);
   /* h3 span {
   	padding: 2px 5px;
   	background-color: $brandBlueLight;

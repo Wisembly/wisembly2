@@ -196,9 +196,12 @@ a {
 		background-color: $white;
 	}
 }
-.documents-management {
+.documents-management,
+.stats-reporting,
+.students-evaluation {
 	background-image: -webkit-linear-gradient(top, rgba($brandBlueExtraExtraExtraLight, 0), rgba($brandBlueExtraExtraExtraLight, 0) 80%, rgba($brandBlueExtraExtraExtraLight, 1));
-	
+}
+.documents-management {	
 	.container {
 		background-image: url(/static/images/illustrations/managing-documents.png);
 		background-position: right center;
@@ -206,7 +209,6 @@ a {
 	}
 }
 .students-evaluation {
-	background-image: -webkit-linear-gradient(top, rgba($brandBlueExtraExtraExtraLight, 0), rgba($brandBlueExtraExtraExtraLight, 0) 80%, rgba($brandBlueExtraExtraExtraLight, 1));
 	
 	/* h3 span {
 		padding: 2px 5px;
