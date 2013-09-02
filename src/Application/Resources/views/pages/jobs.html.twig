@@ -5,7 +5,8 @@
 {% block content %}
 	<div class='section header' style='background-image: url("http://cdn0.stocksy.com/a/n7L000/z0/81207.jpg");'>
 		<div class='container'>
-			<h1>Rejoignez Wisembly</h1>
+			<h1>{{ 'jobs_page_title' | trans }}</h1>
+			<h2>{{ 'jobs_page_desc' | trans }}</h2>
 		</div>
 	</div>
 	<div class='section'>
@@ -13,12 +14,12 @@
 			<div class='row'>
 				<div class='column five'>
 					<div class='column-inner'>
-						<h3>Nous	 transformons la manière dont les gens se réunissent et collaborent. Ca vous intéresse ?</h3>
+						<h3>{{ 'jobs_page_baseline' | trans }}</h3>
 					</div>
 				</div>
 				<div class='column six last'>
 					<div class='column-inner'>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						{{ 'jobs_page_baseline_desc' | trans | raw }}
 					</div>
 				</div>
 			</div>
@@ -26,7 +27,7 @@
 	</div>
 	<div class='section'>
 		<div class='container'>
-			<h3 class='text-centered'>En plein de centre de Paris, pour le monde entier</h3>
+			<h3 class='text-centered'>{{ 'jobs_page_location_title' | trans }}</h3>
 			<ul class='list gallery-list'>
 				<li>
 					<div class='item'>
@@ -78,13 +79,13 @@
 			<div class='row'>
 				<div class='column five'>
 					<div class='column-inner'>
-						<h3>Pourquoi travailler chez Wisembly ?</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<h3>{{ 'jobs_page_why_wisembly_title' | trans }}</h3>
+						{{ 'jobs_page_why_wisembly_desc' | trans | raw }}
 					</div>
 				</div>
 				<div class='column six last'>
 					<div class='column-inner'>
-						<h3>Positions ouvertes</h3>
+						<h3>{{ 'jobs_page_open_positions_title' | trans }}</h3>
 					</div>
 				</div>
 			</div>

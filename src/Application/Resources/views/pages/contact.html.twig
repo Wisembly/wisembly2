@@ -5,8 +5,8 @@
 {% block content %}
 	<div class='section header' style='background-image: url("http://cdn2.stocksy.com/a/AtB000/z0/45704.jpg");'>
 		<div class='container'>
-			<h1>Prenez contact avec nous</h1>
-			<h2>Il vous manque une information ? Vous avez besoin d’un devis détaillé ? Contactez-nous, nous sommes à votre disposition. Nous vous répondons immédiatement.</h2>
+			<h1>{{ 'contact_page_title' | trans }}</h1>
+			<h2>{{ 'contact_page_desc' | trans }}</h2>
 		</div>
 	</div>
 	<div class='section'>
@@ -14,61 +14,62 @@
 			<div class='row'>
 				<div class='column three'>
 					<div class='column-inner'>
-						<h3>Wether you need immediate help or are considering Wisembly, we'll get in touch right away.</h3>
+						<h3>{{ 'contact_page_baseline' | trans }}</h3>
 					</div>
 				</div>
 				<div class='column eight last'>
 					<div class='column-inner'>
 						<div class='hero phone-sheet'>
-							<h3>Call us</h3>
+							<h3>{{ 'call_us' | trans }}</h3>
 							<div class='row'>
 								<div class='column six'>
 									<div class='column-inner'>
-										<p class='label'>Office hours</p>
-										<p class='hours'>Monday to Friday</p>
-										<p class='hours'>10am to 6pm</p>
+										{{ 'office_hours' | trans | raw }}
 									</div>
 								</div>
 								<div class='column six'>
 									<div class='column-inner'>
-										<p class='label'>Telephone</p>
-										<p class='phone'>01 42 61 59 47</p>
+									    {{ 'telephone_info' | trans({ '%number%': app.phone_number }) | raw }}
 									</div>
 								</div>
 							</div>
 						</div>
 						<form class='contact-form' data-status='none'>
-							<h3>Write to us</h3>
+							<h3>{{ 'write_to_us' | trans }}</h3>
 							<div class='row'>
 								<div class='column six'>
 									<div class='column-inner'>
-										<label class='label' for='contact_fullname'>{{ 'Full name' | trans }}</label>
+										<label class='label' for='contact_fullname'>{{ 'fullname' | trans }}</label>
 										<label class='input-container' for='contact_fullname'>
 											<input type='text' class='input' id='contact_fullname' placeholder='{{ 'Full name' | trans }}'>
 											<b class='input-background'></b>
 										</label>
-										<label class='label' for='contact_company'>{{ 'Company' | trans }}</label>
+										<label class='label' for='contact_company'>{{ 'company' | trans }}</label>
 										<label class='input-container' for='contact_company'>
 											<input type='text' class='input' id='contact_company' placeholder='{{ 'Company' | trans }}'>
 											<b class='input-background'></b>
 										</label>
-										<label class='label' for='contact_phone'>{{ 'Phone number' | trans }}</label>
+										<label class='label' for='contact_phone'>{{ 'phone_number' | trans }}</label>
 										<label class='input-container' for='contact_phone'>
 											<input type='text' class='input' id='contact_phone' placeholder='{{ 'Phone number' | trans }}'>
 											<b class='input-background'></b>
 										</label>
-										<label class='label' for='contact_reason'>{{ 'Reason' | trans }}</label>
+										<label class='label' for='contact_reason'>{{ 'reason' | trans }}</label>
 										<select name="contact_reason" id='contact_reason'>
-											<option value="option1">Demande de devis</option>
-											<option value="option2">option2</option>
+											<option value="{{ 'ask_for_quote' | trans }}">{{ 'ask_for_quote' | trans }}</option>
+											<option value="{{ 'more_information' | trans }}">{{ 'more_information' | trans }}</option>
+											<option value="{{ 'write_an_article' | trans }}">{{ 'write_an_article' | trans }}</option>
+											<option value="{{ 'contact_founders' | trans }}">{{ 'contact_founders' | trans }}</option>
+											<option value="{{ 'other' | trans }}">{{ 'other' | trans }}</option>
+											
 										</select>
 									</div>
 								</div>
 								<div class='column six'>
 									<div class='column-inner'>
-										<label class='label' for='contact_message'>{{ 'Message' | trans }}</label>
+										<label class='label' for='contact_message'>{{ 'your_message' | trans }}</label>
 										<label class='textarea-container' for='contact_message'>
-											<textarea class='textarea' id='contact_message' placeholder='{{ 'Your message' | trans }}'></textarea>
+											<textarea class='textarea' id='contact_message' placeholder='{{ 'your_message' | trans }}'></textarea>
 											<b class='textarea-background'></b>
 										</label>
 									</div>
@@ -78,7 +79,7 @@
 								<div class='column six last'>
 									<div class='column-inner'>
 										<button class='button'>
-											<span class='button-text'>{{ 'Send' | trans }}</span>
+											<span class='button-text'>{{ 'send_button' | trans }}</span>
 											<span class='button-processing'>...</span>
 										</button>
 									</div>

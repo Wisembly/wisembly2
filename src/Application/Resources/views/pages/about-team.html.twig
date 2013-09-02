@@ -1,12 +1,15 @@
 {% extends 'layouts/main.html.twig' %}
 
+{# Load team DataSet #}
+{% block team %}{% endblock %}
+
 {% block body_class %}about-team{% endblock %}
 
 {% block content %}
 	<div class='section header' background-image: url();>
 		<div class='container'>
-			<h1>Notre équipe</h1>
-			<h2>De loin la meilleure équipe à Paris</h2>
+			<h1>{{ 'about_team_page_title' | trans }}</h1>
+			<h2>{{ 'about_team_page_desc' | trans }}</h2>
 		</div>
 	</div>
 	<div class='section'>
@@ -18,15 +21,19 @@
 				<div class='column eight last'>
 					<div class='column-inner'>
 						<ul class='list team-list'>
+
+                            {% for member in app.team %}
 							<li>
 								<div class='person'>
 									<div class='img'>
-										<img src='https://si0.twimg.com/profile_images/1226148948/gui_reasonably_small.png'>
+										<img src='{{ member.main_pic }}'>
 									</div>
-									<div class='name'>Guillaume Potier</div>
-									<div class='role'>Founder & CTO</div>
+									<div class='name'>{{ member.name }}</div>
+									<div class='role'>{{ member.job }}</div>
 								</div>
 							</li>
+                            {% endfor %}
+
 						</ul>
 					</div>
 				</div>

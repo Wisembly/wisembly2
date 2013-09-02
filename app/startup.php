@@ -20,6 +20,8 @@ $app->register(new LocalizationSet('homepage', 'homepage', 'key'));
  */
 $app->register(new DataSet('cases', 'cases'));
 $app->register(new DataSet('history', 'history'));
+$app->register(new DataSet('team', 'team'));
+$app->register(new DataSet('press', 'press'));
 
 // Pages
 $app->register(new StaticPage('index', '/', 'pages/index.html.twig'));
@@ -38,8 +40,10 @@ $app->register(new StaticPage('plans', '/plans', 'pages/plans.html.twig'));
 
 // about pages
 $app->register(new StaticPage('about', '/about', 'pages/about.html.twig'));
-$app->register(new StaticPage('about-team', '/about-team', 'pages/about-team.html.twig'));
-$app->register(new StaticPage('about-press', '/about-press', 'pages/about-press.html.twig'));
+$app->register(new StaticPage('about-team', '/about/team', 'pages/about-team.html.twig'));
+$app->register(new StaticPage('about-press', '/about/press', 'pages/about-press.html.twig'));
 $app->register(new StaticPage('resources', '/about/resources', 'pages/resources.html.twig'));
 $app->register(new StaticPage('jobs', '/jobs', 'pages/jobs.html.twig'));
+
+// contact page
 $app->register(new StaticPage('contact', '/contact', 'pages/contact.html.twig'));

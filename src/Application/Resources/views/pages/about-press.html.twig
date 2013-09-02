@@ -1,12 +1,15 @@
 {% extends 'layouts/main.html.twig' %}
 
+{# Load press DataSet #}
+{% block press %}{% endblock %}
+
 {% block body_class %}about-team{% endblock %}
 
 {% block content %}
 	<div class='section header' style='background-image: url(http://cdn0.stocksy.com/a/bVF000/z0/59619.jpg);'>
 		<div class='container'>
-			<h1>Wisembly dans la presse</h1>
-			<h2>Ils chantent nos éloges</h2>
+			<h1>{{ 'about_press_page_title' | trans }}</h1>
+			<h2>{{ 'about_press_page_desc' | trans }}</h2>
 		</div>
 	</div>
 	<div class='section'>
@@ -18,31 +21,32 @@
 				<div class='column eight last'>
 					<div class='column-inner'>
 						<table class='press-list'>
+
+                            {% for press in app.press %}
 							<tr>
-								<td class='src'>The europas</td>
-								<td class='date'>10/01/2013</td>
+								<td class='src'>{{ press.support }}</td>
+								<td class='date'>{{ press.date }}</td>
 								<td class='title'>
-									<a href=''>The Europas: Wisembly in the shortlist for Best French Startup!</a>
+								    {% if press.link is not none %}
+								        <a href='{{ press.link }}'>{{ press.title }}</a>
+								    {% else %}
+								        {{ press.title }}
+								    {% endif %}
 								</td>
 							</tr>
-							<tr>
-								<td class='src'>Comment ca marche ?</td>
-								<td class='date'>10/01/2013</td>
-								<td class='title'>
-									<a href=''>The Europas: Wisembly in the shortlist for Best French Startup!</a>
-								</td>
-							</tr>
+                            {% endfor %}
+
 						</table>
 						<div class='hero hey-press'>
 							<div class='row'>
 								<div class='column seven'>
 									<div class='column-inner'>
-										<p>Journalistes, vous recherchez des images, des photos pour illustrer vos articles ?</p>
+										<p>{{ 'journalists_download_kit_title' | trans }}</p>
 									</div>
 								</div>
 								<div class='column four last'>
 									<div class='column-inner'>
-										<a href='{{ path('resources') }}' class='button button-call'>Téléchargez-les ici</a>
+										<a href='{{ path('resources') }}' class='button button-call'>{{ 'journalists_download_kit_button' | trans }}</a>
 									</div>
 								</div>
 							</div>
