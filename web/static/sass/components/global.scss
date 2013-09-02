@@ -1,7 +1,6 @@
 html {
 	color: $black;
 	font-family: $default-font-family;
-	//background-color: $brandBlueHover;
 }
 html,
 body {
@@ -809,6 +808,7 @@ img {
 .history-item-description {
 	padding: 20px;
 }
+
 .about-navigation {
 	margin-right: 10px;
 	border-top: 1px solid $brandBlueHover;
@@ -826,6 +826,7 @@ img {
 		text-shadow: 0 1px 0 rgba(0,0,0,.2);
 	}
 }
+
 .team-list {
 	@include clearfix;
 	margin: 0 -20px;
@@ -872,6 +873,7 @@ img {
 		margin-top: 0;
 	}
 }
+
 .hey-press {
 	background-image: url(/static/images/patterns/tiny_grid.png);
 	border-width: 0 1px 1px 0;
@@ -882,6 +884,7 @@ img {
 		bottom: 20px;
 	}
 }
+
 .phone-sheet {
 	padding: 30px;
 	
