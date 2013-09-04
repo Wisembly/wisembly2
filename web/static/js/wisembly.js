@@ -32,11 +32,14 @@ var tabs = {
 	}
 };
 
-var login = {
+window.login = {
 	$el: $('[data-name=login]'),
 	isValid: false,
 
 	startListening: function () {
+		if (this.isLogged())
+			return this.$el.hide();
+
 		this.$el.find('input.email').on('change', $.proxy(this.checkInput, this));
 		this.$el.find('input.password').on('keyup', $.proxy(this.checkInput, this));
 		this.$el.find('form').on('submit', $.proxy(this.checkSubmit, this));
@@ -56,6 +59,10 @@ var login = {
 		if (true === this.$el.find('input.email').parsley('validate') && 4 > this.$el.find('input.password').val().length)
 			return this.$el.find('form').attr('data-status', 'active');
 		this.$el.find('form').attr('data-status', this.isValid ? 'valid' : 'not-valid');
+	},
+
+	isLogged: function () {
+		return -1 !== document.cookie.indexOf('wisembly_remember_me');
 	}
 };
 
