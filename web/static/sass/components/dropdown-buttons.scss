@@ -80,45 +80,6 @@ $dropdownLangWidth: 58px;
 		padding: 6px 10px;
 	}
 }
-form {
-	&[data-status='none'],
-	&[data-status='testing'] {
-		.button {
-			box-shadow: none;
-			pointer-events: none;
-			cursor: not-allowed;
-			color: #999;
-			text-shadow: 0 -1px 0 rgba(255,255,255,.5);
-			outline: none;	
-		}
-	}
-	&[data-status='valid'] {
-		.button {
-			background-color: $brandGreen;
-			color: $white;
-		}
-	}
-	&[data-status='not-valid'] {
-		.button {
-			background-color: $brandRed;
-			color: $white;
-			pointer-events: none;
-			cursor: not-allowed;
-		}
-		.input-background,
-		.input:focus + .input-background {
-			background-color: $brandRedExtraExtraExtraLight;
-		}
-	}
-	&[data-status='testing'] {
-		.button-text {
-			display: none;
-		}
-		.button-processing {
-			display: block;
-		}
-	}
-}
 .login {
 	width: 200px;
 	

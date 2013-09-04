@@ -151,6 +151,11 @@ a {
 	ul {
 		@include clearfix;
 	}
+	.list-eight {
+		li {
+			width: 12.5%;
+		}
+	}
 
 	li {
 		float: left;
@@ -170,16 +175,21 @@ a {
 		padding: 20px 20px;
 		text-align: center;
 		text-decoration: none;
-		//border-right: 1px solid $lightGrey;
 		font-size: 12px;
 		font-weight: 600;
 		line-height: 20px;
 		color: $grey;
-		height: 120px;
+		height: 140px;
 		text-transform: uppercase;
 		
+		span {
+			display: block;
+		}
 		.short {
-			line-height: 35px;
+			padding-top: 20px;
+		}
+		.medium {
+			padding-top: 10px;
 		}
 		
 		&:hover {

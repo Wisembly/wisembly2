@@ -451,6 +451,8 @@ a {
       display: table; }
     .features-list ul:after {
       clear: both; }
+  .features-list .list-eight li {
+    width: 12.5%; }
   .features-list li {
     float: left;
     width: 14.28%; }
@@ -465,10 +467,14 @@ a {
     font-weight: 600;
     line-height: 20px;
     color: #999999;
-    height: 120px;
+    height: 140px;
     text-transform: uppercase; }
+    .features-list a span {
+      display: block; }
     .features-list a .short {
-      line-height: 35px; }
+      padding-top: 20px; }
+    .features-list a .medium {
+      padding-top: 10px; }
     .features-list a:hover {
       background-color: #0786cd;
       color: white; }
@@ -1421,6 +1427,29 @@ select {
   -webkit-appearance: none;
   color: #666666; }
 
+form[data-status='none'] .button, form[data-status='testing'] .button {
+  box-shadow: none;
+  pointer-events: none;
+  cursor: not-allowed;
+  color: #999;
+  text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.5);
+  outline: none; }
+form[data-status='valid'] .button {
+  background-color: #66bc58;
+  color: white; }
+form[data-status='not-valid'] .button {
+  background-color: #fd5364;
+  color: white;
+  pointer-events: none;
+  cursor: not-allowed; }
+form[data-status='not-valid'] .input-background,
+form[data-status='not-valid'] .input:focus + .input-background {
+  background-color: #fff5f6; }
+form[data-status='testing'] .button-text {
+  display: none; }
+form[data-status='testing'] .button-processing {
+  display: block; }
+
 .dropdown {
   position: relative; }
 
@@ -1485,29 +1514,6 @@ select {
   .join-event .button {
     width: 100%;
     padding: 6px 10px; }
-
-form[data-status='none'] .button, form[data-status='testing'] .button {
-  box-shadow: none;
-  pointer-events: none;
-  cursor: not-allowed;
-  color: #999;
-  text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.5);
-  outline: none; }
-form[data-status='valid'] .button {
-  background-color: #66bc58;
-  color: white; }
-form[data-status='not-valid'] .button {
-  background-color: #fd5364;
-  color: white;
-  pointer-events: none;
-  cursor: not-allowed; }
-form[data-status='not-valid'] .input-background,
-form[data-status='not-valid'] .input:focus + .input-background {
-  background-color: #fff5f6; }
-form[data-status='testing'] .button-text {
-  display: none; }
-form[data-status='testing'] .button-processing {
-  display: block; }
 
 .login {
   width: 200px; }
