@@ -5,6 +5,7 @@ $(document).ready(function () {
 	tabs.startListening();
 	joinAnEvent.startListening();
 	login.startListening();
+	quotesList.start();
 });
 
 var tabs = {
@@ -38,7 +39,7 @@ window.login = {
 
 	startListening: function () {
 		if (this.isLogged())
-			return this.$el.hide();
+			return;
 
 		this.$el.find('input.email').on('change', $.proxy(this.checkInput, this));
 		this.$el.find('input.password').on('keyup', $.proxy(this.checkInput, this));
@@ -113,5 +114,48 @@ var joinAnEvent = {
 
 	updateStatus: function () {
 		this.$el.find('form').attr('data-status', this.keywordExists ? 'valid' : 'not-valid');
+	}
+};
+
+var quotesList = {
+	$el: $('[data-name=quotes_list]'),
+
+	start: function () {
+		this.$el.on('ended_typing', function () {
+			setTimeout(function () {
+				this.add();
+				this.print();
+			}.bind(this), 2000);
+		}.bind(this));
+		this.print();
+	},
+
+	stop: function () {
+
+	},
+
+	print: function () {
+		if (!this.message || 0 === this.message.length)
+			this.message = this.$el.find('ul.list > li:last .quote-text').text().split('');
+		setTimeout(function () {
+			this.$el.find('textarea').text(this.$el.find('textarea').text() + this.message.shift());
+			if (this.message.length)
+				this.print();
+			else this.$el.trigger('ended_typing');
+		}.bind(this), Math.floor(Math.random() * 250));
+	},
+
+	add: function () {
+		var message = this.$el.find('textarea').text(),
+			$lastElement = this.$el.find('ul.list > li:last'),
+			$append = $lastElement.clone();
+		$append.find('.quote-text').html(message);
+		this.$el.find('ul.list').prepend($append);
+		this.$el.find('ul.list > li:last').remove();
+		this.$el.find('textarea').html('');
+	},
+
+	remove: function () {
+
 	}
 };
