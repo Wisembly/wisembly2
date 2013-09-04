@@ -48,7 +48,8 @@ var login = {
 	},
 
 	checkSubmit: function (e) {
-		e.preventDefault();
+		if (!this.$el.find('form').parsley('validate'))
+			e.preventDefault();
 	},
 
 	updateStatus: function () {

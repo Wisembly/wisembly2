@@ -55,19 +55,20 @@
 									<div class='dropdown'>
 										<a href='#' class='dropdown-toggle tab_link'>{{ 'login' | trans }}</a>
 										<div class='dropdown-bottom' data-name='dropdown'>
-											<form class='login clearfix' data-status='none' data-validate='parsley' data-show-errors='false'>
+											<form action='https://app.wisembly.com/login_check' method='POST' target='_blank' class='login clearfix' data-status='none' data-validate='parsley' data-show-errors='false'>
 												<div class='input-container'>
-													<input class='input email' placeholder='{{ 'email' | trans }}' data-required='true' data-type='email' />
+													<input name='_username' class='input email' placeholder='{{ 'email' | trans }}' data-required='true' data-type='email' />
 													<span class='input-background'></span>
 												</div>
 												<div class='input-container'>
-													<input type='password' class='input password' placeholder='{{ 'password' | trans }}' data-required='true' data-rangelength='[4,20]' />
+													<input name='_password' type='password' class='input password' placeholder='{{ 'password' | trans }}' data-required='true' data-rangelength='[4,20]' />
 													<span class='input-background'></span>
 												</div>
 												<button class='button'>
 													<span class='button-text'>{{ 'login_button' | trans }}</span>
 													<span class='button-processing'>...</span>
 												</button>
+												<input type='hidden' name='_target_path' value='index' />
 											</form>
 										</div>
 									</div>
