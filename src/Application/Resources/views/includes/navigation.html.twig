@@ -23,17 +23,17 @@
 				<div class='column last'>
 					<div class='column-inner'>
 						<div class='app-nav'>
-							<ul class='list'>
-								<li>
+							<ul class='list' data-name='header_tabs'>
+								<li data-name='join_an_event'>
 									<div class='dropdown'>
-										<a href='' class='dropdown-toggle'>{{ 'join_an_event' | trans }}</a>
-										<div class='dropdown-bottom'>
-											<form class='join-event' data-status='none'>
+										<a href='#' class='dropdown-toggle tab_link'>{{ 'join_an_event' | trans }}</a>
+										<div class='dropdown-bottom' data-name='dropdown'>
+											<form class='join-event' data-status='active' data-validate='parsley' data-show-errors='false'>
 												<div class='row'>
 													<div class='column eight'>
 														<div class='column-inner'>
 																<div class='input-container'>
-																	<input class='input' placeholder='{{ 'event_keyword' | trans }}' />
+																	<input class='input' placeholder='{{ 'event_keyword' | trans }}' data-required='true' data-rangelength='[3,20]' data-type='alphanum' />
 																	<span class='input-background'></span>
 																</div>
 														</div>
@@ -51,17 +51,17 @@
 										</div>
 									</div>
 								</li>
-								<li>
+								<li data-name='login'>
 									<div class='dropdown'>
-										<a href='' class='dropdown-toggle'>{{ 'login' | trans }}</a>
-										<div class='dropdown-bottom'>
-											<form class='login clearfix' data-status='none'>
+										<a href='#' class='dropdown-toggle tab_link'>{{ 'login' | trans }}</a>
+										<div class='dropdown-bottom' data-name='dropdown'>
+											<form class='login clearfix' data-status='none' data-validate='parsley' data-show-errors='false'>
 												<div class='input-container'>
-													<input class='input' placeholder='{{ 'email' | trans }}' />
+													<input class='input email' placeholder='{{ 'email' | trans }}' data-required='true' data-type='email' />
 													<span class='input-background'></span>
 												</div>
 												<div class='input-container'>
-													<input class='input' placeholder='{{ 'password' | trans }}' />
+													<input type='password' class='input password' placeholder='{{ 'password' | trans }}' data-required='true' data-rangelength='[4,20]' />
 													<span class='input-background'></span>
 												</div>
 												<button class='button'>
