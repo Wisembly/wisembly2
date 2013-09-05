@@ -801,12 +801,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "bfa123abe1f4f701c5961d205f9a15eb20d6b5f6"
+                "reference": "8716769dcd49b48d628f77057c549b83400afcd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/bfa123abe1f4f701c5961d205f9a15eb20d6b5f6",
-                "reference": "bfa123abe1f4f701c5961d205f9a15eb20d6b5f6",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/8716769dcd49b48d628f77057c549b83400afcd4",
+                "reference": "8716769dcd49b48d628f77057c549b83400afcd4",
                 "shasum": ""
             },
             "require": {
@@ -863,7 +863,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-30 13:10:46"
+            "time": "2013-09-05 11:25:56"
         },
         {
             "name": "symfony/locale",
