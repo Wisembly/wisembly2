@@ -8,85 +8,148 @@
 {% block content %}
     <div class='section headline' id='headline'>
         <div class='container'>
-            <div class='row'>
-                <div class='row-bump'>
-                    <a href='#clients' class='jump-after-fold'>
-                        <i class='picto down-chevron first'></i>
-                        <i class='picto down-chevron last'></i>
-                        <span>{{ 'discover_our_happy_clients' | trans | raw }}</span>
-                    </a>
-                    <div class='column five'>
-                        <div class='column-inner'>
-                            <h1>{{ 'homepage_title' | trans }}</h1>
-                            <h2>{{ 'homepage_baseline' | trans }}</h2>
-                            <div class='try-me'>
-                                <div class='try-me-label'>{{ 'discover_wisembly_for' | trans }}</div>
-                                <ul class='list try-me-choices'>
-                                    <li class='first'>
-                                        <a href='{{ path('classes-trainings') }}'>
-                                            {{ 'formations' | trans }}
-                                        </a>
-                                    </li>
-                                    <li class='second'>
-                                        <a href='{{ path('meetings-confcalls') }}'>
-                                            {{ 'meetings' | trans }}
-                                        </a>
-                                    </li>
-                                    <li class='last'>
-                                        <a href='{{ path('events-seminaries') }}'>
-                                            {{ 'events' | trans }}
-                                        </a>
-                                    </li>
-                                </ul>
+            <div class='center-vertical'>
+                <div class='row'>
+                    <div class='row-bump'>
+                        <a href='#clients' class='jump-after-fold'>
+                            <i class='picto down-chevron first'></i>
+                            <i class='picto down-chevron last'></i>
+                            <span>{{ 'discover_our_happy_clients' | trans | raw }}</span>
+                        </a>
+                        <div class='column five'>
+                            <div class='column-inner'>
+                                <h1>{{ 'homepage_title' | trans }}</h1>
+                                <h2>{{ 'homepage_baseline' | trans }}</h2>
+                                <div class='try-me'>
+                                    <div class='try-me-label'>{{ 'discover_wisembly_for' | trans }}</div>
+                                    <ul class='list try-me-choices'>
+                                        <li class='first'>
+                                            <a href='{{ path('classes-trainings') }}'>
+                                                {{ 'formations' | trans }}
+                                            </a>
+                                        </li>
+                                        <li class='second'>
+                                            <a href='{{ path('meetings-confcalls') }}'>
+                                                {{ 'meetings' | trans }}
+                                            </a>
+                                        </li>
+                                        <li class='last'>
+                                            <a href='{{ path('events-seminaries') }}'>
+                                                {{ 'events' | trans }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class='column six last'>
-                        <div class='column-inner'>
-                            <div class='row'>
-                                <div class='column six'>
-                                    <div class='column-inner'>
-                                        <div class='browser-wrapper first'>
-                                            <div class='browser'>
-                                                <div class='browser-bar'>
-                                                    <span>http://app.wisembly.com/demo</span>
-                                                </div>
-                                                <div class='browser-window'>
-                                                    <div class='mocked-app'>
-                                                        <div class='app-header'>
-                                                            <div class='app-logo'>wisembly</div>
+                        <div class='column six last'>
+                            <div class='column-inner'>
+                                <div class='row'>
+                                    <div class='column six'>
+                                        <div class='column-inner'>
+                                            <div class='browser-wrapper first'>
+                                                <div class='browser'>
+                                                    <div class='browser-bar'>
+                                                        <span>http://app.wisembly.com/demo</span>
+                                                    </div>
+                                                    <div class='browser-window'>
+                                                        <div class='mocked-app'>
+                                                            <div class='app-header'>
+                                                                <div class='app-logo'>wisembly</div>
+                                                            </div>
+                                                            <div class='app-body'>
+                                                                <div class='frame frame-poll'>
+                                                                    <div class='participant-poll'>
+                                                                        <h5>{{ 'homepage_poll_question this is my question' | trans }}</h5>
+                                                                        <ul class='list choices'>
+                                                                            <li class='even'>
+                                                                                <div class='choice one'>
+                                                                                    <span class='radio'></span>
+                                                                                    <span class='text'>One</span>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class='even'>
+                                                                                <div class='choice two'>
+                                                                                    <span class='radio'></span>
+                                                                                    <span class='text'>One</span>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class='even'>
+                                                                                <div class='choice three'>
+                                                                                    <span class='radio'></span>
+                                                                                    <span class='text'>One</span>
+                                                                                </div>
+                                                                            </li>
+                                                                            </ul>
+                                                                    <span href='' class='button button-validate'>{{ 'Cast your vote    ' | trans }}</span>
+                                                                    </div>
+                                                                <div class='mouse'></div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class='app-body'>
-                                                           Teacher.
-                                                        </div>
+                                                        <span class='browser-bottom'>{{ 'organizer' | trans }}</span>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <span class='legend'>{{ 'organizer' | trans }}</span>
-                                            <span class='with'>{{ 'and' | trans }}</span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class='column six'>
-                                    <div class='column-inner'>
-                                        <div class='browser-wrapper last'>
-                                            <b></b>
-                                            <div class='browser'>
-                                                <div class='browser-bar'>
-                                                    <span>http://app.wisembly.com/demo</span>
-                                                </div>
-                                                <div class='browser-window'>
-                                                    <div class='mocked-app'>
-                                                        <div class='app-header'>
-                                                            <div class='app-logo'>wisembly</div>
+                                    <div class='column six'>
+                                        <div class='column-inner'>
+                                            <div class='browser-wrapper last'>
+                                                <b></b>
+                                                <div class='browser'>
+                                                    <div class='browser-bar'>
+                                                        <span>http://app.wisembly.com/demo</span>
+                                                    </div>
+                                                    <div class='browser-window'>
+                                                        <div class='mocked-app'>
+                                                            <div class='app-header'>
+                                                                <div class='app-logo'>wisembly</div>
+                                                            </div>
+                                                            <div class='app-body'>
+                                                               <div class='frame frame-poll'>
+                                                                    <h5>{{ 'homepage_poll_question this is my question' | trans }}</h5>
+                                                                    <ul class='list results'>
+                                                                       <li class='even'>
+                                                                           <div class='result'>
+                                                                               <span class='text'>One</span>
+                                                                               <span class='value'>80%</span>
+                                                                               <span class='progress'>
+                                                                                   <span class='progress-bar' style='width: 80%'></span>
+                                                                               </span>
+                                                                           </div>
+                                                                       </li>
+                                                                       <li class='even'>
+                                                                           <div class='result'>
+                                                                               <span class='text'>One</span>
+                                                                               <span class='value'>20%</span>
+                                                                               <span class='progress'>
+                                                                                   <span class='progress-bar' style='width: 20%'></span>
+                                                                               </span>
+                                                                           </div>
+                                                                       </li>
+                                                                       <li class='even'>
+                                                                           <div class='result'>
+                                                                               <span class='text'>One</span>
+                                                                               <span class='value'>0%</span>
+                                                                               <span class='progress'>
+                                                                                   <span class='progress-bar' style='width: 0%'></span>
+                                                                               </span>
+                                                                           </div>
+                                                                       </li>
+                                                                    </ul>
+                                                                    <div class='total'>
+                                                                        <i class='icon-person icon'></i>
+                                                                        <span class='total-count'>12</span>
+                                                                        <span class='total-label'>{{ 'participants' | trans }}</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class='app-body'>
-                                                           Student.
-                                                        </div>
+                                                        <span class='browser-bottom'>{{ 'participant' | trans }}</span>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <span class='legend'>{{ 'participant' | trans }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -100,108 +163,115 @@
     </div>
     <div class='section clients' id='clients'>
         <div class='container'>
-            <div class='row'>
-                <a href='#footer' class='jump-after-fold'>
-                    <i class='picto down-chevron first'></i>
-                    <i class='picto down-chevron last'></i>
-                    <span>Ensuite il y a le footer</span>
-                </a>
-                <div class='column six'>
-                    <div class='column-inner'>
-                        <h3>{{ 'testimonials' | trans }}</h3>
-                        <ul class='list testimonials'>
-                            <li>
-                                <div class='media'>
-                                    <div class='hd'>
-                                        <img src='/static/images/edito/dias.JPG'>
+            <div class='center-vertical'>
+                <div class='row'>
+                    <a href='#footer' class='jump-after-fold'>
+                        <i class='picto down-chevron first'></i>
+                        <i class='picto down-chevron last'></i>
+                        <span>Ensuite il y a le footer</span>
+                    </a>
+                    <div class='column six'>
+                        <div class='column-inner'>
+                            <h3>{{ 'testimonials' | trans }}</h3>
+                            <ul class='list testimonials'>
+                                <li>
+                                    <div class='media'>
+                                        <div class='hd'>
+                                            <img src='/static/images/edito/dias.JPG'>
+                                        </div>
+                                        <div class='bd'>
+                                            <p class='quote'>{{ 'quote_dias' | trans }}</p>
+                                            <p class='author'><small>Georges-Edouard Dias, L'Oréal</small></p>
+                                        </div>
                                     </div>
-                                    <div class='bd'>
-                                        <p class='quote'>{{ 'quote_dias' | trans }}</p>
-                                        <p class='author'><small>Georges-Edouard Dias, L'Oréal</small></p>
+                                </li>
+                                <li>
+                                    <div class='media'>
+                                        <div class='hd'>
+                                            <img src='/static/images/edito/dias.JPG'>
+                                        </div>
+                                        <div class='bd'>
+                                            <p class='quote'>{{ 'quote_dias' | trans }}</p>
+                                            <p class='author'><small>Georges-Edouard Dias, L'Oréal</small></p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class='media'>
-                                    <div class='hd'>
-                                        <img src='/static/images/edito/dias.JPG'>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='column six last'>
+                        <div class='column-inner'>
+                            <h3>{{ 'clients' | trans }}</h3>
+                            <ul class='list clients-list'>
+                                <li>
+                                    <div class='inner'>
+                                        <i style='background-image:url(/static/images/clients/accenture.gif);'></i>
                                     </div>
-                                    <div class='bd'>
-                                        <p class='quote'>{{ 'quote_dias' | trans }}</p>
-                                        <p class='author'><small>Georges-Edouard Dias, L'Oréal</small></p>
+                                </li>
+                                <li>
+                                    <div class='inner'>
+                                        <i style='background-image:url(/static/images/clients/air-liquide.jpg);'></i>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
+                                </li>
+                                <li>
+                                    <div class='inner'>
+                                        <i style='background-image:url(/static/images/clients/auchan.png);'></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='inner'>
+                                        <i style='background-image:url(/static/images/clients/banque-populaire.gif);'></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='inner'>
+                                        <i style='background-image:url(/static/images/clients/bnp-paribas.jpg);'></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='inner'>
+                                        <i style='background-image:url(/static/images/clients/bouygues-telecom.gif);'></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='inner'>
+                                        <i style='background-image:url(/static/images/clients/carrefour.png);'></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='inner'>
+                                        <i style='background-image:url(/static/images/clients/credit-agricole.jpg);'></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='inner'>
+                                        <i style='background-image:url(/static/images/clients/danone.jpg);'></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='inner'>
+                                        <i style='background-image:url(/static/images/clients/dcns.png);'></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='inner'>
+                                        <i style='background-image:url(/static/images/clients/france-televisions.jpg);'></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class='inner'>
+                                        <i style='background-image:url(/static/images/clients/loreal.jpg);'></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class='column six last'>
-                    <div class='column-inner'>
-                        <h3>{{ 'clients' | trans }}</h3>
-                        <ul class='list clients-list'>
-                            <li>
-                                <div class='inner'>
-                                    <i style='background-image:url(/static/images/clients/accenture.gif);'></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class='inner'>
-                                    <i style='background-image:url(/static/images/clients/air-liquide.jpg);'></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class='inner'>
-                                    <i style='background-image:url(/static/images/clients/auchan.png);'></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class='inner'>
-                                    <i style='background-image:url(/static/images/clients/banque-populaire.gif);'></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class='inner'>
-                                    <i style='background-image:url(/static/images/clients/bnp-paribas.jpg);'></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class='inner'>
-                                    <i style='background-image:url(/static/images/clients/bouygues-telecom.gif);'></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class='inner'>
-                                    <i style='background-image:url(/static/images/clients/carrefour.png);'></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class='inner'>
-                                    <i style='background-image:url(/static/images/clients/credit-agricole.jpg);'></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class='inner'>
-                                    <i style='background-image:url(/static/images/clients/danone.jpg);'></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class='inner'>
-                                    <i style='background-image:url(/static/images/clients/dcns.png);'></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class='inner'>
-                                    <i style='background-image:url(/static/images/clients/france-televisions.jpg);'></i>
-                                </div>
-                            </li>
-                            <li>
-                                <div class='inner'>
-                                    <i style='background-image:url(/static/images/clients/loreal.jpg);'></i>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <h3>{{ 'press' | trans }}</h3>
+                <ul class='list press'>
+                    <li></li>
+                    <li></li>
+                </li>
             </div>
         </div>
     </div>

@@ -65,3 +65,12 @@
 	background-repeat: no-repeat;
 	background-size: auto;
 }
+
+.icon {
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+.icon-person {
+	background-image: url(/static/images/person.png);
+}
