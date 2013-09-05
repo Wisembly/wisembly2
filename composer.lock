@@ -259,12 +259,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Silex.git",
-                "reference": "86d041016617c4503a6136c565665663604545b8"
+                "reference": "f44db3ed16474e7e11b5c1ce96cba3fd4c07c812"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Silex/zipball/86d041016617c4503a6136c565665663604545b8",
-                "reference": "86d041016617c4503a6136c565665663604545b8",
+                "url": "https://api.github.com/repos/fabpot/Silex/zipball/f44db3ed16474e7e11b5c1ce96cba3fd4c07c812",
+                "reference": "f44db3ed16474e7e11b5c1ce96cba3fd4c07c812",
                 "shasum": ""
             },
             "require": {
@@ -333,7 +333,7 @@
             "keywords": [
                 "microframework"
             ],
-            "time": "2013-08-09 06:08:50"
+            "time": "2013-09-04 08:27:59"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1318,12 +1318,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "3db6b6aeb9442abf85d2a9f6d5c3ae3e07398597"
+                "reference": "c0731335a12c58e2a84cde6cf133c586be639491"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/3db6b6aeb9442abf85d2a9f6d5c3ae3e07398597",
-                "reference": "3db6b6aeb9442abf85d2a9f6d5c3ae3e07398597",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/c0731335a12c58e2a84cde6cf133c586be639491",
+                "reference": "c0731335a12c58e2a84cde6cf133c586be639491",
                 "shasum": ""
             },
             "require": {
@@ -1359,7 +1359,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-08-28 06:01:53"
+            "time": "2013-09-04 15:00:30"
         },
         {
             "name": "wisembly/silexcms",
@@ -1367,12 +1367,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Wisembly/SilexCMS.git",
-                "reference": "987f405c6eba1ca1f6419673168f2b99dd241fc3"
+                "reference": "6a67583a321cd4f41d9ae0ce22cb25813076be06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Wisembly/SilexCMS/zipball/987f405c6eba1ca1f6419673168f2b99dd241fc3",
-                "reference": "987f405c6eba1ca1f6419673168f2b99dd241fc3",
+                "url": "https://api.github.com/repos/Wisembly/SilexCMS/zipball/6a67583a321cd4f41d9ae0ce22cb25813076be06",
+                "reference": "6a67583a321cd4f41d9ae0ce22cb25813076be06",
                 "shasum": ""
             },
             "require": {
@@ -1412,7 +1412,7 @@
                 "library",
                 "silex"
             ],
-            "time": "2013-08-31 19:46:33"
+            "time": "2013-09-05 08:58:39"
         }
     ],
     "packages-dev": [
