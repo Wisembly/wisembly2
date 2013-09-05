@@ -50,6 +50,10 @@ $app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
     'swiftmailer.options'   => $config['mailer'],
 ));
 
+$app['mailer'] = $app->share(function ($app) {
+    return new \Swift_Mailer($app['swiftmailer.transport']);
+});
+
 unset($config);
 require_once __DIR__ . '/startup.php';
 
