@@ -5,7 +5,8 @@ use Silex\Application;
 use SilexCMS\Set\LocalizationSet,
     SilexCMS\Set\DataSet,
     SilexCMS\Page\StaticPage,
-    SilexCMS\Page\DynamicPage;
+    SilexCMS\Page\DynamicPage,
+    Application\Controller\Contact;
 
 /**
  * LocalizationsSets
@@ -47,3 +48,4 @@ $app->register(new StaticPage('jobs', '/jobs', 'pages/jobs.html.twig'));
 
 // contact page
 $app->register(new StaticPage('contact', '/contact', 'pages/contact.html.twig'));
+$app->register(new Contact());
