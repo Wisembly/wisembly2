@@ -71,15 +71,15 @@
 	<div class='section' id=''>
 		<div class='container'>
 			<div class='row'>
-				<div class='column six'>
+				<div class='column five'>
 					<div class='column-inner'>
 						<h3>{{ 'schedule_meetings_title' | trans }}</h3>
 						{{ 'schedule_meetings_desc' | trans | raw }}
 					</div>
 				</div>
-				<div class='column four last'>
+				<div class='column six last'>
 					<div class='column-inner'>
-						archive page, agenda
+						<img src='/static/images/illustrations/agenda.png'>
 					</div>
 				</div>
 			</div>
@@ -98,21 +98,27 @@
 	</div>
 	<div class='section' id=''>
 		<div class='container'>
-			<h3 class='text-centered'>{{ 'documents_title' | trans }}</h3>
 			<div class='row'>
-				<div class='column three'>
+				<div class='column six'>
 					<div class='column-inner'>
-						<p>{{ 'documents_desc1' | trans }}</p>
+						<img src='/static/images/illustrations/managing-documents.png'>
 					</div>
 				</div>
-				<div class='column three'>
+				<div class='column six last'>
 					<div class='column-inner'>
-						documents
-					</div>
-				</div>
-				<div class='column three last'>
-					<div class='column-inner'>
-						<p>{{ 'documents_desc2' | trans }}</p>
+						<h3>{{ 'documents_title' | trans }}</h3>
+						<div class='row'>
+							<div class='column six'>
+								<div class='column-inner'>
+									<p>{{ 'documents_desc1' | trans }}</p>
+								</div>
+							</div>
+							<div class='column six last'>
+								<div class='column-inner'>
+									<p>{{ 'documents_desc2' | trans }}</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -209,24 +215,30 @@
 	</div>
 	<div class='section' id=''>
 		<div class='container'>
-			<h3 class='text-centered'>{{ 'feedback_survey_title' | trans }}</h3>
-			<p>fullfilment survey</p>
 			<div class='row'>
-				<div class='column four'>
+				<div class='column six'>
 					<div class='column-inner'>
-						<p>{{ 'feedback_survey_desc1' | trans }}</p>
+						<img src='/static/images/illustrations/fullfilment-survey.png'>
 					</div>
 				</div>
-				<div class='column four'>
+				<div class='column five last'>
 					<div class='column-inner'>
-						<p>{{ 'feedback_survey_desc2' | trans }}</p>
+						<h3>{{ 'feedback_survey_title' | trans }}</h3>
+							<div class='row'>
+								<div class='column six'>
+									<div class='column-inner'>
+										<p>{{ 'feedback_survey_desc2' | trans }}</p>
+									</div>
+								</div>
+								<div class='column six last'>
+									<div class='column-inner'>
+										<p>{{ 'feedback_survey_desc2' | trans }}</p>
+										<p>{{ 'feedback_survey_desc3' | trans }}</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class='column four last'>
-					<div class='column-inner'>
-						<p>{{ 'feedback_survey_desc3' | trans }}</p>
-					</div>
-				</div>
 			</div>
 		</div>	
 	</div>
@@ -243,21 +255,24 @@
 	</div>
 	<div class='section' id=''>
 		<div class='container'>
+			<h3 class='text-centered'>{{ 'statistics_title' | trans }}</h3>
+			<div class='illustration'>
+				<img src='/static/images/illustrations/stats-reporting-meetings.png' />
+			</div>
 			<div class='row'>
-				<div class='column three'>
+				<div class='column four'>
 					<div class='column-inner'>
-						sessions timeline
+						{{ 'statistics_desc_1' | trans | raw }}
 					</div>
 				</div>
-				<div class='column six'>
+				<div class='column four'>
 					<div class='column-inner'>
-						<h3>{{ 'statistics_title' | trans }}</h3>
-						{{ 'statistics_desc' | trans | raw }}
+						{{ 'statistics_desc_2' | trans | raw }}
 					</div>
 				</div>
-				<div class='column three last'>
+				<div class='column four'>
 					<div class='column-inner'>
-						stats illustration
+						{{ 'statistics_desc_3' | trans | raw }}
 					</div>
 				</div>
 			</div>
@@ -276,16 +291,24 @@
 	</div>
 	<div class='section' id=''>
 		<div class='container'>
+			<h3 class='text-centered'>{{ 'multi_devices_title' | trans }}</h3>
+			<div class='illustration'>
+				<img src='/static/images/illustrations/devices.png'>
+			</div>
 			<div class='row'>
 				<div class='column four'>
 					<div class='column-inner'>
-						multi devices
+						{{ 'multi_devices_desc_1' | trans | raw }}
 					</div>
 				</div>
-				<div class='column six last'>
+				<div class='column four'>
 					<div class='column-inner'>
-						<h3>{{ 'multi_devices_title' | trans }}</h3>
-						{{ 'multi_devices_desc' | trans | raw }}
+						{{ 'multi_devices_desc_2' | trans | raw }}
+					</div>
+				</div>
+				<div class='column four last'>
+					<div class='column-inner'>
+						{{ 'multi_devices_desc_3' | trans | raw }}
 					</div>
 				</div>
 			</div>

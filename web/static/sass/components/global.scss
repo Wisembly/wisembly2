@@ -71,6 +71,7 @@ a {
 .section {
 	border-bottom: 1px solid $lightGrey;
 	box-shadow: inset 0 -1px 5px 0 rgba(0,0,0, .06);
+	background-image: -webkit-linear-gradient(top, rgba($brandBlueExtraExtraExtraLight, 0), rgba($brandBlueExtraExtraExtraLight, 0) 70%, rgba($brandBlueExtraExtraExtraLight, 1));
 	
 	.container {
 		padding: 80px 0;
@@ -78,7 +79,7 @@ a {
 	}
 	
 	h3 {
-		font-size: 30px;
+		font-size: 36px;
 		font-weight: 300;
 		margin-top: 0;
 	}
@@ -87,11 +88,13 @@ a {
 	}
 	.illustration {
 		display: block;
-		margin: 20px 0;
+		margin: 40px 0;
 		
 		img {
 			display: block;
 			margin: 0 auto;
+			user-select: none;
+			pointer-events: none;
 		}
 	}
 }
@@ -149,6 +152,7 @@ a {
 }
 .features-list {
 	box-shadow: 0 0 2px 0 rgba(0,0,0, .1);
+	background-image: none;
 	
 	.container {
 		padding: 0;
@@ -191,12 +195,6 @@ a {
 		span {
 			display: block;
 		}
-		.short {
-			padding-top: 20px;
-		}
-		.medium {
-			padding-top: 10px;
-		}
 		
 		&:hover {
 			background-color: $brandBlue;
@@ -211,16 +209,19 @@ a {
 		background-color: $white;
 	}
 }
-.documents-management,
-.stats-reporting,
-.students-evaluation {
-	background-image: -webkit-linear-gradient(top, rgba($brandBlueExtraExtraExtraLight, 0), rgba($brandBlueExtraExtraExtraLight, 0) 80%, rgba($brandBlueExtraExtraExtraLight, 1));
-}
 .documents-management {	
 	.container {
 		background-image: url(/static/images/illustrations/managing-documents.png);
 		background-position: right center;
 		background-repeat: no-repeat;
+	}
+}
+.events-audience-participation {
+	background-color: $brandBlueHover;
+	color: $white;
+	text-shadow: 0 1px 2px rgba(0,0,0,.2);
+	h3 {
+		font-weight: bold;
 	}
 }
 .students-evaluation {
@@ -244,13 +245,17 @@ a {
 		background-repeat: no-repeat;
 	}
 }
+.quizzes {
+	.browser {
+		margin: 0 auto;
+		width: 80%;
+	}
+	.browser-window {
+		height: auto;
+	}
+}
 .quiz-demo {
-	background-color: $white;
 	padding: 20px 30px;
-	border: 1px solid $lightGrey;
-	border-radius: 3px;
-	box-shadow: 0 1px 2px rgba(0,0,0,.5);
-	color: $black;
 	
 	.choice {
 		position: relative;
@@ -289,21 +294,9 @@ a {
 	}
 }
 .q-a {
-	background-image: url(/static/images/edito/training.jpg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: contain;
-	
-	overflow: hidden;
-	
-	&:hover {
-		.browser {
-			bottom: -30px;
-		}
-	}
-	
-	.container {
-		position: relative;
+	.browser {
+		width: 80%;
+		margin: 40px auto 0;
 	}
 	.quote-box {
 		padding: 5px;
@@ -513,10 +506,7 @@ img {
 		box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
 	}
 	.browser {
-		position: relative;
-		bottom: 0;
 		width: 100%;
-		//top: 206px;
 		box-shadow: 0 2px 2px rgba(0,0,0,.1);
 	}
 	.browser-wrapper {
@@ -585,6 +575,7 @@ img {
 
 .try-now {
 	background-color: #fafafa;
+	background-image: none;
 }
 .try-me {
 	background-color: $brandBlueLight;
@@ -654,11 +645,6 @@ img {
 }
 // browser
 .browser {
-	position: absolute;
-	right: 150px;
-	width: 375px;
-	bottom: -80px;
-	transition: all .3s ease-in;
 }
 .browser-bar {
 	display: none;

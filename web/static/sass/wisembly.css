@@ -381,22 +381,25 @@ a {
 
 .section {
   border-bottom: 1px solid #e0e0e0;
-  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.06); }
+  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.06);
+  background-image: -webkit-linear-gradient(top, rgba(239, 248, 251, 0), rgba(239, 248, 251, 0) 70%, #eff8fb); }
   .section .container {
     padding: 80px 0;
     position: relative; }
   .section h3 {
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 300;
     margin-top: 0; }
   .section p {
     line-height: 2em; }
   .section .illustration {
     display: block;
-    margin: 20px 0; }
+    margin: 40px 0; }
     .section .illustration img {
       display: block;
-      margin: 0 auto; }
+      margin: 0 auto;
+      user-select: none;
+      pointer-events: none; }
 
 .header {
   background-color: #f5f5f5;
@@ -441,7 +444,8 @@ a {
     transform: translate3d(0, 0, 0); }
 
 .features-list {
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+  background-image: none; }
   .features-list .container {
     padding: 0; }
   .features-list ul {
@@ -471,10 +475,6 @@ a {
     text-transform: uppercase; }
     .features-list a span {
       display: block; }
-    .features-list a .short {
-      padding-top: 20px; }
-    .features-list a .medium {
-      padding-top: 10px; }
     .features-list a:hover {
       background-color: #0786cd;
       color: white; }
@@ -485,15 +485,17 @@ a {
     left: 0;
     background-color: white; }
 
-.documents-management,
-.stats-reporting,
-.students-evaluation {
-  background-image: -webkit-linear-gradient(top, rgba(239, 248, 251, 0), rgba(239, 248, 251, 0) 80%, #eff8fb); }
-
 .documents-management .container {
   background-image: url(/static/images/illustrations/managing-documents.png);
   background-position: right center;
   background-repeat: no-repeat; }
+
+.events-audience-participation {
+  background-color: #006697;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
+  .events-audience-participation h3 {
+    font-weight: bold; }
 
 .students-evaluation {
   /* h3 span {
@@ -511,13 +513,14 @@ a {
   background-position: left center;
   background-repeat: no-repeat; }
 
+.quizzes .browser {
+  margin: 0 auto;
+  width: 80%; }
+.quizzes .browser-window {
+  height: auto; }
+
 .quiz-demo {
-  background-color: white;
-  padding: 20px 30px;
-  border: 1px solid #e0e0e0;
-  border-radius: 3px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  color: #444444; }
+  padding: 20px 30px; }
   .quiz-demo .choice {
     position: relative;
     display: block;
@@ -553,53 +556,46 @@ a {
     width: 100%;
     margin-top: 20px; }
 
-.q-a {
-  background-image: url(/static/images/edito/training.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  overflow: hidden; }
-  .q-a:hover .browser {
-    bottom: -30px; }
-  .q-a .container {
+.q-a .browser {
+  width: 80%;
+  margin: 40px auto 0; }
+.q-a .quote-box {
+  padding: 5px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0; }
+  .q-a .quote-box.focus button {
+    display: block; }
+  .q-a .quote-box .textarea-container {
     position: relative; }
-  .q-a .quote-box {
-    padding: 5px;
-    background-color: #f5f5f5;
-    border-bottom: 1px solid #e0e0e0; }
-    .q-a .quote-box.focus button {
-      display: block; }
-    .q-a .quote-box .textarea-container {
-      position: relative; }
-    .q-a .quote-box textarea {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      outline: none;
-      resize: none;
-      width: 100%;
-      box-sizing: border-box;
-      border: 1px solid #e0e0e0;
-      overflow: hidden; }
-    .q-a .quote-box .textarea-mirror {
-      min-height: 20px; }
-    .q-a .quote-box textarea,
-    .q-a .quote-box .textarea-mirror {
-      padding: 10px; }
-    .q-a .quote-box button {
-      display: none; }
-  .q-a .quotes-stream li {
-    border-bottom: 1px solid #e0e0e0;
-    padding: 15px; }
-    .q-a .quotes-stream li span {
-      display: block; }
-    .q-a .quotes-stream li .quote-text {
-      margin-bottom: 5px; }
-    .q-a .quotes-stream li .quote-author {
-      color: #999999;
-      font-size: 11px; }
+  .q-a .quote-box textarea {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    outline: none;
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+    overflow: hidden; }
+  .q-a .quote-box .textarea-mirror {
+    min-height: 20px; }
+  .q-a .quote-box textarea,
+  .q-a .quote-box .textarea-mirror {
+    padding: 10px; }
+  .q-a .quote-box button {
+    display: none; }
+.q-a .quotes-stream li {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px; }
+  .q-a .quotes-stream li span {
+    display: block; }
+  .q-a .quotes-stream li .quote-text {
+    margin-bottom: 5px; }
+  .q-a .quotes-stream li .quote-author {
+    color: #999999;
+    font-size: 11px; }
 
 .clients-list {
   margin: 0 -20px;
@@ -730,8 +726,6 @@ img {
     background-image: linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
   .headline .browser {
-    position: relative;
-    bottom: 0;
     width: 100%;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); }
   .headline .browser-wrapper {
@@ -788,7 +782,8 @@ img {
     margin-bottom: 30px; }
 
 .try-now {
-  background-color: #fafafa; }
+  background-color: #fafafa;
+  background-image: none; }
 
 .try-me {
   background-color: #45a4da;
@@ -847,13 +842,6 @@ img {
 .browsers {
   position: relative;
   height: 100%; }
-
-.browser {
-  position: absolute;
-  right: 150px;
-  width: 375px;
-  bottom: -80px;
-  transition: all .3s ease-in; }
 
 .browser-bar {
   display: none;

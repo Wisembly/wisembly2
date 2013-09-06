@@ -169,26 +169,37 @@
 						<p>{{ 'quizzes_desc' | trans }}</p>
 					</div>
 				</div>
-				<div class='column four last'>
+				<div class='column five last'>
 					<div class='column-inner'>
-						<div class='quiz-demo'>
-							<h4 class='quiz-title'>Would you like to try this?</h4>
-							<div class='choice'>
-								<input type='radio' />
-								<i class='target'></i>
-								<span>Yes</span>
+						<div class='browser'>
+							<div class='browser-window'>
+								<div class='mocked-app'>
+									<div class='app-header'>
+										<div class="app-logo">wisembly</div>
+									</div>
+									<div class='app-body'>
+										<div class='quiz-demo'>
+											<h4 class='quiz-title'>Would you like to try this?</h4>
+											<div class='choice'>
+												<input type='radio' />
+												<i class='target'></i>
+												<span>Yes</span>
+											</div>
+											<label class='choice'>
+												<input type='radio' />
+												<i class='target'></i>
+												<span>No</span>
+											</label>
+											<label class='choice'>
+												<input type='radio' />
+												<i class='target'></i>
+												<span>I'm not sure just yet.</span>
+											</label>
+											<button class='button button-default'>Envoyer</button>
+										</div>
+									</div>
+								</div>
 							</div>
-							<label class='choice'>
-								<input type='radio' />
-								<i class='target'></i>
-								<span>No</span>
-							</label>
-							<label class='choice'>
-								<input type='radio' />
-								<i class='target'></i>
-								<span>I'm not sure just yet.</span>
-							</label>
-							<button class='button button-default'>Envoyer</button>
 						</div>
 					</div>
 				</div>
@@ -208,14 +219,14 @@
 	</div>
 	<div class='section q-a' id='q-a'>
 		<div class='container'>
-			<h3>{{ 'qna_title' | trans }}</h3>
 			<div class='row'>
-				<div class='column four'>
+				<div class='column five'>
 					<div class='column-inner'>
+						<h3>{{ 'qna_title' | trans }}</h3>
 						{{ 'qna_desc' | trans | raw }}
 					</div>
 				</div>
-				<div class='column four last'>
+				<div class='column six last'>
 					<div class='column-inner'>
 						<div class='browser'>
 							<div class='browser-bar'>
@@ -304,6 +315,9 @@
 	<div class='section multi-device' id='multi-device'>
 		<div class='container'>
 			<h3 class='text-centered'>{{ 'multi_device_title' | trans }}</h3>
+			<div class='illustration'>
+				<img src='/static/images/illustrations/devices.png'>
+			</div>
 			<div class='row'>
 				<div class='column four'>
 					<div class='column-inner'>
