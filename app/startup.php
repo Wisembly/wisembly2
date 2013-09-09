@@ -4,6 +4,7 @@ use Silex\Application;
 
 use SilexCMS\Set\LocalizationSet,
     SilexCMS\Set\DataSet,
+    SilexCMS\Set\KeyValueSet,
     SilexCMS\Page\StaticPage,
     SilexCMS\Page\DynamicPage,
     Application\Controller\Contact;
@@ -23,6 +24,7 @@ $app->register(new DataSet('cases', 'cases'));
 $app->register(new DataSet('history', 'history'));
 $app->register(new DataSet('team', 'team'));
 $app->register(new DataSet('press', 'press'));
+$app->register(new KeyValueSet('meta', 'meta', 'page'));
 
 // Pages
 $app->register(new StaticPage('index', '/', 'pages/index.html.twig'));

@@ -2,6 +2,14 @@
 
 {% block body_class %}resources{% endblock %}
 
+{# SEO #}
+{% set page = 'resources' %}
+{% block meta %}{% endblock %}
+{% block page_title %}{{ app.meta[page].title }}{% endblock %}
+{% block meta_description %}{{ app.meta[page].description }}{% endblock %}
+{% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
+
+
 {% block content %}
 	<div class='section header' style='background-image: url(http://cdn0.stocksy.com/a/f3A000/z0/38667.jpg)'>
 		<div class='container'>

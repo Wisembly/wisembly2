@@ -5,6 +5,13 @@
 
 {% block body_class %}case-studies{% endblock %}
 
+{# SEO #}
+{% set page = 'casestudies' %}
+{% block meta %}{% endblock %}
+{% block page_title %}{{ app.meta[page].title }}{% endblock %}
+{% block meta_description %}{{ app.meta[page].description }}{% endblock %}
+{% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
+
 {% block content %}
 	<div class='section header' style='background-image: url(http://i.istockimg.com/file_thumbview_approve/19293961/2/stock-photo-19293961-group-of-office-workers-in-a-boardroom-presentation.jpg)'>
 		<div class='container'>

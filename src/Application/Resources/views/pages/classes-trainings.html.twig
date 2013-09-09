@@ -5,6 +5,14 @@
 
 {% block body_class %}classes-trainings{% endblock %}
 
+{# SEO #}
+{% set page = 'classes_trainings' %}
+{% block meta %}{% endblock %}
+{% block page_title %}{{ app.meta[page].title }}{% endblock %}
+{% block meta_description %}{{ app.meta[page].description }}{% endblock %}
+{% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
+
+
 {%  block content %}
 	<div class='section header' style='background-image: url(http://cdn2.stocksy.com/a/t1K000/z0/76997.jpg);'>
 		<div class='container'>

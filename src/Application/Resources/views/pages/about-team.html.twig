@@ -5,6 +5,13 @@
 
 {% block body_class %}about-team{% endblock %}
 
+{# SEO #}
+{% set page = 'about_team' %}
+{% block meta %}{% endblock %}
+{% block page_title %}{{ app.meta[page].title }}{% endblock %}
+{% block meta_description %}{{ app.meta[page].description }}{% endblock %}
+{% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
+
 {% block content %}
 	<div class='section header' background-image: url();>
 		<div class='container'>

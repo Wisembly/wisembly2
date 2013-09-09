@@ -5,6 +5,14 @@
 
 {% block body_class %}events-seminaries{% endblock %}
 
+{# SEO #}
+{% set page = 'events_seminaries' %}
+{% block meta %}{% endblock %}
+{% block page_title %}{{ app.meta[page].title }}{% endblock %}
+{% block meta_description %}{{ app.meta[page].description }}{% endblock %}
+{% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
+
+
 {%  block content %}
 	<div class='section header' style='background-image: url(http://farm5.staticflickr.com/4111/5077272375_8738bc6f3d_b.jpg);'>
 		<div class='container'>

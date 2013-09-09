@@ -5,6 +5,13 @@
 {# automatically get case in app.set provided by slug in url #}
 {% set case = app.set %}
 
+{# SEO #}
+{% set page = 'casestudies' %}
+{% block meta %}{% endblock %}
+{% block page_title %}{{ app.meta[page].title }}{% endblock %}
+{% block meta_description %}{{ app.meta[page].description }}{% endblock %}
+{% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
+
 {% block content %}
     <a href='{{ path('case-studies') }}'>{{ 'back' | trans }}</a>
 	<div class='section hec' id='hec'>
