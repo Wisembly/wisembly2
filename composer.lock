@@ -259,12 +259,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Silex.git",
-                "reference": "f44db3ed16474e7e11b5c1ce96cba3fd4c07c812"
+                "reference": "4787bf21e416b9abd5cbf41daf136dae20d56f5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Silex/zipball/f44db3ed16474e7e11b5c1ce96cba3fd4c07c812",
-                "reference": "f44db3ed16474e7e11b5c1ce96cba3fd4c07c812",
+                "url": "https://api.github.com/repos/fabpot/Silex/zipball/4787bf21e416b9abd5cbf41daf136dae20d56f5c",
+                "reference": "4787bf21e416b9abd5cbf41daf136dae20d56f5c",
                 "shasum": ""
             },
             "require": {
@@ -333,7 +333,7 @@
             "keywords": [
                 "microframework"
             ],
-            "time": "2013-09-04 08:27:59"
+            "time": "2013-09-08 05:31:36"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -488,12 +488,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "8f04af088451aa787e8c2433aa8174f2a0e10b4b"
+                "reference": "148bbb43845296e288744543d1ff86e54e257657"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/8f04af088451aa787e8c2433aa8174f2a0e10b4b",
-                "reference": "8f04af088451aa787e8c2433aa8174f2a0e10b4b",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/148bbb43845296e288744543d1ff86e54e257657",
+                "reference": "148bbb43845296e288744543d1ff86e54e257657",
                 "shasum": ""
             },
             "require": {
@@ -532,7 +532,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-23 15:27:50"
+            "time": "2013-09-07 16:46:00"
         },
         {
             "name": "symfony/debug",
@@ -751,12 +751,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "cd7b96d5777a742e178fb58059ab70d794b5b351"
+                "reference": "903e22f3bc236bb92a1031c111bca4829931ba40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/cd7b96d5777a742e178fb58059ab70d794b5b351",
-                "reference": "cd7b96d5777a742e178fb58059ab70d794b5b351",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/903e22f3bc236bb92a1031c111bca4829931ba40",
+                "reference": "903e22f3bc236bb92a1031c111bca4829931ba40",
                 "shasum": ""
             },
             "require": {
@@ -792,7 +792,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-29 19:32:30"
+            "time": "2013-09-08 16:12:21"
         },
         {
             "name": "symfony/http-kernel",
@@ -801,12 +801,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "8716769dcd49b48d628f77057c549b83400afcd4"
+                "reference": "db8bdfc092c6e70bdaf93cd7b09b3fcb5e43528b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/8716769dcd49b48d628f77057c549b83400afcd4",
-                "reference": "8716769dcd49b48d628f77057c549b83400afcd4",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/db8bdfc092c6e70bdaf93cd7b09b3fcb5e43528b",
+                "reference": "db8bdfc092c6e70bdaf93cd7b09b3fcb5e43528b",
                 "shasum": ""
             },
             "require": {
@@ -863,7 +863,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "http://symfony.com",
-            "time": "2013-09-05 11:25:56"
+            "time": "2013-09-08 16:12:21"
         },
         {
             "name": "symfony/locale",
@@ -964,12 +964,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Process.git",
-                "reference": "a6f139c42a924904cee21e75624ea2256dbd44cf"
+                "reference": "f1386b09571aa886e3d51691442bee5554dc11da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Process/zipball/a6f139c42a924904cee21e75624ea2256dbd44cf",
-                "reference": "a6f139c42a924904cee21e75624ea2256dbd44cf",
+                "url": "https://api.github.com/repos/symfony/Process/zipball/f1386b09571aa886e3d51691442bee5554dc11da",
+                "reference": "f1386b09571aa886e3d51691442bee5554dc11da",
                 "shasum": ""
             },
             "require": {
@@ -1002,7 +1002,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-30 13:15:50"
+            "time": "2013-09-07 16:33:27"
         },
         {
             "name": "symfony/routing",
@@ -1011,12 +1011,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "69af3f07dbf3ae93dd513dbc373f561cb2e7f143"
+                "reference": "3085975262bc36dc89929a936056dc6e5cb8a100"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/69af3f07dbf3ae93dd513dbc373f561cb2e7f143",
-                "reference": "69af3f07dbf3ae93dd513dbc373f561cb2e7f143",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/3085975262bc36dc89929a936056dc6e5cb8a100",
+                "reference": "3085975262bc36dc89929a936056dc6e5cb8a100",
                 "shasum": ""
             },
             "require": {
@@ -1060,7 +1060,7 @@
             ],
             "description": "Symfony Routing Component",
             "homepage": "http://symfony.com",
-            "time": "2013-08-23 15:14:07"
+            "time": "2013-09-06 18:20:34"
         },
         {
             "name": "symfony/translation",
@@ -1318,12 +1318,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "c0731335a12c58e2a84cde6cf133c586be639491"
+                "reference": "4001f81a179e3971377ce1ac51b4ff9ea851b8ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/c0731335a12c58e2a84cde6cf133c586be639491",
-                "reference": "c0731335a12c58e2a84cde6cf133c586be639491",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/4001f81a179e3971377ce1ac51b4ff9ea851b8ce",
+                "reference": "4001f81a179e3971377ce1ac51b4ff9ea851b8ce",
                 "shasum": ""
             },
             "require": {
@@ -1359,7 +1359,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-09-04 15:00:30"
+            "time": "2013-09-08 15:21:02"
         },
         {
             "name": "wisembly/silexcms",

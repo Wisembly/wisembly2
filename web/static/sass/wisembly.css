@@ -422,13 +422,14 @@ a {
     font-weight: 300; }
   .header h1,
   .header h2 {
-    margin: 0 0 2px; }
+    margin: 0 0 2px;
+    border-left: 3px solid #0786cd;
+    margin-bottom: 2px; }
     .header h1 span,
     .header h2 span {
-      background-color: rgba(7, 134, 205, 0.9);
+      background-color: rgba(68, 68, 68, 0.7);
       line-height: 1.5em;
-      padding: 2px 5px;
-      margin-bottom: 2px; }
+      padding: 2px 10px; }
   .header h2 {
     font-weight: 300; }
   .header .header-background {
