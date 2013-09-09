@@ -4,6 +4,7 @@ global:
  host: http://wisembly.com
  assets_version: 42
  mysqldump: /Applications/MAMP/Library/bin/mysqldump
+ mysql: /Applications/MAMP/Library/bin/mysql
 
 silexcms.cache:
   enable: false
