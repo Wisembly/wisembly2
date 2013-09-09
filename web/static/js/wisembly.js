@@ -6,7 +6,95 @@ $(document).ready(function () {
 	joinAnEvent.startListening();
 	login.startListening();
 	quotesList.start();
+	var browsersAnimation = new Animator();
+	browsersAnimation.init({
+		loops: 20,
+		stepDelay: 100,
+		loopDelay: 10000,
+		steps: [
+			{
+				name: 'step-1',
+				animations: [
+					{
+						selector: 		'[data-name=browser-organizer]',
+						animationFn : 	'indexOrganizerHoverToSelect',
+						duration: 		2000
+					}
+				]
+			}, {
+				name: 'step-2',
+				animations: [
+					{
+						selector: 		'[data-name=browser-organizer]',
+						animationFn: 	'indexOrganizerSelectHover',
+						duration: 		0
+					}
+				]
+			}, {
+				name: 'step-3',
+				animations: [
+					{
+						selector: 		'[data-name=browser-organizer]',
+						animationFn: 	'indexOrganizerSelectClick',
+						duration: 		0
+					}
+				]
+			}, {
+				name: 'step-4',
+				animations: [
+					{
+						selector: 		'[data-name=browser-organizer]',
+						animationFn: 	'indexOrganizerHoverToPublish',
+						duration: 		1000
+					}
+				]
+			}, {
+				name: 'step-5',
+				animations: [
+					{
+						selector: 		'[data-name=browser-organizer]',
+						animationFn: 	'indexOrganizerPublishHover',
+						duration: 		0
+					}
+				]
+			}, {
+				name: 'step-6',
+				animations: [
+					{
+						selector: 		'[data-name=browser-organizer]',
+						animationFn: 	'indexOrganizerPublishClick',
+						duration: 		0
+					}
+				]
+			}, {
+				name: 'step-7',
+				animations: [
+					{
+						selector: 		'[data-name=browser-organizer]',
+						animationFn: 	'indexOrganizerSending',
+						duration: 		1500
+					}
+				]
+			}, {
+				name: 'step-8',
+				animations: [
+					{
+						selector: 		'[data-name=browser-organizer]',
+						animationFn: 	'indexOrganizerSent',
+						duration: 		0
+					}, {
+						selector: 		'[data-name=browser-participant]',
+						animationFn: 	'indexParticipantResults',
+						duration: 		500
+					}
+				]
+			}
+		],
+		cleanup: 'indexCleanup'
+	});
+
 });
+
 
 var tabs = {
 	startListening: function () {
@@ -159,3 +247,192 @@ var quotesList = {
 
 	}
 };
+
+var indexCleanup = function () {
+	var $button = $('[data-name=browser-organizer] .button'),
+		buttonText = $('[data-name=browser-organizer] .button').data('reset-text');
+
+	$('[data-name=browser-organizer] .mouse').css({
+		'top' : '110%',
+		'bottom' : '110%'
+	});
+	$('[data-name=browser-organizer] .choice.one').css({
+		'box-shadow': 'none',
+		'background-color': '#eee'
+	});
+	$('[data-name=browser-organizer] .choice.one .radio').css({
+		'background-image': 'url(/static/images/ok.png)'
+	});
+	$button
+		.css({
+			'background-color': '#45a4da'
+		})
+		.text(buttonText);
+
+	$('[data-name=result-1] .progress-bar').css({
+		'width' : '80%'
+	});
+	$('[data-name=result-2] .progress-bar').css({
+		'width' : '20%'
+	});
+
+	$('[data-name=result-1] .value').text('80%');
+	$('[data-name=result-2] .value').text('20%');
+	$('.total-count').text('12');
+};
+
+var indexOrganizerHoverToSelect = function (selector, duration) {
+	$('.mouse', selector).animate({
+		top: '93px',
+    	left: '17px'
+	}, duration);
+};
+
+var indexOrganizerSelectHover = function (selector) {
+	$('.choice.one', selector).css({
+		'background-color': '#f5f5f5'
+	});
+};
+
+var indexOrganizerSelectClick = function (selector) {
+	$('.choice.one', selector).css({
+		'box-shadow': 'inset 0 0 2px rgba(0, 0, 0, 0.1)'
+	});
+	$('.choice.one .radio').css({
+		'background-image': 'url(/static/images/ok-hover.png)'
+	});
+}
+
+var indexOrganizerSelectClickRadio = function (selector) {
+	$(selector).css({
+		'background-image': 'url(/static/images/ok-hover.png)'
+	});
+}
+
+var indexOrganizerHoverToPublish = function (selector, duration) {
+	$('.mouse', selector).animate({
+		'top': '233px',
+		'left': '167px'
+	}, duration)
+};
+
+var indexOrganizerPublishHover = function(selector) {
+	$('.button', selector).css({
+		'background-color': '#7fc4e2'
+	});
+};
+
+var indexOrganizerPublishClick = function(selector) {
+	$('.button', selector).css({
+		'box-shadow': 'inset 0 0 5px rgba(0, 0, 0, 0.3)',
+		'background-color': '#45a4da'
+	});
+};
+
+var indexOrganizerSending = function(selector, duration) {
+	var $el = $('.button', selector),
+		sendingText = $el.data('sending-text');
+	$el
+		.css({
+			'box-shadow': 'inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1)'
+		})
+		.text(sendingText)
+		.animate({
+			'opacity': 1
+		}, duration);
+};
+
+var indexOrganizerSent = function(selector, duration) {
+	var $el = $('.button', selector),
+		sentText = $el.data('sent-text');
+	$el.text(sentText);
+};
+
+var indexParticipantResults = function (selector, duration) {
+	$('[data-name=result-1] .progress-bar', selector).animate({
+		'width' : '82%'
+	}, duration);
+	$('[data-name=result-2] .progress-bar', selector).animate({
+		'width' : '18%'
+	}, duration);
+
+	$('[data-name=result-1] .value', selector).text('82%');
+	$('[data-name=result-2] .value', selector).text('18%');
+	$('.total-count', selector).text('13');
+};
+
+
+/**
+ * Small animator helper, meant to play on or more animation sequences at the same time
+ * A sequence is composed of steps, and can be played several times
+ * Each step can manage animations functions on one or more selectors
+ **/
+
+var Animator = (function () {
+
+	var currentStep 	= 0,
+		currentLoop 	= 1,
+		currentState 	= 'stopped',
+		options,
+		defaults = {
+			autoplay: 	true,			// Play animation sequence just after init ?
+			loops: 		5,				// How many times should be played the animation sequence
+			loopDelay: 	500,			// How much time should be taken between each loop
+			stepDelay: 	500,			// How much time should be taken between each steps
+			steps: 		[]				// Steps : { name | animations : { selector, animationFn, duration } }
+		};
+
+	var init = function (args) {
+		options = $.extend(defaults, args);
+		if (options.autoplay) {
+			loop();
+		}
+	};
+
+	var loop = function () {
+		currentStep = 0;
+		if (options.cleanup) {
+			window[options.cleanup].call();
+		}
+		if (currentLoop <= options.loops) {
+			play();
+		} else {
+			stop();
+		}
+	};
+
+	var play = function () {
+		currentState = 'playing';
+		$.each(options.steps[currentStep].animations, function (index, animation) {
+			window[animation.animationFn].call(this, animation.selector, animation.duration || 500);
+		});
+		// Waiting for ALL animations in this step to be finished before continuing
+		$(':animated').promise().done( function () {
+			currentStep += 1;
+			if (currentStep < options.steps.length) {
+				setTimeout(play, options.stepDelay);
+			} else {
+				currentLoop += 1;
+				setTimeout(loop, options.loopDelay);
+			}
+		});
+
+	};
+
+	var stop = function () {
+		currentState = 'stopped';
+		currentStep = 0;
+		currentLoop = 1;
+		if (options.cleanup) {
+			window[options.cleanup].call();
+		}
+	};
+
+	return {
+		init: init
+	};
+
+});
+
+
+

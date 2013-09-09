@@ -51,11 +51,11 @@
                         </div>
                         <div class='column six last'>
                             <div class='column-inner'>
-                                <div class='row'>
+                                <div class='row' data-name='home-browsers-loop'>
                                     <div class='column six'>
                                         <div class='column-inner'>
                                             <div class='browser-wrapper first'>
-                                                <div class='browser'>
+                                                <div class='browser' data-name="browser-organizer">
                                                     <div class='browser-bar'>
                                                         <span>http://app.wisembly.com/demo</span>
                                                     </div>
@@ -88,7 +88,14 @@
                                                                                 </div>
                                                                             </li>
                                                                             </ul>
-                                                                    <span href='' class='button button-validate'>{{ 'Cast your vote    ' | trans }}</span>
+                                                                    <span
+                                                                        href=''
+                                                                        class='button button-validate'
+                                                                        data-reset-text="{{ 'Cast your vote' | trans }}"
+                                                                        data-sending-text="{{ 'Sending' | trans }}"
+                                                                        data-sent-text="{{ 'Sent' | trans }}">
+                                                                            {{ 'Cast your vote' | trans }}
+                                                                    </span>
                                                                     </div>
                                                                 <div class='mouse'></div>
                                                                 </div>
@@ -104,7 +111,7 @@
                                         <div class='column-inner'>
                                             <div class='browser-wrapper last'>
                                                 <b></b>
-                                                <div class='browser'>
+                                                <div class='browser' data-name="browser-participant">
                                                     <div class='browser-bar'>
                                                         <span>http://app.wisembly.com/demo</span>
                                                     </div>
@@ -118,7 +125,7 @@
                                                                     <h5>{{ 'homepage_poll_question this is my question' | trans }}</h5>
                                                                     <ul class='list results'>
                                                                        <li class='even'>
-                                                                           <div class='result'>
+                                                                           <div class='result' data-name='result-1'>
                                                                                <span class='text'>One</span>
                                                                                <span class='value'>80%</span>
                                                                                <span class='progress'>
@@ -127,7 +134,7 @@
                                                                            </div>
                                                                        </li>
                                                                        <li class='even'>
-                                                                           <div class='result'>
+                                                                           <div class='result' data-name='result-2'>
                                                                                <span class='text'>One</span>
                                                                                <span class='value'>20%</span>
                                                                                <span class='progress'>
@@ -136,7 +143,7 @@
                                                                            </div>
                                                                        </li>
                                                                        <li class='even'>
-                                                                           <div class='result'>
+                                                                           <div class='result'  data-name='result-3'>
                                                                                <span class='text'>One</span>
                                                                                <span class='value'>0%</span>
                                                                                <span class='progress'>

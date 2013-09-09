@@ -1266,7 +1266,7 @@ img {
     opacity: .3;
     top: 110%;
     left: 110%;
-    transition: all 1.5s ease-out; }
+  }
   .frame .mouse-idle, .frame.sending .mouse {
     opacity: .1; }
   .frame .mouse-hover, .frame.select-hover .mouse, .frame.publish-hover .mouse {
