@@ -255,6 +255,9 @@ a {
 		height: auto;
 	}
 }
+.quiz-title {
+	font-weight: bold;
+}
 .quiz-demo {
 	padding: 20px 30px;
 	
@@ -267,7 +270,7 @@ a {
 		cursor: pointer;
 	}
 	h4 {
-		font-weight: 400;
+		font-weight: bold;
 		margin-top: 0;
 	}
 	input {
@@ -277,7 +280,7 @@ a {
 	}
 	span {
 		display: block;
-		padding: 5px 10px;
+		padding: 8px 10px;
 		overflow: hidden;
 	}
 	.target {
@@ -287,11 +290,21 @@ a {
 		height: 20px;
 		padding: 6px 5px;
 		border-right: 1px solid $lightGrey;
-		background-color: rgba(0,0,0,.02);
+		background-color: rgba(0,0,0,.1);
+		background-image: url(/static/images/ok.png);
+		background-repeat: no-repeat;
+		background-position: center center;
 	}
 	.button {
 		width: 100%;
 		margin-top: 20px;
+	}
+	input:checked {
+		background-color: red;
+		
+		& + .target {
+			background-image: url(/static/images/ok-hover.png);
+		}
 	}
 }
 .q-a {
