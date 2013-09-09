@@ -1,10 +1,15 @@
 global:
- debug: true
- locale_fallback: en
- host: http://wisembly.com
- assets_version: 42
- mysqldump: /Applications/MAMP/Library/bin/mysqldump
- mysql: /Applications/MAMP/Library/bin/mysql
+  debug: true
+  locale_fallback: en
+  host: http://wisembly.com
+  assets_version: 42
+  mysqldump: /Applications/MAMP/Library/bin/mysqldump
+  mysql: /Applications/MAMP/Library/bin/mysql
+
+third_party:
+  mixpanel:  trackingnumber
+  analytics: trackingnumber
+  olark:     trackingnumber
 
 silexcms.cache:
   enable: false

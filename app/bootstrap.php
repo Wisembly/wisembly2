@@ -54,6 +54,9 @@ $app['mailer'] = $app->share(function ($app) {
     return new \Swift_Mailer($app['swiftmailer.transport']);
 });
 
+// third party scripts ids (mixpanel, olark, analytics..)
+$app['third_party'] = $config['third_party'];
+
 unset($config);
 require_once __DIR__ . '/startup.php';
 
