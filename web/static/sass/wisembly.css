@@ -1622,6 +1622,7 @@ form[data-status='testing'] .button-processing {
 .dropdown.active .dropdown-toggle {
   background-color: white;
   background-image: none; }
+.dropdown.active .dropdown-list,
 .dropdown.active .dropdown-bottom {
   display: block; }
 .dropdown.active .dropdown-toggle {
@@ -1638,22 +1639,29 @@ form[data-status='testing'] .button-processing {
   background-repeat: no-repeat;
   background-position: 37px center; }
 
-.join-event {
-  width: 200px; }
-  .join-event .row {
-    margin: 0 -5px; }
-  .join-event .column-inner {
-    padding: 0 5px; }
-  .join-event .button {
-    width: 100%;
-    padding: 6px 10px; }
+.join-event,
+.login,
+.subscribe {
+  width: 260px; }
 
-.login {
-  width: 200px; }
-  .login .button {
-    float: right; }
-  .login .input-container {
-    margin-bottom: 10px; }
+.join-event .row,
+.subscribe .row {
+  margin: 0 -5px; }
+.join-event .column-inner,
+.subscribe .column-inner {
+  padding: 0 5px; }
+.join-event .button,
+.subscribe .button {
+  width: 100%;
+  padding: 6px 10px; }
+
+.login .button {
+  float: right; }
+.login .input-container {
+  margin-bottom: 10px; }
+
+.footer .dropdown-bottom {
+  margin-top: 1px; }
 
 .top-bar {
   position: absolute;
@@ -1806,11 +1814,8 @@ form[data-status='testing'] .button-processing {
   .footer .dropdown {
     float: right;
     margin-left: 20px; }
-  .footer .subscribe {
-    float: right; }
   .footer .trial {
-    float: right;
-    margin-right: 20px; }
+    float: right; }
   .footer h5 {
     text-transform: uppercase;
     color: #999999;

@@ -46,6 +46,7 @@ $dropdownLangWidth: 58px;
 		background-color: $white;
 		background-image: none;
 	}
+	.dropdown-list,
 	.dropdown-bottom {
 		display: block;
 	}
@@ -66,8 +67,13 @@ $dropdownLangWidth: 58px;
 	background-repeat: no-repeat;
 	background-position: 37px center;
 }
-.join-event {
-	width: 200px;
+.join-event,
+.login,
+.subscribe {
+	width: 260px;
+}
+.join-event,
+.subscribe {
 	
 	.row {
 		margin: 0 -5px;
@@ -81,12 +87,17 @@ $dropdownLangWidth: 58px;
 	}
 }
 .login {
-	width: 200px;
 	
 	.button {
 		float: right;
 	}
 	.input-container {
 		margin-bottom: 10px;
+	}
+}
+
+.footer {
+	.dropdown-bottom {
+		margin-top: 1px;
 	}
 }

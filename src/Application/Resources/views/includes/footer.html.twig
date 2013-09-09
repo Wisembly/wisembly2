@@ -69,8 +69,30 @@
 								</li>
 							</ul>
 						</div>
-						<div class='subscribe'>
-							<a href='' class='button button-validate'>{{ 'suscribe' | trans }}</a>
+						<div class='dropdown'>
+							<label class='button button-validate'>{{ 'suscribe' | trans }}</label>
+							<div class='dropdown-bottom' data-name='dropdown'>
+								<form class='subscribe' data-status='active' data-show-errors='false'>
+									<div class='row'>
+										<div class='column eight'>
+											<div class='column-inner'>
+													<div class='input-container'>
+														<input class='input' placeholder='{{ 'subscribe_newsletter_placeholder' | trans }}' data-required='true' />
+														<span class='input-background'></span>
+													</div>
+											</div>
+										</div>
+										<div class='column four'>
+											<div class='column-inner'>
+												<button class='button'>
+													<span class='button-text'>{{ 'join_event_button' | trans }}</span>
+													<span class='button-processing'>...</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
 						</div>
 						<div class='trial'>
 							<a href='' class='button button-call'>{{ 'free_trial' | trans }}</a>
