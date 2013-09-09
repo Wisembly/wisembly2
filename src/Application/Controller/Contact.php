@@ -23,7 +23,7 @@ class Contact implements ServiceProviderInterface
                 }
             }
 
-            $body = $app['translator']->trans('full_name') . ' : ' . $request->request->get('contact_fullname') . "\t\n";
+            $body = $app['translator']->trans('fullname') . ' : ' . $request->request->get('contact_fullname') . "\t\n";
             $body .= $app['translator']->trans('email') . ' : ' . $request->request->get('contact_email') . "\t\n";
             $body .= $app['translator']->trans('company') . ' : ' . $request->request->get('contact_company') . "\t\n";
             $body .= $app['translator']->trans('phone_number') . ' : ' . $request->request->get('contact_phone') . "\t\n";
