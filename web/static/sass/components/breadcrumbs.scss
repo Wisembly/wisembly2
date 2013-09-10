@@ -7,10 +7,25 @@
 	}
 	li {
 		float: left;
+		background-image: url(/static/images/right-chevron.png);
+		background-position: center right;
+		background-repeat: no-repeat;
+	}
+	.last {
+		background-image: none;
+		
+		a {
+			padding-right: 15px;
+		}
 	}
 	a {
 		display: block;
-		padding: 20px 15px;
+		padding: 20px 29px 20px 15px;
 		text-decoration: none;
+		color: $grey;
+		
+		&:hover {
+			color: #666;
+		}
 	}
 }

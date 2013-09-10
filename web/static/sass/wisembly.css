@@ -403,13 +403,33 @@ a {
 
 .header {
   background-color: #f5f5f5;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
   color: white;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   padding: 60px 0;
-  border-bottom: 0; }
+  border-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+  .header .header-background {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; }
+  .header img,
+  .header .bg  {
+    min-width: 1024px;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-top: -20%; }
   .header .container {
     height: 240px;
     padding: 0; }
@@ -432,17 +452,6 @@ a {
       padding: 2px 10px; }
   .header h2 {
     font-weight: 300; }
-  .header .header-background {
-    -webkit-transition: opacity 800ms cubic-bezier(0.51, 0.01, 0.37, 0.98);
-    -webkit-transition-delay: 100ms;
-    -moz-transition: opacity 800ms cubic-bezier(0.51, 0.01, 0.37, 0.98) 100ms;
-    -o-transition: opacity 800ms cubic-bezier(0.51, 0.01, 0.37, 0.98) 100ms;
-    transition: opacity 800ms cubic-bezier(0.51, 0.01, 0.37, 0.98) 100ms;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
 
 .features-list {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
@@ -912,6 +921,47 @@ img {
   .gallery-list .img {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     padding: 1px; }
+
+.case-detail .section li {
+  line-height: 1.5em;
+  margin-bottom: 10px; }
+.case-detail .section, .case-detail   {
+  background-image: none; }
+.case-detail .comment {
+  display: block;
+  padding: 30px;
+  background-color: #eff8fb;
+  border-left: 2px solid #7fc4e2; }
+  .case-detail .comment blockquote {
+    padding: 24px 34px;
+    margin: 0;
+    line-height: 1.5em;
+    position: relative;
+    font-family: Georgia;
+    font-size: 26px; }
+  .case-detail .comment blockquote:before {
+    content: '';
+    display: block;
+    background-image: url(/static/images/double-quotes-left.png);
+    width: 30px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .case-detail .comment blockquote:after {
+    content: '';
+    display: block;
+    background-image: url(/static/images/double-quotes-right.png);
+    width: 30px;
+    height: 24px;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+  .case-detail .comment p {
+    margin-left: 34px;
+    margin-bottom: 0;
+    color: #999999;
+    font-size: 14px; }
 
 .case-study-sncf,
 .case-study-hec {
@@ -1946,8 +1996,18 @@ form[data-status='testing'] .button-processing {
   .breadcrumbs ul {
     margin: 0 -15px; }
   .breadcrumbs li {
-    float: left; }
+    float: left;
+    background-image: url(/static/images/right-chevron.png);
+    background-position: center right;
+    background-repeat: no-repeat; }
+  .breadcrumbs .last {
+    background-image: none; }
+    .breadcrumbs .last a {
+      padding-right: 15px; }
   .breadcrumbs a {
     display: block;
-    padding: 20px 15px;
-    text-decoration: none; }
+    padding: 20px 29px 20px 15px;
+    text-decoration: none;
+    color: #999999; }
+    .breadcrumbs a:hover {
+      color: #666; }

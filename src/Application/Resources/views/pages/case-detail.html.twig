@@ -13,6 +13,18 @@
 {% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
 
 {% block content %}
+	<div class='section header'>
+		{% if case.illustration_image %}
+			<div class='header-background'>
+				<img class='bg' src='{{ case.illustration_image }}'>
+			</div>
+		{% endif %}
+		<div class='container'>
+			<div class='id'>
+				<h1><span>{{ case.title }}</span></h1>
+			</div>
+		</div>
+	</div>
 	<div class='breadcrumbs'>
 		<div class='container'>
 			<ul class='list'>
@@ -20,23 +32,64 @@
     				<a href='{{ path('case-studies') }}'>{{ 'case_studies' | trans }}</a>
     			</li>
     			<li class='last'>
-    				<a href='{{ path('case-studies') }}'>{{ case.client }}</a>
+    				<a href='{{ path('case-detail', { slug: case.slug }) }}'>{{ case.client }}</a>
     			</li>
     		</ul>
     </div>
   </div>
-	<div class='section hec' id='hec'>
+	<div class='section'>
 		<div class='container'>
 			<div class='row'>
-				<div class='column six'>
+				<div class='column four'>
 					<div class='column-inner'>
-						<h3>{{ case.title }}</h3>
-						<h4>{{ 'case_context_title' | trans }}</h4>
+						<h3>{{ 'case_context_title' | trans }}</h3>
+					</div>
+				</div>
+				<div class='column seven last'>
+					<div class='column-inner'>
 						{{ case.context | raw }}
-						<h4>{{ 'case_usage_title' | trans }}</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column four'>
+					<div class='column-inner'>
+						<h3>{{ 'case_usage_title' | trans }}</h3>
+					</div>
+				</div>
+				<div class='column seven last'>
+					<div class='column-inner'>
 						{{ case.usage | raw }}
-						<h4>{{ 'case_results_title' | trans }}</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column four'>
+					<div class='column-inner'>
+						<h3>{{ 'case_results_title' | trans }}</h3>
+					</div>
+				</div>
+				<div class='column seven last'>
+					<div class='column-inner'>
 						{{ case.results | raw }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column eight centered'>
+					<div class='comment'>
 						<blockquote>{{ case.blockquote }}</blockquote>
 						<p>{{ case.interviewed }}</p>
 					</div>

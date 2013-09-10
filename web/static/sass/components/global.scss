@@ -99,14 +99,37 @@ a {
 }
 .header {
 	background-color: #f5f5f5;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
 	color: $white;
 	text-shadow: 0 0 6px rgba(0,0,0,.2);
 	padding: 60px 0;
 	border-bottom: 0;
-
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+	.header-background {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+	}
+	img,
+	.bg {
+		min-width: 1024px;
+		min-height: 100%;
+		width: 100%;
+		height: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		margin-top: -20%;
+	}
+	
 	.container {
 		height: 240px;
 		padding: 0;
@@ -136,19 +159,6 @@ a {
 	}
 	h2 {
 		font-weight: 300;
-	}
-	.header-background {
-		-webkit-transition: opacity 800ms cubic-bezier(0.51, 0.01, 0.37, 0.98);
-		-webkit-transition-delay: 100ms;
-		-moz-transition: opacity 800ms cubic-bezier(0.51, 0.01, 0.37, 0.98) 100ms;
-		-o-transition: opacity 800ms cubic-bezier(0.51, 0.01, 0.37, 0.98) 100ms;
-		transition: opacity 800ms cubic-bezier(0.51, 0.01, 0.37, 0.98) 100ms;
-		-webkit-transform: translate3d(0, 0, 0);
-		-moz-transform: translate3d(0, 0, 0);
-		-ms-transform: translate3d(0, 0, 0);
-		-o-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-
 	}
 }
 .features-list {
@@ -728,6 +738,58 @@ img {
 }
 
 // case studies
+.case-detail {
+	.section {
+		li {
+			line-height: 1.5em;
+			margin-bottom: 10px;
+		}
+	}
+	.section, {
+		background-image: none;
+	}
+	.comment {
+		display: block;
+		padding: 30px;
+		background-color: $brandBlueExtraExtraExtraLight;
+		border-left: 2px solid $brandBlueExtraLight;
+		
+		blockquote {
+			padding: 24px 34px;
+			margin: 0;
+			line-height: 1.5em;
+			position: relative;
+			font-family: Georgia;
+			font-size: 26px;
+		}
+		blockquote:before {
+			content: '';
+			display: block;
+			background-image: url(/static/images/double-quotes-left.png);
+			width: 30px;
+			height: 24px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		blockquote:after {
+			content: '';
+			display: block;
+			background-image: url(/static/images/double-quotes-right.png);
+			width: 30px;
+			height: 24px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		p {
+			margin-left: 34px;
+			margin-bottom: 0;
+			color: $grey;
+			font-size: 14px;
+		}
+	}
+}
 .case-study-sncf,
 .case-study-hec {
 	background-color: #efefef;
