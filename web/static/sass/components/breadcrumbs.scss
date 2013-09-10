@@ -1,0 +1,16 @@
+.breadcrumbs {
+	@include clearfix;
+	border-bottom: 1px solid $lightGrey;
+	
+	ul {
+		margin: 0 -15px;
+	}
+	li {
+		float: left;
+	}
+	a {
+		display: block;
+		padding: 20px 15px;
+		text-decoration: none;
+	}
+}
