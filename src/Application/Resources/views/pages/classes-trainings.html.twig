@@ -189,6 +189,10 @@
 										<div class='quiz-demo'>
 											<h4 class='quiz-title'> {{ 'Would you like to try this?' | trans }} </h4>
 											<div data-name='quiz-demo-form'>
+												<div class="frame frame-loading hide">
+	                                                <div class="overlay"></div>
+	                                                <i class="icon-asterisk icon-spin icon-2x"></i>
+	                                            </div>
 												<label class='choice' for='quiz_choice_1'>
 													<input type='radio' id='quiz_choice_1' name='quiz' />
 													<i class='target'></i>
@@ -308,7 +312,11 @@
 													<span class='quote-author'>Ben at the dentist</span>
 												</li>
 												<li>
-													<span class='quote-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus in ante pretium blandit. Aliquam erat volutpat. Nulla libero lectus.</span>
+													<span class='quote-text'>Is the interviewee a specialist ?</span>
+													<span class='quote-author'>Ben at the dentist</span>
+												</li>
+												<li>
+													<span class='quote-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus in ante pretium blandit. Aliquam erat volutpat.</span>
 													<span class='quote-author'>Ben at the dentist</span>
 												</li>
 											</ul>

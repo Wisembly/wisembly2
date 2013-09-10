@@ -9,9 +9,10 @@ $(document).ready(function () {
 	quizDemo.startListening();
 	var browsersAnimation = new Animator();
 	browsersAnimation.init({
+		// autoplay: false,
 		loops: 20,
-		stepDelay: 100,
-		loopDelay: 10000,
+		stepDelay: 200,
+		loopDelay: 4000,
 		steps: [
 			{
 				name: 'step-1',
@@ -87,6 +88,46 @@ $(document).ready(function () {
 						selector: 		'[data-name=browser-participant]',
 						animationFn: 	'indexParticipantResults',
 						duration: 		500
+					}
+				]
+			}, {
+				name: 'step-9',
+				animations: [
+					{
+						selector: 		'[data-name=browser-organizer]',
+						animationFn: 	'indexToggleSlides',
+						duration: 		500
+					}, {
+						selector: 		'[data-name=browser-participant]',
+						animationFn: 	'indexToggleSlides',
+						duration: 		1500
+					}
+				]
+			}, {
+				name: 'step-10',
+				animations: [
+					{
+						selector: 		'[data-name=browser-organizer]',
+						animationFn: 	'indexSlideDoc',
+						duration: 		1000
+					}
+				]
+			}, {
+				name: 'step-11',
+				animations: [
+					{
+						selector: 		'[data-name=browser-organizer]',
+						animationFn: 	'indexSlideDoc',
+						duration: 		1000
+					}
+				]
+			}, {
+				name: 'step-12',
+				animations: [
+					{
+						selector: 		'[data-name=browser-organizer]',
+						animationFn: 	'indexGoBackToPoll',
+						duration: 		1500
 					}
 				]
 			}
@@ -270,24 +311,33 @@ var quizDemo = {
 		if (this.isValid) {
 			var $button 	= this.$form.find('button'),
 				sendingText = $button.data('sending-text'),
-				sentText 	= $button.data('sent-text');
+				sentText 	= $button.data('sent-text'),
+				$loader 	= this.$form.find('.frame-loading');
 			$button.text(sendingText);
+			$loader.removeClass('hide');
 			setTimeout(function () {
 				$button.text(sentText);
 				this.$form.fadeOut();
 				this.$results.fadeIn();
+				$loader.addClass('hide');
 			}.bind(this), 1500);
 		}
 	}
 }
 
 var indexCleanup = function () {
-	var $button = $('[data-name=browser-organizer] .button'),
-		buttonText = $('[data-name=browser-organizer] .button').data('reset-text');
+	var $button 				= $('[data-name=browser-organizer] .button'),
+		buttonText 				= $('[data-name=browser-organizer] .button').data('reset-text')
+		$slidesProgressCount 	= $('[data-name=controls-progress-count]'),
+		$slidesProgressBarValue = $('[data-name=progress-bar-value]'),
+		currentSlide			= parseInt($slidesProgressCount.text(), 10);
 
-	$('[data-name=browser-organizer] .mouse').css({
+
+	// Cleaning poll animation
+
+	$('[data-name=browser-organizer] .mouse').show().css({
 		'top' : '110%',
-		'bottom' : '110%'
+		'left' : '110%'
 	});
 	$('[data-name=browser-organizer] .choice.one').css({
 		'box-shadow': 'none',
@@ -312,6 +362,16 @@ var indexCleanup = function () {
 	$('[data-name=result-1] .value').text('80%');
 	$('[data-name=result-2] .value').text('20%');
 	$('.total-count').text('12');
+
+
+	// Cleaning slides animation
+
+	$('.slides').css({'left': '0px'});
+	$slidesProgressCount.text('1');
+	$slidesProgressBarValue.css({
+		'width' : '25%'
+	});
+
 };
 
 var indexOrganizerHoverToSelect = function (selector, duration) {
@@ -365,6 +425,7 @@ var indexOrganizerPublishClick = function(selector) {
 var indexOrganizerSending = function(selector, duration) {
 	var $el = $('.button', selector),
 		sendingText = $el.data('sending-text');
+	$('.frame-loading', selector).removeClass('hide');
 	$el
 		.css({
 			'box-shadow': 'inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1)'
@@ -378,6 +439,7 @@ var indexOrganizerSending = function(selector, duration) {
 var indexOrganizerSent = function(selector, duration) {
 	var $el = $('.button', selector),
 		sentText = $el.data('sent-text');
+	$('.frame-loading', selector).addClass('hide');
 	$el.text(sentText);
 };
 
@@ -392,7 +454,52 @@ var indexParticipantResults = function (selector, duration) {
 	$('[data-name=result-1] .value', selector).text('82%');
 	$('[data-name=result-2] .value', selector).text('18%');
 	$('.total-count', selector).text('13');
+
+	// Fake pause
+	$(selector).animate({
+		'opacity': 1
+	}, 3000);
 };
+
+var indexToggleSlides = function (selector, duration) {
+	$('.mouse', selector).css({
+		'top' : '40%',
+		'left' : '110%'
+	});
+	$('.frame-poll', selector).fadeToggle(duration);
+	$('.frame-doc', selector).fadeToggle(duration);
+};
+
+var indexSlideDoc = function (selector, duration) {
+	var $progressCount 		= $('[data-name=controls-progress-count]'),
+		$progressBarValue 	= $('[data-name=progress-bar-value]'),
+		currentSlide		= parseInt($progressCount.text(), 10);
+
+	$('.mouse', selector).animate({'left': '65%'}, duration);
+
+	$('.mouse', selector).promise().done(function () {
+		$('.slides').animate({'left': '-=235px'}, duration / 1.5);
+		$('.mouse', selector).animate({'left': '-50%'}, duration / 1.5);
+		$progressCount.text(currentSlide + 1);
+		$progressBarValue.animate({
+			'width' : '+=33%'
+		}, duration / 2);
+	})
+
+};
+
+var indexGoBackToPoll = function (selector, duration) {
+	$('.mouse', selector).animate({
+		'top' : '81%',
+		'left' : '84%'
+	}, duration, function () {
+		$('.mouse', selector).fadeOut(100).fadeIn(100).fadeOut(100, function () {
+			$('.frame-poll').fadeIn(duration);
+			$('.frame-doc').fadeOut(duration);
+		});
+	});
+
+}
 
 
 /**
@@ -424,9 +531,7 @@ var Animator = (function () {
 
 	var loop = function () {
 		currentStep = 0;
-		if (options.cleanup) {
-			window[options.cleanup].call();
-		}
+
 		if (currentLoop <= options.loops) {
 			play();
 		} else {
@@ -446,6 +551,9 @@ var Animator = (function () {
 				setTimeout(play, options.stepDelay);
 			} else {
 				currentLoop += 1;
+				if (options.cleanup) {
+					window[options.cleanup].call();
+				}
 				setTimeout(loop, options.loopDelay);
 			}
 		});
