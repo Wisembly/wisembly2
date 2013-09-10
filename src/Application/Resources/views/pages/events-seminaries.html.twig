@@ -32,49 +32,49 @@
 		<div class='container'>
 			<ul class='list list-eight'>
 				<li class='one first'>
-					<a href='#schedule'>
+					<a href='{{ path('events-seminaries') }}#audience-participation'>
 						<i class='picto picto-participation'></i>
 						<span class='medium'>{{ 'qna_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='two'>
-					<a href='#quiz'>
+					<a href='{{ path('events-seminaries') }}#moderation'>
 						<i class='picto picto-moderation'></i>
 						<span class='short'>{{ 'moderation_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='three'>
-					<a href='#'>
+					<a href='{{ path('events-seminaries') }}#comments'>
 						<i class='picto picto-qa'></i>
 						<span>{{ 'question_answers_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='four'>
-					<a href='#quizzes'>
+					<a href='{{ path('events-seminaries') }}#vote'>
 						<i class='picto picto-votes'></i>
 						<span class='short'>{{ 'votes_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='five'>
-					<a href='#'>
+					<a href='{{ path('events-seminaries') }}#fullscreen'>
 						<i class='picto picto-fullscreen'></i>
 						<span class='short'>{{ 'fullscreen_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='six'>
-					<a href='#'>
+					<a href='{{ path('events-seminaries') }}#satisfaction-study'>
 						<i class='picto picto-satisfaction-study'></i>
 						<span class='medium'>{{ 'feedback_survey_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='seven'>
-					<a href='#'>
+					<a href='{{ path('events-seminaries') }}#stats-reporting'>
 						<i class='picto picto-stats-reporting'></i>
 						<span class='medium'>{{ 'interaction_analysis_link' | trans }}</span>
 					</a>
 				</li>
 				<li class='eight'>
-					<a href='#'>
+					<a href='{{ path('events-seminaries') }}#multi-devices'>
 						<i class='picto picto-multi-devices'></i>
 						<span class='medium'>{{ 'multi_devices_link' | trans }}</span>
 					</a>
@@ -82,7 +82,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class='section events-audience-participation' id=''>
+	<div class='section events-audience-participation' id='audience-participation'>
 		<div class='container'>
 			<h3>{{ 'qna_title' | trans }}</h3>
 			<div class='row'>
@@ -110,7 +110,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section' id=''>
+	<div class='section' id='moderation'>
 		<div class='container'>
 			<div class='row'>
 				<div class='column five'>
@@ -138,7 +138,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section' id=''>
+	<div class='section' id='comments'>
 		<div class='container'>
 			<div class='row'>
 				<div class='column six'>
@@ -155,7 +155,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section' id=''>
+	<div class='section' id='vote'>
 		<div class='container'>
 			<div class='row'>
 				<div class='column five'>
@@ -183,7 +183,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section' id=''>
+	<div class='section' id='fullscreen'>
 		<div class='container'>
 			<div class='row'>
 				<div class='column five'>
@@ -200,7 +200,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section' id=''>
+	<div class='section' id='satisfaction-study'>
 		<div class='container'>
 			<div class='row'>
 				<div class='column five'>
@@ -228,7 +228,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section' id=''>
+	<div class='section' id='stats-reporting'>
 		<div class='container'>
 			<h3 class='text-centered'>{{ 'interaction_analysis_title' | trans }}</h3>
 			<div class='illustration'>
@@ -248,7 +248,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section' id=''>
+	<div class='section' id='multi-devices'>
 		<div class='container'>
 			<h3 class='text-centered'>{{ 'multi_devices_title' | trans }}</h3>
 			<div class='illustration'>
