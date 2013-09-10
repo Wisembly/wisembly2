@@ -51,11 +51,11 @@
                         </div>
                         <div class='column six last'>
                             <div class='column-inner'>
-                                <div class='row'>
+                                <div class='row' data-name='home-browsers-loop'>
                                     <div class='column six'>
                                         <div class='column-inner'>
                                             <div class='browser-wrapper first'>
-                                                <div class='browser'>
+                                                <div class='browser' data-name="browser-organizer">
                                                     <div class='browser-bar'>
                                                         <span>http://app.wisembly.com/demo</span>
                                                     </div>
@@ -65,6 +65,10 @@
                                                                 <div class='app-logo'>wisembly</div>
                                                             </div>
                                                             <div class='app-body'>
+                                                                <div class="frame frame-loading hide">
+                                                                    <div class="overlay"></div>
+                                                                    <i class="icon-asterisk icon-spin icon-2x"></i>
+                                                                </div>
                                                                 <div class='frame frame-poll'>
                                                                     <div class='participant-poll'>
                                                                         <h5>{{ 'homepage_poll_question this is my question' | trans }}</h5>
@@ -87,10 +91,50 @@
                                                                                     <span class='text'>One</span>
                                                                                 </div>
                                                                             </li>
-                                                                            </ul>
-                                                                    <span href='' class='button button-validate'>{{ 'Cast your vote    ' | trans }}</span>
+                                                                        </ul>
+                                                                        <span
+                                                                            href=''
+                                                                            class='button button-validate'
+                                                                            data-reset-text="{{ 'Cast your vote' | trans }}"
+                                                                            data-sending-text="{{ 'Sending' | trans }}"
+                                                                            data-sent-text="{{ 'Sent' | trans }}">
+                                                                                {{ 'Cast your vote' | trans }}
+                                                                        </span>
                                                                     </div>
-                                                                <div class='mouse'></div>
+                                                                    <div class='mouse'></div>
+                                                                </div>
+                                                                <div class='frame frame-doc hide'>
+                                                                    <ul class='list slides'>
+                                                                        <li class="slide">
+                                                                            <img src="/static/images/slides/1.png">
+                                                                        </li>
+                                                                        <li class="slide">
+                                                                            <img src="/static/images/slides/2.png">
+                                                                        </li>
+                                                                        <li class="slide">
+                                                                            <img src="/static/images/slides/3.png">
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div data-name="player_controls" class="row controls">
+                                                                        <div class="column two">
+                                                                            <div class="column-inner controls-progress-count">
+                                                                                <span data-name='controls-progress-count'>1</span>/3
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="column seven">
+                                                                            <div class="column-inner progress-bar-container">
+                                                                                <div class="progress-bar">
+                                                                                    <div class="progress-bar-value" data-name='progress-bar-value' style="width:34%"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="column two">
+                                                                            <div class="column-inner controls-progress-stop">
+                                                                                <i class="icon icon-eject"></i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class='mouse'></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -104,7 +148,7 @@
                                         <div class='column-inner'>
                                             <div class='browser-wrapper last'>
                                                 <b></b>
-                                                <div class='browser'>
+                                                <div class='browser' data-name="browser-participant">
                                                     <div class='browser-bar'>
                                                         <span>http://app.wisembly.com/demo</span>
                                                     </div>
@@ -118,7 +162,7 @@
                                                                     <h5>{{ 'homepage_poll_question this is my question' | trans }}</h5>
                                                                     <ul class='list results'>
                                                                        <li class='even'>
-                                                                           <div class='result'>
+                                                                           <div class='result' data-name='result-1'>
                                                                                <span class='text'>One</span>
                                                                                <span class='value'>80%</span>
                                                                                <span class='progress'>
@@ -127,7 +171,7 @@
                                                                            </div>
                                                                        </li>
                                                                        <li class='even'>
-                                                                           <div class='result'>
+                                                                           <div class='result' data-name='result-2'>
                                                                                <span class='text'>One</span>
                                                                                <span class='value'>20%</span>
                                                                                <span class='progress'>
@@ -136,7 +180,7 @@
                                                                            </div>
                                                                        </li>
                                                                        <li class='even'>
-                                                                           <div class='result'>
+                                                                           <div class='result'  data-name='result-3'>
                                                                                <span class='text'>One</span>
                                                                                <span class='value'>0%</span>
                                                                                <span class='progress'>
@@ -150,6 +194,22 @@
                                                                         <span class='total-count'>12</span>
                                                                         <span class='total-label'>{{ 'participants' | trans }}</span>
                                                                     </div>
+                                                                </div>
+                                                                <div class='frame frame-doc hide'>
+                                                                    <ul class='list slides'>
+                                                                        <li class="slide">
+                                                                            <img src="/static/images/slides/1.png">
+                                                                        </li>
+                                                                        <li class="slide">
+                                                                            <img src="/static/images/slides/2.png">
+                                                                        </li>
+                                                                        <li class="slide">
+                                                                            <img src="/static/images/slides/3.png">
+                                                                        </li>
+                                                                    </ul>
+                                                                    <p class="participant-help">
+                                                                        <i class="icon-caret-up"></i> {{ 'Slides are updated in real-time !' | trans }}
+                                                                    </p>
                                                                 </div>
                                                             </div>
                                                         </div>
