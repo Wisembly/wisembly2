@@ -248,45 +248,112 @@ var joinAnEvent = {
 };
 
 var quotesList = {
-	$el: $('[data-name=quotes_list]'),
+
+	$el: 		$('[data-name=quotes_list]'),
+	$textarea: 	$('[data-name=quotes_list]').find('textarea'),
 
 	start: function () {
-		this.$el.on('ended_typing', function () {
-			setTimeout(function () {
-				this.add();
-				this.print();
-			}.bind(this), 2000);
-		}.bind(this));
+		window.timers = [];
+		this.startListening();
+		this.engageAutomaticMode();
+	},
+
+	startListening: function () {
+		this.$el.on(		'post:auto', 	$.proxy(this.automaticPost, 		this ));
+		this.$textarea.on(	'click', 		$.proxy(this.engageManualMode, 		this ));
+		this.$textarea.on(	'blur', 		$.proxy(this.engageAutomaticMode, 	this ));
+		this.$textarea.on(	'keyup', 		$.proxy(this.manualPost, 			this ));
+	},
+
+	engageManualMode: function () {
+		this.manualMode = true;
+		delete this.message;
+		this.clearTextarea();
+
+		// Timers
+		clearTimeout(window.timers.print);
+		// this.manualModeCooldown('start');
+
+	},
+
+	engageAutomaticMode: function () {
+		this.manualMode = false;
+		// this.manualModeCooldown('stop');
+		this.clearTextarea();
 		this.print();
 	},
 
-	stop: function () {
+	manualPost: function (event) {
+		// Post a quote on `enter`
+		if (event.which === 13) {
+			// this.manualModeCooldown('restart');
+			this.add();
+		}
+	},
 
+	// PROTO: Manual mode cooldown management | We would like to switch back to automatic mode if we don't post after 10 seconds
+	manualModeCooldown: function (arg) {
+		switch (arg) {
+			case 'start':
+				window.timers.manualMode = setTimeout($.proxy(function () {
+					this.engageAutomaticMode();
+				}, this), 10000);
+			break;
+			case 'stop':
+			console.log('ddsdqsdqsdqdqdqddf');
+				clearTimeout(window.timers.manualMode);
+			break;
+			case 'restart':
+				this.manualModeCooldown('stop');
+				this.manualModeCooldown('start');
+			break;
+		}
+	},
+
+	automaticPost: function () {
+		setTimeout(
+			$.proxy(function () {
+				this.add();
+				this.print();
+			}, this
+			), 2000
+		);
+	},
+
+	clearTextarea: function () {
+		this.$textarea.val('');
 	},
 
 	print: function () {
-		if (!this.message || 0 === this.message.length)
-			this.message = this.$el.find('ul.list > li:last .quote-text').text().split('');
-		setTimeout(function () {
-			this.$el.find('textarea').text(this.$el.find('textarea').text() + this.message.shift());
-			if (this.message.length)
-				this.print();
-			else this.$el.trigger('ended_typing');
-		}.bind(this), Math.floor(Math.random() * 250));
+		if (!this.manualMode) {
+			if (!this.message || 0 === this.message.length) {
+				this.message = this.$el.find('ul.list > li.auto:last .quote-text').text().split('');
+			}
+			window.timers.print = setTimeout(function () {
+				this.$textarea.val(this.$textarea.val() + this.message.shift());
+				if (this.message.length) {
+					this.print();
+				} else {
+					this.$el.trigger('post:auto');
+				}
+			}.bind(this), Math.floor(Math.random() * 250));
+		}
 	},
 
 	add: function () {
-		var message = this.$el.find('textarea').text(),
-			$lastElement = this.$el.find('ul.list > li:last'),
-			$append = $lastElement.clone();
+		var message 		= this.$textarea.val(),
+			$lastElement 	= this.$el.find('ul.list > li.auto:last'),
+			$userQuoteTpl 	= this.$el.find('ul.list > li[data-name=user-quote-tpl]'),
+			$append 		= this.manualMode ? $userQuoteTpl.clone().removeAttr('data-name') : $lastElement.clone();
+
 		$append.find('.quote-text').html(message);
 		this.$el.find('ul.list').prepend($append);
-		this.$el.find('ul.list > li:last').remove();
-		this.$el.find('textarea').html('');
-	},
 
-	remove: function () {
+		if (!this.manualMode) {
+			this.$el.find('ul.list > li.auto:last').remove();
+		}
 
+		this.$textarea.val('');
 	}
 };
 
