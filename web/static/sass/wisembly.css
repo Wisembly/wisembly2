@@ -520,7 +520,11 @@ a {
   font-weight: bold; }
 
 .quiz-demo {
+  height: 210px;
   padding: 20px 30px; }
+  .quiz-demo > div {
+    position: absolute;
+    width: 260px; }
   .quiz-demo .choice {
     position: relative;
     display: block;
@@ -1266,7 +1270,7 @@ img {
     opacity: .3;
     top: 110%;
     left: 110%;
-  }
+    transition: all 1.5s ease-out; }
   .frame .mouse-idle, .frame.sending .mouse {
     opacity: .1; }
   .frame .mouse-hover, .frame.select-hover .mouse, .frame.publish-hover .mouse {
@@ -1287,6 +1291,17 @@ img {
     left: 50%; }
   .frame.sending ul {
     opacity: .5; }
+
+.quiz-demo .frame {
+  padding: 0; }
+  .quiz-demo .frame li {
+    margin: 0 0 5px 0; }
+  .quiz-demo .frame .results {
+    margin: 0; }
+  .quiz-demo .frame .total {
+    margin-top: 25px; }
+  .quiz-demo .frame .total-count, .quiz-demo .frame .total-label {
+    padding: 0; }
 
 .container {
   width: 1024px;

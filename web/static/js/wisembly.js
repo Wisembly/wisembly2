@@ -6,6 +6,7 @@ $(document).ready(function () {
 	joinAnEvent.startListening();
 	login.startListening();
 	quotesList.start();
+	quizDemo.startListening();
 	var browsersAnimation = new Animator();
 	browsersAnimation.init({
 		loops: 20,
@@ -247,6 +248,38 @@ var quotesList = {
 
 	}
 };
+
+var quizDemo = {
+	$form: 			$('[data-name=quiz-demo-form]'),
+	$results: 		$('[data-name=quiz-demo-results]'),
+	isValid: 		false,
+	selectedAnswer: '',
+
+	startListening: function () {
+		this.$form.find('input[type=radio]').on('change', $.proxy(this.validateForm, 		this	));
+		this.$form.find('button').on('click', 	$.proxy(this.displayResults, 	this	));
+	},
+
+	validateForm: function (event) {
+		this.isValid = true;
+		this.selectedAnswer = $(event.currentTarget).attr('id');
+		this.$form.find('.button-default').addClass('button-validate');
+	},
+
+	displayResults: function () {
+		if (this.isValid) {
+			var $button 	= this.$form.find('button'),
+				sendingText = $button.data('sending-text'),
+				sentText 	= $button.data('sent-text');
+			$button.text(sendingText);
+			setTimeout(function () {
+				$button.text(sentText);
+				this.$form.fadeOut();
+				this.$results.fadeIn();
+			}.bind(this), 1500);
+		}
+	}
+}
 
 var indexCleanup = function () {
 	var $button = $('[data-name=browser-organizer] .button'),

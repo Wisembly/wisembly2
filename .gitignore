@@ -5,3 +5,4 @@ app/config
 vendor
 web/vendor
 .DS_Store
+web/static/sass/.sass-cache/*
