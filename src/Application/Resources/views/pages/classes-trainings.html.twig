@@ -187,23 +187,71 @@
 									</div>
 									<div class='app-body'>
 										<div class='quiz-demo'>
-											<h4 class='quiz-title'>Would you like to try this?</h4>
-											<label class='choice' for='quiz_choice_1'>
-												<input type='radio' id='quiz_choice_1' name='quiz' />
-												<i class='target'></i>
-												<span>Yes</span>
-											</label>
-											<label class='choice' for='quiz_choice_2'>
-												<input type='radio' id='quiz_choice_2' name='quiz' />
-												<i class='target'></i>
-												<span>No</span>
-											</label>
-											<label class='choice' for='quiz_choice_3'>
-												<input type='radio' id='quiz_choice_3' name='quiz' />
-												<i class='target'></i>
-												<span>I'm not sure just yet.</span>
-											</label>
-											<button class='button button-default'>Envoyer</button>
+											<h4 class='quiz-title'> {{ 'Would you like to try this?' | trans }} </h4>
+											<div data-name='quiz-demo-form'>
+												<div class="frame frame-loading hide">
+	                                                <div class="overlay"></div>
+	                                                <i class="icon-asterisk icon-spin icon-2x"></i>
+	                                            </div>
+												<label class='choice' for='quiz_choice_1'>
+													<input type='radio' id='quiz_choice_1' name='quiz' />
+													<i class='target'></i>
+													<span>{{ 'Yes' | trans }}</span>
+												</label>
+												<label class='choice' for='quiz_choice_2'>
+													<input type='radio' id='quiz_choice_2' name='quiz' />
+													<i class='target'></i>
+													<span>{{ 'No' | trans }}</span>
+												</label>
+												<label class='choice' for='quiz_choice_3'>
+													<input type='radio' id='quiz_choice_3' name='quiz' />
+													<i class='target'></i>
+													<span>{{ "I'm not sure yet" | trans }}</span>
+												</label>
+												<button
+													class='button button-default'
+													data-reset-text='{{ 'Send' | trans }}'
+                                                    data-sending-text='{{ 'Sending' | trans }}'
+                                                    data-sent-text='{{ 'Sent' | trans }}'>
+													{{ 'Send' | trans }}
+												</button>
+											</div>
+											<div data-name='quiz-demo-results' class='hide frame'>
+												<ul class='list results'>
+                                                   <li class='even'>
+                                                       <div class='result'>
+                                                           <span class='text'>{{ 'Yes' | trans }}</span>
+                                                           <span class='value'>55%</span>
+                                                           <span class='progress'>
+                                                               <span class='progress-bar' style='width: 55%'></span>
+                                                           </span>
+                                                       </div>
+                                                   </li>
+                                                   <li class='even'>
+                                                       <div class='result'>
+                                                           <span class='text'>{{ 'No' | trans }}</span>
+                                                           <span class='value'>35%</span>
+                                                           <span class='progress'>
+                                                               <span class='progress-bar' style='width: 35%'></span>
+                                                           </span>
+                                                       </div>
+                                                   </li>
+                                                   <li class='even'>
+                                                       <div class='result'>
+                                                           <span class='text'>{{ "I'm not sure yet" | trans }}</span>
+                                                           <span class='value'>10%</span>
+                                                           <span class='progress'>
+                                                               <span class='progress-bar' style='width: 10%'></span>
+                                                           </span>
+                                                       </div>
+                                                   </li>
+                                                </ul>
+                                                <div class='total'>
+                                                    <i class='icon-person icon'></i>
+                                                    <span class='total-count'>12</span>
+                                                    <span class='total-label'>{{ 'participants' | trans }}</span>
+                                                </div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -255,17 +303,25 @@
 										</div>
 										<div class='quotes-stream'>
 											<ul class='list'>
-												<li>
+												<li class="auto">
 													<span class='quote-text'>Aliquam erat volutpat. Nulla libero lectus.</span>
 													<span class='quote-author'>Ben at the dentist</span>
 												</li>
-												<li>
+												<li class="auto">
 													<span class='quote-text'>Is this going to be forever?</span>
 													<span class='quote-author'>Ben at the dentist</span>
 												</li>
-												<li>
-													<span class='quote-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus in ante pretium blandit. Aliquam erat volutpat. Nulla libero lectus.</span>
+												<li class="auto">
+													<span class='quote-text'>Is the interviewee a specialist ?</span>
 													<span class='quote-author'>Ben at the dentist</span>
+												</li>
+												<li class="auto">
+													<span class='quote-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus in ante pretium blandit. Aliquam erat volutpat.</span>
+													<span class='quote-author'>Ben at the dentist</span>
+												</li>
+												<li class="manual" data-name='user-quote-tpl'>
+													<span class='quote-text'></span>
+													<span class='quote-author'>{{ 'You' | trans }}</span>
 												</li>
 											</ul>
 										</div>

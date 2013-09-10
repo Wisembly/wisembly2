@@ -1,4 +1,4 @@
-/* normalize.css v2.1.1 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
 	 HTML5 display definitions
 	 ========================================================================== */
@@ -520,7 +520,11 @@ a {
   font-weight: bold; }
 
 .quiz-demo {
+  height: 210px;
   padding: 20px 30px; }
+  .quiz-demo > div {
+    position: absolute;
+    width: 260px; }
   .quiz-demo .choice {
     position: relative;
     display: block;
@@ -1265,8 +1269,7 @@ img {
     border-radius: 30px;
     opacity: .3;
     top: 110%;
-    left: 110%;
-    transition: all 1.5s ease-out; }
+    left: 110%; }
   .frame .mouse-idle, .frame.sending .mouse {
     opacity: .1; }
   .frame .mouse-hover, .frame.select-hover .mouse, .frame.publish-hover .mouse {
@@ -1287,6 +1290,109 @@ img {
     left: 50%; }
   .frame.sending ul {
     opacity: .5; }
+
+.frame-loading {
+  position: absolute;
+  z-index: 1;
+  text-align: center; }
+  .frame-loading .overlay {
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    -ms-filter: "alpha(opacity=50)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    zoom: 1;
+    position: absolute;
+    background: #fff; }
+  .frame-loading i {
+    color: #45a4da; }
+
+[data-name=home-browsers-loop] .app-body {
+  height: 292px; }
+[data-name=home-browsers-loop] .frame-loading {
+  width: 202px;
+  height: 260px;
+  line-height: 260px; }
+  [data-name=home-browsers-loop] .frame-loading .overlay {
+    width: 215px;
+    height: 260px; }
+[data-name=home-browsers-loop] .frame-poll {
+  position: absolute;
+  overflow: hidden; }
+[data-name=home-browsers-loop] .frame-doc {
+  position: absolute;
+  overflow: hidden; }
+  [data-name=home-browsers-loop] .frame-doc ul.slides {
+    *zoom: 1;
+    position: absolute;
+    left: 0;
+    width: 1000px; }
+    [data-name=home-browsers-loop] .frame-doc ul.slides:before, [data-name=home-browsers-loop] .frame-doc ul.slides:after {
+      content: " ";
+      display: table; }
+    [data-name=home-browsers-loop] .frame-doc ul.slides:after {
+      clear: both; }
+    [data-name=home-browsers-loop] .frame-doc ul.slides li.slide {
+      float: left;
+      margin: 0 15px 0 15px;
+      background: #ccc;
+      color: #fff;
+      text-align: center;
+      width: 205px;
+      height: 184px;
+      line-height: 184px;
+      font-weight: bold; }
+    [data-name=home-browsers-loop] .frame-doc ul.slides li.first {
+      margin-left: 0; }
+  [data-name=home-browsers-loop] .frame-doc .controls, [data-name=home-browsers-loop] .frame-doc .participant-help {
+    margin-top: 200px; }
+    [data-name=home-browsers-loop] .frame-doc .controls .controls-progress-count, [data-name=home-browsers-loop] .frame-doc .participant-help .controls-progress-count {
+      font-weight: bold; }
+    [data-name=home-browsers-loop] .frame-doc .controls .progress-bar-container, [data-name=home-browsers-loop] .frame-doc .participant-help .progress-bar-container {
+      margin-top: 4px; }
+      [data-name=home-browsers-loop] .frame-doc .controls .progress-bar-container .progress-bar, [data-name=home-browsers-loop] .frame-doc .participant-help .progress-bar-container .progress-bar {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+        border: none;
+        width: 130px;
+        height: 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        display: block;
+        background: #eaedef; }
+        [data-name=home-browsers-loop] .frame-doc .controls .progress-bar-container .progress-bar .progress-bar-value, [data-name=home-browsers-loop] .frame-doc .participant-help .progress-bar-container .progress-bar .progress-bar-value {
+          text-indent: -100%;
+          height: 10px;
+          max-width: 100%;
+          background: #c7d1d5;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px; }
+    [data-name=home-browsers-loop] .frame-doc .controls .controls-progress-stop, [data-name=home-browsers-loop] .frame-doc .participant-help .controls-progress-stop {
+      padding: 0;
+      text-align: right; }
+
+.quiz-demo .frame-loading {
+  height: 130px;
+  line-height: 130px;
+  width: 280px; }
+  .quiz-demo .frame-loading .overlay {
+    height: 130px;
+    width: 280px; }
+.quiz-demo .frame {
+  padding: 0; }
+  .quiz-demo .frame li {
+    margin: 0 0 5px 0; }
+  .quiz-demo .frame .results {
+    margin: 0; }
+  .quiz-demo .frame .total {
+    margin-top: 25px; }
+  .quiz-demo .frame .total-count, .quiz-demo .frame .total-label {
+    padding: 0; }
 
 .container {
   width: 1024px;
