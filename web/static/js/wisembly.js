@@ -8,7 +8,7 @@ $(document).ready(function () {
 	subscribe.startListening();
 	quotesList.start();
 	quizDemo.startListening();
-	featuresScroll.startListening();
+	scrollManager.startListening();
 	var browsersAnimation = new Animator();
 	browsersAnimation.init({
 		// autoplay: false,
@@ -469,7 +469,7 @@ var indexCleanup = function () {
 
 var indexParticipantHoverToSelect = function (selector, duration) {
 	$('.mouse', selector).animate({
-		top: '73px',
+		top: '93px',
     	left: '17px'
 	}, duration);
 };
@@ -497,7 +497,7 @@ var indexParticipantSelectClickRadio = function (selector) {
 
 var indexParticipantHoverToPublish = function (selector, duration) {
 	$('.mouse', selector).animate({
-		'top': '213px',
+		'top': '233px',
 		'left': '167px'
 	}, duration)
 };
@@ -668,20 +668,35 @@ var Animator = (function () {
 
 });
 
-var featuresScroll = {
-	$el: 	$('.features-list'),
+var scrollTo = function (selector) {
+
+}
+
+/*
+ * Simple scroll manager, use it to smoothify your anchor links
+ *
+ * Initially designed for features pages
+ *
+ * Add the `scroll` class to the link // Add adata-offset attribute to the link to use a custom offset
+ *
+ */
+
+var scrollManager = {
+	$el: 	$('body'),
 	offset: -180,
 
 	startListening: function () {
-		this.$el.on('click', 'a', $.proxy(this.scrollToAnchor, this));
+		this.$el.on('click', 'a.scroll', $.proxy(this.scrollToAnchor, this));
 	},
 
 	scrollToAnchor: function (event) {
 		event.preventDefault();
 		var $link = $(event.currentTarget),
-			$anchor = $($link.attr('href'));
+			$anchor = $($link.attr('href')),
+			linkOffset = $link.data('offset'),
+			offset = linkOffset !== undefined ? parseInt(linkOffset, 10) : this.offset;
 		$('body').stop().animate({
-			scrollTop: $anchor.offset().top + this.offset
+			scrollTop: $anchor.offset().top + offset
 		}, 500);
 	}
 }
