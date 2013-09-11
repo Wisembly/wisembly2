@@ -5,6 +5,7 @@ $(document).ready(function () {
 	tabs.startListening();
 	joinAnEvent.startListening();
 	login.startListening();
+	subscribe.startListening();
 	quotesList.start();
 	quizDemo.startListening();
 	featuresScroll.startListening();
@@ -195,6 +196,30 @@ window.login = {
 
 	isLogged: function () {
 		return -1 !== document.cookie.indexOf('wisembly_remember_me');
+	}
+};
+
+window.subscribe = {
+	$el: $('[data-name=subscribe]'),
+	isValid: false,
+
+	startListening: function () {
+		this.$el.find('input.email').on('keyup', 	$.proxy(this.checkInput, 	this));
+		this.$el.find('form').on('submit', 			$.proxy(this.checkSubmit, 	this));
+	},
+
+	checkInput: function (e) {
+		this.isValid = this.$el.find('form').parsley('validate');
+		this.updateStatus();
+	},
+
+	checkSubmit: function (e) {
+		if (!this.$el.find('form').parsley('validate'))
+			e.preventDefault();
+	},
+
+	updateStatus: function () {
+		this.$el.find('form').attr('data-status', this.isValid ? 'valid' : 'not-valid');
 	}
 };
 
