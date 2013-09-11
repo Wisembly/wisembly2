@@ -13,7 +13,7 @@
 {% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
 
 
-{%  block content %}
+{% block content %}
 	<div class='section header' style='background-image: url(http://cdn2.stocksy.com/a/t1K000/z0/76997.jpg);'>
 		<div class='container'>
 			<div class='row'>
@@ -29,52 +29,54 @@
 			</div>
 		</div>
 	</div>
-	<div class='section features-list'>
-		<div class='container'>
-			<ul class='list'>
-				<li class='one first'>
-					<a href='{{ path('classes-trainings') }}#documents-management'>
-						<i class='picto picto-documents-management'></i>
-						<span class='medium'>{{ 'documents_management_link' | trans }}</span>
-					</a>
-				</li>
-				<li class='two'>
-					<a href='{{ path('classes-trainings') }}#students-evaluation'>
-						<i class='picto picto-students-evaluation'></i>
-						<span class='medium'>{{ 'students_evaluation_link' | trans }}</span>
-					</a>
-				</li>
-				<li class='three'>
-					<a href='{{ path('classes-trainings') }}#trainings-evaluation'>
-						<i class='picto picto-trainings-evaluation'></i>
-						<span class='medium'>{{ 'trainings_evaluation_link' | trans }}</span>
-					</a>
-				</li>
-				<li class='four'>
-					<a href='{{ path('classes-trainings') }}#quizzes'>
-						<i class='picto picto-quiz'></i>
-						<span class='short'>{{ 'quiz_link' | trans }}</span>
-					</a>
-				</li>
-				<li class='five'>
-					<a href='{{ path('classes-trainings') }}#qa'>
-						<i class='picto picto-qa'></i>
-						<span class='short'>{{ 'qna_link' | trans }}</span>
-					</a>
-				</li>
-				<li class='six'>
-					<a href='{{ path('classes-trainings') }}#stats-reporting'>
-						<i class='picto picto-stats-reporting'></i>
-						<span class='medium'>{{ 'stats_reporting_link' | trans }}</span>
-					</a>
-				</li>
-				<li class='seven'>
-					<a href='{{ path('classes-trainings') }}#multi-devices'>
-						<i class='picto picto-multi-devices'></i>
-						<span class='short'>{{ 'multi_devices_link' | trans }}</span>
-					</a>
-				</li>
-			</ul>
+	<div class='features-list-container'>
+		<div class='section features-list' data-spy='affix' data-offset-top='460'>
+			<div class='container spy-list'>
+				<ul class='nav list'>
+					<li class='one first active'>
+						<a href='#documents-management'>
+							<i class='picto picto-documents-management'></i>
+							<span class='medium'>{{ 'documents_management_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='two'>
+						<a href='#students-evaluation'>
+							<i class='picto picto-students-evaluation'></i>
+							<span class='medium'>{{ 'students_evaluation_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='three'>
+						<a href='#trainings-evaluation'>
+							<i class='picto picto-trainings-evaluation'></i>
+							<span class='medium'>{{ 'trainings_evaluation_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='four'>
+						<a href='#quizzes'>
+							<i class='picto picto-quiz'></i>
+							<span class='short'>{{ 'quiz_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='five'>
+						<a href='#qa'>
+							<i class='picto picto-qa'></i>
+							<span class='short'>{{ 'qna_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='six'>
+						<a href='#stats-reporting'>
+							<i class='picto picto-stats-reporting'></i>
+							<span class='medium'>{{ 'stats_reporting_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='seven'>
+						<a href='#multi-devices'>
+							<i class='picto picto-multi-devices'></i>
+							<span class='short'>{{ 'multi_devices_link' | trans }}</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div class='section documents-management' id='documents-management'>
