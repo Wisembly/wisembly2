@@ -1128,7 +1128,7 @@ img {
 		margin-bottom: 30px;
 	}
 	.textarea {
-		height: 277px;
+		height: 181px;
 	}
 	.button {
 		width: 100%;
@@ -1560,5 +1560,22 @@ img {
 			padding: 0;
 		}
 
+	}
+}
+
+.parsley-error-list {
+	position: absolute;
+	padding: 0;
+	li {
+		list-style-type: none;
+		color: red;
+
+		font-size: 12px;
+	}
+}
+
+.contact-form {
+	.label {
+		margin-top: 30px;
 	}
 }

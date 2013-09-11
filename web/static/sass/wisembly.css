@@ -1236,7 +1236,7 @@ img {
   .contact-form .input-container {
     margin-bottom: 30px; }
   .contact-form .textarea {
-    height: 277px; }
+    height: 181px; }
   .contact-form .button {
     width: 100%; }
   .contact-form .label {
@@ -1528,6 +1528,17 @@ img {
     margin-top: 25px; }
   .quiz-demo .frame .total-count, .quiz-demo .frame .total-label {
     padding: 0; }
+
+.parsley-error-list {
+  position: absolute;
+  padding: 0; }
+  .parsley-error-list li {
+    list-style-type: none;
+    color: red;
+    font-size: 12px; }
+
+.contact-form .label {
+  margin-top: 30px; }
 
 .container {
   width: 1024px;

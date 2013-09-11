@@ -13,8 +13,8 @@
 {% block content %}
 	<div class='section header' style='background-image: url("http://cdn2.stocksy.com/a/AtB000/z0/45704.jpg");'>
 		<div class='container'>
-			<h1>{{ 'contact_page_title' | trans }}</h1>
-			<h2>{{ 'contact_page_desc' | trans }}</h2>
+			<h1><span>{{ 'contact_page_title' | trans }}</span></h1>
+			<h2><span>{{ 'contact_page_desc' | trans }}</span></h2>
 		</div>
 	</div>
 	<div class='section'>
@@ -93,6 +93,7 @@
     											<option value="{{ 'contact_founders' | trans }}">{{ 'contact_founders' | trans }}</option>
     											<option value="{{ 'other' | trans }}">{{ 'other' | trans }}</option>
     										</select>
+                                            <br><br>
     										<label class='label' for='contact_message'>{{ 'your_message' | trans }}</label>
     										<label class='textarea-container' for='contact_message'>
     											<textarea name="contact_message" class='textarea' id='contact_message' placeholder='{{ 'your_message' | trans }}' required></textarea>
