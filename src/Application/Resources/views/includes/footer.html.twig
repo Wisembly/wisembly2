@@ -47,26 +47,40 @@
 			<div class='column four last'>
 				<div class='column-inner'>
 					<div class='clearfix'>
+
 						<div class='dropdown dropdown-lang'>
-							<label class='dropdown-toggle'>
-								<img src='/static/images/flags/fr.png'>
+							<label class='dropdown-toggle' data-toggle='dropdown'>
+								<img src='/static/images/flags/{{ app['country'] }}.png'>
 							</label>
 							<ul class='list dropdown-list'>
+								{% if app['country'] != 'fr' %}
 								<li>
-									<a href='http://wisembly.com/en/'>
-										<img src='/static/images/flags/gb.png'>
+									<a href='/fr/'>
+										<img src='/static/images/flags/fr.png'>
 									</a>
 								</li>
+								{% endif %}
+								{% if app['country'] != 'en' %}
 								<li>
-									<a href='http://wisembly.com/it/'>
+									<a href='/en/'>
+										<img src='/static/images/flags/en.png'>
+									</a>
+								</li>
+								{% endif %}
+<!-- 								{% if app['country'] != 'it' %}
+								<li>
+									<a href='/it/'>
 										<img src='/static/images/flags/it.png'>
 									</a>
 								</li>
+								{% endif %}
+ -->								{% if app['country'] != 'de' %}
 								<li class='last'>
-									<a href='http://wisembly.com/de/'>
+									<a href='/de/'>
 										<img src='/static/images/flags/de.png'>
 									</a>
 								</li>
+								{% endif %}
 							</ul>
 						</div>
 						<div class='dropdown'>

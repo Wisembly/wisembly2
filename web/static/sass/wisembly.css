@@ -1786,6 +1786,9 @@ form[data-status='testing'] .button-processing {
   position: relative;
   z-index: 4; }
 
+.open .dropdown-list {
+  display: block; }
+
 .dropdown-lang {
   border: 1px solid #e0e0e0;
   width: 58px; }
