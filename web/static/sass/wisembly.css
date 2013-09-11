@@ -1,4 +1,4 @@
-/* normalize.css v2.1.1 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
 	 HTML5 display definitions
 	 ========================================================================== */
@@ -1800,6 +1800,9 @@ form[data-status='testing'] .button-processing {
 .dropdown.active .dropdown-toggle {
   position: relative;
   z-index: 4; }
+
+.open .dropdown-list, .open .dropdown-bottom {
+  display: block; }
 
 .dropdown-lang {
   border: 1px solid #e0e0e0;
