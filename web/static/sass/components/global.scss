@@ -742,6 +742,7 @@ img {
 .browser {
 	width: 80%;
 	margin: 0 auto;
+	box-shadow: 0 1px 5px rgba(0,0,0,.1);
 }
 .browser-poll {
 	width: 320px;
@@ -788,7 +789,7 @@ img {
 		margin-top: 8px;
 	}
 	.app-body {
-		height: 433px;
+		height: 408px;
 	}
 }
 .questions-ideas .browser .app-body {
@@ -1158,6 +1159,7 @@ img {
 	box-shadow: 0 1px 5px rgba(0,0,0,.1);
 	overflow: hidden;
 	background-color: $white;
+	line-height: 1.5em;
 
 	h3 {
 		font-size: 16px;

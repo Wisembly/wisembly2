@@ -1,4 +1,4 @@
-/*! normalize.css v2.1.1 | MIT License | git.io/normalize */
+/* normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
 	 HTML5 display definitions
 	 ========================================================================== */
@@ -912,7 +912,8 @@ img {
 
 .browser {
   width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); }
 
 .browser-poll {
   width: 320px;
@@ -953,7 +954,7 @@ img {
 .events-audience-participation .browser {
   margin-top: 8px; }
 .events-audience-participation .app-body {
-  height: 433px; }
+  height: 408px; }
 
 .questions-ideas .browser .app-body {
   height: 335px; }
@@ -1259,7 +1260,8 @@ img {
   border-radius: 2px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background-color: white; }
+  background-color: white;
+  line-height: 1.5em; }
   .plan h3 {
     font-size: 16px;
     font-weight: 400;
