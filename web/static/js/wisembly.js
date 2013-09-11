@@ -21,7 +21,7 @@ $(document).ready(function () {
 				animations: [
 					{
 						selector: 		'[data-name=browser-participant]',
-						animationFn : 	'indexOrganizerHoverToSelect',
+						animationFn : 	'indexParticipantHoverToSelect',
 						duration: 		2000
 					}
 				]
@@ -30,7 +30,7 @@ $(document).ready(function () {
 				animations: [
 					{
 						selector: 		'[data-name=browser-participant]',
-						animationFn: 	'indexOrganizerSelectHover',
+						animationFn: 	'indexParticipantSelectHover',
 						duration: 		0
 					}
 				]
@@ -39,7 +39,7 @@ $(document).ready(function () {
 				animations: [
 					{
 						selector: 		'[data-name=browser-participant]',
-						animationFn: 	'indexOrganizerSelectClick',
+						animationFn: 	'indexParticipantSelectClick',
 						duration: 		0
 					}
 				]
@@ -48,7 +48,7 @@ $(document).ready(function () {
 				animations: [
 					{
 						selector: 		'[data-name=browser-participant]',
-						animationFn: 	'indexOrganizerHoverToPublish',
+						animationFn: 	'indexParticipantHoverToPublish',
 						duration: 		1000
 					}
 				]
@@ -57,7 +57,7 @@ $(document).ready(function () {
 				animations: [
 					{
 						selector: 		'[data-name=browser-participant]',
-						animationFn: 	'indexOrganizerPublishHover',
+						animationFn: 	'indexParticipantPublishHover',
 						duration: 		0
 					}
 				]
@@ -66,7 +66,7 @@ $(document).ready(function () {
 				animations: [
 					{
 						selector: 		'[data-name=browser-participant]',
-						animationFn: 	'indexOrganizerPublishClick',
+						animationFn: 	'indexParticipantPublishClick',
 						duration: 		0
 					}
 				]
@@ -75,7 +75,7 @@ $(document).ready(function () {
 				animations: [
 					{
 						selector: 		'[data-name=browser-participant]',
-						animationFn: 	'indexOrganizerSending',
+						animationFn: 	'indexParticipantSending',
 						duration: 		1500
 					}
 				]
@@ -84,11 +84,11 @@ $(document).ready(function () {
 				animations: [
 					{
 						selector: 		'[data-name=browser-participant]',
-						animationFn: 	'indexOrganizerSent',
+						animationFn: 	'indexParticipantSent',
 						duration: 		0
 					}, {
 						selector: 		'[data-name=browser-organizer]',
-						animationFn: 	'indexParticipantResults',
+						animationFn: 	'indexOrganizerResults',
 						duration: 		500
 					}
 				]
@@ -419,8 +419,8 @@ var quizDemo = {
 }
 
 var indexCleanup = function () {
-	var $button 				= $('[data-name=browser-organizer] .button'),
-		buttonText 				= $('[data-name=browser-organizer] .button').data('reset-text')
+	var $button 				= $('[data-name=browser-participant] .button'),
+		buttonText 				= $('[data-name=browser-participant] .button').data('reset-text')
 		$slidesProgressCount 	= $('[data-name=controls-progress-count]'),
 		$slidesProgressBarValue = $('[data-name=progress-bar-value]'),
 		currentSlide			= parseInt($slidesProgressCount.text(), 10);
@@ -428,15 +428,15 @@ var indexCleanup = function () {
 
 	// Cleaning poll animation
 
-	$('[data-name=browser-organizer] .mouse').show().css({
+	$('[data-name=browser-participant] .mouse').show().css({
 		'top' : '110%',
 		'left' : '110%'
 	});
-	$('[data-name=browser-organizer] .choice.one').css({
+	$('[data-name=browser-participant] .choice.one').css({
 		'box-shadow': 'none',
 		'background-color': '#eee'
 	});
-	$('[data-name=browser-organizer] .choice.one .radio').css({
+	$('[data-name=browser-participant] .choice.one .radio').css({
 		'background-image': 'url(/static/images/ok.png)'
 	});
 	$button
@@ -446,14 +446,14 @@ var indexCleanup = function () {
 		.text(buttonText);
 
 	$('[data-name=result-1] .progress-bar').css({
-		'width' : '80%'
-	});
-	$('[data-name=result-2] .progress-bar').css({
 		'width' : '20%'
 	});
+	$('[data-name=result-2] .progress-bar').css({
+		'width' : '50%'
+	});
 
-	$('[data-name=result-1] .value').text('80%');
-	$('[data-name=result-2] .value').text('20%');
+	$('[data-name=result-1] .value').text('20%');
+	$('[data-name=result-2] .value').text('50%');
 	$('.total-count').text('12');
 
 
@@ -467,20 +467,20 @@ var indexCleanup = function () {
 
 };
 
-var indexOrganizerHoverToSelect = function (selector, duration) {
+var indexParticipantHoverToSelect = function (selector, duration) {
 	$('.mouse', selector).animate({
-		top: '93px',
+		top: '73px',
     	left: '17px'
 	}, duration);
 };
 
-var indexOrganizerSelectHover = function (selector) {
+var indexParticipantSelectHover = function (selector) {
 	$('.choice.one', selector).css({
 		'background-color': '#f5f5f5'
 	});
 };
 
-var indexOrganizerSelectClick = function (selector) {
+var indexParticipantSelectClick = function (selector) {
 	$('.choice.one', selector).css({
 		'box-shadow': 'inset 0 0 2px rgba(0, 0, 0, 0.1)'
 	});
@@ -489,33 +489,33 @@ var indexOrganizerSelectClick = function (selector) {
 	});
 }
 
-var indexOrganizerSelectClickRadio = function (selector) {
+var indexParticipantSelectClickRadio = function (selector) {
 	$(selector).css({
 		'background-image': 'url(/static/images/ok-hover.png)'
 	});
 }
 
-var indexOrganizerHoverToPublish = function (selector, duration) {
+var indexParticipantHoverToPublish = function (selector, duration) {
 	$('.mouse', selector).animate({
-		'top': '233px',
+		'top': '213px',
 		'left': '167px'
 	}, duration)
 };
 
-var indexOrganizerPublishHover = function(selector) {
+var indexParticipantPublishHover = function(selector) {
 	$('.button', selector).css({
 		'background-color': '#7fc4e2'
 	});
 };
 
-var indexOrganizerPublishClick = function(selector) {
+var indexParticipantPublishClick = function(selector) {
 	$('.button', selector).css({
 		'box-shadow': 'inset 0 0 5px rgba(0, 0, 0, 0.3)',
 		'background-color': '#45a4da'
 	});
 };
 
-var indexOrganizerSending = function(selector, duration) {
+var indexParticipantSending = function(selector, duration) {
 	var $el = $('.button', selector),
 		sendingText = $el.data('sending-text');
 	$('.frame-loading', selector).removeClass('hide');
@@ -529,14 +529,14 @@ var indexOrganizerSending = function(selector, duration) {
 		}, duration);
 };
 
-var indexOrganizerSent = function(selector, duration) {
+var indexParticipantSent = function(selector, duration) {
 	var $el = $('.button', selector),
 		sentText = $el.data('sent-text');
 	$('.frame-loading', selector).addClass('hide');
 	$el.text(sentText);
 };
 
-var indexParticipantResults = function (selector, duration) {
+var indexOrganizerResults = function (selector, duration) {
 	$('[data-name=result-1] .progress-bar', selector).animate({
 		'width' : '82%'
 	}, duration);
