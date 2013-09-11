@@ -482,7 +482,7 @@ a {
     font-weight: 300; }
 
 .features-list-container {
-  height: 180px; }
+  height: 150px; }
 
 .features-list {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
@@ -521,7 +521,7 @@ a {
     font-weight: 600;
     line-height: 20px;
     color: #999999;
-    height: 140px;
+    height: 110px;
     text-transform: uppercase; }
     .features-list a span {
       display: block; }
