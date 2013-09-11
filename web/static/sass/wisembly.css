@@ -1258,6 +1258,8 @@ img {
     padding: 15px 20px; }
     .plan li:nth-child(even) {
       background-color: #eff8fb; }
+  .plan .list {
+    height: 200px; }
   .plan .list-dot {
     display: inline-block;
     background-color: #ff6539;
