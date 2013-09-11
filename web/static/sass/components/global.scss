@@ -21,6 +21,9 @@ img {
 a {
 	color: $brandBlueLight;
 }
+
+// utilities
+
 .list {
 	margin: 0;
 	padding: 0;
@@ -31,6 +34,28 @@ a {
 }
 .relative {
 	position: relative;
+}
+.affix {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  zoom: 1;
+}
+
+
+/*
+ * Mixins
+ */
+
+// CSS3 transitions
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
 }
 
 // clear floats with clearfix
@@ -108,7 +133,7 @@ a {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
-	
+
 	.header-background {
 		display: block;
 		position: absolute;
@@ -129,7 +154,7 @@ a {
 		display: block;
 		margin-top: -20%;
 	}
-	
+
 	.container {
 		height: 240px;
 		padding: 0;
@@ -161,9 +186,14 @@ a {
 		font-weight: 300;
 	}
 }
+
+.features-list-container {
+	height: 180px;
+}
 .features-list {
 	box-shadow: 0 0 2px 0 rgba(0,0,0, .1);
 	background-image: none;
+	background-color: #fff;
 
 	.container {
 		padding: 0;
@@ -185,6 +215,14 @@ a {
 		&.first {
 			a {
 				//border-left: 1px solid $lightGrey;
+			}
+		}
+
+		&.active {
+			a {
+				background-color: $brandBlue;
+				color: $white;
+				@include transition(all, .1s, ease-in-out);
 			}
 		}
 	}
@@ -210,6 +248,7 @@ a {
 		&:hover {
 			background-color: $brandBlue;
 			color: $white;
+			@include transition(all, .1s, ease-in-out);
 		}
 	}
 	&.docked {
@@ -753,7 +792,7 @@ img {
 		padding: 30px;
 		background-color: $brandBlueExtraExtraExtraLight;
 		border-left: 2px solid $brandBlueExtraLight;
-		
+
 		blockquote {
 			padding: 24px 34px;
 			margin: 0;

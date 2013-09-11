@@ -7,6 +7,7 @@ $(document).ready(function () {
 	login.startListening();
 	quotesList.start();
 	quizDemo.startListening();
+	featuresScroll.startListening();
 	var browsersAnimation = new Animator();
 	browsersAnimation.init({
 		// autoplay: false,
@@ -641,6 +642,24 @@ var Animator = (function () {
 	};
 
 });
+
+var featuresScroll = {
+	$el: 	$('.features-list'),
+	offset: -180,
+
+	startListening: function () {
+		this.$el.on('click', 'a', $.proxy(this.scrollToAnchor, this));
+	},
+
+	scrollToAnchor: function (event) {
+		event.preventDefault();
+		var $link = $(event.currentTarget),
+			$anchor = $($link.attr('href'));
+		$('body').stop().animate({
+			scrollTop: $anchor.offset().top + this.offset
+		}, 500);
+	}
+}
 
 
 

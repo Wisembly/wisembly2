@@ -13,7 +13,7 @@
 {% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
 
 
-{%  block content %}
+{% block content %}
 	<div class='section header' style='background-image: url(http://farm5.staticflickr.com/4111/5077272375_8738bc6f3d_b.jpg);'>
 		<div class='container'>
 			<div class='row'>
@@ -28,58 +28,60 @@
 			</div>
 		</div>
 	</div>
-	<div class='section features-list'>
-		<div class='container'>
-			<ul class='list list-eight'>
-				<li class='one first'>
-					<a href='{{ path('events-seminaries') }}#audience-participation'>
-						<i class='picto picto-participation'></i>
-						<span class='medium'>{{ 'qna_link' | trans }}</span>
-					</a>
-				</li>
-				<li class='two'>
-					<a href='{{ path('events-seminaries') }}#moderation'>
-						<i class='picto picto-moderation'></i>
-						<span class='short'>{{ 'moderation_link' | trans }}</span>
-					</a>
-				</li>
-				<li class='three'>
-					<a href='{{ path('events-seminaries') }}#comments'>
-						<i class='picto picto-qa'></i>
-						<span>{{ 'question_answers_link' | trans }}</span>
-					</a>
-				</li>
-				<li class='four'>
-					<a href='{{ path('events-seminaries') }}#vote'>
-						<i class='picto picto-votes'></i>
-						<span class='short'>{{ 'votes_link' | trans }}</span>
-					</a>
-				</li>
-				<li class='five'>
-					<a href='{{ path('events-seminaries') }}#fullscreen'>
-						<i class='picto picto-fullscreen'></i>
-						<span class='short'>{{ 'fullscreen_link' | trans }}</span>
-					</a>
-				</li>
-				<li class='six'>
-					<a href='{{ path('events-seminaries') }}#satisfaction-study'>
-						<i class='picto picto-satisfaction-study'></i>
-						<span class='medium'>{{ 'feedback_survey_link' | trans }}</span>
-					</a>
-				</li>
-				<li class='seven'>
-					<a href='{{ path('events-seminaries') }}#stats-reporting'>
-						<i class='picto picto-stats-reporting'></i>
-						<span class='medium'>{{ 'interaction_analysis_link' | trans }}</span>
-					</a>
-				</li>
-				<li class='eight'>
-					<a href='{{ path('events-seminaries') }}#multi-devices'>
-						<i class='picto picto-multi-devices'></i>
-						<span class='medium'>{{ 'multi_devices_link' | trans }}</span>
-					</a>
-				</li>
-			</ul>
+	<div class="features-list-container">
+		<div class='section features-list' data-spy='affix' data-offset='460'>
+			<div class='container spy-list'>
+				<ul class='nav list list-eight'>
+					<li class='one first active'>
+						<a href='#audience-participation'>
+							<i class='picto picto-participation'></i>
+							<span class='medium'>{{ 'qna_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='two'>
+						<a href='#moderation'>
+							<i class='picto picto-moderation'></i>
+							<span class='short'>{{ 'moderation_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='three'>
+						<a href='#comments'>
+							<i class='picto picto-qa'></i>
+							<span>{{ 'question_answers_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='four'>
+						<a href='#vote'>
+							<i class='picto picto-votes'></i>
+							<span class='short'>{{ 'votes_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='five'>
+						<a href='#fullscreen'>
+							<i class='picto picto-fullscreen'></i>
+							<span class='short'>{{ 'fullscreen_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='six'>
+						<a href='#satisfaction-study'>
+							<i class='picto picto-satisfaction-study'></i>
+							<span class='medium'>{{ 'feedback_survey_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='seven'>
+						<a href='#stats-reporting'>
+							<i class='picto picto-stats-reporting'></i>
+							<span class='medium'>{{ 'interaction_analysis_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='eight'>
+						<a href='#multi-devices'>
+							<i class='picto picto-multi-devices'></i>
+							<span class='medium'>{{ 'multi_devices_link' | trans }}</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div class='section events-audience-participation' id='audience-participation'>
@@ -99,7 +101,7 @@
 									<p>{{ 'qna_desc2' | trans }}</p>
 								</div>
 							</div>
-						</div>	
+						</div>
 					</div>
 				</div>
 				<div class='column four last'>
@@ -190,7 +192,7 @@
 					<div class='column-inner'>
 						<img src='/static/images/illustrations/fullscreen.png' />
 					</div>
-				</div> 
+				</div>
 				<div class='column six last'>
 					<div class='column-inner'>
 						<h3>{{ 'fullscreen_title' | trans }}</h3>

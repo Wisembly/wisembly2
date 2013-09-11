@@ -366,6 +366,16 @@ a {
 .relative {
   position: relative; }
 
+.affix {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  zoom: 1; }
+
+/*
+ * Mixins
+ */
 .clearfix {
   *zoom: 1; }
   .clearfix:before, .clearfix:after {
@@ -453,9 +463,13 @@ a {
   .header h2 {
     font-weight: 300; }
 
+.features-list-container {
+  height: 180px; }
+
 .features-list {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
-  background-image: none; }
+  background-image: none;
+  background-color: #fff; }
   .features-list .container {
     padding: 0; }
   .features-list ul {
@@ -470,6 +484,14 @@ a {
   .features-list li {
     float: left;
     width: 14.28%; }
+    .features-list li.active a {
+      background-color: #0786cd;
+      color: white;
+      -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+      -ms-transition: all 0.1s ease-in-out;
+      -o-transition: all 0.1s ease-in-out;
+      transition: all 0.1s ease-in-out; }
   .features-list .picto {
     margin: 0 auto 20px; }
   .features-list a {
@@ -487,7 +509,12 @@ a {
       display: block; }
     .features-list a:hover {
       background-color: #0786cd;
-      color: white; }
+      color: white;
+      -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+      -ms-transition: all 0.1s ease-in-out;
+      -o-transition: all 0.1s ease-in-out;
+      transition: all 0.1s ease-in-out; }
   .features-list.docked {
     position: fixed;
     top: 0;
