@@ -62,7 +62,14 @@
                                                                 <div class='app-logo'>wisembly</div>
                                                             </div>
                                                             <div class='app-body'>
+                                                                <div class="frame frame-loading hide">
+                                                                    <div class='frame-inner'>
+                                                                        <div class="overlay"></div>
+                                                                        <i class="icon-asterisk icon-spin icon-2x"></i>
+                                                                    </div>
+                                                                </div>
                                                                 <div class='frame frame-poll'>
+                                                                    <div class='frame-inner'>
                                                                      <h5>{{ 'homepage_poll_question' | trans }}</h5>
                                                                      <ul class='list results'>
                                                                         <li class='even'>
@@ -98,8 +105,10 @@
                                                                          <span class='total-count'>12</span>
                                                                          <span class='total-label'>{{ 'participants' | trans }}</span>
                                                                      </div>
+                                                                     </div>
                                                                  </div>
                                                                 <div class='frame frame-doc hide'>
+                                                                    <div class='frame-inner'>
                                                                     <ul class='list slides'>
                                                                         <li class="slide">
                                                                             <img src="/static/images/slides/1.png">
@@ -131,6 +140,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class='mouse'></div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -156,54 +166,58 @@
                                                                     <i class="icon-asterisk icon-spin icon-2x"></i>
                                                                 </div>
                                                                 <div class='frame frame-poll'>
-                                                                   <div class='participant-poll'>
-                                                                       <h5>{{ 'homepage_poll_question' | trans }}</h5>
-                                                                        <ul class='list choices'>
-                                                                           <li class='even'>
-                                                                               <div class='choice one'>
-                                                                                   <span class='radio'></span>
-                                                                                   <span class='text'>{{ 'homepage_poll_choice_1' | trans }}</span>
-                                                                               </div>
-                                                                           </li>
-                                                                           <li class='even'>
-                                                                               <div class='choice two'>
-                                                                                   <span class='radio'></span>
-                                                                                   <span class='text'>{{ 'homepage_poll_choice_2' | trans }}</span>
-                                                                               </div>
-                                                                           </li>
-                                                                           <li class='even'>
-                                                                               <div class='choice three'>
-                                                                                   <span class='radio'></span>
-                                                                                   <span class='text'>{{ 'homepage_poll_choice_3' | trans }}</span>
-                                                                               </div>
-                                                                           </li>
-                                                                       </ul>
-                                                                       <span
-                                                                           href=''
-                                                                           class='button button-validate'
-                                                                           data-reset-text="{{ 'poll_button_submit' | trans }}"
-                                                                           data-sending-text="{{ 'poll_button_sending' | trans }}"
-                                                                           data-sent-text="{{ 'poll_button_sent' | trans }}">
-                                                                               {{ 'poll_button_submit' | trans }}
-                                                                       </span>
+                                                                    <div class='frame-inner'>
+                                                                        <div class='participant-poll'>
+                                                                           <h5>{{ 'homepage_poll_question' | trans }}</h5>
+                                                                            <ul class='list choices'>
+                                                                               <li class='even'>
+                                                                                   <div class='choice one'>
+                                                                                       <span class='radio'></span>
+                                                                                       <span class='text'>{{ 'homepage_poll_choice_1' | trans }}</span>
+                                                                                   </div>
+                                                                               </li>
+                                                                               <li class='even'>
+                                                                                   <div class='choice two'>
+                                                                                       <span class='radio'></span>
+                                                                                       <span class='text'>{{ 'homepage_poll_choice_2' | trans }}</span>
+                                                                                   </div>
+                                                                               </li>
+                                                                               <li class='even'>
+                                                                                   <div class='choice three'>
+                                                                                       <span class='radio'></span>
+                                                                                       <span class='text'>{{ 'homepage_poll_choice_3' | trans }}</span>
+                                                                                   </div>
+                                                                               </li>
+                                                                           </ul>
+                                                                           <span
+                                                                               href=''
+                                                                               class='button button-validate'
+                                                                               data-reset-text="{{ 'poll_button_submit' | trans }}"
+                                                                               data-sending-text="{{ 'poll_button_sending' | trans }}"
+                                                                               data-sent-text="{{ 'poll_button_sent' | trans }}">
+                                                                                   {{ 'poll_button_submit' | trans }}
+                                                                           </span>
+                                                                           <div class='mouse'></div>
+                                                                        </div>
                                                                    </div>
-                                                                   <div class='mouse'></div>
-                                                               </div>
+                                                                </div>
                                                                 <div class='frame frame-doc hide'>
-                                                                    <ul class='list slides'>
-                                                                        <li class="slide">
-                                                                            <img src="/static/images/slides/1.png">
-                                                                        </li>
-                                                                        <li class="slide">
-                                                                            <img src="/static/images/slides/2.png">
-                                                                        </li>
-                                                                        <li class="slide">
-                                                                            <img src="/static/images/slides/3.png">
-                                                                        </li>
-                                                                    </ul>
-                                                                    <p class="participant-help">
-                                                                        {{ 'Slides are updated in real-time !' | trans }}
-                                                                    </p>
+                                                                    <div class='frame-inner'>
+                                                                        <ul class='list slides'>
+                                                                            <li class="slide">
+                                                                                <img src="/static/images/slides/1.png">
+                                                                            </li>
+                                                                            <li class="slide">
+                                                                                <img src="/static/images/slides/2.png">
+                                                                            </li>
+                                                                            <li class="slide">
+                                                                                <img src="/static/images/slides/3.png">
+                                                                            </li>
+                                                                        </ul>
+                                                                        <p class="participant-help text-centered">
+                                                                            {{ 'slide_help_notice' | trans }}
+                                                                        </p>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
