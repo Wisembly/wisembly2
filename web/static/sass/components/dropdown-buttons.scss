@@ -59,7 +59,7 @@ $dropdownLangWidth: 58px;
 // opening dropdowns
 
 .open {
-	.dropdown-list {
+	.dropdown-list, .dropdown-bottom {
 		display: block;
 	}
 }
