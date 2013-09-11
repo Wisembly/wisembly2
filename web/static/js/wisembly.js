@@ -393,8 +393,8 @@ var quizDemo = {
 	selectedAnswer: '',
 
 	startListening: function () {
-		this.$form.find('input[type=radio]').on('change', $.proxy(this.validateForm, 		this	));
-		this.$form.find('button').on('click', 	$.proxy(this.displayResults, 	this	));
+		this.$form.find('input[type=radio]').on(	'change', 	$.proxy(this.validateForm, 		this ));
+		this.$form.find('button').on(				'click', 	$.proxy(this.displayResults, 	this ));
 	},
 
 	validateForm: function (event) {

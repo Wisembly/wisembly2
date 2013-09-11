@@ -122,7 +122,7 @@ a {
 .section {
 	border-bottom: 1px solid $lightGrey;
 	box-shadow: inset 0 -1px 5px 0 rgba(0,0,0, .06);
-	
+
 	.container {
 		padding: 80px 0;
 		position: relative;
@@ -755,6 +755,13 @@ img {
 
 	.browser-window {
 		height: 290px;
+	}
+}
+.meetings-confcalls {
+	.browser-poll {
+		.browser-window {
+			height: 360px;
+		}
 	}
 }
 .browser-window {
@@ -1434,7 +1441,7 @@ img {
 	.frame-doc {
 		position: absolute;
 		overflow: hidden;
-		
+
 		.frame-inner {
 			padding-top: 64px;
 		}
