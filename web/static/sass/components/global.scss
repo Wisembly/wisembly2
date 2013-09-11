@@ -311,7 +311,7 @@ a {
 .quiz-demo {
 	height: 220px;
 	padding: 20px 30px;
-	
+
 	> div {
 		position: absolute;
 		width: 260px;
@@ -370,60 +370,62 @@ a {
 		width: 80%;
 		margin: 40px auto 0;
 	}
-	.quote-box {
-		padding: 5px;
-		background-color: #f5f5f5;
-		border-bottom: 1px solid $lightGrey;
+}
 
-		&.focus {
-			button {
-				display: block;
-			}
-		}
+.quote-box {
+	padding: 5px;
+	background-color: #f5f5f5;
+	border-bottom: 1px solid $lightGrey;
 
-		.textarea-container {
-			position: relative;
-		}
-		textarea {
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			outline: none;
-			resize: none;
-			width: 100%;
-			box-sizing: border-box;
-			border: 1px solid $lightGrey;
-			overflow: hidden;
-		}
-		.textarea-mirror {
-			min-height: 20px;
-		}
-		textarea,
-		.textarea-mirror {
-			padding: 10px;
-		}
+	&.focus {
 		button {
-			display: none;
-		}
-	}
-	.quotes-stream li {
-		border-bottom: 1px solid $lightGrey;
-		padding: 15px;
-
-		span {
 			display: block;
 		}
-		.quote-text {
-			margin-bottom: 5px;
-		}
-		.quote-author {
-			color: $grey;
-			font-size: 11px;
-		}
+	}
+
+	.textarea-container {
+		position: relative;
+	}
+	textarea {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		outline: none;
+		resize: none;
+		width: 100%;
+		box-sizing: border-box;
+		border: 1px solid $lightGrey;
+		overflow: hidden;
+	}
+	.textarea-mirror {
+		min-height: 20px;
+	}
+	textarea,
+	.textarea-mirror {
+		padding: 10px;
+	}
+	button {
+		display: none;
 	}
 }
+.quotes-stream li {
+	border-bottom: 1px solid $lightGrey;
+	padding: 15px;
+
+	span {
+		display: block;
+	}
+	.quote-text {
+		margin-bottom: 5px;
+	}
+	.quote-author {
+		color: $grey;
+		font-size: 11px;
+	}
+}
+
 
 .clients-list {
 	margin: 0 -20px;
@@ -717,6 +719,15 @@ img {
 	height: 100%;
 }
 // browser
+
+.browser-poll {
+	width: 320px;
+	margin: 0 auto;
+
+	.browser-window {
+		height: 290px;
+	}
+}
 .browser-window {
 	height: 353px;
 	border-width: 1px;
