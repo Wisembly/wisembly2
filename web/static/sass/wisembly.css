@@ -384,6 +384,22 @@ a {
   .clearfix:after {
     clear: both; }
 
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: -50px;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.4);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);
+  zoom: 1;
+  border-left: 3px solid #0786cd;
+  color: #fff;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px; }
+
 .frontpage {
   padding: 0; }
   .frontpage .top-bar {

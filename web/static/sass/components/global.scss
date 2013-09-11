@@ -49,13 +49,22 @@ a {
  */
 
 // CSS3 transitions
-
 @mixin transition($transition-property, $transition-time, $method) {
     -webkit-transition: $transition-property $transition-time $method;
     -moz-transition: $transition-property $transition-time $method;
     -ms-transition: $transition-property $transition-time $method;
     -o-transition: $transition-property $transition-time $method;
     transition: $transition-property $transition-time $method;
+}
+
+// Transparent background
+@mixin transparent($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: transparent;
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+  zoom: 1;
 }
 
 // clear floats with clearfix
@@ -80,6 +89,23 @@ a {
 	background-repeat: no-repeat;
 	text-indent: -1000%;
 }
+
+// back to top
+
+#back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: -50px;
+	@include transparent(#000, .4);
+	border-left: 3px solid #0786cd;
+	color: #fff;
+	text-decoration: none;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+
 
 // pages
 
