@@ -1595,10 +1595,8 @@ h4 {
 
 .picto {
   display: block;
-  height: 60px;
-  width: 100%;
-  width: 90px;
-  background-size: 90px;
+  height: 53px;
+  width: 80px;
   background-repeat: no-repeat;
   background-position: bottom center; }
 
@@ -1630,7 +1628,7 @@ h4 {
   background-image: url(/static/images/pictos/fullscreen.png); }
 
 .picto-participation {
-  background-image: url(/static/images/pictos/participation.png); }
+  background-image: url(/static/images/pictos/questions-ideas.png); }
 
 .picto-agenda {
   background-image: url(/static/images/pictos/agenda.png); }
