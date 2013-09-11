@@ -9,7 +9,10 @@ $(document).ready(function () {
 	quotesList.start();
 	quizDemo.startListening();
 	scrollManager.startListening();
+	backToTop.startListening();
+
 	var browsersAnimation = new Animator();
+
 	browsersAnimation.init({
 		// autoplay: false,
 		loops: 20,
@@ -460,9 +463,10 @@ var indexCleanup = function () {
 	// Cleaning slides animation
 
 	$('.slides').css({'left': '0px'});
+	$('[data-name=browser-organizer] .mouse').show();
 	$slidesProgressCount.text('1');
 	$slidesProgressBarValue.css({
-		'width' : '25%'
+		'width' : '34%'
 	});
 
 };
@@ -701,5 +705,38 @@ var scrollManager = {
 	}
 }
 
+
+// Should we display the `back to top` link ?
+var backToTop = {
+
+	$el: 	$(document),
+	$link: 	$('#back-to-top'),
+
+	threshold: 200,
+	isHidden:  true,
+
+	startListening : function () {
+		this.$el.on('scroll', $.proxy(this.toggle, this));
+	},
+
+	show: function () {
+		this.isHidden = false;
+		this.$link.animate({ 'right': 0 }, 1000, 'easeOutBounce');
+	},
+
+	hide: function () {
+		this.isHidden = true;
+		this.$link.animate({ 'right': '-50px' }, 1000, 'easeOutBounce');
+	},
+
+	toggle: function () {
+		var scrollTop = this.$el.scrollTop();
+		if (scrollTop > this.threshold && this.isHidden)
+			this.show();
+		if (scrollTop < this.threshold && !this.isHidden)
+			this.hide();
+	}
+
+}
 
 
