@@ -855,6 +855,14 @@ img {
 .try-now {
   background-color: #fafafa;
   background-image: none; }
+  .try-now .container {
+    padding: 40px 0; }
+  .try-now p {
+    font-size: 24px;
+    margin: 0;
+    color: #666; }
+  .try-now .button {
+    margin: 7px 0 0; }
 
 .try-me {
   background-color: #45a4da;
@@ -1171,6 +1179,17 @@ img {
     line-height: 26px;
     color: #ff6539;
     font-weight: bold; }
+
+.press {
+  margin: 0 -20px; }
+  .press li {
+    width: 20%;
+    float: left; }
+  .press div {
+    padding: 20px; }
+  .press img {
+    display: block;
+    -webkit-filter: grayscale(1); }
 
 .press-list {
   margin-bottom: 50px;
