@@ -18,7 +18,7 @@ $(document).ready(function () {
 				name: 'step-1',
 				animations: [
 					{
-						selector: 		'[data-name=browser-organizer]',
+						selector: 		'[data-name=browser-participant]',
 						animationFn : 	'indexOrganizerHoverToSelect',
 						duration: 		2000
 					}
@@ -27,7 +27,7 @@ $(document).ready(function () {
 				name: 'step-2',
 				animations: [
 					{
-						selector: 		'[data-name=browser-organizer]',
+						selector: 		'[data-name=browser-participant]',
 						animationFn: 	'indexOrganizerSelectHover',
 						duration: 		0
 					}
@@ -36,7 +36,7 @@ $(document).ready(function () {
 				name: 'step-3',
 				animations: [
 					{
-						selector: 		'[data-name=browser-organizer]',
+						selector: 		'[data-name=browser-participant]',
 						animationFn: 	'indexOrganizerSelectClick',
 						duration: 		0
 					}
@@ -45,7 +45,7 @@ $(document).ready(function () {
 				name: 'step-4',
 				animations: [
 					{
-						selector: 		'[data-name=browser-organizer]',
+						selector: 		'[data-name=browser-participant]',
 						animationFn: 	'indexOrganizerHoverToPublish',
 						duration: 		1000
 					}
@@ -54,7 +54,7 @@ $(document).ready(function () {
 				name: 'step-5',
 				animations: [
 					{
-						selector: 		'[data-name=browser-organizer]',
+						selector: 		'[data-name=browser-participant]',
 						animationFn: 	'indexOrganizerPublishHover',
 						duration: 		0
 					}
@@ -63,7 +63,7 @@ $(document).ready(function () {
 				name: 'step-6',
 				animations: [
 					{
-						selector: 		'[data-name=browser-organizer]',
+						selector: 		'[data-name=browser-participant]',
 						animationFn: 	'indexOrganizerPublishClick',
 						duration: 		0
 					}
@@ -72,7 +72,7 @@ $(document).ready(function () {
 				name: 'step-7',
 				animations: [
 					{
-						selector: 		'[data-name=browser-organizer]',
+						selector: 		'[data-name=browser-participant]',
 						animationFn: 	'indexOrganizerSending',
 						duration: 		1500
 					}
@@ -81,11 +81,11 @@ $(document).ready(function () {
 				name: 'step-8',
 				animations: [
 					{
-						selector: 		'[data-name=browser-organizer]',
+						selector: 		'[data-name=browser-participant]',
 						animationFn: 	'indexOrganizerSent',
 						duration: 		0
 					}, {
-						selector: 		'[data-name=browser-participant]',
+						selector: 		'[data-name=browser-organizer]',
 						animationFn: 	'indexParticipantResults',
 						duration: 		500
 					}

@@ -1,4 +1,4 @@
-/*! normalize.css v2.1.1 | MIT License | git.io/normalize */
+/* normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
 	 HTML5 display definitions
 	 ========================================================================== */
@@ -529,7 +529,7 @@ a {
   font-weight: bold; }
 
 .quiz-demo {
-  height: 210px;
+  height: 220px;
   padding: 20px 30px; }
   .quiz-demo > div {
     position: absolute;
@@ -538,6 +538,7 @@ a {
     position: relative;
     display: block;
     margin-bottom: 10px;
+    padding-left: 30px;
     border: 1px solid #e0e0e0;
     *zoom: 1;
     cursor: pointer; }
@@ -559,9 +560,11 @@ a {
     overflow: hidden; }
   .quiz-demo .target {
     display: block;
-    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
     width: 20px;
-    height: 20px;
     padding: 6px 5px;
     border-right: 1px solid #e0e0e0;
     background-color: rgba(0, 0, 0, 0.1);
@@ -864,25 +867,12 @@ img {
   position: relative;
   height: 100%; }
 
-.browser-bar {
-  display: none;
-  background-image: url(/static/images/browser-bar.png);
-  background-position: -1px 0;
-  background-repeat: no-repeat;
-  width: 375px;
-  height: 44px; }
-  .browser-bar span {
-    display: block;
-    padding: 13px 70px;
-    font-size: 12px;
-    line-height: 20px; }
-
 .browser-window {
   height: 353px;
-  border-width: 0 1px 1px;
+  border-width: 1px;
   border-color: #979797;
   border-style: solid;
-  border-radius: 0 0 3px 3px;
+  border-radius: 3px;
   background-color: white;
   overflow: hidden; }
 
@@ -1387,11 +1377,9 @@ img {
     [data-name=home-browsers-loop] .frame-doc ul.slides li.slide {
       float: left;
       margin: 0 15px 0 15px;
-      background: #ccc;
       color: #fff;
       text-align: center;
       width: 205px;
-      height: 184px;
       line-height: 184px;
       font-weight: bold; }
     [data-name=home-browsers-loop] .frame-doc ul.slides li.first {

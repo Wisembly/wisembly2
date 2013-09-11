@@ -270,8 +270,9 @@ a {
 	font-weight: bold;
 }
 .quiz-demo {
-	height: 210px;
+	height: 220px;
 	padding: 20px 30px;
+	
 	> div {
 		position: absolute;
 		width: 260px;
@@ -280,6 +281,7 @@ a {
 		position: relative;
 		display: block;
 		margin-bottom: 10px;
+		padding-left: 30px;
 		border: 1px solid $lightGrey;
 		@include clearfix;
 		cursor: pointer;
@@ -300,9 +302,11 @@ a {
 	}
 	.target {
 		display: block;
-		float: left;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
 		width: 20px;
-		height: 20px;
 		padding: 6px 5px;
 		border-right: 1px solid $lightGrey;
 		background-color: rgba(0,0,0,.1);
@@ -674,29 +678,12 @@ img {
 	height: 100%;
 }
 // browser
-.browser {
-}
-.browser-bar {
-	display: none;
-	background-image: url(/static/images/browser-bar.png);
-	background-position: -1px 0;
-	background-repeat: no-repeat;
-	width: 375px;
-	height: 44px;
-
-	span {
-		display: block;
-		padding: 13px 70px;
-		font-size: 12px;
-		line-height: 20px;
-	}
-}
 .browser-window {
 	height: 353px;
-	border-width: 0 1px 1px;
+	border-width: 1px;
 	border-color: #979797;
 	border-style: solid;
-	border-radius: 0 0 3px 3px;
+	border-radius: 3px;
 	background-color: $white;
 	overflow: hidden;
 }
@@ -1364,11 +1351,10 @@ img {
 			li.slide {
 				float: left;
 				margin: 0 15px 0 15px;
-				background: #ccc;
 				color: #fff;
 				text-align: center;
 				width: 205px;
-				height: 184px;
+				//height: 184px;
 				line-height: 184px;
 				font-weight: bold;
 			}
