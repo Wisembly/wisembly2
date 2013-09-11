@@ -545,19 +545,10 @@ a {
   background-position: right center;
   background-repeat: no-repeat; }
 
-.events-audience-participation h3 {
-  font-weight: bold; }
-
-.students-evaluation {
-  /* h3 span {
-  	padding: 2px 5px;
-  	background-color: $brandBlueLight;
-  	color: $white;
-  } */ }
-  .students-evaluation .container {
-    background-image: url(/static/images/edito/students-evaluation.png);
-    background-position: right center;
-    background-repeat: no-repeat; }
+.students-evaluation .container {
+  background-image: url(/static/images/edito/students-evaluation.png);
+  background-position: right center;
+  background-repeat: no-repeat; }
 
 .training-evaluation .container {
   background-image: url(/static/images/illustrations/training-evaluation.png);
@@ -623,10 +614,6 @@ a {
     background-color: red; }
     .quiz-demo input:checked + .target {
       background-image: url(/static/images/ok-hover.png); }
-
-.q-a .browser {
-  width: 80%;
-  margin: 40px auto 0; }
 
 .quote-box {
   padding: 5px;
@@ -862,7 +849,8 @@ img {
     margin: 0;
     color: #666; }
   .try-now .button {
-    margin: 7px 0 0; }
+    margin: 7px auto 0;
+    width: 50%; }
 
 .try-me {
   background-color: #45a4da;
@@ -922,6 +910,10 @@ img {
   position: relative;
   height: 100%; }
 
+.browser {
+  width: 80%;
+  margin: 0 auto; }
+
 .browser-poll {
   width: 320px;
   margin: 0 auto; }
@@ -957,6 +949,17 @@ img {
   background-position: 0 0;
   background-repeat: no-repeat;
   text-indent: -1000%; }
+
+.events-audience-participation .browser {
+  margin-top: 8px; }
+.events-audience-participation .app-body {
+  height: 433px; }
+
+.questions-ideas .browser .app-body {
+  height: 335px; }
+
+.q-a .app-body {
+  height: 417px; }
 
 .gallery-list {
   *zoom: 1;
@@ -1189,7 +1192,9 @@ img {
     padding: 20px; }
   .press img {
     display: block;
-    -webkit-filter: grayscale(1); }
+    -webkit-filter: grayscale(1);
+    margin: 0 auto;
+    width: 150px; }
 
 .press-list {
   margin-bottom: 50px;
