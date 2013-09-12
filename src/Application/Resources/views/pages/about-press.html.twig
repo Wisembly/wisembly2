@@ -34,7 +34,7 @@
 					<div class='column-inner'>
 						<table class='press-list'>
 
-                            {% for press in app.press %}
+                            {% for press in app.press | reverse %}
 							<tr>
 								<td class='src'>{{ press.support }}</td>
 								<td class='date'>{{ press.date }}</td>
