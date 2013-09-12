@@ -37,7 +37,7 @@
 								</div>
 							</div>
 						</div>
-						<form class='contact-form' method="POST" action="{{ path('contact_send_mail') }}" data-status='none' data-validate="parsley" novalidate>
+						<form class='contact-form' method="POST" action="{{ path('contact_send_mail') }}" data-status='active' data-validate="parsley" novalidate>
 							<h3>{{ 'write_to_us' | trans }}</h3>
 
                             {% if app['request'].query.has('success') %}
@@ -60,22 +60,22 @@
     							<div class='row'>
     								<div class='column six'>
     									<div class='column-inner'>
-    										<label class='label' for='contact_fullname'>{{ 'fullname' | trans }}</label>
+    										<label class='label' for='contact_fullname'>{{ 'fullname' | trans }} *</label>
     										<label class='input-container' for='contact_fullname'>
     											<input type='text' class='input' id='contact_fullname' name="contact_fullname" placeholder='{{ 'fullname' | trans }}' required />
     											<b class='input-background'></b>
     										</label>
-    										<label class='label' for='contact_email'>{{ 'email' | trans }}</label>
+    										<label class='label' for='contact_email'>{{ 'email' | trans }} *</label>
     										<label class='input-container' for='contact_email'>
     											<input type='email' class='input' id='contact_email' name="contact_email" placeholder='{{ 'email' | trans }}' required />
     											<b class='input-background'></b>
     										</label>
-    										<label class='label' for='contact_company'>{{ 'company' | trans }}</label>
+    										<label class='label' for='contact_company'>{{ 'company' | trans }} *</label>
     										<label class='input-container' for='contact_company'>
     											<input type='text' class='input' id='contact_company' name="contact_company" placeholder='{{ 'company' | trans }}' required />
     											<b class='input-background'></b>
     										</label>
-    										<label class='label' for='contact_phone'>{{ 'phone_number' | trans }}</label>
+    										<label class='label' for='contact_phone'>{{ 'phone_number' | trans }} *</label>
     										<label class='input-container' for='contact_phone'>
     											<input type='tel' data-type="phone" class='input' name="contact_phone" id='contact_phone' placeholder='{{ 'phone_number' | trans }}' required />
     											<b class='input-background'></b>
@@ -84,17 +84,18 @@
     								</div>
     								<div class='column six'>
     									<div class='column-inner'>
-    									    <label class='label' for='contact_reason'>{{ 'reason' | trans }}</label>
-    										<select name="contact_reason" id='contact_reason' required>
-    										    <option value="">{{ 'please_select' | trans }}</option>
-    											<option value="{{ 'ask_for_quote' | trans }}">{{ 'ask_for_quote' | trans }}</option>
-    											<option value="{{ 'more_information' | trans }}">{{ 'more_information' | trans }}</option>
-    											<option value="{{ 'write_an_article' | trans }}">{{ 'write_an_article' | trans }}</option>
-    											<option value="{{ 'contact_founders' | trans }}">{{ 'contact_founders' | trans }}</option>
-    											<option value="{{ 'other' | trans }}">{{ 'other' | trans }}</option>
-    										</select>
-                                            <br><br>
-    										<label class='label' for='contact_message'>{{ 'your_message' | trans }}</label>
+    									    <label class='label' for='contact_reason'>{{ 'reason' | trans }} *</label>
+                                            <label class='select-container'>
+        										<select name="contact_reason" id='contact_reason' required>
+        										    <option value="">{{ 'please_select' | trans }}</option>
+        											<option value="{{ 'ask_for_quote' | trans }}">{{ 'ask_for_quote' | trans }}</option>
+        											<option value="{{ 'more_information' | trans }}">{{ 'more_information' | trans }}</option>
+        											<option value="{{ 'write_an_article' | trans }}">{{ 'write_an_article' | trans }}</option>
+        											<option value="{{ 'contact_founders' | trans }}">{{ 'contact_founders' | trans }}</option>
+        											<option value="{{ 'other' | trans }}">{{ 'other' | trans }}</option>
+        										</select>
+                                            </label>
+    										<label class='label' for='contact_message'>{{ 'your_message' | trans }} *</label>
     										<label class='textarea-container' for='contact_message'>
     											<textarea name="contact_message" class='textarea' id='contact_message' placeholder='{{ 'your_message' | trans }}' required></textarea>
     											<b class='textarea-background'></b>
@@ -105,10 +106,8 @@
     							<div class='row'>
     								<div class='column six last'>
     									<div class='column-inner'>
-                                            <!-- <button class='button'> -->
-    											<input type="submit" class='button-text' value="{{ 'send_button' | trans }}" />
-    											<span class='button-processing'>...</span>
-                                            <!-- </button> -->
+											<input type="submit" class='button button-validate' value="{{ 'send_button' | trans }}" />
+											<span class='button-processing'>...</span>
     									</div>
     								</div>
     							</div>

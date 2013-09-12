@@ -1,4 +1,4 @@
-/* normalize.css v2.1.1 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
 	 HTML5 display definitions
 	 ========================================================================== */
@@ -1223,10 +1223,12 @@ img {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   padding: 30px; }
   .contact-form .textarea-container,
-  .contact-form .input-container {
+  .contact-form .input-container,
+  .contact-form .select-container {
+    position: relative;
     margin-bottom: 30px; }
   .contact-form .textarea {
-    height: 181px; }
+    height: 194px; }
   .contact-form .button {
     width: 100%; }
   .contact-form .label {
@@ -1522,11 +1524,16 @@ img {
 
 .parsley-error-list {
   position: absolute;
-  padding: 0; }
+  left: 0;
+  padding: 0;
+  margin-top: 10px; }
   .parsley-error-list li {
     list-style-type: none;
     color: red;
     font-size: 12px; }
+
+.select-container .parsley-error-list {
+  margin-top: 5px; }
 
 .contact-form .label {
   margin-top: 30px; }
