@@ -1,0 +1,105 @@
+<div class='section odd' id='decision-taking'>
+	<div class='container'>
+		<div class='row'>
+			<div class='column six'>
+				<div class='column-inner'>
+					<div class='browser browser-poll'>
+						<div class='browser-window'>
+							<div class='mocked-app'>
+								<div class='app-header'>
+									<div class="app-logo">wisembly</div>
+								</div>
+								<div class='app-body'>
+									<div class='quiz-demo'>
+										<h4 class='quiz-title'> {{ 'meeting_poll_title' | trans }} </h4>
+										<div data-name='quiz-demo-form'>
+											<div class="frame frame-loading hide">
+												<div class="overlay"></div>
+												<i class="icon-asterisk icon-spin icon-2x"></i>
+											</div>
+											<label class='choice' for='quiz_choice_1'>
+												<input type='radio' id='quiz_choice_1' name='quiz' />
+												<i class='target'></i>
+												<span>{{ 'meeting_poll_choice_1' | trans }}</span>
+											</label>
+											<label class='choice' for='quiz_choice_2'>
+												<input type='radio' id='quiz_choice_2' name='quiz' />
+												<i class='target'></i>
+												<span>{{ 'meeting_poll_choice_2' | trans }}</span>
+											</label>
+											<label class='choice' for='quiz_choice_3'>
+												<input type='radio' id='quiz_choice_3' name='quiz' />
+												<i class='target'></i>
+												<span>{{ "meeting_poll_choice_3" | trans }}</span>
+											</label>
+											<button
+												class='button button-default'
+												data-reset-text='{{ 'poll_button_submit' | trans }}'
+												data-sending-text='{{ 'poll_button_sending' | trans }}'
+												data-sent-text='{{ 'poll_button_sent' | trans }}'>
+													{{ 'poll_button_submit' | trans }}
+											</button>
+										</div>
+										<div data-name='quiz-demo-results' class='hide frame'>
+											<ul class='list results'>
+												<li class='even'>
+													 <div class='result'>
+														 <span class='text'>{{ 'training_poll_choice_1' | trans }}</span>
+														 <span class='value'>55%</span>
+														 <span class='progress'>
+															 <span class='progress-bar' style='width: 55%'></span>
+														 </span>
+													 </div>
+												</li>
+												<li class='even'>
+													<div class='result'>
+														<span class='text'>{{ 'training_poll_choice_2' | trans }}</span>
+														<span class='value'>35%</span>
+														<span class='progress'>
+															<span class='progress-bar' style='width: 35%'></span>
+														</span>
+													</div>
+												 </li>
+												 <li class='even'>
+													 <div class='result'>
+														 <span class='text'>{{ "training_poll_choice_3" | trans }}</span>
+														 <span class='value'>10%</span>
+														 <span class='progress'>
+															 <span class='progress-bar' style='width: 10%'></span>
+														 </span>
+													 </div>
+												 </li>
+											  </ul>
+											  <div class='total'>
+												  <i class='icon-person icon'></i>
+												  <span class='total-count'>12</span>
+												  <span class='total-label'>{{ 'participants' | trans }}</span>
+											  </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='column six last'>
+				<div class='column-inner'>
+					<h3>{{ 'decision_taking_title' | trans }}</h3>
+					<div class='row'>
+						<div class='column six'>
+							<div class='column-inner'>
+								{{ 'decision_taking_desc1' | trans | raw }}
+							</div>
+						</div>
+						<div class='column six'>
+							<div class='column-inner'>
+								{{ 'decision_taking_desc2' | trans | raw }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

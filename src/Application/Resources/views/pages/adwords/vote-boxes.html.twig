@@ -1,0 +1,353 @@
+{% extends 'layouts/main.html.twig' %}
+
+{# load features localization keys #}
+{% block features_event %}{% endblock %}
+
+{% block body_class %}events-seminaries{% endblock %}
+
+{# SEO #}
+{% set page = 'events_seminaries' %}
+{% block meta %}{% endblock %}
+{% block page_title %}{{ app.meta[page].title }}{% endblock %}
+{% block meta_description %}{{ app.meta[page].description }}{% endblock %}
+{% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
+
+
+{% block content %}
+	<div class='section header' style='background-image: url(http://farm5.staticflickr.com/4111/5077272375_8738bc6f3d_b.jpg);'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column'>
+					<div class='column-inner'>
+						<div class='id'>
+							<h1><span>{{ 'event_seminaries_title' | trans }}</span></h1>
+							<h2><span>{{ 'event_seminaries_desc' | trans }}</span></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="features-list-container">
+		<div class='section features-list' data-spy='affix' data-offset='460'>
+			<div class='container spy-list'>
+				<ul class='nav list list-eight'>
+					<li class='one first active'>
+						<a href='#audience-participation' class='scroll'>
+							<i class='picto picto-participation'></i>
+							<span class='medium'>{{ 'qna_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='two'>
+						<a href='#moderation' class='scroll'>
+							<i class='picto picto-moderation'></i>
+							<span class='short'>{{ 'moderation_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='three'>
+						<a href='#comments' class='scroll'>
+							<i class='picto picto-qa'></i>
+							<span>{{ 'question_answers_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='four'>
+						<a href='#vote' class='scroll'>
+							<i class='picto picto-votes'></i>
+							<span class='short'>{{ 'votes_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='five'>
+						<a href='#fullscreen' class='scroll'>
+							<i class='picto picto-fullscreen'></i>
+							<span class='short'>{{ 'fullscreen_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='six'>
+						<a href='#satisfaction-study' class='scroll'>
+							<i class='picto picto-satisfaction-study'></i>
+							<span class='medium'>{{ 'feedback_survey_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='seven'>
+						<a href='#stats-reporting' class='scroll'>
+							<i class='picto picto-stats-reporting'></i>
+							<span class='medium'>{{ 'interaction_analysis_link' | trans }}</span>
+						</a>
+					</li>
+					<li class='eight'>
+						<a href='#multi-devices' class='scroll'>
+							<i class='picto picto-multi-devices'></i>
+							<span class='medium'>{{ 'multi_devices_link' | trans }}</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class='section events-audience-participation' id='audience-participation'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column six'>
+					<h3 class='text-centered'>{{ 'qna_title' | trans }}</h3>
+					<div class='column-inner'>
+						<div class='row'>
+							<div class='column six'>
+								<div class='column-inner'>
+									{{ 'qna_desc1' | trans | raw }}
+								</div>
+							</div>
+							<div class='column six last'>
+								<div class='column-inner'>
+									{{ 'qna_desc2' | trans | raw }}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='column six last'>
+					<div class='column-inner'>
+						<div class='browser'>
+							<div class='browser-window' data-name='quotes_list'>
+								<div class='mocked-app'>
+									<div class='app-header'>
+										<div class='app-logo'>wisembly</div>
+									</div>
+									<div class='app-body'>
+										<div class='quote-box'>
+											<div class='textarea-container'>
+												<textarea placeholder='{{ 'stream_textarea_placeholder' | trans }}'></textarea>
+												<div class='textarea-mirror'></div>
+											</div>
+										</div>
+										<div class='quotes-stream'>
+											<ul class='list'>
+												<li class="auto">
+													<span class='quote-text'>{{ 'event_stream_item_1_text' | trans }}</span>
+													<span class='quote-author'>{{ 'event_stream_item_1_author' | trans }}</span>
+												</li>
+												<li class="auto">
+													<span class='quote-text'>{{ 'event_stream_item_2_text' | trans }}</span>
+													<span class='quote-author'>{{ 'event_stream_item_2_author' | trans }}</span>
+												</li>
+												<li class="auto">
+													<span class='quote-text'>{{ 'event_stream_item_3_text' | trans }}</span>
+													<span class='quote-author'>{{ 'event_stream_item_3_author' | trans }}</span>
+												</li>
+												<li class="auto">
+													<span class='quote-text'>{{ 'event_stream_item_4_text' | trans }}</span>
+													<span class='quote-author'>{{ 'event_stream_item_4_author' | trans }}</span>
+												</li>
+												<li class="auto">
+													<span class='quote-text'>{{ 'event_stream_item_5_text' | trans }}</span>
+													<span class='quote-author'>{{ 'event_stream_item_5_author' | trans }}</span>
+												</li>
+												<li class="manual" data-name='user-quote-tpl'>
+													<span class='quote-text'></span>
+													<span class='quote-author'>{{ 'you' | trans }}</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section' id='moderation'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column five'>
+					<div class='column-inner'>
+						<h3>{{ 'moderation_title' | trans }}</h3>
+						<p>{{ 'moderation_desc' | trans }}</p>
+					</div>
+				</div>
+				<div class='column six last'>
+					<div class='column-inner'>
+						<img src='/static/images/illustrations/moderation.png' />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section try-now'>
+		<div class='container'>
+<div class='row'>
+				<div class='column eight'>
+					<div class='column-inner'>
+						<p>{{ 'free_trial_incentive' | trans }}</p>
+					</div>
+				</div>
+				<div class='column four last'>
+					<div class='column-inner'>
+						<a href='{{ path('plans') }}' class='button button-large button-attention'>{{ 'try_for_free' | trans }}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section' id='comments'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column six'>
+					<div class='column-inner'>
+						<img src='/static/images/illustrations/comment.png' />
+					</div>
+				</div>
+				<div class='column five last'>
+					<div class='column-inner'>
+						<h3>{{ 'question_answers_title' | trans }}</h3>
+						<p>{{ 'question_answers_desc' | trans }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section' id='vote'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column five'>
+					<div class='column-inner'>
+						<h3>{{ 'votes_title' | trans }}</h3>
+						<p>{{ 'votes_desc' | trans }}</p>
+					</div>
+				</div>
+				<div class='column six last'>
+					<div class='column-inner'>
+						<img src='/static/images/illustrations/vote.png' />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section try-now'>
+		<div class='container'>
+<div class='row'>
+				<div class='column eight'>
+					<div class='column-inner'>
+						<p>{{ 'free_trial_incentive' | trans }}</p>
+					</div>
+				</div>
+				<div class='column four last'>
+					<div class='column-inner'>
+						<a href='{{ path('plans') }}' class='button button-large button-attention'>{{ 'try_for_free' | trans }}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section' id='fullscreen'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column five'>
+					<div class='column-inner'>
+						<img src='/static/images/illustrations/fullscreen.png' />
+					</div>
+				</div>
+				<div class='column six last'>
+					<div class='column-inner'>
+						<h3>{{ 'fullscreen_title' | trans }}</h3>
+						<p>{{ 'fullscreen_desc' | trans }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section' id='satisfaction-study'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column five'>
+					<div class='column-inner'>
+						<h3>{{ 'feedback_survey_title' | trans }}</h3>
+						{{ 'feedback_survey_desc' | trans | raw }}
+					</div>
+				</div>
+				<div class='column six last'>
+					<div class='column-inner'>
+						<img src='/static/images/illustrations/fullfilment-survey.png'>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section try-now'>
+		<div class='container'>
+<div class='row'>
+				<div class='column eight'>
+					<div class='column-inner'>
+						<p>{{ 'free_trial_incentive' | trans }}</p>
+					</div>
+				</div>
+				<div class='column four last'>
+					<div class='column-inner'>
+						<a href='{{ path('plans') }}' class='button button-large button-attention'>{{ 'try_for_free' | trans }}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section' id='stats-reporting'>
+		<div class='container'>
+			<h3 class='text-centered'>{{ 'interaction_analysis_title' | trans }}</h3>
+			<div class='illustration'>
+				<img src='/static/images/illustrations/stats-reporting-events.png'>
+			</div>
+			<div class='row'>
+				<div class='column six'>
+					<div class='column-inner'>
+						<p>{{ 'interaction_analysis_desc1' | trans }}</p>
+					</div>
+				</div>
+				<div class='column six last'>
+					<div class='column-inner'>
+						<p>{{ 'interaction_analysis_desc2' | trans }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section' id='multi-devices'>
+		<div class='container'>
+			<h3 class='text-centered'>{{ 'multi_devices_title' | trans }}</h3>
+			<div class='illustration'>
+				<img src='/static/images/illustrations/devices.png'>
+			</div>
+			<div class='row'>
+				<div class='column four'>
+					<div class='column-inner'>
+						<p>{{ 'multi_devices_desc1' | trans }}</p>
+					</div>
+				</div>
+				<div class='column four'>
+					<div class='column-inner'>
+						{{ 'multi_devices_desc2' | trans | raw }}
+					</div>
+				</div>
+				<div class='column four last'>
+					<div class='column-inner'>
+						<p>{{ 'multi_devices_desc3' | trans }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='section try-now'>
+		<div class='container'>
+<div class='row'>
+				<div class='column eight'>
+					<div class='column-inner'>
+						<p>{{ 'free_trial_incentive' | trans }}</p>
+					</div>
+				</div>
+				<div class='column four last'>
+					<div class='column-inner'>
+						<a href='{{ path('plans') }}' class='button button-large button-attention'>{{ 'try_for_free' | trans }}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+<div class='section odd q-a' id='qa'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column five'>
+					<div class='column-inner'>
+						<h3>{{ 'qna_title' | trans }}</h3>
+						{{ 'qna_desc' | trans | raw }}
+					</div>
+				</div>
+				<div class='column six last'>
+					<div class='column-inner'>
+						<div class='browser'>
+							<div class='browser-window' data-name='quotes_list'>
+								<div class='mocked-app'>
+									<div class='app-header'>
+										<div class='app-logo'>wisembly</div>
+									</div>
+									<div class='app-body'>
+										<div class='quote-box'>
+											<div class='textarea-container'>
+												<textarea placeholder='{{ 'stream_textarea_placeholder' | trans }}'></textarea>
+												<div class='textarea-mirror'></div>
+											</div>
+										</div>
+										<div class='quotes-stream'>
+											<ul class='list'>
+												<li class="auto">
+													<span class='quote-text'>{{ 'training_stream_item_1_text' | trans }}</span>
+													<span class='quote-author'>{{ 'training_stream_item_1_author' | trans }}</span>
+												</li>
+												<li class="auto">
+													<span class='quote-text'>{{ 'training_stream_item_2_text' | trans }}</span>
+													<span class='quote-author'>{{ 'training_stream_item_2_author' | trans }}</span>
+												</li>
+												<li class="auto">
+													<span class='quote-text'>{{ 'training_stream_item_3_text' | trans }}</span>
+													<span class='quote-author'>{{ 'training_stream_item_3_author' | trans }}</span>
+												</li>
+												<li class="auto">
+													<span class='quote-text'>{{ 'training_stream_item_4_text' | trans }}</span>
+													<span class='quote-author'>{{ 'training_stream_item_4_author' | trans }}</span>
+												</li>
+												<li class="auto">
+													<span class='quote-text'>{{ 'training_stream_item_5_text' | trans }}</span>
+													<span class='quote-author'>{{ 'training_stream_item_5_author' | trans }}</span>
+												</li>
+												<li class="manual" data-name='user-quote-tpl'>
+													<span class='quote-text'></span>
+													<span class='quote-author'>{{ 'you' | trans }}</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
