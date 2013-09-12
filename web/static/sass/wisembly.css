@@ -1,4 +1,4 @@
-/*! normalize.css v2.1.1 | MIT License | git.io/normalize */
+/* normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
 	 HTML5 display definitions
 	 ========================================================================== */
@@ -408,6 +408,8 @@ a {
 .section {
   border-bottom: 1px solid #e0e0e0;
   box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.06); }
+  .section.even {
+    background-color: #f3f6f7; }
   .section .container {
     padding: 80px 0;
     position: relative; }
@@ -476,11 +478,14 @@ a {
     .header h1 span,
     .header h2 span {
       background-color: rgba(68, 68, 68, 0.7);
-      border-left: 3px solid #0786cd;
       line-height: 1.5em;
       padding: 2px 10px; }
+  .header h1 span {
+    border-left: 3px solid #0786cd; }
   .header h2 {
     font-weight: 300; }
+    .header h2 span {
+      padding-left: 13px; }
 
 .features-list-container {
   height: 150px; }
@@ -488,7 +493,7 @@ a {
 .features-list {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
   background-image: none;
-  background-color: #fff; }
+  background-color: white !important; }
   .features-list .container {
     padding: 0; }
   .features-list ul {
@@ -830,7 +835,7 @@ img {
     padding: 0 3px; }
 
 .try-now {
-  background-color: #fafafa;
+  background-color: #fafafa !important;
   background-image: none; }
   .try-now .container {
     padding: 40px 0; }
@@ -885,16 +890,12 @@ img {
     background-color: #0786cd; }
 
 .browser-wrapper.first {
-  background-image: url(/static/images/edito/smiling.png);
-  background-position: -85px -30px;
-  background-repeat: no-repeat;
-  background-size: 400px; }
+  background-image: url(/static/images/homepage/organizer.png);
+  background-repeat: no-repeat; }
 
 .browser-wrapper.last {
-  background-image: url(/static/images/edito/young.png);
-  background-position: -51px -40px;
-  background-repeat: no-repeat;
-  background-size: 320px; }
+  background-image: url(/static/images/homepage/participant.png);
+  background-repeat: no-repeat; }
 
 .browsers {
   position: relative;
@@ -968,6 +969,15 @@ img {
   .gallery-list .img {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     padding: 1px; }
+
+.la-poste .header {
+  background-color: #ffec27; }
+
+.sncf .header {
+  background-color: #8c0056; }
+
+.auchan .header {
+  background-color: #e5001c; }
 
 .case-detail .section li {
   line-height: 1.5em;
@@ -1055,13 +1065,14 @@ img {
   left: -34px;
   top: 0;
   border: 1px solid white;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0 2px rgba(68, 68, 68, 0.2); }
 
 .history-item-cover {
   position: relative;
   color: white;
   border-radius: 2px;
-  height: 150px; }
+  height: 170px;
+  background-color: #f5f5f5; }
 
 .history-item-background {
   display: block;
@@ -1071,15 +1082,22 @@ img {
   bottom: 0;
   left: 0;
   z-index: 1;
-  border-radius: 2px; }
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  background-position: center center; }
 
 .history-item-date {
   text-transform: uppercase;
   font-size: 13px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  display: block; }
 
 .history-item-title {
-  margin: 0; }
+  margin: 0;
+  color: white !important; }
+  .history-item-title span {
+    background-color: rgba(68, 68, 68, 0.7);
+    padding: 0 5px; }
 
 .history-item-id {
   position: absolute;
@@ -1088,7 +1106,7 @@ img {
   left: 0;
   padding: 20px;
   z-index: 2;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+  text-shadow: 0 0 10px rgba(68, 68, 68, 0.5); }
 
 .history-item-description {
   padding: 20px; }
@@ -1106,7 +1124,7 @@ img {
     padding: 10px;
     border-top: 1px solid #45a4da;
     border-bottom: 1px solid #006697;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+    text-shadow: 0 1px 0 rgba(68, 68, 68, 0.7); }
 
 .team-list {
   *zoom: 1;

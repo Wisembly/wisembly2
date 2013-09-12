@@ -1,6 +1,6 @@
 {% extends 'layouts/main.html.twig' %}
 
-{% block body_class %}case-detail{% endblock %}
+{% block body_class %}case-detail {{ case.slug }}{% endblock %}
 
 {# automatically get case in app.set provided by slug in url #}
 {% set case = app.set %}

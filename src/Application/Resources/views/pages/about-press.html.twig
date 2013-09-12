@@ -13,10 +13,15 @@
 {% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
 
 {% block content %}
-	<div class='section header' style='background-image: url(http://cdn0.stocksy.com/a/bVF000/z0/59619.jpg);'>
+	<div class='section header'>
+		<div class='header-background'>
+			<img class='bg' src='/static/images/wallpapers/press.jpg'>
+		</div>
 		<div class='container'>
-			<h1>{{ 'about_press_page_title' | trans }}</h1>
-			<h2>{{ 'about_press_page_desc' | trans }}</h2>
+			<div class='id'>
+				<h1><span>{{ 'about_press_page_title' | trans }}</span></h1>
+				<h2><span>{{ 'about_press_page_desc' | trans }}</span></h2>
+			</div>
 		</div>
 	</div>
 	<div class='section'>

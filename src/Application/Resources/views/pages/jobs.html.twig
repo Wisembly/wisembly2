@@ -11,10 +11,15 @@
 
 
 {% block content %}
-	<div class='section header' style='background-image: url("http://cdn0.stocksy.com/a/n7L000/z0/81207.jpg");'>
+	<div class='section header'>
+		<div class='header-background'>
+			<img class='bg' src='/static/images/wallpapers/jobs.jpg'>
+		</div>
 		<div class='container'>
-			<h1>{{ 'jobs_page_title' | trans }}</h1>
-			<h2>{{ 'jobs_page_desc' | trans }}</h2>
+			<div class='id'>
+				<h1><span>{{ 'jobs_page_title' | trans }}</span></h1>
+				<h2><span>{{ 'jobs_page_desc' | trans }}</span></h2>
+			</div>
 		</div>
 	</div>
 	<div class='section'>

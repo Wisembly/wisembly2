@@ -14,7 +14,10 @@
 
 
 {% block content %}
-	<div class='section header' style='background-image: url(http://cdn2.stocksy.com/a/t1K000/z0/76997.jpg);'>
+	<div class='section odd header'>
+		<div class='header-background'>
+			<img class='bg' src='/static/images/wallpapers/trainings.jpg'>
+		</div>
 		<div class='container'>
 			<div class='row'>
 				<div class='column'>
@@ -30,7 +33,7 @@
 		</div>
 	</div>
 	<div class='features-list-container'>
-		<div class='section features-list' data-spy='affix' data-offset-top='460'>
+		<div class='section even features-list' data-spy='affix' data-offset-top='460'>
 			<div class='container spy-list'>
 				<ul class='nav list'>
 					<li class='one first active'>
@@ -79,7 +82,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section documents-management' id='documents-management'>
+	<div class='section documents-management odd' id='documents-management'>
 		<div class='container'>
 			<div class='row'>
 				<div class='column six'>
@@ -96,15 +99,20 @@
 			</div>
 		</div>
 	</div>
-	<div class='section students-evaluation' id='students-evaluation'>
-		<div class='container'>
+	<div class='section students-evaluation even' id='students-evaluation'>
+		<div class='container' style='background-image: url(http://cdn1.stocksy.com/a/Mk4000/z0/18250.jpg);background-repeat: no-repeat; background-position: center center; background-size: cover;'>
 			<div class='row'>
-				<div class='column six'>
+				<div class='column five'>
+					<div class='column-inner'>
+						<img src='/static/images/illustrations/students-evaluation.png' />	
+					</div>
+				</div>
+				<div class='column six last'>
 					<div class='column-inner'>
 						<h3>{{ 'students_evaluation_title' | trans }}</h3>
 						<div class='row'>
 							<div class='column six'>
-								<div class='column-inner'>
+								<div cla ss='column-inner'>
 									{{ 'students_evaluation_desc1' | trans | raw }}
 								</div>
 							</div>
@@ -116,15 +124,10 @@
 						</div>
 					</div>
 				</div>
-				<div class='column six last'>
-					<div class='column-inner'>
-						<img src='/static/images/illustrations/students-evaluation.png' />	
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
-	<div class='section try-now'>
+	<div class='section odd try-now'>
 		<div class='container'>
 			<div class='row'>
 				<div class='column eight'>
@@ -140,7 +143,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section training-evaluation' id='trainings-evaluation'>
+	<div class='section even training-evaluation' id='trainings-evaluation'>
 		<div class='container'>
 			<div class='row'>
 				<div class='column six'>
@@ -157,7 +160,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section quizzes' id='quizzes'>
+	<div class='section odd quizzes' id='quizzes'>
 		<div class='container'>
 			<div class='row'>
 				<div class='column six'>
@@ -251,7 +254,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section try-now'>
+	<div class='section even try-now'>
 		<div class='container'>
 			<div class='row'>
 				<div class='column eight'>
@@ -267,7 +270,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section q-a' id='qa'>
+	<div class='section odd q-a' id='qa'>
 		<div class='container'>
 			<div class='row'>
 				<div class='column five'>
@@ -328,7 +331,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section stats-reporting' id='stats-reporting'>
+	<div class='section even stats-reporting' id='stats-reporting'>
 		<div class='container'>
 			<h3 class='text-centered'>{{ 'stats_reporting_title' | trans }}</h3>
 			<i class='illustration'>
@@ -348,7 +351,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section multi-device' id='multi-devices'>
+	<div class='section odd multi-device' id='multi-devices'>
 		<div class='container'>
 			<h3 class='text-centered'>{{ 'multi_device_title' | trans }}</h3>
 			<div class='illustration'>
@@ -373,7 +376,7 @@
 			</div>
 		</div>
 	</div>
-	<div class='section try-now'>
+	<div class='section even try-now'>
 		<div class='container'>
 			<div class='row'>
 				<div class='column eight'>

@@ -11,10 +11,15 @@
 
 
 {% block content %}
-	<div class='section header' style='background-image: url("http://cdn2.stocksy.com/a/AtB000/z0/45704.jpg");'>
+	<div class='section header'>
+		<div class='header-background'>
+			<img class='bg' src='/static/images/wallpapers/contact.jpg'>
+		</div>
 		<div class='container'>
-			<h1><span>{{ 'contact_page_title' | trans }}</span></h1>
-			<h2><span>{{ 'contact_page_desc' | trans }}</span></h2>
+			<div class='id'>
+				<h1><span>{{ 'contact_page_title' | trans }}</span></h1>
+				<h2><span>{{ 'contact_page_desc' | trans }}</span></h2>
+			</div>
 		</div>
 	</div>
 	<div class='section'>
@@ -107,7 +112,6 @@
     								<div class='column six last'>
     									<div class='column-inner'>
 											<input type="submit" class='button button-validate' value="{{ 'send_button' | trans }}" />
-											<span class='button-processing'>...</span>
     									</div>
     								</div>
     							</div>
