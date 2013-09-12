@@ -272,7 +272,7 @@ CREATE TABLE `meta` (
 
 LOCK TABLES `meta` WRITE;
 /*!40000 ALTER TABLE `meta` DISABLE KEYS */;
-INSERT INTO `meta` VALUES ('about','Wisembly - À propos de Wisembly',NULL,NULL),('about_press','Wisembly - Dans la presse',NULL,NULL),('about_team','Wisembly - L\'équipe',NULL,NULL),('casestudies','Wisembly - Comme nos clients, gagnez en productivité durant vos meetings',NULL,NULL),('classes_trainings','Wisembly - Cours et formations',NULL,NULL),('contact','Wisembly - Contactez nous',NULL,NULL),('events_seminaries','Wisembly - Faites participer votre public',NULL,NULL),('index','Wisembly - Collaborez en réunion',NULL,NULL),('jobs','Wisembly - Emplois',NULL,NULL),('meetings_confcalls','Wisembly - Boostez vos réunions',NULL,NULL),('plans','Wisembly - Créez un compte de démonstration en 3 clics',NULL,NULL),('resources','Wisembly - Ressources',NULL,NULL);
+INSERT INTO `meta` VALUES ('about','Wisembly - À propos de Wisembly',NULL,NULL),('about_press','Wisembly - Dans la presse',NULL,NULL),('about_team','Wisembly - L\'équipe',NULL,NULL),('assurez_vous_que_tout_le_monde_suit','Assurez-vous que tout le monde suit',NULL,NULL),('casestudies','Wisembly - Comme nos clients, gagnez en productivité durant vos meetings',NULL,NULL),('classes_trainings','Wisembly - Cours et formations',NULL,NULL),('contact','Wisembly - Contactez nous',NULL,NULL),('events_seminaries','Wisembly - Faites participer votre public',NULL,NULL),('index','Wisembly - Collaborez en réunion',NULL,NULL),('jobs','Wisembly - Emplois',NULL,NULL),('laissez_sexprimer_votre_public','Wisembly - Laissez s\'exprimer votre public',NULL,NULL),('meetings_confcalls','Wisembly - Boostez vos réunions',NULL,NULL),('oubliez_les_boitiers_de_vote','Wisembly - Oubliez les boitiers de vote',NULL,NULL),('plans','Wisembly - Créez un compte de démonstration en 3 clics',NULL,NULL),('prenez_de_vraies_decisions_durant_vos_reunions','Wisembly - Prenez de vraies décisions durant vos réunions',NULL,NULL),('resources','Wisembly - Ressources',NULL,NULL),('vos_evaluations_sont_corrigees_immediatement','Wisembly - Vos évaluations sont corrigées immédiatement',NULL,NULL);
 /*!40000 ALTER TABLE `meta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -346,4 +346,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-09-12 18:31:07
+-- Dump completed on 2013-09-12 19:12:26
