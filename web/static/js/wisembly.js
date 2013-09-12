@@ -687,7 +687,7 @@ var scrollTo = function (selector) {
 
 var scrollManager = {
 	$el: 	$('body'),
-	offset: -180,
+	offset: -150,
 
 	startListening: function () {
 		this.$el.on('click', 'a.scroll', $.proxy(this.scrollToAnchor, this));
