@@ -291,7 +291,7 @@ var quotesList = {
 		this.$el.on(		'post:auto', 	$.proxy(this.automaticPost, 		this ));
 		this.$textarea.on(	'click', 		$.proxy(this.engageManualMode, 		this ));
 		this.$textarea.on(	'blur', 		$.proxy(this.engageAutomaticMode, 	this ));
-		this.$textarea.on(	'keyup', 		$.proxy(this.manualPost, 			this ));
+		this.$textarea.on(	'keypress', 	$.proxy(this.manualPost, 			this ));
 	},
 
 	engageManualMode: function () {
@@ -314,9 +314,13 @@ var quotesList = {
 
 	manualPost: function (event) {
 		// Post a quote on `enter`
+
 		if (event.which === 13) {
-			// this.manualModeCooldown('restart');
-			this.add();
+			event.preventDefault();
+			if (this.$textarea.val() !== '') {
+				// this.manualModeCooldown('restart');
+				this.add();
+			}
 		}
 	},
 
@@ -340,13 +344,15 @@ var quotesList = {
 	},
 
 	automaticPost: function () {
-		setTimeout(
-			$.proxy(function () {
-				this.add();
-				this.print();
-			}, this
-			), 2000
-		);
+		if (this.$textarea.val() !== '') {
+			setTimeout(
+				$.proxy(function () {
+					this.add();
+					this.print();
+				}, this
+				), 2000
+			);
+		}
 	},
 
 	clearTextarea: function () {
