@@ -42,8 +42,8 @@ $app->register(new DynamicPage('case-detail', '/case-studies/{slug}', 'pages/cas
 $app->register(new StaticPage('plans', '/plans', 'pages/plans.html.twig'));
 
 // about pages
-$app->register(new StaticPage('about', '/about', 'pages/about.html.twig'));
-$app->register(new StaticPage('about-team', '/about/team', 'pages/about-team.html.twig'));
+$app->register(new StaticPage('about', '/about/story', 'pages/about.html.twig'));
+$app->register(new StaticPage('about-team', '/about', 'pages/about-team.html.twig'));
 $app->register(new StaticPage('about-press', '/about/press', 'pages/about-press.html.twig'));
 $app->register(new StaticPage('resources', '/about/resources', 'pages/resources.html.twig'));
 $app->register(new StaticPage('jobs', '/jobs', 'pages/jobs.html.twig'));
