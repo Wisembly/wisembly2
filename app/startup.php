@@ -48,6 +48,13 @@ $app->register(new StaticPage('about-press', '/about/press', 'pages/about-press.
 $app->register(new StaticPage('resources', '/about/resources', 'pages/resources.html.twig'));
 $app->register(new StaticPage('jobs', '/jobs', 'pages/jobs.html.twig'));
 
+// Adwords
+$app->register(new StaticPage('oubliez-les-boitiers-de-vote', '/campaign/oubliez-les-boitiers-de-vote', 'pages/adwords/oubliez-les-boitiers-de-vote.html.twig'));
+$app->register(new StaticPage('laissez-sexprimer-votre-public', '/campaign/laissez-sexprimer-votre-public', 'pages/adwords/laissez-sexprimer-votre-public.html.twig'));
+$app->register(new StaticPage('vos-evaluations-sont-corrigees-immediatement', '/campaign/vos-evaluations-sont-corrigees-immediatement', 'pages/adwords/vos-evaluations-sont-corrigees-immediatement.html.twig'));
+$app->register(new StaticPage('assurez-vous-que-tout-le-monde-suit', '/campaign/assurez-vous-que-tout-le-monde-suit', 'pages/adwords/assurez-vous-que-tout-le-monde-suit.html.twig'));
+$app->register(new StaticPage('prenez-de-vraies-decisions-durant-vos-reunions', '/campaign/prenez-de-vraies-decisions-durant-vos-reunions', 'pages/adwords/prenez-de-vraies-decisions-durant-vos-reunions.html.twig'));
+
 // contact page
 $app->register(new StaticPage('contact', '/contact', 'pages/contact.html.twig'));
 $app->register(new Contact());

@@ -1,0 +1,35 @@
+{% extends 'layouts/main.html.twig' %}
+
+{# load features localization keys #}
+{% block features_event %}{% endblock %}
+
+{% block body_class %}laissez-sexprimer-votre-public{% endblock %}
+
+{# SEO #}
+{% set page = 'events_seminaries' %}
+{% block meta %}{% endblock %}
+{% block page_title %}{{ app.meta[page].title }}{% endblock %}
+{% block meta_description %}{{ app.meta[page].description }}{% endblock %}
+{% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
+
+{% block content %}
+    <div class='section odd header'>
+    	<div class='header-background'>
+    		<img class='bg' src='/static/images/wallpapers/events.jpg'>
+    	</div>
+    	<div class='container'>
+    		<div class='row'>
+    			<div class='column'>
+    				<div class='column-inner'>
+    					<div class='id'>
+    						<h1><span>{{ 'event_seminaries_title' | trans }}</span></h1>
+    						<h2><span>{{ 'event_seminaries_desc' | trans }}</span></h2>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    {% include 'includes/features/events/audience-participation.html.twig' %}
+    {% include 'includes/features/try-now.html.twig' %}
+{% endblock %}

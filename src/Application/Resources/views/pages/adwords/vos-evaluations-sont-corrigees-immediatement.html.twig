@@ -1,0 +1,36 @@
+{% extends 'layouts/main.html.twig' %}
+
+{# load features localization keys #}
+{% block features_training %}{% endblock %}
+
+{% block body_class %}vos-evaluations-sont-corrigees-immediatement{% endblock %}
+
+{# SEO #}
+{% set page = 'classes_trainings' %}
+{% block meta %}{% endblock %}
+{% block page_title %}{{ app.meta[page].title }}{% endblock %}
+{% block meta_description %}{{ app.meta[page].description }}{% endblock %}
+{% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
+
+{% block content %}
+	<div class='section odd header'>
+		<div class='header-background'>
+			<img class='bg' src='/static/images/wallpapers/trainings.jpg'>
+		</div>
+		<div class='container'>
+			<div class='row'>
+				<div class='column'>
+					<div class='column-inner'>
+						<div class='id'>
+							<h1><span>{{ 'classes_trainings_title' | trans }}</span></h1>
+							<h2><span>{{ 'classes_trainings_desc1' | trans }}</span></h2>
+							<h2><span>{{ 'classes_trainings_desc2' | trans }}</span></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    {% include 'includes/features/trainings/students-evaluation.html.twig' %}
+    {% include 'includes/features/try-now.html.twig' %}
+{% endblock %}
