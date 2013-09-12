@@ -414,7 +414,8 @@ a {
   .section h3 {
     font-size: 36px;
     font-weight: 300;
-    margin-top: 0; }
+    margin-top: 0;
+    color: #326279; }
   .section .h4 {
     font-size: 24px;
     font-weight: 300; }
@@ -471,11 +472,11 @@ a {
   .header h1,
   .header h2 {
     margin: 0 0 2px;
-    border-left: 3px solid #0786cd;
     margin-bottom: 2px; }
     .header h1 span,
     .header h2 span {
       background-color: rgba(68, 68, 68, 0.7);
+      border-left: 3px solid #0786cd;
       line-height: 1.5em;
       padding: 2px 10px; }
   .header h2 {
@@ -662,7 +663,6 @@ a {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    -webkit-filter: grayscale(1);
     opacity: .5;
     width: 100%;
     height: 50px; }
@@ -719,10 +719,16 @@ img {
   color: white;
   text-shadow: 0 1px 2px rgba(7, 134, 205, 0.9);
   overflow: hidden; }
+  .headline h1,
+  .headline h2 {
+    padding: 0 10px; }
   .headline h1 {
     font-weight: 400;
-    font-size: 40px;
+    font-size: 36px;
     margin-top: 53px; }
+  .headline h2 span  {
+    background-color: #0786cd;
+    text-shadow: none; }
   .headline h2 {
     font-size: 30px;
     font-weight: 300; }
@@ -813,16 +819,15 @@ img {
   .jump-after-fold:focus .picto {
     top: 1px; }
 
-.clients {
-  background-color: #b0ddb1;
-  background-image: none;
-  color: white;
-  text-shadow: 0 1px 2px rgba(102, 188, 88, 0.9); }
-  .clients h3 {
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 30px; }
+.clients h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px; }
+  .clients h3 span {
+    background-color: #b0ddb1;
+    color: white;
+    padding: 0 3px; }
 
 .try-now {
   background-color: #fafafa;
@@ -1178,7 +1183,6 @@ img {
     padding: 20px; }
   .press img {
     display: block;
-    -webkit-filter: grayscale(1);
     margin: 0 auto;
     width: 150px; }
 
@@ -1912,7 +1916,7 @@ form[data-status='testing'] .button-processing {
   *zoom: 1;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  z-index: 1; }
+  z-index: 10; }
   .top-bar:before, .top-bar:after {
     content: " ";
     display: table; }
