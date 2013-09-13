@@ -683,6 +683,7 @@ hr {
 	}
 	.item {
 		padding: 10px 20px;
+		position: relative;
 	}
 	.img {
 		box-shadow: 0 1px 3px rgba(0,0,0, .3);
@@ -1324,24 +1325,38 @@ hr {
 }
 
 .frame-loading {
+	position: absolute;
+	z-index: 2;
+		
+	.overlay {
+		-moz-opacity:0.5;
+		-khtml-opacity:0.5;
+		-ms-filter:"alpha(opacity=50)";
+		filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+		filter:alpha(opacity=50);
+		opacity:0.5;
+		zoom: 1;
 		position: absolute;
-		z-index: 1;
-		text-align: center;
-		.overlay {
-			-moz-opacity:0.5;
-			-khtml-opacity:0.5;
-			-ms-filter:"alpha(opacity=50)";
-			filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
-			filter:alpha(opacity=50);
-			opacity:0.5;
-			zoom: 1;
-			position: absolute;
-			background: #fff;
-		}
-		i {
-			color: #45a4da;
-		}
+		background: #fff;
+		top: 0;
+		left: 0;
 	}
+	i {
+		color: #45a4da;
+	}
+	.loading {
+		background-image: url(/static/images/load-grey-bg.gif);
+		background-repeat: no-repeat;
+		width: 80px;
+		height: 20px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -10px;
+		margin-left: -40px;
+	}
+}
+
 
 [data-name=home-browsers-loop] {
 	.app-body {
@@ -1480,4 +1495,16 @@ hr {
 	.label {
 		margin-top: 30px;
 	}
+}
+
+.play {
+	background-image: url(/static/images/play.png);
+	width: 56px;
+	height: 60px;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -30px;
+	margin-left: -28px;
 }

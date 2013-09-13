@@ -863,7 +863,8 @@ hr {
     float: left;
     width: 33.333%; }
   .gallery-list .item {
-    padding: 10px 20px; }
+    padding: 10px 20px;
+    position: relative; }
   .gallery-list .img {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     padding: 1px; }
@@ -1331,8 +1332,7 @@ hr {
 
 .frame-loading {
   position: absolute;
-  z-index: 1;
-  text-align: center; }
+  z-index: 2; }
   .frame-loading .overlay {
     -moz-opacity: 0.5;
     -khtml-opacity: 0.5;
@@ -1342,9 +1342,21 @@ hr {
     opacity: 0.5;
     zoom: 1;
     position: absolute;
-    background: #fff; }
+    background: #fff;
+    top: 0;
+    left: 0; }
   .frame-loading i {
     color: #45a4da; }
+  .frame-loading .loading {
+    background-image: url(/static/images/load-grey-bg.gif);
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -40px; }
 
 [data-name=home-browsers-loop] .app-body {
   height: 307px; }
@@ -1449,6 +1461,17 @@ hr {
 
 .contact-form .label {
   margin-top: 30px; }
+
+.play {
+  background-image: url(/static/images/play.png);
+  width: 56px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -30px;
+  margin-left: -28px; }
 
 .mtl,
 .mvl {
