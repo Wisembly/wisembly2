@@ -698,11 +698,12 @@ var scrollManager = {
 
 	scrollToAnchor: function (event) {
 		event.preventDefault();
-		var $link = $(event.currentTarget),
-			$anchor = $($link.attr('href')),
-			linkOffset = $link.data('offset'),
-			offset = linkOffset !== undefined ? parseInt(linkOffset, 10) : this.offset;
-		$('html, body').stop().animate({
+		var $link 				= $(event.currentTarget),
+			$anchor 			= $($link.attr('href')),
+			linkOffset 			= $link.data('offset'),
+			$elementToScroll 	= window.webkitURL ? 			$('body') 					: $('html'),
+			offset 				= linkOffset !== undefined ? 	parseInt(linkOffset, 10) 	: this.offset;
+		$elementToScroll.stop().animate({
 			scrollTop: $anchor.offset().top + offset
 		}, 500);
 	}
