@@ -1497,6 +1497,11 @@ hr {
 	}
 }
 
+.video {
+	&:active {
+		margin-top: -28px;
+	}
+}
 .play {
 	background-image: url(/static/images/play.png);
 	width: 56px;
