@@ -581,7 +581,7 @@ var indexSlideDoc = function (selector, duration) {
 	$('.mouse', selector).animate({'left': '65%'}, duration);
 
 	$('.mouse', selector).promise().done(function () {
-		$('.slides').animate({'left': '-=235px'}, duration / 1.5);
+		$('.slides').animate({'left': '-=226px'}, duration / 1.5);
 		$('.mouse', selector).animate({'left': '-50%'}, duration / 1.5);
 		$progressCount.text(currentSlide + 1);
 		$progressBarValue.animate({
