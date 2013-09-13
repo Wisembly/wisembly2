@@ -57,7 +57,7 @@
                                             <div class='browser-wrapper first'>
                                                 <div class='browser' data-name="browser-organizer">
                                                     <div class='browser-window'>
-                                                        <div class='mocked-app'>
+                                                        <div class='app'>
                                                             <div class='app-header'>
                                                                 <div class='app-logo'>wisembly</div>
                                                             </div>
@@ -153,10 +153,9 @@
                                     <div class='column six'>
                                         <div class='column-inner'>
                                             <div class='browser-wrapper last'>
-                                                <b></b>
                                                 <div class='browser' data-name="browser-participant">
                                                     <div class='browser-window'>
-                                                        <div class='mocked-app'>
+                                                        <div class='app'>
                                                             <div class='app-header'>
                                                                 <div class='app-logo'>wisembly</div>
                                                             </div>
@@ -239,7 +238,7 @@
     <div class='section clients' id='clients'>
         <div class='container'>
             <div class='center-vertical'>
-                <div class='row'>
+                <div class='row row-bump'>
                     <a href='#footer' class='scroll jump-after-fold' data-offset='0'>
                         <i class='picto down-chevron first'></i>
                         <i class='picto down-chevron last'></i>
@@ -277,110 +276,87 @@
                     <div class='column six last'>
                         <div class='column-inner'>
                             <h3><span>{{ 'clients' | trans }}</span></h3>
-                            <ul class='list clients-list'>
-                                <li>
-                                    <div class='inner'>
-                                        <i style='background-image:url(/static/images/clients/accenture.gif);'></i>
+                            <ul class='row list clients-list'>
+                                <li class='column four'>
+                                    <div class='column-inner'>
+                                        <img src='/static/images/clients/accenture.png' />
                                     </div>
                                 </li>
-                                <li>
-                                    <div class='inner'>
-                                        <i style='background-image:url(/static/images/clients/air-liquide.jpg);'></i>
+                                <li class='column four'>
+                                    <div class='column-inner'>
+                                        <img src='/static/images/clients/air-liquide.png' />
                                     </div>
                                 </li>
-                                <li>
-                                    <div class='inner'>
-                                        <i style='background-image:url(/static/images/clients/auchan.png);'></i>
+                                <li class='column four'>
+                                    <div class='column-inner'>
+                                        <img src='/static/images/clients/auchan.png' />
                                     </div>
                                 </li>
-                                <li>
-                                    <div class='inner'>
-                                        <i style='background-image:url(/static/images/clients/banque-populaire.gif);'></i>
+                                <li class='column four'>
+                                    <div class='column-inner'>
+                                        <img src='/static/images/clients/banque-populaire.png' />
                                     </div>
                                 </li>
-                                <li>
-                                    <div class='inner'>
-                                        <i style='background-image:url(/static/images/clients/bnp-paribas.jpg);'></i>
+                                <li class='column four'>
+                                    <div class='column-inner'>
+                                        <img src='/static/images/clients/bnp-paribas.jpg' />
                                     </div>
                                 </li>
-                                <li>
-                                    <div class='inner'>
-                                        <i style='background-image:url(/static/images/clients/bouygues-telecom.gif);'></i>
+                                <li class='column four'>
+                                    <div class='column-inner'>
+                                        <img src='/static/images/clients/bouygues-telecom.png' />
                                     </div>
                                 </li>
-                                <li>
-                                    <div class='inner'>
-                                        <i style='background-image:url(/static/images/clients/carrefour.png);'></i>
+                                <li class='column four'>
+                                    <div class='column-inner'>
+                                        <img src='/static/images/clients/carrefour.png' />
                                     </div>
                                 </li>
-                                <li>
-                                    <div class='inner'>
-                                        <i style='background-image:url(/static/images/clients/credit-agricole.jpg);'></i>
+                                <li class='column four'>
+                                    <div class='c   olumn-inner'>
+                                        <img src='/static/images/clients/credit-agricole.jpg' />
                                     </div>
                                 </li>
-                                <li>
-                                    <div class='inner'>
-                                        <i style='background-image:url(/static/images/clients/danone.jpg);'></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class='inner'>
-                                        <i style='background-image:url(/static/images/clients/dcns.png);'></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class='inner'>
-                                        <i style='background-image:url(/static/images/clients/france-televisions.jpg);'></i>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class='inner'>
-                                        <i style='background-image:url(/static/images/clients/loreal.jpg);'></i>
+                                <li class='column four'>
+                                    <div class='column-inner'>
+                                        <img src='/static/images/clients/danone.jpg' />
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <h3><span>{{ 'press' | trans }}</span></h3>
-                <ul class='list press list-horizontal'>
-                    <li>
-                        <div>
-                            <img src='/static/images/press/challenges.png' />
+                <hr class='mvl' />
+                <div class='row'>
+                    <div class='column twelve'>
+                        <div class='column-inner'>
+                            <h3><span>{{ 'press' | trans }}</span></h3>
+                            <div class='row press'>
+                                <div class='column three'>
+                                    <div class='column-inner'>
+                                        <img src='/static/images/press/challenges.png' />
+                                    </div>
+                                </div>
+                                <div class='column three'>
+                                    <div class='column-inner'>
+                                        <img src='/static/images/press/management.png' />
+                                    </div>
+                                </div>
+                                <div class='column three'>
+                                    <div class='column-inner'>
+                                        <img src='/static/images/press/les-echos.jpg' />
+                                    </div>
+                                </div>
+                                <div class='column three'>
+                                    <div class='column-inner'>
+                                        <img src='/static/images/press/latribune.jpeg' />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src='/static/images/press/management.png' />
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src='/static/images/press/les-echos.jpg' />
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src='/static/images/press/latribune.jpeg' />
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <img src='/static/images/press/jdn.jpeg' />
-                        </div>
-                    </li>
-                </li>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class='section press hide'>
-        <div class='container'>
-            <ul class='list'>
-                <li>
-                    <a href=''>
-                    </a>
-                </li>
-            </ul>
         </div>
     </div>
 {% endblock %}

@@ -6,6 +6,9 @@
 	margin: 0 -20px;
 	@include clearfix;
 }
+.row .row {
+	//margin: 0;
+}
 .column {
 	float: left;
 	
@@ -44,5 +47,14 @@
 	}
 	&.nine {
 		width: 75%;
+	}
+	&.ten {
+		width: (100/12) * 10%;
+	}
+	&.eleven {
+		width: (100/12) * 11%;
+	}
+	&.twelve {
+		width: (100/12) * 12%;
 	}
 }

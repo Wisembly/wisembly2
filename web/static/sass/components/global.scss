@@ -17,6 +17,7 @@ body {
 }
 img {
 	display: block;
+	max-width: 100%;
 }
 a {
 	color: $brandBlueLight;
@@ -41,6 +42,9 @@ a {
   z-index: 5;
   width: 100%;
   zoom: 1;
+}
+hr {
+	border: 1px dashed $lightGrey;
 }
 
 
@@ -164,10 +168,7 @@ a {
 	border-bottom: 0;
 	position: relative;
 	overflow: hidden;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-
+	
 	.header-background {
 		display: block;
 		position: absolute;
@@ -286,22 +287,6 @@ a {
 			@include transition(all, .1s, ease-in-out);
 		}
 	}
-	&.docked {
-		position: fixed;
-		top: 0;
-		right: 0;
-		left: 0;
-		background-color: $white;
-	}
-}
-.quizzes {
-	.browser {
-		margin: 0 auto;
-		width: 80%;
-	}
-	.browser-window {
-		height: auto;
-	}
 }
 .quiz-title {
 	font-weight: bold;
@@ -417,40 +402,6 @@ a {
 	}
 }
 
-
-.clients-list {
-	margin: 0 -20px;
-	@include clearfix;
-
-	li {
-		width: 25%;
-		float: left;
-	}
-	.inner {
-		padding: 20px;
-		text-align: center;
-		line-height: 30px;
-		transition: background-color 1s linear;
-
-		&:hover {
-			background-color: $brandGreen;
-		}
-	}
-	i {
-		display: block;
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: contain;
-		opacity: .5;
-		width: 100%;
-		height: 50px;
-	}
-}
-img {
-	display: block;
-	max-width: 100%;
-}
-
 .media {
 	.hd {
 		float: left;
@@ -492,14 +443,17 @@ img {
 	min-height: 728px;
 
 	.container {
+		padding: 0;
 		display: table;
 		height: 100%;
-		width: 1064px;
 		position: relative;
 	}
 	.center-vertical {
 		display: table-cell;
 		vertical-align: middle;
+	}
+	.row-bump {
+		margin-top: $topbarHeight;
 	}
 }
 .headline {
@@ -511,34 +465,17 @@ img {
 	color: $white;
 	text-shadow: 0 1px 2px rgba($brandBlue, .9);
 	overflow: hidden;
-
-	h1,
-	h2 {
-		padding: 0 10px;
-	}
+	
 	h1 {
 		font-weight: 400;
-		font-size: 36px;
-		margin-top: 53px;
-	}
-	h2 {
-		span {
-			background-color: $brandBlue;
-			text-shadow: none;
-		}
+		font-size: 38px;
+		line-height: 150px;
+		margin: 0;
 	}
 	h2 {
 		font-size: 30px;
 		font-weight: 300;
-	}
-	.browser {
-		text-shadow: none;
-		color: $grey;
-		bottom: -60px;
-		right: 0;
-	}
-	.row-bump {
-		margin-top: $topbarHeight;
+		margin-top: 0;
 	}
 	.container-shadow {
 		position: absolute;
@@ -568,24 +505,20 @@ img {
 			background-image: -webkit-linear-gradient(right, #78bad6, rgba(#78bad6, 0));
 		}
 	}
-	.browser-bottom {
-		display: block;
-		padding: 5px;
-		background-color: #f5f5f5;
-		font-size: 12px;
-		font-weight: bold;
-		text-align: center;
-		border-top: 1px solid #e0e0e0;
-		background-image: linear-gradient(top, rgba(255,255,255,0.1), rgba(255,255,255,0));
-		box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
-	}
-	.browser {
-		width: 100%;
-		box-shadow: 0 2px 2px rgba(0,0,0,.1);
-	}
-	.browser-wrapper {
-		padding-top: 150px;
-		position: relative;
+}
+.clients {
+	h3 {
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 30px;
+
+		span {
+			background-color: $brandBlueExtraLight;
+			text-shadow: 0 1px 2px rgba($brandBlue, .9);
+			color: $white;
+			padding: 0 5px;
+		}
 	}
 }
 .jump-after-fold {
@@ -633,23 +566,21 @@ img {
 		}
 	}
 }
-
-.clients {
-
-	h3 {
-		text-transform: uppercase;
-		font-size: 18px;
-		font-weight: 600;
-		margin-bottom: 30px;
-
-		span {
-			background-color: $brandGreenExtraLight;
-			color: $white;
-			padding: 0 3px;
-		}
+.clients-list {
+	.column {
+		height: 80px;
+		line-height: 80px;
+		text-align: center;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+	img {
+		vertical-align: middle;
+		display: inline;
+		max-height: 80px;
+		opacity: .7;
 	}
 }
-
 .try-now {
 	background-color: #fafafa !important;
 	background-image: none;
@@ -675,7 +606,7 @@ img {
 	font-family: $header-font-family;
 	text-align: center;
 	text-shadow: 0 -1px 1px rgba(0,0,0,.5);
-	margin: 20px -20px;
+	margin: 20px -10px;
 }
 .try-me-label {
 	padding: 20px 20px 0 20px;
@@ -718,78 +649,7 @@ img {
 		}
 	}
 }
-.browser-wrapper.first {
-	background-image: url(/static/images/homepage/organizer.png);
-	background-repeat: no-repeat;
-}
-.browser-wrapper.last {
-	background-image: url(/static/images/homepage/participant.png);	
-	background-repeat: no-repeat;
-}
-.browsers {
-	position: relative;
-	height: 100%;
-}
-// browser
-.browser {
-	width: 80%;
-	margin: 0 auto;
-	box-shadow: 0 1px 5px rgba(0,0,0,.1);
-}
-.browser-poll {
-	width: 320px;
-	margin: 0 auto;
 
-	.browser-window {
-		height: 290px;
-	}
-}
-.meetings-confcalls {
-	.browser-poll {
-		.browser-window {
-			height: 360px;
-		}
-	}
-}
-.browser-window {
-	border-width: 1px;
-	border-color: #979797;
-	border-style: solid;
-	border-radius: 3px;
-	background-color: $white;
-	overflow: hidden;
-}
-.mocked-app {
-	font-size: 13px;
-}
-.app-header {
-	padding: 7px 0;
-	background-color: $brandBlueHover;
-	border-bottom: 1px solid rgba(0,0,0, .1);
-	box-shadow: 0 1px 3px 0 rgba(0,		0,0, .15), inset 0 1px 0 rgba(255,255,255,.2);
-}
-.app-logo {
-	width: 90px;
-	height: 20px;
-	margin: 0 auto;
-	background-image: url(/static/images/wisembly-w-372x85.png);
-	background-size: 90px;
-	@include image-replacement;
-}
-.events-audience-participation {
-	.browser {
-		margin-top: 8px;
-	}
-	.app-body {
-		height: 408px;
-	}
-}
-.questions-ideas .browser .app-body {
-	height: 335px;
-}
-.q-a .app-body {
-	height: 417px;
-}
 
 // jobs
 
@@ -1076,19 +936,12 @@ img {
 }
 
 .press {
-	margin: 0 -20px;
-
-	li {
-		width: 20%;
-		float: left;
-	}
-	div {
-		padding: 20px;
-	}
+	text-align: center;
+	line-height: 60px;
+	
 	img {
-		display: block;
-		margin: 0 auto;
-		width: 150px;
+		display: inline;
+		vertical-align: middle;
 	}
 }
 .press-list {
@@ -1097,7 +950,8 @@ img {
 	table-layout: fixed;
 	border-top: 1px solid $lightGrey;
 	border-bottom: 1px solid $lightGrey;
-
+	
+	.even,
 	tr:nth-child(2n) {
 		background-color: $brandBlueExtraExtraExtraLight;
 	}

@@ -16,11 +16,11 @@ $form-element-color: #666;
 	text-align: center;
 	text-decoration: none;
 	text-shadow: 0 1px 0 rgba(0,0,0,.2);
-	appearance: none;
-	-webkit-user-select: none;  
-	-moz-user-select: none;    
-	-ms-user-select: none;      
+	appearance: none;   
 	user-select: none;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 	
 	&:active {
 		@extend .button-state-active;
