@@ -656,7 +656,19 @@ hr {
   padding: 1px; }
 .testimonials .quote {
   margin-bottom: 10px;
-  font-family: Georgia; }
+  font-family: Georgia, serif;
+  position: relative;
+  text-indent: 23px; }
+  .testimonials .quote:before {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 10px;
+    background-repeat: no-repeat; }
+  .testimonials .quote:before {
+    background-image: url(/static/images/quote-left.png);
+    top: 0;
+    left: 0; }
 .testimonials .author {
   color: #999999; }
 
@@ -690,7 +702,7 @@ hr {
   overflow: hidden; }
   .headline h1 {
     font-weight: 400;
-    font-size: 38px;
+    font-size: 32px;
     line-height: 150px;
     margin: 0; }
   .headline h2 {
@@ -1971,9 +1983,9 @@ form[data-status='testing'] .button-processing {
   color: white; }
 
 .bottom-header .first {
-  width: 160px; }
+  width: 156px; }
 .bottom-header .second {
-  width: 764px; }
+  width: 768px; }
 .bottom-header .last {
   width: 140px; }
 

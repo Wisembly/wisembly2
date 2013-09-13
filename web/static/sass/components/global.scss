@@ -434,7 +434,22 @@ hr {
 	}
 	.quote {
 		margin-bottom: 10px;
-		font-family: Georgia;
+		font-family: Georgia, serif;
+		position: relative;
+		text-indent: 23px;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			width: 13px;
+			height: 10px;
+			background-repeat: no-repeat;
+		}
+		&:before {
+			background-image: url(/static/images/quote-left.png);
+			top: 0;
+			left: 0;
+		}
 	}
 	.author {
 		color: $grey;
@@ -473,7 +488,7 @@ hr {
 	
 	h1 {
 		font-weight: 400;
-		font-size: 38px;
+		font-size: 32px;
 		line-height: 150px;
 		margin: 0;
 	}
