@@ -63,8 +63,11 @@ $topHeaderHeight: 29px;
 		}
 	}
 }
-.app-nav .list {
-	height: $topHeaderHeight;
+.app-nav {
+	float: right;
+	.list {
+		height: $topHeaderHeight;
+	}
 }
 .bottom-header {
 	padding: 0;
@@ -150,4 +153,18 @@ $topHeaderHeight: 29px;
 .case-studies .nav-case-studies a {
 	background-color: $brandBlue;
 	color: $white;
+}
+
+// columns 
+
+.bottom-header {
+	.first {
+		width: 160px;
+	}
+	.second {
+		width: 764px;
+	}
+	.last {
+		width: 140px;
+	}
 }

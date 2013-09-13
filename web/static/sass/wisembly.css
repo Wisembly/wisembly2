@@ -451,6 +451,8 @@ hr {
     right: 0;
     left: 0;
     bottom: 0; }
+    .header .header-background img {
+      margin: -20% auto; }
   .header img,
   .header .bg  {
     min-width: 1024px;
@@ -461,7 +463,7 @@ hr {
     top: 0;
     left: 0;
     display: block;
-    margin-top: -20%; }
+    margin: -20% auto 0; }
   .header .container {
     height: 240px;
     padding: 0; }
@@ -478,6 +480,7 @@ hr {
     margin-bottom: 2px; }
     .header h1 span,
     .header h2 span {
+      background-color: #444444;
       background-color: rgba(68, 68, 68, 0.7);
       line-height: 1.5em;
       padding: 2px 10px; }
@@ -651,11 +654,11 @@ hr {
 .testimonials .hd {
   border: 1px solid #e0e0e0;
   padding: 1px; }
-.testimonials img {
-  position: relative;
-  top: -5px; }
 .testimonials .quote {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-family: Georgia; }
+.testimonials .author {
+  color: #999999; }
 
 .headline,
 .clients {
@@ -764,7 +767,7 @@ hr {
     line-height: 13px;
     font-size: 14px; }
     .jump-after-fold span strong {
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: #45a4da;
       padding: 5px; }
   .jump-after-fold:focus .picto {
     top: 1px; }
@@ -1885,8 +1888,10 @@ form[data-status='testing'] .button-processing {
     .top-header .list .item-text {
       color: #666; }
 
-.app-nav .list {
-  height: 29px; }
+.app-nav {
+  float: right; }
+  .app-nav .list {
+    height: 29px; }
 
 .bottom-header {
   padding: 0; }
@@ -1964,6 +1969,13 @@ form[data-status='testing'] .button-processing {
 .case-studies .nav-case-studies a {
   background-color: #0786cd;
   color: white; }
+
+.bottom-header .first {
+  width: 160px; }
+.bottom-header .second {
+  width: 764px; }
+.bottom-header .last {
+  width: 140px; }
 
 .footer {
   padding: 50px;
