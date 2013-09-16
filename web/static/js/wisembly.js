@@ -142,7 +142,6 @@ $(document).ready(function () {
 
 });
 
-
 var tabs = {
 	startListening: function () {
 		$('[data-name=join_an_event] a.tab_link').on('click', this.toggleState);
@@ -277,7 +276,6 @@ var joinAnEvent = {
 };
 
 var quotesList = {
-
 	$el: 		$('[data-name=quotes_list]'),
 	$textarea: 	$('[data-name=quotes_list]').find('textarea'),
 
@@ -711,10 +709,8 @@ var scrollManager = {
 	}
 }
 
-
 // Should we display the `back to top` link ?
 var backToTop = {
-
 	$el: 	$(document),
 	$link: 	$('#back-to-top'),
 
@@ -742,7 +738,4 @@ var backToTop = {
 		if (scrollTop < this.threshold && !this.isHidden)
 			this.hide();
 	}
-
 }
-
-
