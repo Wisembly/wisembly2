@@ -331,7 +331,6 @@ var quotesList = {
 				}, this), 10000);
 			break;
 			case 'stop':
-			console.log('ddsdqsdqsdqdqdqddf');
 				clearTimeout(window.timers.manualMode);
 			break;
 			case 'restart':
@@ -678,20 +677,20 @@ var Animator = (function () {
 
 var scrollTo = function (selector) {
 
-}
+};
 
 /*
  * Simple scroll manager, use it to smoothify your anchor links
  *
  * Initially designed for features pages
  *
- * Add the `scroll` class to the link // Add adata-offset attribute to the link to use a custom offset
+ * Add the `scroll` class to the link // Add a data-offset attribute to the link to use a custom offset
  *
  */
 
 var scrollManager = {
 	$el: 	$('body'),
-	offset: -150,
+	offset: -149,
 
 	startListening: function () {
 		this.$el.on('click', 'a.scroll', $.proxy(this.scrollToAnchor, this));
@@ -703,11 +702,11 @@ var scrollManager = {
 			$anchor = $($link.attr('href')),
 			linkOffset = $link.data('offset'),
 			offset = linkOffset !== undefined ? parseInt(linkOffset, 10) : this.offset;
-		$('body').stop().animate({
+		$('html, body').stop().animate({
 			scrollTop: $anchor.offset().top + offset
 		}, 500);
 	}
-}
+};
 
 // Should we display the `back to top` link ?
 var backToTop = {
@@ -738,4 +737,4 @@ var backToTop = {
 		if (scrollTop < this.threshold && !this.isHidden)
 			this.hide();
 	}
-}
+};

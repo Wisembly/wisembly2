@@ -1,3 +1,3 @@
 # Wisembly2
 
-soon..
+http://wisembly.com
