@@ -1909,6 +1909,8 @@ form[data-status='testing'] .button-processing {
     .top-header .list li {
       float: left;
       border-right: 1px solid #f1f1f1; }
+    .top-header .list .last {
+      border-right: 0; }
     .top-header .list a {
       text-decoration: none;
       color: #999999;
