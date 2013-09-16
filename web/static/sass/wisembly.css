@@ -1925,6 +1925,9 @@ form[data-status='testing'] .button-processing {
       padding: 5px 10px; }
     .top-header .list .item-text {
       color: #666; }
+    .top-header .list .item-highlighted a {
+      background-color: #45a4da;
+      color: white; }
 
 .app-nav {
   float: right; }
@@ -2020,6 +2023,7 @@ form[data-status='testing'] .button-processing {
   font-size: 14px; }
   .footer .button-call {
     margin-bottom: 20px; }
+  .footer .contact,
   .footer .dropdown {
     float: right;
     margin-left: 20px; }

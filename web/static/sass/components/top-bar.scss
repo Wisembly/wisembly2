@@ -61,6 +61,12 @@ $topHeaderHeight: 29px;
 		.item-text {
 			color: #666;
 		}
+		.item-highlighted {
+			a {
+				background-color: $brandBlueLight;
+				color: $white;
+			}
+		}
 	}
 }
 .app-nav {
