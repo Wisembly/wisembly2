@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 use Symfony\Component\Yaml\Yaml;
 
+$defaultLocale = 'en';
 $config = Yaml::parse(__DIR__.'/../app/config/config.yml');
 
 if (!isset($config['global']['host'])) {
@@ -23,10 +24,10 @@ function url_redirect($url, $header = true)
 
 $url = $_SERVER["REQUEST_URI"];
 $host = $_SERVER["HTTP_HOST"];
-$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+$lang = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2) : $defaultLocale;
 
 if (!in_array($lang, array('fr', 'en', 'de', 'es', 'it', 'ch'))) {
-    $lang = 'en';
+    $lang = $defaultLocale;
 }
 
 // redirect all urls that does not contain locale in url to same url with locale
