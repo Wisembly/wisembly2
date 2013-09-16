@@ -69,7 +69,7 @@ class DatabaseCommand extends Command
             }
 
             $db = array_merge($database, $default);
-            $command = $mysqldump ." --add-drop-database -u ". $db['user'] ." -p". $db['password'] ." ". $db['dbname'] ." > ". __DIR__ . "/../../../db/" . $db['dbname'] .".sql";
+            $command = $mysqldump ." --add-drop-database -u ". $db['user'] ." -p". $db['password'] ." ". $db['dbname'] ." > ". __DIR__ . "/../../../db/dump_db_" . $name .".sql";
 
             $output->writeln("<info>Dumping {$name} database..</info>");
             $process = new Process($command);
@@ -106,7 +106,7 @@ class DatabaseCommand extends Command
             }
 
             $output->writeln("<info>Importing {$name} database..</info>");
-            $command = $mysql . ' ' . $db['dbname'] . ' < ' . __DIR__ . '/../../../db/' . $db['dbname'] . '.sql';
+            $command = $mysql . ' ' . $db['dbname'] . ' < ' . __DIR__ . '/../../../db/dump_db_' . $name . '.sql';
             $process = new Process($command);
             $process->setTimeout(3600);
             $process->run();
@@ -141,7 +141,7 @@ class DatabaseCommand extends Command
         }
 
         $output->writeln("<info>Cloning " . $to['dbname'] . " database with " . $from['dbname'] . " dump file..</info>");
-        $command = $mysql . ' ' . $to['dbname'] . ' < ' . __DIR__ . '/../../../db/' . $from['dbname'] . '.sql';
+        $command = $mysql . ' ' . $to['dbname'] . ' < ' . __DIR__ . '/../../../db/dump_db_' . $clone[0] . '.sql';
         $process = new Process($command);
         $process->setTimeout(3600);
         $process->run();

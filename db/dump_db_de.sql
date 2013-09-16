@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.5.29, for osx10.6 (i386)
 --
--- Host: localhost    Database: wisembly_es
+-- Host: localhost    Database: wisembly_de
 -- ------------------------------------------------------
 -- Server version	5.5.29
 
@@ -345,4 +345,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-09-13 17:29:47
+-- Dump completed on 2013-09-16 13:16:44
