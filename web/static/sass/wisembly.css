@@ -2023,6 +2023,8 @@ form[data-status='testing'] .button-processing {
 .footer {
   padding: 50px;
   font-size: 14px; }
+  .footer .container {
+    position: relative; }
   .footer .button-call {
     margin-bottom: 20px; }
   .footer .contact,
@@ -2042,6 +2044,11 @@ form[data-status='testing'] .button-processing {
   .page-list li a {
     color: #999999;
     text-decoration: none; }
+
+.mixpanel {
+  position: absolute;
+  right: 0;
+  bottom: 0; }
 
 .breadcrumbs {
   *zoom: 1;

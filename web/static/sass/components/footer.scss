@@ -2,6 +2,10 @@
 	padding: 50px;
 	font-size: 14px;
 	
+	.container {
+		position: relative;
+	}
+	
 	.button-call {
 		margin-bottom: 20px;
 	}
@@ -29,4 +33,9 @@
 			text-decoration: none;
 		}
 	}
+}
+.mixpanel {
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }
