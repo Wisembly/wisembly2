@@ -377,6 +377,9 @@ a {
 hr {
   border: 1px dashed #e0e0e0; }
 
+.force-white {
+  background-color: white !important; }
+
 /*
  * Mixins
  */

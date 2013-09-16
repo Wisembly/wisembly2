@@ -46,7 +46,9 @@ a {
 hr {
 	border: 1px dashed $lightGrey;
 }
-
+.force-white {
+	background-color: $white !important;
+}
 
 /*
  * Mixins
