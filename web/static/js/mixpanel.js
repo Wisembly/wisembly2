@@ -11,9 +11,9 @@ mixpanel.track_links('#plan-create-training', 'corpo_create_wiz_freemium_trainin
 mixpanel.track_links('#plan-create-event', 'corpo_create_wiz_freemium_event');
 
 // clicks on home page view product features
-mixpanel.track_links('#hp-feature-meeting a', 'corpo_homepage_feature_meeting');
-mixpanel.track_links('#hp-feature-training a', 'corpo_homepage_feature_training');
-mixpanel.track_links('#hp-feature-event a', 'corpo_homepage_feature_event');
+mixpanel.track_links('#hp-feature-meeting', 'corpo_homepage_feature_meeting');
+mixpanel.track_links('#hp-feature-training', 'corpo_homepage_feature_training');
+mixpanel.track_links('#hp-feature-event', 'corpo_homepage_feature_event');
 
 var persistCampaign = {
     adwordsCampaign: getAdwordsCampaign()
