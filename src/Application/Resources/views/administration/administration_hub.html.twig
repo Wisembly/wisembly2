@@ -6,7 +6,7 @@
 <div class="section">
     <div class="container">
         <div class="bread-crumb">
-            <a class="catcher btn btn-small" href="{{path('logout')}}">Logout</a>
+            <a class="catcher btn btn-small" href="{{url('logout')}}">Logout</a>
             <a href="/">Home</a> > Administration Hub
         </div>
         <div class="row content-wrapper">
@@ -18,7 +18,7 @@
                             {% for table in tables %}
                                 <li>
                                     <strong>{{ table | title }}</strong>
-                                    <a href="{{ path('administration_table', {'table' : table}) }}"   title="{{ table | title }}" class="btn btn-primary">  Let's go    </a>
+                                    <a href="{{ url('administration_table', {'table' : table}) }}"   title="{{ table | title }}" class="btn btn-primary">  Let's go    </a>
                                 </li>
                             {% endfor %}
                         </ul>

@@ -44,7 +44,7 @@
 	    						<img src='{{ case.client_logo }}'>
 	    					</div>
 	    					<h3>{{ case.title }}</h3>
-	    					<a href='{{ path('case-detail', { slug: case.slug }) }}'>{{ 'read_case_study_link' | trans }}</a>
+	    					<a href='{{ url('case-detail', { slug: case.slug }) }}'>{{ 'read_case_study_link' | trans }}</a>
 	    				</div>
 	    			</div>
 	    		</div>

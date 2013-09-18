@@ -42,7 +42,7 @@
 								</div>
 							</div>
 						</div>
-						<form class='contact-form' method="POST" action="{{ path('contact_send_mail') }}" data-status='active' data-validate="parsley" novalidate>
+						<form class='contact-form' method="POST" action="{{ url('contact_send_mail') }}" data-status='active' data-validate="parsley" novalidate>
 							<h3>{{ 'write_to_us' | trans }}</h3>
 
                             {% if app['request'].query.has('success') %}

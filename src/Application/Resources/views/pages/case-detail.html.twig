@@ -29,10 +29,10 @@
 		<div class='container'>
 			<ul class='list'>
 				<li class='first'>
-    				<a href='{{ path('case-studies') }}'>{{ 'case_studies' | trans }}</a>
+    				<a href='{{ url('case-studies') }}'>{{ 'case_studies' | trans }}</a>
     			</li>
     			<li class='last'>
-    				<a href='{{ path('case-detail', { slug: case.slug }) }}'>{{ case.client }}</a>
+    				<a href='{{ url('case-detail', { slug: case.slug }) }}'>{{ case.client }}</a>
     			</li>
     		</ul>
     </div>
