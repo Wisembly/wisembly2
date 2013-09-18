@@ -12,7 +12,7 @@
 											<span class='item-text'>{{ 'contact_us_number' | trans({ '%number%': app.phone_number }) | raw }}</span>
 										</li>
 										<li class='item item-highlighted last'>
-											<a href='{{ path('contact') }}' class='item-text'>{{ 'write_to_us' | trans }}</a>
+											<a href='{{ url('contact') }}' class='item-text'>{{ 'write_to_us' | trans }}</a>
 										</li>
 									</ul>
 								</li>
@@ -84,7 +84,7 @@
 		<div class='row bottom-header'>
 			<div class='column first'>
 				<div class='column-inner'>
-					<a href='{{ path('index') }}' class='brand'>Wisembly</a>
+					<a href='{{ url('index') }}' class='brand'>Wisembly</a>
 				</div>
 			</div>
 			<div class='column second'>
@@ -92,16 +92,16 @@
 					<div class='navigation'>
 						<ul class='list'>
 							<li class='nav-classes-trainings'>
-								<a href='{{ path('classes-trainings') }}'>{{ 'classes_an_trainings_menu_title' | trans }}</a>
+								<a href='{{ url('classes-trainings') }}'>{{ 'classes_an_trainings_menu_title' | trans }}</a>
 							</li>
 							<li class='nav-meetings-confcalls '>
-								<a href='{{ path('meetings-confcalls') }}'>{{ 'meetings_and_confcalls_menu_title' | trans }}</a>
+								<a href='{{ url('meetings-confcalls') }}'>{{ 'meetings_and_confcalls_menu_title' | trans }}</a>
 							</li>
 							<li class='nav-events-seminaries'>
-								<a href='{{ path('events-seminaries') }}'>{{ 'events_and_seminaries_menu_title' | trans }}</a>
+								<a href='{{ url('events-seminaries') }}'>{{ 'events_and_seminaries_menu_title' | trans }}</a>
 							</li>
 							<li class='nav-case-studies'>
-								<a href='{{ path('case-studies') }}'>{{ 'case_studies_menu_title' | trans }}</a>
+								<a href='{{ url('case-studies') }}'>{{ 'case_studies_menu_title' | trans }}</a>
 							</li>
 						</ul>
 					</div>
@@ -109,7 +109,7 @@
 			</div>
 			<div class='column last'>
 				<div class='column-inner'>
-					<a href='{{ path('plans') }}' class='button button-attention button-small button-light'>{{ 'free_trial' | trans }}</a>
+					<a href='{{ url('plans') }}' class='button button-attention button-small button-light'>{{ 'free_trial' | trans }}</a>
 				</div>
 			</div>
 		</div>
