@@ -55,14 +55,14 @@
 							<ul class='list dropdown-list'>
 								{% if app['country'] != 'fr' %}
 								<li>
-									<a href='/fr/'>
+									<a href='{{ app.host }}/fr/'>
 										<img src='{{ asset("/static/images/flags/fr.png") }}'>
 									</a>
 								</li>
 								{% endif %}
 								{% if app['country'] != 'en' %}
 								<li>
-									<a href='/en/'>
+									<a href='{{ app.host }}/en/'>
 										<img src='{{ asset("/static/images/flags/en.png") }}'>
 									</a>
 								</li>

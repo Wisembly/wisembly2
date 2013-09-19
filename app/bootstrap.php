@@ -29,6 +29,7 @@ $app = new SilexCMS\Application(array_merge(
 // country & phone numbers
 $app['country'] = isset($country) ? $country : 'fr';
 $app['phone_number'] = $config['phone.numbers'][$app['country']];
+$app['host'] = $config['global']['host'];
 
 // ** load DB messages through LocalizationsSet if message table exist**
 try {
