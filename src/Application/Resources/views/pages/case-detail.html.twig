@@ -16,7 +16,7 @@
 	<div class='section header'>
 		{% if case.illustration_image %}
 			<div class='header-background'>
-				<img class='bg' src='{{ case.illustration_image }}'>
+				<img class='bg' src='{{ asset(case.illustration_image) }}'>
 			</div>
 		{% endif %}
 		<div class='container'>
