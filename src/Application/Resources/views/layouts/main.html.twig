@@ -23,7 +23,7 @@
 </head>
 <body id='top' class='{% block body_class %}{% endblock %}' data-spy='scroll' data-target='.spy-list' data-offset='150'>
 
-<a class="scroll" id="back-to-top" href="#top"><i class="icon-chevron-up"></i></a>
+<a class="scroll" id="back-to-top" href="{{ app.request.uri }}#top"><i class="icon-chevron-up"></i></a>
 
 {% include 'includes/navigation.html.twig' %}
 

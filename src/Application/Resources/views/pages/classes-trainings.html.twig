@@ -37,43 +37,43 @@
 			<div class='container spy-list'>
 				<ul class='nav list'>
 					<li class='one first active'>
-						<a href='{{ url('classes-trainings') }}#documents-management' class='scroll'>
+						<a href='{{ app.request.uri }}#documents-management' 	class='scroll' 	data-target='#documents-management'>
 							<i class='picto picto-documents-management'></i>
 							<span class='medium'>{{ 'documents_management_link' | trans }}</span>
 						</a>
 					</li>
 					<li class='two'>
-						<a href='{{ url('classes-trainings') }}#students-evaluation' class='scroll'>
+						<a href='{{ app.request.uri }}#students-evaluation' 	class='scroll' 	data-target='#students-evaluation'>
 							<i class='picto picto-students-evaluation'></i>
 							<span class='medium'>{{ 'students_evaluation_link' | trans }}</span>
 						</a>
 					</li>
 					<li class='three'>
-						<a href='{{ url('classes-trainings') }}#trainings-evaluation' class='scroll'>
+						<a href='{{ app.request.uri }}#trainings-evaluation' 	class='scroll' 	data-target='#trainings-evaluation'>
 							<i class='picto picto-trainings-evaluation'></i>
 							<span class='medium'>{{ 'trainings_evaluation_link' | trans }}</span>
 						</a>
 					</li>
 					<li class='four'>
-						<a href='{{ url('classes-trainings') }}#quizzes' class='scroll'>
+						<a href='{{ app.request.uri }}#quizzes' 				class='scroll' 	data-target='#quizzes'>
 							<i class='picto picto-quiz' class='scroll'></i>
 							<span class='short'>{{ 'quiz_link' | trans }}</span>
 						</a>
 					</li>
 					<li class='five'>
-						<a href='{{ url('classes-trainings') }}#qa' class='scroll'>
+						<a href='{{ app.request.uri }}#qa' 						class='scroll' 	data-target='#qa'>
 							<i class='picto picto-qa' class='scroll'></i>
 							<span class='short'>{{ 'qna_link' | trans }}</span>
 						</a>
 					</li>
 					<li class='six'>
-						<a href='{{ url('classes-trainings') }}#stats-reporting' class='scroll'>
+						<a href='{{ app.request.uri }}#stats-reporting' 		class='scroll' 	data-target='#stats-reporting'>
 							<i class='picto picto-stats-reporting'></i>
 							<span class='medium'>{{ 'stats_reporting_link' | trans }}</span>
 						</a>
 					</li>
 					<li class='seven'>
-						<a href='{{ url('classes-trainings') }}#multi-devices' class='scroll'>
+						<a href='{{ app.request.uri }}#multi-devices' 			class='scroll' 	data-target='#multi-devices'>
 							<i class='picto picto-multi-devices'></i>
 							<span class='short'>{{ 'multi_devices_link' | trans }}</span>
 						</a>

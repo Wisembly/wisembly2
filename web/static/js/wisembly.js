@@ -701,8 +701,8 @@ var scrollManager = {
 		var $link 				= $(event.currentTarget),
 			$anchor 			= $('#' + $($link).attr('href').split('#')[1]),
 			linkOffset 			= $link.data('offset'),
-			$elementToScroll 	= window.webkitURL ? 			$('body') 					: $('html'),
-			offset 				= linkOffset !== undefined ? 	parseInt(linkOffset, 10) 	: this.offset;
+			$elementToScroll 	= window.webkitURL 			? 	$('body') 					: $('html'),
+			offset 				= linkOffset !== undefined 	? 	parseInt(linkOffset, 10) 	: this.offset;
 		$elementToScroll.stop().animate({
 			scrollTop: $anchor.offset().top + offset
 		}, 500);
