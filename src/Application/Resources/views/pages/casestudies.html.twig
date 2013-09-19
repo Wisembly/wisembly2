@@ -41,7 +41,7 @@
 	    			<div class='column six centered'>
 	    				<div class='column-inner'>
 	    					<div class='img'>
-	    						<img src='{{ case.client_logo }}'>
+	    						<img src='{{ asset(case.client_logo) }}'>
 	    					</div>
 	    					<h3>{{ case.title }}</h3>
 	    					<a href='{{ url('case-detail', { slug: case.slug }) }}'>{{ 'read_case_study_link' | trans }}</a>

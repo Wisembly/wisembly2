@@ -28,6 +28,10 @@ class AssetsExtension extends \Twig_Extension
 
     public function asset($asset)
     {
+        if (false !== strpos($asset, 'http')) {
+            return $asset;
+        }
+
         return $this->basePath . '/' . $asset . '?v=' . $this->assetsVersion;
     }
 }
