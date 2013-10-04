@@ -26,12 +26,12 @@ $url = $_SERVER["REQUEST_URI"];
 $host = $_SERVER["HTTP_HOST"];
 $lang = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2) : $defaultLocale;
 
-if (!in_array($lang, array('fr', 'en', 'de', 'es', 'it', 'ch'))) {
+if (!in_array($lang, array('fr', 'en', 'de', 'it', 'ch'))) {
     $lang = $defaultLocale;
 }
 
 // redirect all urls that does not contain locale in url to same url with locale
-if (0 === preg_match('/\/(fr|en|fr|de|es|it|ch)\//i', $url)) {
+if (0 === preg_match('/\/(fr|en|fr|de|it|ch)\//i', $url)) {
     url_redirect($mainHost.'/'.$lang.$url);
 }
 

@@ -1,6 +1,6 @@
 <?php
 
-$locale = 'es';
-$country = 'es';
+$locale = 'it';
+$country = 'it';
 $app = require __DIR__ . '/../../app/bootstrap.php';
 $app->run();

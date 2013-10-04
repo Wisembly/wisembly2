@@ -67,6 +67,13 @@
 									</a>
 								</li>
 								{% endif %}
+								{% if app['country'] != 'it' %}
+								<li>
+									<a href='{{ app.host }}/it/'>
+										<img src='{{ asset("/static/images/flags/it.png") }}'>
+									</a>
+								</li>
+								{% endif %}
 							</ul>
 						</div>
 						<div class='contact'>

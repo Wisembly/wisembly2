@@ -42,8 +42,8 @@ databases:
     de:
       dbname:   wisembly_de
       password: ******
-    es:
-      dbname:   wisembly_es
+    it:
+      dbname:   wisembly_it
     ch:
       dbname:   wisembly_fr
 
@@ -51,6 +51,6 @@ phone.numbers:
   en: "+44 20 3608 9022"
   fr: "01 42 61 59 47"
   de: "+49 800 723 4918"
-  es: "+34 93 180 7007"
+  it: "+39 02 87166000"
   ch: "+41 43 508 35 20"
   be: "+32 2 588 17 20"
