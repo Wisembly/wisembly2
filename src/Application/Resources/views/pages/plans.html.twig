@@ -9,6 +9,15 @@
 {% block meta_description %}{{ app.meta[page].description }}{% endblock %}
 {% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
 
+{# force app locale when creating wiz #}
+{% if app['country'] == 'fr' %}
+    {% set localeapp = 'fr' %}
+{% elseif app['country'] == 'it' %}
+    {% set localeapp = 'it' %}
+{% else %}
+    {% set localeapp = 'en' %}
+{% endif %}
+
 
 {% block content %}
 	<div class='section header'>
@@ -41,7 +50,7 @@
 							<ul class='list'>
 								{{ 'plan_meetings_conf_calls_items' | trans | raw }}
 							</ul>
-							<a href='https://app.wisembly.com/wiz/create?type=meeting&attendees=5' id='plan-create-meeting' class='button button-attention'>{{ 'plans_try' | trans }}</a>
+							<a href='https://app.wisembly.com/wiz/create?type=meeting&attendees=5&locale={{ localeapp }}' id='plan-create-meeting' class='button button-attention'>{{ 'plans_try' | trans }}</a>
 						</div>
 					</div>
 				</div>
@@ -53,7 +62,7 @@
 							<ul class='list'>
 								{{ 'plan_classes_training_items' | trans | raw }}
 							</ul>
-							<a href='https://app.wisembly.com/wiz/create?type=training&attendees=5' id='plan-create-training' class='button button-attention'>{{ 'plans_try' | trans }}</a>
+							<a href='https://app.wisembly.com/wiz/create?type=training&attendees=5&locale={{ localeapp }}' id='plan-create-training' class='button button-attention'>{{ 'plans_try' | trans }}</a>
 						</div>
 					</div>
 				</div>
@@ -65,7 +74,7 @@
 							<ul class='list'>
 								{{ 'plan_events_seminaries_items' | trans | raw }}
 							</ul>
-							<a href='https://app.wisembly.com/wiz/create?type=event&attendees=5' id='plan-create-event' class='button button-attention'>{{ 'plans_try' | trans }}</a>
+							<a href='https://app.wisembly.com/wiz/create?type=event&attendees=5&locale={{ localeapp }}' id='plan-create-event' class='button button-attention'>{{ 'plans_try' | trans }}</a>
 						</div>
 					</div>
 				</div>
