@@ -245,16 +245,16 @@ var joinAnEvent = {
 
 		var keyword = $(e.currentTarget).val();
 		this.getEvent(keyword)
-			.success(function () {
+			.success($.proxy(function () {
 				this.keywordExists = true;
 				this.updateStatus();
 				delete this.xhr;
-			}.bind(this))
-			.fail(function () {
+			}, this))
+			.fail($.proxy(function () {
 				this.keywordExists = false;
 				this.updateStatus();
 				delete this.xhr;
-			}.bind(this));
+			}, this));
 	},
 
 	getEvent: function (keyword) {
@@ -361,14 +361,14 @@ var quotesList = {
 			if (!this.message || 0 === this.message.length) {
 				this.message = this.$el.find('ul.list > li.auto:last .quote-text').text().split('');
 			}
-			window.timers.print = setTimeout(function () {
+			window.timers.print = setTimeout($.proxy(function () {
 				this.$textarea.val(this.$textarea.val() + this.message.shift());
 				if (this.message.length) {
 					this.print();
 				} else {
 					this.$el.trigger('post:auto');
 				}
-			}.bind(this), Math.floor(Math.random() * 250));
+			}, this), Math.floor(Math.random() * 250));
 		}
 	},
 
@@ -414,12 +414,12 @@ var quizDemo = {
 				$loader 	= this.$form.find('.frame-loading');
 			$button.text(sendingText);
 			$loader.removeClass('hide');
-			setTimeout(function () {
+			setTimeout($.proxy(function () {
 				$button.text(sentText);
 				this.$form.fadeOut();
 				this.$results.fadeIn();
 				$loader.addClass('hide');
-			}.bind(this), 1500);
+			}, this), 1500);
 		}
 	}
 }
