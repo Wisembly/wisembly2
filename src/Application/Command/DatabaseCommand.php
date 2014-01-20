@@ -86,6 +86,8 @@ class DatabaseCommand extends Command
 
     private function import(array $config, OutputInterface $output)
     {
+        $mysql = $config['global']['mysql'];
+
         foreach ($config['databases'] as $name => $database) {
             if ('default' === $name) {
                 $default = $database;
@@ -93,7 +95,7 @@ class DatabaseCommand extends Command
             }
 
             $db = array_merge($database, $default);
-            $mysql = 'mysql -u ' . $db['user'] . ' -p' . $db['password'];
+            $mysql = $mysql . ' -u ' . $db['user'] . ' -p' . $db['password'];
 
             $output->writeln("<info>Dumping {$name} database if exists..</info>");
             $command = 'echo "DROP DATABASE IF EXISTS '. $db['dbname'] . '" | ' . $mysql . ' && echo "CREATE DATABASE ' . $db['dbname'] . '" | ' . $mysql;
