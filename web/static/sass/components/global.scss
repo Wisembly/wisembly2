@@ -166,6 +166,178 @@ p {
 	}
 }
 
+.features-list-container {
+	height: 150px;
+}
+.features-list {
+	box-shadow: 0 0 2px 0 rgba(0,0,0, .1);
+	background-image: none;
+	background-color: $white !important;
+
+	.container {
+		padding: 0;
+	}
+
+	ul {
+		@include clearfix;
+	}
+	.list-eight {
+		li {
+			width: 12.5%;
+		}
+	}
+
+	li {
+		float: left;
+		width: 14.28%;
+
+		&.active {
+			a {
+				background-color: $brandBlue;
+				color: $white;
+				@include transition(all, .1s, ease-in-out);
+			}
+		}
+	}
+	.picto {
+		margin: 0 auto 20px;
+	}
+	a {
+		display: block;
+		padding: 20px 20px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 20px;
+		color: $grey;
+		height: 110px;
+		text-transform: uppercase;
+
+		span {
+			display: block;
+		}
+
+		&:hover {
+			background-color: $brandBlue;
+			color: $white;
+			@include transition(all, .1s, ease-in-out);
+		}
+	}
+}
+.quiz-title {
+	font-weight: bold;
+}
+.quiz-demo {
+	height: 220px;
+	padding: 20px 30px;
+
+	> div {
+		position: absolute;
+		width: 260px;
+	}
+	.choice {
+		position: relative;
+		display: block;
+		margin-bottom: 10px;
+		padding-left: 30px;
+		border: 1px solid $lightGrey;
+		@include clearfix;
+		cursor: pointer;
+	}
+	h4 {
+		font-weight: bold;
+		margin-top: 0;
+	}
+	input {
+		visibility: hidden;
+		position: absolute;
+		left: -100%;
+	}
+	span {
+		display: block;
+		padding: 8px 10px;
+		overflow: hidden;
+	}
+	.target {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 20px;
+		padding: 6px 5px;
+		border-right: 1px solid $lightGrey;
+		background-color: rgba(0,0,0,.1);
+		background-image: url(/static/images/ok.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.button {
+		width: 100%;
+		margin-top: 20px;
+	}
+	input:checked {
+		background-color: red;
+
+		& + .target {
+			background-image: url(/static/images/ok-hover.png);
+		}
+	}
+}
+.quote-box {
+	padding: 5px;
+	background-color: #f5f5f5;
+	border-bottom: 1px solid $lightGrey;
+
+	&.focus {
+		button {
+			display: block;
+		}
+	}
+
+	.textarea-container {
+		position: relative;
+	}
+	textarea {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		outline: none;
+		resize: none;
+		width: 100%;
+		box-sizing: border-box;
+		border: 1px solid $lightGrey;
+		overflow: hidden;
+	}
+	.textarea-mirror {
+		min-height: 20px;
+	}
+	textarea,
+	.textarea-mirror {
+		padding: 10px;
+	}
+	button {
+		display: none;
+	}
+}
+.quotes-stream li {
+	border-bottom: 1px solid $lightGrey;
+	padding: 15px;
+
+	span {
+		display: block;
+	}
+	.quote-text {
+		margin-bottom: 5px;
+	}
+	.quote-author {
+		color: $grey;
+		font-size: 11px;
+	}
+}
 
 .media {
 	.hd {
