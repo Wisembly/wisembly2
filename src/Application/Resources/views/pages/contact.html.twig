@@ -41,6 +41,20 @@
 									</div>
 								</div>
 							</div>
+							<div class='row'>
+								<div class='column six'>
+									<div class='column-inner'>
+										<p class='label'>{{ 'office' | trans }}</p>
+										<p>{{ 'office_adress' | trans }}</p>
+									</div>
+								</div>
+								<div class='column six'>
+									<div class='column-inner'>
+										<p class='label'>{{ 'head_office' | trans }}</p>
+										<p>{{ 'head_office_address' | trans }}</p>
+									</div>
+								</div>
+							</div>
 						</div>
 						<form class='contact-form' method="POST" action="{{ url('contact_send_mail') }}" data-status='active' data-validate="parsley" novalidate>
 							<h3>{{ 'write_to_us' | trans }}</h3>
@@ -55,9 +69,10 @@
     							</div>
                             {% elseif app['request'].query.has('error') %}
                                 <div class='row'>
-                                    <div class='column six'>
-    									<div class='column-inner'>
-    									    {{ 'email_sent_error' | trans | raw }}
+									<div class='column six'>
+	    									<div class='column-inner'>
+	    									    {{ 'email_sent_error' | trans | raw }}
+	    									</div>
     									</div>
     								</div>
     							</div>
