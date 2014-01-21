@@ -35,15 +35,15 @@
 						<ul class='list team-list'>
 
                             {% for member in app.team %}
-							<li>
-								<div class='person'>
-									<div class='img'>
-										<img src='{{ asset(member.main_pic) }}'>
+								<li>
+									<div class='person'>
+										<div class='img'>
+											<img src='{{ asset(member.main_pic) }}'>
+										</div>
+										<div class='name'>{{ member.name }}</div>
+										<div class='role'>{{ member.job }}</div>
 									</div>
-									<div class='name'>{{ member.name }}</div>
-									<div class='role'>{{ member.job }}</div>
-								</div>
-							</li>
+								</li>
                             {% endfor %}
 
 						</ul>
