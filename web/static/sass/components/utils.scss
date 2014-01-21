@@ -1,0 +1,23 @@
+// utilities
+
+.list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.hide {
+	display: none;
+}
+.relative {
+	position: relative;
+}
+.affix {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  zoom: 1;
+}
+.force-white {
+	background-color: $white !important;
+}

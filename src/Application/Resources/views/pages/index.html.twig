@@ -101,7 +101,7 @@
                                                                         </li>
                                                                      </ul>
                                                                      <div class='total'>
-                                                                         <i class='icon-person icon'></i>
+                                                                         <!-- <i class='icon-person icon'></i> -->
                                                                          <span class='total-count'>12</span>
                                                                          <span class='total-label'>{{ 'participants' | trans }}</span>
                                                                      </div>
@@ -237,115 +237,149 @@
     </div>
     <div class='section clients' id='clients'>
         <div class='container'>
-            <div class='center-vertical'>
-                <div class='row row-bump'>
-                    <div class='column six'>
-                        <div class='column-inner'>
-                            <h3><span>{{ 'testimonials' | trans }}</span></h3>
-                            <ul class='list testimonials'>
-                                <li>
-                                    <div class='media'>
-                                        <div class='hd'>
-                                            <img src='{{ asset("/static/images/edito/dias.JPG") }}'>
-                                        </div>
-                                        <div class='bd'>
-                                            <p class='quote'>{{ 'quote_dias' | trans }}</p>
-                                            <p class='author'><small>Georges-Edouard Dias, L'Oréal</small></p>
-                                        </div>
+            <div class='row row-bump'>
+                <div class='column six'>
+                    <div class='column-inner'>
+                        <h3><span>{{ 'testimonials' | trans }}</span></h3>
+                        <ul class='list testimonials'>
+                            <li>
+                                <div class='media'>
+                                    <div class='hd'>
+                                        <img src='{{ asset("/static/images/edito/dias.JPG") }}'>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class='media'>
-                                        <div class='hd'>
-                                            <img src='{{ asset("/static/images/edito/stelmaszyk.jpg") }}'>
-                                        </div>
-                                        <div class='bd'>
-                                            <p class='quote'>{{ 'quote_stelmaszyk' | trans }}</p>
-                                            <p class='author'><small>Patric Stelmaszyk, Capgemini Consulting</small></p>
-                                        </div>
+                                    <div class='bd'>
+                                        <p class='quote'>{{ 'quote_dias' | trans }}</p>
+                                        <p class='author'><small>Georges-Edouard Dias, L'Oréal</small></p>
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class='column six last'>
-                        <div class='column-inner'>
-                            <h3><span>{{ 'clients' | trans }}</span></h3>
-                            <ul class='row list clients-list'>
-                                <li class='column four'>
-                                    <div class='column-inner'>
-                                        <img src='{{ asset("/static/images/clients/accenture.png") }}' />
+                                </div>
+                            </li>
+                            <li>
+                                <div class='media'>
+                                    <div class='hd'>
+                                        <img src='{{ asset("/static/images/edito/stelmaszyk.jpg") }}'>
                                     </div>
-                                </li>
-                                <li class='column four'>
-                                    <div class='column-inner'>
-                                        <img src='{{ asset("/static/images/clients/air-liquide.png") }}' />
+                                    <div class='bd'>
+                                        <p class='quote'>{{ 'quote_stelmaszyk' | trans }}</p>
+                                        <p class='author'><small>Patric Stelmaszyk, Capgemini Consulting</small></p>
                                     </div>
-                                </li>
-                                <li class='column four'>
-                                    <div class='column-inner'>
-                                        <img src='{{ asset("/static/images/clients/auchan.png") }}' />
-                                    </div>
-                                </li>
-                                <li class='column four'>
-                                    <div class='column-inner'>
-                                        <img src='{{ asset("/static/images/clients/banque-populaire.png") }}' />
-                                    </div>
-                                </li>
-                                <li class='column four'>
-                                    <div class='column-inner'>
-                                        <img src='{{ asset("/static/images/clients/bnp-paribas.jpg") }}' />
-                                    </div>
-                                </li>
-                                <li class='column four'>
-                                    <div class='column-inner'>
-                                        <img src='{{ asset("/static/images/clients/bouygues-telecom.png") }}' />
-                                    </div>
-                                </li>
-                                <li class='column four'>
-                                    <div class='column-inner'>
-                                        <img src='{{ asset("/static/images/clients/carrefour.png") }}' />
-                                    </div>
-                                </li>
-                                <li class='column four'>
-                                    <div class='column-inner'>
-                                        <img src='{{ asset("/static/images/clients/credit-agricole.jpg") }}' />
-                                    </div>
-                                </li>
-                                <li class='column four'>
-                                    <div class='column-inner'>
-                                        <img src='{{ asset("/static/images/clients/danone.jpg") }}' />
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <hr class='mvl' />
-                <div class='row'>
-                    <div class='column twelve'>
-                        <div class='column-inner'>
-                            <h3><span>{{ 'press' | trans }}</span></h3>
-                            <div class='row press'>
-                                <div class='column three'>
-                                    <div class='column-inner'>
-                                        <img src='{{ asset("/static/images/press/challenges.png") }}' />
-                                    </div>
+                <div class='column six last'>
+                    <div class='column-inner'>
+                        <h3><span>{{ 'clients' | trans }}</span></h3>
+                        <ul class='row list clients-list'>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/airbus.jpg") }}' />
                                 </div>
-                                <div class='column three'>
-                                    <div class='column-inner'>
-                                        <img src='{{ asset("/static/images/press/management.png") }}' />
-                                    </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/bmw.png") }}' />
                                 </div>
-                                <div class='column three'>
-                                    <div class='column-inner'>
-                                        <img src='{{ asset("/static/images/press/les-echos.jpg") }}' />
-                                    </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/capgemini.png") }}' />
                                 </div>
-                                <div class='column three'>
-                                    <div class='column-inner'>
-                                        <img src='{{ asset("/static/images/press/latribune.jpeg") }}' />
-                                    </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/axa.jpg") }}' />
+                                </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/google.png") }}' />
+                                </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/la-poste.png") }}' />
+                                </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/sanofi.png") }}' />
+                                </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/solvay.png") }}' />
+                                </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/deloitte.jpg") }}' />
+                                </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/sncf.png") }}' />
+                                </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/loreal.png") }}' />
+                                </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/auchan.jpeg") }}' />
+                                </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/credit-agricole.jpg") }}' />
+                                </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/societe-generale.png") }}' />
+                                </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/total.png") }}' />
+                                </div>
+                            </li>
+                            <li class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/clients/orange.png") }}' />
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class='mvl' />
+            <div class='row'>
+                <div class='column twelve'>
+                    <div class='column-inner'>
+                        <h3><span>{{ 'press' | trans }}</span></h3>
+                        <div class='row press'>
+                            <div class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/press/challenges.png") }}' />
+                                </div>
+                            </div>
+                            <div class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/press/management.png") }}' />
+                                </div>
+                            </div>
+                            <div class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/press/les-echos.jpg") }}' />
+                                </div>
+                            </div>
+                            <div class='column three'>
+                                <div class='column-inner'>
+                                    <img src='{{ asset("/static/images/press/latribune.jpeg") }}' />
                                 </div>
                             </div>
                         </div>

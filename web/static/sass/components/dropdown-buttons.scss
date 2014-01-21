@@ -64,11 +64,23 @@ $dropdownLangWidth: 58px;
 	}
 }
 
+.contact-nav .dropdown-lang {
+	.dropdown-toggle {
+		padding-top: 7px;
+		padding-bottom: 6px;
+	}
+}
+
 // lang dropdown
 .dropdown-lang {
 	border: 1px solid $lightGrey;
 	width: $dropdownLangWidth;
 }
+
+.dropdown-borderless {
+	border: 0;
+}
+
 .dropdown-lang .dropdown-toggle {
 	padding: 7px 30px 7px 10px;
 	background-image: url(../images/down-pointing-arrow.png);

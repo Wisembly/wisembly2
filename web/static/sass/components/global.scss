@@ -22,78 +22,8 @@ img {
 a {
 	color: $brandBlueLight;
 }
-
-// utilities
-
-.list {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-.hide {
-	display: none;
-}
-.relative {
-	position: relative;
-}
-.affix {
-  position: fixed;
-  top: 0;
-  z-index: 5;
-  width: 100%;
-  zoom: 1;
-}
 hr {
 	border: 1px dashed $lightGrey;
-}
-.force-white {
-	background-color: $white !important;
-}
-
-/*
- * Mixins
- */
-
-// CSS3 transitions
-@mixin transition($transition-property, $transition-time, $method) {
-    -webkit-transition: $transition-property $transition-time $method;
-    -moz-transition: $transition-property $transition-time $method;
-    -ms-transition: $transition-property $transition-time $method;
-    -o-transition: $transition-property $transition-time $method;
-    transition: $transition-property $transition-time $method;
-}
-
-// Transparent background
-@mixin transparent($color, $alpha) {
-  $rgba: rgba($color, $alpha);
-  $ie-hex-str: ie-hex-str($rgba);
-  background-color: transparent;
-  background-color: $rgba;
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
-  zoom: 1;
-}
-
-// clear floats with clearfix
-@mixin clearfix() {
-	*zoom:1;
-
-	&:before,
-	&:after {
-		content: " ";
-		display: table;
-	}
-	&:after {
-		clear: both;
-	}
-}
-.clearfix {
-	@include clearfix;
-}
-
-@mixin image-replacement() {
-	background-position: 0 0;
-	background-repeat: no-repeat;
-	text-indent: -1000%;
 }
 
 // back to top
@@ -111,7 +41,6 @@ hr {
 	text-align: center;
 	line-height: 40px;
 }
-
 
 // pages
 
@@ -184,7 +113,7 @@ hr {
 		}
 	}
 	img,
-	.bg {
+	.bd {
 		min-width: 1024px;
 		min-height: 100%;
 		width: 100%;
@@ -195,12 +124,10 @@ hr {
 		display: block;
 		margin: -20% auto 0;
 	}
-
 	.container {
 		height: 240px;
 		padding: 0;
 	}
-
 	.id {
 		position: absolute;
 		left: 0;
@@ -236,178 +163,6 @@ hr {
 	}
 }
 
-.features-list-container {
-	height: 150px;
-}
-.features-list {
-	box-shadow: 0 0 2px 0 rgba(0,0,0, .1);
-	background-image: none;
-	background-color: $white !important;
-
-	.container {
-		padding: 0;
-	}
-
-	ul {
-		@include clearfix;
-	}
-	.list-eight {
-		li {
-			width: 12.5%;
-		}
-	}
-
-	li {
-		float: left;
-		width: 14.28%;
-
-		&.active {
-			a {
-				background-color: $brandBlue;
-				color: $white;
-				@include transition(all, .1s, ease-in-out);
-			}
-		}
-	}
-	.picto {
-		margin: 0 auto 20px;
-	}
-	a {
-		display: block;
-		padding: 20px 20px;
-		text-align: center;
-		text-decoration: none;
-		font-size: 12px;
-		font-weight: 600;
-		line-height: 20px;
-		color: $grey;
-		height: 110px;
-		text-transform: uppercase;
-
-		span {
-			display: block;
-		}
-
-		&:hover {
-			background-color: $brandBlue;
-			color: $white;
-			@include transition(all, .1s, ease-in-out);
-		}
-	}
-}
-.quiz-title {
-	font-weight: bold;
-}
-.quiz-demo {
-	height: 220px;
-	padding: 20px 30px;
-
-	> div {
-		position: absolute;
-		width: 260px;
-	}
-	.choice {
-		position: relative;
-		display: block;
-		margin-bottom: 10px;
-		padding-left: 30px;
-		border: 1px solid $lightGrey;
-		@include clearfix;
-		cursor: pointer;
-	}
-	h4 {
-		font-weight: bold;
-		margin-top: 0;
-	}
-	input {
-		visibility: hidden;
-		position: absolute;
-		left: -100%;
-	}
-	span {
-		display: block;
-		padding: 8px 10px;
-		overflow: hidden;
-	}
-	.target {
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		width: 20px;
-		padding: 6px 5px;
-		border-right: 1px solid $lightGrey;
-		background-color: rgba(0,0,0,.1);
-		background-image: url(/static/images/ok.png);
-		background-repeat: no-repeat;
-		background-position: center center;
-	}
-	.button {
-		width: 100%;
-		margin-top: 20px;
-	}
-	input:checked {
-		background-color: red;
-
-		& + .target {
-			background-image: url(/static/images/ok-hover.png);
-		}
-	}
-}
-.quote-box {
-	padding: 5px;
-	background-color: #f5f5f5;
-	border-bottom: 1px solid $lightGrey;
-
-	&.focus {
-		button {
-			display: block;
-		}
-	}
-
-	.textarea-container {
-		position: relative;
-	}
-	textarea {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		outline: none;
-		resize: none;
-		width: 100%;
-		box-sizing: border-box;
-		border: 1px solid $lightGrey;
-		overflow: hidden;
-	}
-	.textarea-mirror {
-		min-height: 20px;
-	}
-	textarea,
-	.textarea-mirror {
-		padding: 10px;
-	}
-	button {
-		display: none;
-	}
-}
-.quotes-stream li {
-	border-bottom: 1px solid $lightGrey;
-	padding: 15px;
-
-	span {
-		display: block;
-	}
-	.quote-text {
-		margin-bottom: 5px;
-	}
-	.quote-author {
-		color: $grey;
-		font-size: 11px;
-	}
-}
 
 .media {
 	.hd {
@@ -439,7 +194,7 @@ hr {
 		font-family: Georgia, serif;
 		position: relative;
 		text-indent: 23px;
-		
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -458,8 +213,7 @@ hr {
 	}
 }
 
-.headline,
-.clients {
+.headline {
 	height: 100%;
 	padding: 0;
 	min-height: 728px;
@@ -487,17 +241,18 @@ hr {
 	color: $white;
 	text-shadow: 0 1px 2px rgba($brandBlue, .9);
 	overflow: hidden;
-	
+
 	h1 {
 		font-weight: 400;
-		font-size: 32px;
+		font-size: 38px;
 		line-height: 150px;
 		margin: 0;
 	}
 	h2 {
-		font-size: 30px;
+		font-size: 28px;
 		font-weight: 300;
 		margin-top: 0;
+		margin-bottom: 60px;
 	}
 	.container-shadow {
 		position: absolute;
@@ -716,7 +471,7 @@ hr {
 			margin-bottom: 10px;
 		}
 	}
-	.section, {
+	.section {
 		background-image: none;
 	}
 	.comment {
@@ -841,7 +596,7 @@ hr {
 .history-item-title {
 	margin: 0;
 	color: $white !important;
-	
+
 	span {
 		background-color: rgba($black, .7);
 		padding: 0 5px;
@@ -961,7 +716,7 @@ hr {
 .press {
 	text-align: center;
 	line-height: 60px;
-	
+
 	img {
 		display: inline;
 		vertical-align: middle;
@@ -973,7 +728,7 @@ hr {
 	table-layout: fixed;
 	border-top: 1px solid $lightGrey;
 	border-bottom: 1px solid $lightGrey;
-	
+
 	.even,
 	tr:nth-child(2n) {
 		background-color: $brandBlueExtraExtraExtraLight;
@@ -1329,7 +1084,7 @@ hr {
 .frame-loading {
 	position: absolute;
 	z-index: 2;
-		
+
 	.overlay {
 		-moz-opacity:0.5;
 		-khtml-opacity:0.5;

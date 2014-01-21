@@ -1,4 +1,4 @@
-/* normalize.css v2.1.1 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
 	 HTML5 display definitions
 	 ========================================================================== */
@@ -338,23 +338,16 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-html {
-  color: #444444;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-html,
-body {
-  height: 100%; }
-
-body {
-  padding-top: 100px; }
-
-img {
-  display: block;
-  max-width: 100%; }
-
-a {
-  color: #45a4da; }
+/*
+ * Mixins
+ */
+.clearfix {
+  *zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    content: " ";
+    display: table; }
+  .clearfix:after {
+    clear: both; }
 
 .list {
   margin: 0;
@@ -374,22 +367,29 @@ a {
   width: 100%;
   zoom: 1; }
 
-hr {
-  border: 1px dashed #e0e0e0; }
-
 .force-white {
   background-color: white !important; }
 
-/*
- * Mixins
- */
-.clearfix {
-  *zoom: 1; }
-  .clearfix:before, .clearfix:after {
-    content: " ";
-    display: table; }
-  .clearfix:after {
-    clear: both; }
+html {
+  color: #444444;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  padding-top: 100px; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+a {
+  color: #45a4da; }
+
+hr {
+  border: 1px dashed #e0e0e0; }
 
 #back-to-top {
   position: fixed;
@@ -457,7 +457,7 @@ hr {
     .header .header-background img {
       margin: -20% auto; }
   .header img,
-  .header .bg  {
+  .header .bd {
     min-width: 1024px;
     min-height: 100%;
     width: 100%;
@@ -494,152 +494,6 @@ hr {
     .header h2 span {
       padding-left: 13px; }
 
-.features-list-container {
-  height: 150px; }
-
-.features-list {
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
-  background-image: none;
-  background-color: white !important; }
-  .features-list .container {
-    padding: 0; }
-  .features-list ul {
-    *zoom: 1; }
-    .features-list ul:before, .features-list ul:after {
-      content: " ";
-      display: table; }
-    .features-list ul:after {
-      clear: both; }
-  .features-list .list-eight li {
-    width: 12.5%; }
-  .features-list li {
-    float: left;
-    width: 14.28%; }
-    .features-list li.active a {
-      background-color: #0786cd;
-      color: white;
-      -webkit-transition: all 0.1s ease-in-out;
-      -moz-transition: all 0.1s ease-in-out;
-      -ms-transition: all 0.1s ease-in-out;
-      -o-transition: all 0.1s ease-in-out;
-      transition: all 0.1s ease-in-out; }
-  .features-list .picto {
-    margin: 0 auto 20px; }
-  .features-list a {
-    display: block;
-    padding: 20px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 20px;
-    color: #999999;
-    height: 110px;
-    text-transform: uppercase; }
-    .features-list a span {
-      display: block; }
-    .features-list a:hover {
-      background-color: #0786cd;
-      color: white;
-      -webkit-transition: all 0.1s ease-in-out;
-      -moz-transition: all 0.1s ease-in-out;
-      -ms-transition: all 0.1s ease-in-out;
-      -o-transition: all 0.1s ease-in-out;
-      transition: all 0.1s ease-in-out; }
-
-.quiz-title {
-  font-weight: bold; }
-
-.quiz-demo {
-  height: 220px;
-  padding: 20px 30px; }
-  .quiz-demo > div {
-    position: absolute;
-    width: 260px; }
-  .quiz-demo .choice {
-    position: relative;
-    display: block;
-    margin-bottom: 10px;
-    padding-left: 30px;
-    border: 1px solid #e0e0e0;
-    *zoom: 1;
-    cursor: pointer; }
-    .quiz-demo .choice:before, .quiz-demo .choice:after {
-      content: " ";
-      display: table; }
-    .quiz-demo .choice:after {
-      clear: both; }
-  .quiz-demo h4 {
-    font-weight: bold;
-    margin-top: 0; }
-  .quiz-demo input {
-    visibility: hidden;
-    position: absolute;
-    left: -100%; }
-  .quiz-demo span {
-    display: block;
-    padding: 8px 10px;
-    overflow: hidden; }
-  .quiz-demo .target {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 20px;
-    padding: 6px 5px;
-    border-right: 1px solid #e0e0e0;
-    background-color: rgba(0, 0, 0, 0.1);
-    background-image: url(/static/images/ok.png);
-    background-repeat: no-repeat;
-    background-position: center center; }
-  .quiz-demo .button {
-    width: 100%;
-    margin-top: 20px; }
-  .quiz-demo input:checked {
-    background-color: red; }
-    .quiz-demo input:checked + .target {
-      background-image: url(/static/images/ok-hover.png); }
-
-.quote-box {
-  padding: 5px;
-  background-color: #f5f5f5;
-  border-bottom: 1px solid #e0e0e0; }
-  .quote-box.focus button {
-    display: block; }
-  .quote-box .textarea-container {
-    position: relative; }
-  .quote-box textarea {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    outline: none;
-    resize: none;
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #e0e0e0;
-    overflow: hidden; }
-  .quote-box .textarea-mirror {
-    min-height: 20px; }
-  .quote-box textarea,
-  .quote-box .textarea-mirror {
-    padding: 10px; }
-  .quote-box button {
-    display: none; }
-
-.quotes-stream li {
-  border-bottom: 1px solid #e0e0e0;
-  padding: 15px; }
-  .quotes-stream li span {
-    display: block; }
-  .quotes-stream li .quote-text {
-    margin-bottom: 5px; }
-  .quotes-stream li .quote-author {
-    color: #999999;
-    font-size: 11px; }
-
 .media .hd {
   float: left;
   width: 90px;
@@ -675,23 +529,19 @@ hr {
 .testimonials .author {
   color: #999999; }
 
-.headline,
-.clients {
+.headline {
   height: 100%;
   padding: 0;
   min-height: 728px; }
-  .headline .container,
-  .clients .container {
+  .headline .container {
     padding: 0;
     display: table;
     height: 100%;
     position: relative; }
-  .headline .center-vertical,
-  .clients .center-vertical {
+  .headline .center-vertical {
     display: table-cell;
     vertical-align: middle; }
-  .headline .row-bump,
-  .clients .row-bump {
+  .headline .row-bump {
     margin-top: 100px; }
 
 .headline {
@@ -705,11 +555,11 @@ hr {
   overflow: hidden; }
   .headline h1 {
     font-weight: 400;
-    font-size: 32px;
+    font-size: 38px;
     line-height: 150px;
     margin: 0; }
   .headline h2 {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 300;
     margin-top: 0; }
   .headline .container-shadow {
@@ -884,7 +734,7 @@ hr {
 .case-detail .section li {
   line-height: 1.5em;
   margin-bottom: 10px; }
-.case-detail .section, .case-detail   {
+.case-detail .section {
   background-image: none; }
 .case-detail .comment {
   display: block;
@@ -1603,7 +1453,7 @@ h4 {
   background-position: 0 0;
   background-repeat: no-repeat; }
 
-.icon  {
+.icon {
   display: block;
   width: 20px;
   height: 20px; }
@@ -1833,9 +1683,16 @@ form[data-status='testing'] .button-processing {
 .open .dropdown-list, .open .dropdown-bottom {
   display: block; }
 
+.contact-nav .dropdown-lang .dropdown-toggle {
+  padding-top: 7px;
+  padding-bottom: 6px; }
+
 .dropdown-lang {
   border: 1px solid #e0e0e0;
   width: 58px; }
+
+.dropdown-borderless {
+  border: 0; }
 
 .dropdown-lang .dropdown-toggle {
   padding: 7px 30px 7px 10px;
@@ -2158,7 +2015,7 @@ form[data-status='testing'] .button-processing {
 .q-a .app-body {
   height: 417px; }
 
-/*
+/*!
  *  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------

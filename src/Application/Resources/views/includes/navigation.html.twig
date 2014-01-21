@@ -2,7 +2,7 @@
 	<div class='top-header'>
 		<div class='container'>
 			<div class='row'>
-				<div class='column five'>
+				<div class='column six'>
 					<div class='column-inner'>
 						<div class='contact-nav'>
 							<ul class='list'>
@@ -10,6 +10,36 @@
 									<ul class='list contact-nav'>
 										<li class='item'>
 											<span class='item-text'>{{ 'contact_us_number' | trans({ '%number%': app.phone_number }) | raw }}</span>
+										</li>
+										<li class='item'>
+											<div class='dropdown dropdown-borderless dropdown-lang'>
+												<label class='dropdown-toggle' data-toggle='dropdown'>
+													<img src='{{ asset("/static/images/flags/" ~ app['country'] ~ ".png") }}'>
+												</label>
+												<ul class='list dropdown-list'>
+													{% if app['country'] != 'fr' %}
+													<li>
+														<a href='{{ app.host }}/fr/'>
+															<img src='{{ asset("/static/images/flags/fr.png") }}'>
+														</a>
+													</li>
+													{% endif %}
+													{% if app['country'] != 'en' %}
+													<li>
+														<a href='{{ app.host }}/en/'>
+															<img src='{{ asset("/static/images/flags/en.png") }}'>
+														</a>
+													</li>
+													{% endif %}
+													{% if app['country'] != 'it' %}
+													<li>
+														<a href='{{ app.host }}/it/'>
+															<img src='{{ asset("/static/images/flags/it.png") }}'>
+														</a>
+													</li>
+													{% endif %}
+												</ul>
+											</div>
 										</li>
 										<li class='item item-highlighted last'>
 											<a href='{{ url('contact') }}' class='item-text'>{{ 'write_to_us' | trans }}</a>
