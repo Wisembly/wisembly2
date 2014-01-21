@@ -1,0 +1,52 @@
+{% extends 'layouts/main.html.twig' %}
+
+{# Load client DataSet #}
+{% block client %}{% endblock %}
+{% block client_category %}{% endblock %}
+
+{% block body_class %}clients{% endblock %}
+
+{# SEO #}
+{% set page = 'clients' %}
+{% block meta %}{% endblock %}
+{% block page_title %}{{ app.meta[page].title }}{% endblock %}
+{% block meta_description %}{{ app.meta[page].description }}{% endblock %}
+{% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
+
+{% block content %}
+  <div class='section header'>
+    <div class='header-background'>
+      <img class='bg' src='{{ asset("/static/images/wallpapers/contact.jpg") }}'>
+    </div>
+    <div class='container'>
+      <div class='id'>
+        <h1><span>{{ 'clients_page_title' | trans }}</span></h1>
+        <h2><span>{{ 'clients_page_desc' | trans }}</span></h2>
+      </div>
+    </div>
+  </div>
+  <div class='section'>
+    <div class='container'>
+      <div class='row'>
+
+      {% for category in app.client_category %}
+          <h2>{{ category.name | trans }}</h2>
+          <ul class="unstyled">
+
+          {% for client in app.client %}
+            {% if client.client_category_id == category.id %}
+              <li>
+                  <a href="{{ client.url }}" target="_blank" rel="tooltip" data-original-title="{{ client.name }}" class="img-container">
+                      <img src="{{ client.logo }}" alt="{{ client.name }}">
+                  </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+
+          </ul>
+      {% endfor %}
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

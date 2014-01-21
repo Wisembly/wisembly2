@@ -26,6 +26,10 @@ $app->register(new DataSet('team', 'team'));
 $app->register(new DataSet('press', 'press'));
 $app->register(new KeyValueSet('meta', 'meta', 'page'));
 
+$app->register(new DataSet('client', 'client'));
+$app->register(new DataSet('client_category', 'client_category'));
+
+
 // Pages
 $app->register(new StaticPage('index', '/', 'pages/index.html.twig'));
 
@@ -40,6 +44,9 @@ $app->register(new DynamicPage('case-detail', '/case-studies/{slug}', 'pages/cas
 
 // create your freemium now
 $app->register(new StaticPage('plans', '/plans', 'pages/plans.html.twig'));
+
+// clients page
+$app->register(new StaticPage('clients', '/our-clients', 'pages/clients.html.twig'));
 
 // about pages
 $app->register(new StaticPage('about-story', '/about/story', 'pages/about.html.twig'));
