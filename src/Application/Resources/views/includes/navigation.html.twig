@@ -7,7 +7,7 @@
 						<div class='contact-nav'>
 							<ul class='list'>
 								<li class='first'>
-									<ul class='list contact-nav'>
+									<ul class='list top-header-list contact-nav'>
 										<li class='item'>
 											<span class='item-text'>{{ 'contact_us_number' | trans({ '%number%': app.phone_number }) | raw }}</span>
 										</li>
@@ -53,8 +53,8 @@
 				<div class='column four last'>
 					<div class='column-inner'>
 						<div class='app-nav'>
-							<ul class='list' data-name='header_tabs'>
-								<li data-name='join_an_event'>
+							<ul class='list top-header-list' data-name='header_tabs'>
+								<li class='item' data-name='join_an_event'>
 									<div class='dropdown'>
 										<a href='#' class='dropdown-toggle tab_link'>{{ 'join_an_event' | trans }}</a>
 										<div class='dropdown-bottom' data-name='dropdown'>
@@ -81,7 +81,7 @@
 										</div>
 									</div>
 								</li>
-								<li data-name='login'>
+								<li class='item' data-name='login'>
 									<div class='dropdown'>
 										<a href='#' class='dropdown-toggle tab_link'>{{ 'login' | trans }}</a>
 										<div class='dropdown-bottom' data-name='dropdown'>

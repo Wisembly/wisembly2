@@ -26,6 +26,16 @@ $topHeaderHeight: 29px;
 	margin-top: 21px;
 }
 
+.top-header-list {
+	border-left: 1px solid #f1f1f1;
+}
+.top-header-list > .item {
+	float: left;
+	border-right: 1px solid #f1f1f1;
+}
+.top-header-list > .item.last {
+	border-right: 0;
+}
 .top-header {
 	background-color: #fafafa;
 	border-bottom: 1px solid #f1f1f1;
@@ -33,15 +43,7 @@ $topHeaderHeight: 29px;
 	
 	.list {
 		@include clearfix;
-		border-left: 1px solid #f1f1f1;
 		
-		li {
-			float: left;
-			border-right: 1px solid #f1f1f1;
-		}
-		.last {
-			border-right: 0;
-		}
 		a {
 			text-decoration: none;
 			color: $grey;

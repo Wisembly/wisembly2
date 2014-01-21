@@ -27,7 +27,8 @@ $dropdownLangWidth: 58px;
 	li {
 		border-bottom: 1px solid $lightGrey;
 		margin-bottom: 0;
-
+		
+		&:last-child,
 		&.last {
 			border-bottom: 0;
 		}
