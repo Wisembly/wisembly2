@@ -4,7 +4,7 @@
 {% block client %}{% endblock %}
 {% block client_category %}{% endblock %}
 
-{% block body_class %}clients{% endblock %}
+{% block body_class %}our-clients{% endblock %}
 
 {# SEO #}
 {% set page = 'clients' %}
@@ -25,28 +25,26 @@
       </div>
     </div>
   </div>
-  <div class='section'>
-    <div class='container'>
-      <div class='row'>
-
-      {% for category in app.client_category %}
-          <h2>{{ category.name | trans }}</h2>
-          <ul class="unstyled">
-
-          {% for client in app.client %}
-            {% if client.client_category_id == category.id %}
-              <li>
-                  <a href="{{ client.url }}" target="_blank" rel="tooltip" data-original-title="{{ client.name }}" class="img-container">
-                      <img src="{{ client.logo }}" alt="{{ client.name }}">
-                  </a>
-              </li>
-            {% endif %}
-          {% endfor %}
-
-          </ul>
-      {% endfor %}
-
+  {% for category in app.client_category %}
+    <div class='section'>
+      <div class='container'>
+        <h3>{{ category.name | trans }}</h3>
+        <ul class="list horizontal-list clients-list row">
+        
+        {% for client in app.client %}
+          {% if client.client_category_id == category.id %}
+            <div class='column two'>
+              <div class='column-inner'>
+                <a href="{{ client.url }}" target="_blank" rel="tooltip" class="img-container" id='{{ client.name|escape('url')|lower }}'>
+                    <img src="{{ client.logo }}" alt="{{ client.name }}">
+                </a>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+        
+        </ul>
       </div>
     </div>
-  </div>
+  {% endfor %}
 {% endblock %}
