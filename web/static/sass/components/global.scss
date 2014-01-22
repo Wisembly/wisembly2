@@ -539,11 +539,9 @@ p {
 	a {
 		display: block;
 	}
-	a:hover {
-		background-color: $brandYellow;
-	}
 	a:target {
-		background-color: $brandOrange;
+		background-color: $brandOrangeExtraExtraExtraLight;
+		outline: none;
 	}
 }
 .try-now {
@@ -990,7 +988,6 @@ p {
 	h4 {
 		margin-top: 10px;
 		margin-bottom: 40px;
-		color: $grey;
 	}
 }
 .plan {
@@ -1018,20 +1015,34 @@ p {
 		font-size: 16px;
 		font-weight: normal;
 		font-family: $default-font-family;
-		color: $grey;
+	}
+	h5 {
+		padding: 10px 20px;
+		margin: 0;
+		@extend .type-light;
+		border-bottom: 1px solid $lightGrey;
+		box-shadow: inset 0 1px 0 rgba(255,255,255, .4);
+		background-color: #fafbfc;
+		background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.1), rgba(255,255,255,0));
+		text-transform: uppercase;
 	}
 	ul {
 		border-bottom: 1px solid $lightGrey;
+		padding: 5px 0;
 	}
 	li {
-		padding: 15px 20px;
+		padding: 10px 20px;
+		color: #888;
 
 		&:nth-child(even) {
-			background-color: $brandBlueExtraExtraExtraLight;
+			background-color: #fefefe;
+			border-width: 1px 0;
+			border-style: solid;
+			border-color: #f1f1f1;
 		}
 	}
 	.list {
-		height: 200px;
+		height: 180px;
 	}
 	.list-dot {
 		display: inline-block;
@@ -1040,8 +1051,11 @@ p {
 		height: 10px;
 		margin-right: 10px;
 	}
-	.button {
-		margin: 20px;
+	.plan-footer {
+		box-shadow: inset 0 1px 0 rgba(255,255,255, .4);
+		background-color: #fafbfc;
+		background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.1), rgba(255,255,255,0));
+		padding: 20px;
 	}
 }
 .plan-meetings-conf-calls h3 {
