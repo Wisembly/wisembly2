@@ -28,7 +28,7 @@ $app->register(new KeyValueSet('meta', 'meta', 'page'));
 
 $app->register(new DataSet('client', 'client'));
 $app->register(new DataSet('client_category', 'client_category'));
-
+$app->register(new DataSet('featured_client', 'client', array('featured' => 1)));
 
 // Pages
 $app->register(new StaticPage('index', '/', 'pages/index.html.twig'));

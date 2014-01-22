@@ -30,19 +30,19 @@
       <div class='container'>
         <h3>{{ category.name | trans }}</h3>
         <ul class="list horizontal-list clients-list row">
-        
+
         {% for client in app.client %}
           {% if client.client_category_id == category.id %}
             <div class='column two'>
               <div class='column-inner'>
-                <a href="{{ client.url }}" target="_blank" rel="tooltip" class="img-container" id='{{ client.name|escape('url')|lower }}'>
+                <a href="{{ client.url }}" target="_blank" rel="tooltip" class="img-container" id='{{ client.name | escape('url') | lower }}'>
                     <img src="{{ client.logo }}" alt="{{ client.name }}">
                 </a>
               </div>
             </div>
           {% endif %}
         {% endfor %}
-        
+
         </ul>
       </div>
     </div>

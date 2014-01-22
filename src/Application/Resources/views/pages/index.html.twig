@@ -1,5 +1,8 @@
 {% extends 'layouts/main.html.twig' %}
 
+{# Load client DataSet #}
+{% block featured_client %}{% endblock %}
+
 {# load homepage localization keys #}
 {% block homepage %}{% endblock %}
 
@@ -271,87 +274,15 @@
                     <div class='column-inner'>
                         <h3><a href='{{ url('clients') }}'>{{ 'clients' | trans }}</a></h3>
                         <ul class='row list clients-list'>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/airbus.jpg") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/bmw.png") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/capgemini.png") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/axa.jpg") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/google.png") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/la-poste.png") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/sanofi.png") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/solvay.png") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/deloitte.jpg") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/sncf.png") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/loreal.png") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/auchan.jpeg") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/credit-agricole.jpg") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/societe-generale.png") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/total.png") }}' />
-                                </div>
-                            </li>
-                            <li class='column three'>
-                                <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/clients/orange.png") }}' />
-                                </div>
-                            </li>
-                            
+                            {% for client in app.featured_client %}
+                                <li class='column three'>
+                                    <div class='column-inner'>
+                                        <a href='{{ url('clients') }}#{{ client.name|escape('url')|lower }} '>
+                                            <img src='{{ client.logo }}' />
+                                        </a>
+                                    </div>
+                                </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
