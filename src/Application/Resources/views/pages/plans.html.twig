@@ -20,7 +20,7 @@
 
 
 {% block content %}
-	<div class='section header'>
+	<!-- <div class='section header'>
 		<div class='header-background'>
 			<img class='bg' src='{{ asset("/static/images/wallpapers/plans.jpg") }}'>
 		</div>
@@ -36,7 +36,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class='section'>
 		<div class='container'>
 			<h3 class='text-centered'>{{ 'choose_your_wiz' | trans }}</h3>
@@ -75,6 +75,21 @@
 								{{ 'plan_events_seminaries_items' | trans | raw }}
 							</ul>
 							<a href='https://app.wisembly.com/wiz/create?type=event&attendees=5&locale={{ localeapp }}' id='plan-create-event' class='button button-attention'>{{ 'plans_try' | trans }}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class='type-light type-small'>{{ 'plan_demo_version_footnotes' | trans }}</p>
+			<div class='hero mtl phl pvm'>
+				<div class='row'>
+					<div class='column nine'>
+						<div class='column-inner'>
+							<p class='mbn inline'>{{ 'incentive_to_contact_for_pricing' | trans }}</p>
+						</div>
+					</div>
+					<div class='column three'>
+						<div class='column-inner'>
+							<a href='{{ url('contact') }}' class='button button-call'>{{ 'contact_us' | trans }}</a>
 						</div>
 					</div>
 				</div>

@@ -370,6 +370,15 @@ table {
 .force-white {
   background-color: white !important; }
 
+.inline {
+  line-height: 40px !important; }
+
+.type-light {
+  color: #999; }
+
+.type-small {
+  font-size: 13px; }
+
 html {
   color: #444444;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -1181,7 +1190,7 @@ p {
   line-height: 1.5em; }
   .plan h3 {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
     background-color: #fafbfc;
     background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); }
@@ -1213,13 +1222,16 @@ p {
     margin: 20px; }
 
 .plan-meetings-conf-calls h3 {
-  border-color: #66bc58; }
+  border-color: #66bc58;
+  color: #66bc58; }
 
 .plan-teaching-training h3 {
-  border-color: #ff6539; }
+  border-color: #ff6539;
+  color: #ff6539; }
 
 .plan-events-seminaries h3 {
-  border-color: #0786cd; }
+  border-color: #0786cd;
+  color: #0786cd; }
 
 .frame-inner {
   padding: 30px 15px; }
@@ -1495,6 +1507,30 @@ p {
 
 .mvl {
   margin-bottom: 30px; }
+
+.mtm {
+  margin-top: 15px; }
+
+.pal {
+  padding: 30px; }
+
+.pvl {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.pvm {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.phl {
+  padding-right: 30px;
+  padding-left: 30px; }
+
+.mbn {
+  margin-bottom: 0; }
+
+.mtn {
+  margin-top: 0; }
 
 .container {
   width: 1024px;
