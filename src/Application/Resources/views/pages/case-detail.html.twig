@@ -19,8 +19,8 @@
 				<div class='table'>
 					<div class='tr'>
 						<div class='td middle'>
-							<img class='wallpaper' src='{{ asset(case.illustration_image) }}'>
-							<!-- alternate class is logo -->
+							<!-- .wallpaper or .logo -->
+							<img class='{{ case.illustration_type }}' src='{{ asset(case.illustration_image) }}'>
 						</div>
 					</div>
 				</div>
@@ -82,7 +82,7 @@
 				<div class='column eight centered'>
 					<div class='comment-wrapper'>
 						<div class='comment-photo'>
-							<img src='https://pbs.twimg.com/profile_images/1737753564/image.jpg'> 
+							<img src='{{ case.blockquote_logo }}'>
 						</div>
 						<div class='comment'>
 							<blockquote>{{ case.blockquote }}</blockquote>
