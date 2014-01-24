@@ -103,18 +103,6 @@ p {
 	position: relative;
 	overflow: hidden;
 	
-	.header-background {
-		display: block;
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
-		
-		img {
-			margin: -20% auto;
-		}
-	}
 	img,
 	.bd {
 		min-width: 1024px;
@@ -642,6 +630,9 @@ p {
 .la-poste {
 	.header h1 span {
 		border-color: #ffec27;
+	}
+	.header-background .logo {
+		width: 300px;
 	}
 }
 
@@ -1567,9 +1558,22 @@ p {
 		min-width: 0;
 	}
 }
+.header-background {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	
+	img {
+		margin: -20% auto 0;
+	}
+}
 .header-background .wallpaper {
 	margin-top: -20%;
 }
 .header-background .logo {
 	width: 400px;
+	margin-top: 0;
 }

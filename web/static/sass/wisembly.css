@@ -459,15 +459,6 @@ p {
   border-bottom: 0;
   position: relative;
   overflow: hidden; }
-  .header .header-background {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0; }
-    .header .header-background img {
-      margin: -20% auto; }
   .header img,
   .header .bd {
     min-width: 1024px;
@@ -894,6 +885,8 @@ p {
 
 .la-poste .header h1 span {
   border-color: #ffec27; }
+.la-poste .header-background .logo {
+  width: 300px; }
 
 .sncf .header h1 span {
   border-color: #8c0056; }
@@ -1576,11 +1569,22 @@ p {
     min-height: 0;
     min-width: 0; }
 
+.header-background {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; }
+  .header-background img {
+    margin: -20% auto 0; }
+
 .header-background .wallpaper {
   margin-top: -20%; }
 
 .header-background .logo {
-  width: 400px; }
+  width: 400px;
+  margin-top: 0; }
 
 .mtl,
 .mvl {
