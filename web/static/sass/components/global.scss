@@ -738,6 +738,10 @@ p {
 	.img {
 		width: 200px;
 		margin: 0 auto 20px;
+		
+		img {
+			margin: 0 auto;
+		}
 	}
 	a {
 		display: inline-block;
