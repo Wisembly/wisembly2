@@ -407,6 +407,9 @@ p {
 		margin-top: $topbarHeight;
 	}
 }
+.en .headline h1 {
+	font-size: 32px;
+}
 .headline {
 	background-color: $brandBlueExtraLight;
 	background-image: url(/static/images/edito/headline-graph-alt.png);

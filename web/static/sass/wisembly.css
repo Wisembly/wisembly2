@@ -702,6 +702,9 @@ p {
   .headline .row-bump {
     margin-top: 100px; }
 
+.en .headline h1 {
+  font-size: 32px; }
+
 .headline {
   background-color: #7fc4e2;
   background-image: url(/static/images/edito/headline-graph-alt.png);
