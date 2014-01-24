@@ -889,14 +889,17 @@ p {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     padding: 1px; }
 
-.la-poste .header {
-  background-color: #ffec27; }
+.la-poste .header h1 span {
+  border-color: #ffec27; }
 
-.sncf .header {
-  background-color: #8c0056; }
+.sncf .header h1 span {
+  border-color: #8c0056; }
 
-.auchan .header {
-  background-color: #e5001c; }
+.auchan .header h1 span {
+  border-color: #e5001c; }
+
+.hec .header h1 span {
+  border-color: #03447b; }
 
 .case-detail .section li {
   line-height: 1.5em;
@@ -907,7 +910,8 @@ p {
   display: block;
   padding: 30px;
   background-color: #eff8fb;
-  border-left: 2px solid #7fc4e2; }
+  overflow: hidden;
+  border-radius: 5px; }
   .case-detail .comment blockquote {
     padding: 24px 34px;
     margin: 0;
@@ -933,11 +937,20 @@ p {
     position: absolute;
     bottom: 0;
     right: 0; }
-  .case-detail .comment p {
-    margin-left: 34px;
-    margin-bottom: 0;
-    color: #999999;
-    font-size: 14px; }
+.case-detail .comment-photo {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  float: left;
+  margin-right: 40px;
+  border-radius: 5px; }
+  .case-detail .comment-photo img {
+    width: 100%; }
+.case-detail .comment-author-name {
+  margin-left: 140px;
+  margin-bottom: 0;
+  color: #999999;
+  font-size: 14px; }
 
 .case-study-sncf,
 .case-study-hec {
@@ -1513,6 +1526,56 @@ p {
   left: 50%;
   margin-top: -30px;
   margin-left: -28px; }
+
+.kpi-table {
+  table-layout: fixed;
+  width: 100%; }
+  .kpi-table tr {
+    border-bottom: 1px solid #bfe1f0; }
+  .kpi-table tr.last {
+    border-bottom: 0; }
+  .kpi-table td {
+    border-right: 1px solid #bfe1f0;
+    padding: 30px 30px;
+    width: 50%;
+    vertical-align: top;
+    line-height: 1.5em; }
+  .kpi-table td.first {
+    padding-left: 0; }
+  .kpi-table td.last {
+    border-right: 0; }
+  .kpi-table td span {
+    margin: 0 0 5px;
+    display: block;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 26px; }
+
+.table {
+  display: table;
+  height: 100%;
+  width: 100%; }
+
+.tr {
+  display: table-row; }
+
+.td {
+  display: table-cell; }
+
+.middle {
+  vertical-align: middle; }
+  .middle img {
+    position: static;
+    margin: 0 auto;
+    height: auto;
+    min-height: 0;
+    min-width: 0; }
+
+.header-background .bg {
+  margin-top: -20%; }
+
+.header-background .logo {
+  width: 400px; }
 
 .mtl,
 .mvl {

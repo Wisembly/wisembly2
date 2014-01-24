@@ -635,21 +635,31 @@ p {
 }
 
 // case studies
+
 .la-poste {
-	.header {
-		background-color: #ffec27;
+	.header h1 span {
+		border-color: #ffec27;
 	}
 }
+
 .sncf {
-	.header {
-		background-color: #8c0056;
-	}
+	.header h1 span {
+		border-color: #8c0056;
+ 	}
 }
+
 .auchan {
-	.header {
-		background-color: #e5001c;
+	.header h1 span {
+		border-color: #e5001c;
 	}
 }
+
+.hec {
+	.header h1 span {
+		border-color: #03447b;
+	}
+}
+
 .case-detail {
 	.section {
 		li {
@@ -664,7 +674,9 @@ p {
 		display: block;
 		padding: 30px;
 		background-color: $brandBlueExtraExtraExtraLight;
-		border-left: 2px solid $brandBlueExtraLight;
+		//border: 1px solid $brandBlueExtraLight;
+		overflow: hidden;
+		border-radius: 5px;
 
 		blockquote {
 			padding: 24px 34px;
@@ -694,12 +706,23 @@ p {
 			bottom: 0;
 			right: 0;
 		}
-		p {
-			margin-left: 34px;
-			margin-bottom: 0;
-			color: $grey;
-			font-size: 14px;
+	}
+	.comment-photo {
+		width: 100px;
+		height: 100px;
+		overflow: hidden;
+		float: left;
+		margin-right: 40px;
+		border-radius: 5px;
+		img {
+			width: 100%;
 		}
+	}
+	.comment-author-name {
+		margin-left: 140px;
+		margin-bottom: 0;
+		color: $grey;
+		font-size: 14px;
 	}
 }
 .case-study-sncf,
@@ -1476,4 +1499,70 @@ p {
 	left: 50%;
 	margin-top: -30px;
 	margin-left: -28px;
+}
+.kpi-table {
+	table-layout: fixed;
+	width: 100%;
+	
+	tr {
+		border-bottom: 1px solid $brandBlueExtraExtraLight;
+	}
+	// tr.first td {
+	// 	padding-top: 0;
+	// }
+	// tr.last td {
+	// 	padding-bottom: 0;
+	// }
+	tr.last {
+		border-bottom: 0;
+	}
+	td {
+		border-right: 1px solid $brandBlueExtraExtraLight;
+		padding: 30px 30px;
+		width: 50%;
+		vertical-align: top;
+		line-height: 1.5em;
+	}
+	td.first {
+		padding-left: 0;
+	}
+	td.last {
+		border-right: 0;
+	}
+	td span {
+		margin: 0 0 5px;
+		display: block;
+		font-family: $header-font-family;
+		font-weight: bold;
+		font-size: 26px;
+	}
+}
+
+.table {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.tr {
+	display: table-row;
+}
+.td {
+	display: table-cell;
+}
+.middle {
+	vertical-align: middle;
+	
+	img {
+		position: static;
+		margin: 0 auto;
+		height: auto;
+		min-height: 0;
+		min-width: 0;
+	}
+}
+.header-background .wallpaper {
+	margin-top: -20%;
+}
+.header-background .logo {
+	width: 400px;
 }
