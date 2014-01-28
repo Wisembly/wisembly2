@@ -1586,6 +1586,10 @@ p {
   width: 400px;
   margin-top: 0; }
 
+.meetings-confcalls .bg,
+.case-studies .bg {
+  margin-top: -10%; }
+
 .mtl,
 .mvl {
   margin-top: 30px; }
