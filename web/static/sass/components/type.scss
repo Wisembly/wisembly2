@@ -64,3 +64,18 @@ h4 {
 .type-white {
 	color: $white;
 }
+
+// type weights
+
+.type-weight-light {
+	font-weight: 300;
+}
+.type-weight-default {
+	font-weight: 400;
+}
+.type-weight-semibold {
+	font-weight: 600;
+}
+.type-weight-bold {
+	font-weight: 700;
+}

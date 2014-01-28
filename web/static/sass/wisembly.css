@@ -373,7 +373,7 @@ table {
 .inline {
   line-height: 40px !important; }
 
-.type-light, .plan h5 {
+.type-light, .plans .plan h5 {
   color: #999; }
 
 .type-small {
@@ -432,11 +432,8 @@ p {
     padding: 80px 0;
     position: relative; }
   .section h3 {
-    font-weight: 300;
     margin-top: 0;
     color: #326279; }
-  .section .h4 {
-    font-weight: 300; }
   .section p {
     line-height: 2em; }
   .section .illustration {
@@ -453,7 +450,6 @@ p {
 
 .header {
   background-color: #f5f5f5;
-  color: white;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
   padding: 60px 0;
   border-bottom: 0;
@@ -477,8 +473,6 @@ p {
     position: absolute;
     left: 0;
     bottom: 0; }
-  .header h1 {
-    font-weight: 300; }
   .header h1,
   .header h2 {
     margin: 0 0 2px;
@@ -491,10 +485,8 @@ p {
       padding: 2px 10px; }
   .header h1 span {
     border-left: 3px solid #0786cd; }
-  .header h2 {
-    font-weight: 300; }
-    .header h2 span {
-      padding-left: 13px; }
+  .header h2 span {
+    padding-left: 13px; }
 
 .features-list-container {
   height: 150px; }
@@ -519,7 +511,6 @@ p {
     width: 14.28%; }
     .features-list li.active a {
       background-color: #0786cd;
-      color: white;
       -webkit-transition: all 0.1s ease-in-out;
       -moz-transition: all 0.1s ease-in-out;
       -ms-transition: all 0.1s ease-in-out;
@@ -531,7 +522,6 @@ p {
     display: block;
     padding: 20px 20px;
     text-decoration: none;
-    font-weight: 600;
     line-height: 20px;
     color: #999999;
     height: 110px;
@@ -540,15 +530,11 @@ p {
       display: block; }
     .features-list a:hover {
       background-color: #0786cd;
-      color: white;
       -webkit-transition: all 0.1s ease-in-out;
       -moz-transition: all 0.1s ease-in-out;
       -ms-transition: all 0.1s ease-in-out;
       -o-transition: all 0.1s ease-in-out;
       transition: all 0.1s ease-in-out; }
-
-.quiz-title {
-  font-weight: bold; }
 
 .quiz-demo {
   height: 220px;
@@ -570,7 +556,6 @@ p {
     .quiz-demo .choice:after {
       clear: both; }
   .quiz-demo h4 {
-    font-weight: bold;
     margin-top: 0; }
   .quiz-demo input {
     visibility: hidden;
@@ -695,15 +680,12 @@ p {
   background-repeat: no-repeat;
   background-position: right bottom;
   -webkit-animation: mute 10s infinite;
-  color: white;
   text-shadow: 0 1px 2px rgba(7, 134, 205, 0.9);
   overflow: hidden; }
   .headline h1 {
-    font-weight: 400;
     line-height: 150px;
     margin: 0; }
   .headline h2 {
-    font-weight: 300;
     margin-top: 0;
     margin-bottom: 60px; }
   .headline .container-shadow {
@@ -731,17 +713,15 @@ p {
       position: absolute;
       background-image: -webkit-linear-gradient(right, #78bad6, rgba(120, 186, 214, 0)); }
 
-.clients h3 {
+.section.clients h3 {
   text-transform: uppercase;
-  font-weight: 600;
   margin-bottom: 30px; }
-  .clients h3 a,
-  .clients h3 span {
+  .section.clients h3 a,
+  .section.clients h3 span {
     background-color: #7fc4e2;
     text-shadow: 0 1px 2px rgba(7, 134, 205, 0.9);
-    color: white;
     padding: 0 5px; }
-  .clients h3 a {
+  .section.clients h3 a {
     text-decoration: none; }
 
 .jump-after-fold {
@@ -751,7 +731,6 @@ p {
   bottom: 0;
   left: 50%;
   margin-left: -150px;
-  color: white;
   *zoom: 1;
   text-shadow: 0;
   text-decoration: none;
@@ -834,11 +813,9 @@ p {
   .try-me-choices a {
     display: block;
     padding: 10px;
-    color: white;
     text-decoration: none;
     margin: 0 10px;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
-    font-weight: 100;
     border-radius: 1px;
     background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); }
   .try-me-choices .last a {
@@ -983,7 +960,6 @@ p {
 
 .history-item-cover {
   position: relative;
-  color: white;
   border-radius: 2px;
   height: 170px;
   background-color: #f5f5f5; }
@@ -1027,12 +1003,10 @@ p {
 .about-navigation {
   margin-right: 10px;
   border-top: 1px solid #006697;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300; }
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .about-navigation a {
     display: block;
     background-color: #0786cd;
-    color: white;
     text-decoration: none;
     padding: 10px;
     border-top: 1px solid #45a4da;
@@ -1065,7 +1039,6 @@ p {
   .team-list .name {
     margin-bottom: 10px; }
   .team-list .role {
-    font-weight: normal;
     color: #999999; }
 
 .hero {
@@ -1091,13 +1064,11 @@ p {
     display: block;
     color: #999;
     text-transform: uppercase;
-    font-weight: bold;
     margin-bottom: 0; }
   .phone-sheet .phone,
   .phone-sheet .hours {
     line-height: 26px;
-    color: #ff6539;
-    font-weight: bold; }
+    color: #ff6539; }
 
 .press {
   line-height: 60px; }
@@ -1157,36 +1128,31 @@ p {
     margin-bottom: 8px;
     display: block;
     color: #666;
-    text-transform: uppercase;
-    font-weight: bold; }
+    text-transform: uppercase; }
 
 .plans h3 {
   margin-bottom: 0px; }
 .plans h4 {
   margin-top: 10px;
   margin-bottom: 40px; }
-
-.plan {
+.plans .plan {
   border: 1px solid #e0e0e0;
   border-radius: 2px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background-color: white;
   line-height: 1.5em; }
-  .plan h3 {
-    font-weight: 600;
+  .plans .plan h3 {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
     background-color: #fafbfc;
     background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); }
-  .plan h3,
-  .plan h4 {
+  .plans .plan h3,
+  .plans .plan h4 {
     padding: 20px;
     border-bottom: 1px solid #e0e0e0;
     margin: 0; }
-  .plan h4 {
-    font-weight: normal;
+  .plans .plan h4 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-  .plan h5 {
+  .plans .plan h5 {
     padding: 10px 20px;
     margin: 0;
     border-bottom: 1px solid #e0e0e0;
@@ -1194,26 +1160,26 @@ p {
     background-color: #fafbfc;
     background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     text-transform: uppercase; }
-  .plan ul {
+  .plans .plan ul {
     border-bottom: 1px solid #e0e0e0;
     padding: 5px 0; }
-  .plan li {
+  .plans .plan li {
     padding: 10px 20px;
     color: #888; }
-    .plan li:nth-child(even) {
+    .plans .plan li:nth-child(even) {
       background-color: #fefefe;
       border-width: 1px 0;
       border-style: solid;
       border-color: #f1f1f1; }
-  .plan .list {
+  .plans .plan .list {
     height: 180px; }
-  .plan .list-dot {
+  .plans .plan .list-dot {
     display: inline-block;
     background-color: #ff6539;
     width: 10px;
     height: 10px;
     margin-right: 10px; }
-  .plan .plan-footer {
+  .plans .plan .plan-footer {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
     background-color: #fafbfc;
     background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
@@ -1319,7 +1285,6 @@ p {
     text-transform: uppercase; }
   .frame .total-count {
     display: inline-block;
-    font-weight: bold;
     margin-bottom: 3px; }
   .frame .mouse {
     width: 30px;
@@ -1411,16 +1376,13 @@ p {
       margin: 0 15px 0 15px;
       color: #fff;
       width: 196px;
-      line-height: 184px;
-      font-weight: bold; }
+      line-height: 184px; }
     [data-name=home-browsers-loop] .frame-doc ul.slides li.first {
       margin-left: 0; }
   [data-name=home-browsers-loop] .frame-doc .participant-help {
     color: #999999; }
   [data-name=home-browsers-loop] .frame-doc .controls, [data-name=home-browsers-loop] .frame-doc .participant-help {
     margin-top: 162px; }
-    [data-name=home-browsers-loop] .frame-doc .controls .controls-progress-count, [data-name=home-browsers-loop] .frame-doc .participant-help .controls-progress-count {
-      font-weight: bold; }
     [data-name=home-browsers-loop] .frame-doc .controls .progress-bar-container, [data-name=home-browsers-loop] .frame-doc .participant-help .progress-bar-container {
       margin-top: 4px; }
       [data-name=home-browsers-loop] .frame-doc .controls .progress-bar-container .progress-bar, [data-name=home-browsers-loop] .frame-doc .participant-help .progress-bar-container .progress-bar {
@@ -1515,8 +1477,7 @@ p {
   .kpi-table td span {
     margin: 0 0 5px;
     display: block;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold; }
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .table {
   display: table;
@@ -1680,10 +1641,10 @@ h4 {
 .type-14, .jump-after-fold span, .case-detail .comment-author-name, .team-list .role, .frame h5 {
   font-size: 14px; }
 
-.type-16, .team-list .name, .plan h3, .plan h4 {
+.type-16, .team-list .name, .plans .plan h3, .plans .plan h4 {
   font-size: 16px; }
 
-.type-18, .clients h3 {
+.type-18, .section.clients h3 {
   font-size: 18px; }
 
 .type-22, .phone-sheet .phone,
@@ -1717,8 +1678,22 @@ h4 {
 .type-40, .header h1 {
   font-size: 40px; }
 
-.type-white, .case-study-la-poste .button-flat, .case-study-sncf .button-flat, .case-study-auchan .button-flat, .case-study-hec .button-flat {
+.type-white, .header, .features-list li.active a, .features-list a:hover, .headline, .section.clients h3 a,
+.section.clients h3 span, .jump-after-fold, .try-me-choices a, .history-item-cover, .about-navigation a, .case-study-la-poste .button-flat, .case-study-sncf .button-flat, .case-study-auchan .button-flat, .case-study-hec .button-flat {
   color: white; }
+
+.type-weight-light, .section h3, .section .h4, .header h1, .header h2, .headline h2, .try-me-choices a, .about-navigation {
+  font-weight: 300; }
+
+.type-weight-default, .headline h1, .team-list .role, .plans .plan h4 {
+  font-weight: 400; }
+
+.type-weight-semibold, .features-list a, .section.clients h3, .plans .plan h3 {
+  font-weight: 600; }
+
+.type-weight-bold, .quiz-title, .quiz-demo h4, .phone-sheet .label, .phone-sheet .phone,
+.phone-sheet .hours, .contact-form .label, .frame .total-count, [data-name=home-browsers-loop] .frame-doc ul.slides li.slide, [data-name=home-browsers-loop] .frame-doc .controls .controls-progress-count, [data-name=home-browsers-loop] .frame-doc .participant-help .controls-progress-count, .kpi-table td span {
+  font-weight: 700; }
 
 .picto {
   display: block;
