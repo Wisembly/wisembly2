@@ -416,7 +416,6 @@ p {
   text-decoration: none;
   width: 40px;
   height: 40px;
-  text-align: center;
   line-height: 40px; }
 
 .frontpage {
@@ -433,12 +432,10 @@ p {
     padding: 80px 0;
     position: relative; }
   .section h3 {
-    font-size: 36px;
     font-weight: 300;
     margin-top: 0;
     color: #326279; }
   .section .h4 {
-    font-size: 24px;
     font-weight: 300; }
   .section p {
     line-height: 2em; }
@@ -450,6 +447,9 @@ p {
       margin: 0 auto;
       user-select: none;
       pointer-events: none; }
+
+.section-small .container {
+  padding: 60px 0; }
 
 .header {
   background-color: #f5f5f5;
@@ -478,7 +478,6 @@ p {
     left: 0;
     bottom: 0; }
   .header h1 {
-    font-size: 40px;
     font-weight: 300; }
   .header h1,
   .header h2 {
@@ -531,9 +530,7 @@ p {
   .features-list a {
     display: block;
     padding: 20px 20px;
-    text-align: center;
     text-decoration: none;
-    font-size: 12px;
     font-weight: 600;
     line-height: 20px;
     color: #999999;
@@ -640,8 +637,7 @@ p {
   .quotes-stream li .quote-text {
     margin-bottom: 5px; }
   .quotes-stream li .quote-author {
-    color: #999999;
-    font-size: 11px; }
+    color: #999999; }
 
 .media .hd {
   float: left;
@@ -693,9 +689,6 @@ p {
   .headline .row-bump {
     margin-top: 100px; }
 
-.en .headline h1 {
-  font-size: 32px; }
-
 .headline {
   background-color: #7fc4e2;
   background-image: url(/static/images/edito/headline-graph-alt.png);
@@ -707,11 +700,9 @@ p {
   overflow: hidden; }
   .headline h1 {
     font-weight: 400;
-    font-size: 38px;
     line-height: 150px;
     margin: 0; }
   .headline h2 {
-    font-size: 28px;
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 60px; }
@@ -742,7 +733,6 @@ p {
 
 .clients h3 {
   text-transform: uppercase;
-  font-size: 18px;
   font-weight: 600;
   margin-bottom: 30px; }
   .clients h3 a,
@@ -783,10 +773,8 @@ p {
     float: right; }
   .jump-after-fold span {
     display: block;
-    text-align: center;
     overflow: hidden;
-    line-height: 13px;
-    font-size: 14px; }
+    line-height: 13px; }
     .jump-after-fold span strong {
       background-color: #45a4da;
       padding: 5px; }
@@ -796,7 +784,6 @@ p {
 .clients-list .column {
   height: 80px;
   line-height: 80px;
-  text-align: center;
   overflow: hidden;
   margin-bottom: 20px; }
 .clients-list img {
@@ -816,7 +803,6 @@ p {
   .try-now .container {
     padding: 40px 0; }
   .try-now p {
-    font-size: 24px;
     margin: 0;
     color: #666; }
   .try-now .button {
@@ -828,7 +814,6 @@ p {
   border-radius: 5px;
   line-height: 1.5em;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
   margin: 20px -10px; }
 
@@ -913,8 +898,7 @@ p {
     margin: 0;
     line-height: 1.5em;
     position: relative;
-    font-family: Georgia;
-    font-size: 26px; }
+    font-family: Georgia; }
   .case-detail .comment blockquote:before {
     content: '';
     display: block;
@@ -945,29 +929,29 @@ p {
 .case-detail .comment-author-name {
   margin-left: 140px;
   margin-bottom: 0;
-  color: #999999;
-  font-size: 14px; }
+  color: #999999; }
 
 .case-study-sncf,
 .case-study-hec {
   background-color: #efefef; }
 
-.case-study {
-  text-align: center; }
-  .case-study h3 {
-    font-size: 30px; }
-  .case-study .img {
-    width: 200px;
-    margin: 0 auto 20px; }
-    .case-study .img img {
-      margin: 0 auto; }
-  .case-study a {
-    display: inline-block;
-    padding: 10px;
-    text-decoration: none;
-    color: #999;
-    border: 1px solid #e0e0e0;
-    border-radius: 2px; }
+.case-study h3 {
+  margin-bottom: 30px; }
+.case-study .img {
+  display: block;
+  width: 200px;
+  margin: 0 auto 30px;
+  text-decoration: none; }
+  .case-study .img img {
+    margin: 0 auto; }
+
+.button-flat {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color: #999;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px; }
 
 .history-stream {
   position: relative; }
@@ -1018,7 +1002,6 @@ p {
 
 .history-item-date {
   text-transform: uppercase;
-  font-size: 13px;
   margin-bottom: 10px;
   display: block; }
 
@@ -1076,16 +1059,13 @@ p {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
   .team-list .name,
   .team-list .role {
-    text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden; }
   .team-list .name {
-    font-size: 16px;
     margin-bottom: 10px; }
   .team-list .role {
     font-weight: normal;
-    font-size: 14px;
     color: #999999; }
 
 .hero {
@@ -1111,18 +1091,15 @@ p {
     display: block;
     color: #999;
     text-transform: uppercase;
-    font-size: 12px;
     font-weight: bold;
     margin-bottom: 0; }
   .phone-sheet .phone,
   .phone-sheet .hours {
-    font-size: 22px;
     line-height: 26px;
     color: #ff6539;
     font-weight: bold; }
 
 .press {
-  text-align: center;
   line-height: 60px; }
   .press img {
     display: inline;
@@ -1181,7 +1158,6 @@ p {
     display: block;
     color: #666;
     text-transform: uppercase;
-    font-size: 12px;
     font-weight: bold; }
 
 .plans h3 {
@@ -1198,7 +1174,6 @@ p {
   background-color: white;
   line-height: 1.5em; }
   .plan h3 {
-    font-size: 16px;
     font-weight: 600;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
     background-color: #fafbfc;
@@ -1209,7 +1184,6 @@ p {
     border-bottom: 1px solid #e0e0e0;
     margin: 0; }
   .plan h4 {
-    font-size: 16px;
     font-weight: normal;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .plan h5 {
@@ -1268,7 +1242,6 @@ p {
   -webkit-font-smoothing: antialiased;
   color: #666; }
   .frame h5 {
-    font-size: 14px;
     margin: 0;
     color: #999999;
     line-height: 1.5em; }
@@ -1343,8 +1316,7 @@ p {
       background-image: url(/static/images/ok-hover.png); }
   .frame .total-label {
     display: block;
-    text-transform: uppercase;
-    font-size: 11px; }
+    text-transform: uppercase; }
   .frame .total-count {
     display: inline-block;
     font-weight: bold;
@@ -1438,7 +1410,6 @@ p {
       float: left;
       margin: 0 15px 0 15px;
       color: #fff;
-      text-align: center;
       width: 196px;
       line-height: 184px;
       font-weight: bold; }
@@ -1502,8 +1473,7 @@ p {
   margin-top: 10px; }
   .parsley-error-list li {
     list-style-type: none;
-    color: red;
-    font-size: 12px; }
+    color: red; }
 
 .select-container .parsley-error-list {
   margin-top: 5px; }
@@ -1546,8 +1516,7 @@ p {
     margin: 0 0 5px;
     display: block;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 26px; }
+    font-weight: bold; }
 
 .table {
   display: table;
@@ -1589,6 +1558,26 @@ p {
 .meetings-confcalls .bg,
 .case-studies .bg {
   margin-top: -10%; }
+
+.case-study-la-poste .button-flat {
+  background-color: #ffec27;
+  border-color: #ffec27;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+
+.case-study-sncf .button-flat {
+  background-color: #8c0056;
+  border-color: #8c0056;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+
+.case-study-auchan .button-flat {
+  background-color: #e5001c;
+  border-color: #e5001c;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+
+.case-study-hec .button-flat {
+  background-color: #03447b;
+  border-color: #03447b;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
 
 .mtl,
 .mvl {
@@ -1675,8 +1664,61 @@ h3,
 h4 {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-.text-centered {
+.text-centered, #back-to-top, .features-list a, .jump-after-fold span, .clients-list .column, .try-me, .case-study, .team-list .name,
+.team-list .role, .press, [data-name=home-browsers-loop] .frame-doc ul.slides li.slide {
   text-align: center; }
+
+.type-11, .quotes-stream li .quote-author, .frame .total-label {
+  font-size: 11px; }
+
+.type-12, .features-list a, .phone-sheet .label, .contact-form .label, .parsley-error-list li {
+  font-size: 12px; }
+
+.type-13, .history-item-date {
+  font-size: 13px; }
+
+.type-14, .jump-after-fold span, .case-detail .comment-author-name, .team-list .role, .frame h5 {
+  font-size: 14px; }
+
+.type-16, .team-list .name, .plan h3, .plan h4 {
+  font-size: 16px; }
+
+.type-18, .clients h3 {
+  font-size: 18px; }
+
+.type-22, .phone-sheet .phone,
+.phone-sheet .hours {
+  font-size: 22px; }
+
+.type-24, .section .h4, .try-now p {
+  font-size: 24px; }
+
+.type-26, .case-detail .comment blockquote, .kpi-table td span {
+  font-size: 26px; }
+
+.type-28, .headline h2 {
+  font-size: 28px; }
+
+.type-30, .case-study h3 {
+  font-size: 30px; }
+
+.type-32, .en .headline h1 {
+  font-size: 32px; }
+
+.type-34, .case-studies .header h1 {
+  font-size: 34px; }
+
+.type-36, .section h3 {
+  font-size: 36px; }
+
+.type-38, .headline h1 {
+  font-size: 38px; }
+
+.type-40, .header h1 {
+  font-size: 40px; }
+
+.type-white, .case-study-la-poste .button-flat, .case-study-sncf .button-flat, .case-study-auchan .button-flat, .case-study-hec .button-flat {
+  color: white; }
 
 .picto {
   display: block;

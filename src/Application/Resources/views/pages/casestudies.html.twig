@@ -35,16 +35,16 @@
 		</div>
 	</div>
   {% for case in app.cases %}
-    <div class='section case-study case-study-{{ case.slug }}'>
+    <div class='section section-small case-study case-study-{{ case.slug }}'>
 	    	<div class='container'>
 	    		<div class='row'>
-	    			<div class='column six centered'>
+	    			<div class='column seven centered'>
 	    				<div class='column-inner'>
-	    					<div class='img'>
+	    					<a href='{{ url('case-detail', { slug: case.slug }) }}' class='img'>
 	    						<img src='{{ asset(case.client_logo) }}'>
-	    					</div>
+	    					</a>
 	    					<h3>{{ case.title }}</h3>
-	    					<a href='{{ url('case-detail', { slug: case.slug }) }}'>{{ 'read_case_study_link' | trans }}</a>
+	    					<a href='{{ url('case-detail', { slug: case.slug }) }}' class='button-flat'>{{ 'read_case_study_link' | trans }} {{ case.client }}</a>
 	    				</div>
 	    			</div>
 	    		</div>

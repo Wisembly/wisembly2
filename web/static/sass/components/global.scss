@@ -41,7 +41,7 @@ p {
 	text-decoration: none;
 	width: 40px;
 	height: 40px;
-	text-align: center;
+	@extend .text-centered;
 	line-height: 40px;
 }
 
@@ -70,13 +70,13 @@ p {
 		position: relative;
 	}
 	h3 {
-		font-size: 36px;
+		@extend .type-36;
 		font-weight: 300;
 		margin-top: 0;
 		color: $brandGrey;
 	}
 	.h4 {
-		font-size: 24px;
+		@extend .type-24;
 		font-weight: 300;
 	}
 	p {
@@ -92,6 +92,11 @@ p {
 			user-select: none;
 			pointer-events: none;
 		}
+	}
+}
+.section-small {
+	.container {
+		padding: 60px 0;
 	}
 }
 .header {
@@ -126,7 +131,7 @@ p {
 	}
 
 	h1 {
-		font-size: 40px;
+		@extend .type-40;
 		font-weight: 300;
 	}
 	h1,
@@ -193,9 +198,9 @@ p {
 	a {
 		display: block;
 		padding: 20px 20px;
-		text-align: center;
+		@extend .text-centered;
 		text-decoration: none;
-		font-size: 12px;
+		@extend .type-12;
 		font-weight: 600;
 		line-height: 20px;
 		color: $grey;
@@ -323,7 +328,7 @@ p {
 	}
 	.quote-author {
 		color: $grey;
-		font-size: 11px;
+		@extend .type-11;
 	}
 }
 
@@ -396,7 +401,7 @@ p {
 	}
 }
 .en .headline h1 {
-	font-size: 32px;
+	@extend .type-32;
 }
 .headline {
 	background-color: $brandBlueExtraLight;
@@ -410,12 +415,12 @@ p {
 
 	h1 {
 		font-weight: 400;
-		font-size: 38px;
+		@extend .type-38;
 		line-height: 150px;
 		margin: 0;
 	}
 	h2 {
-		font-size: 28px;
+		@extend .type-28;
 		font-weight: 300;
 		margin-top: 0;
 		margin-bottom: 60px;
@@ -452,7 +457,7 @@ p {
 .clients {
 	h3 {
 		text-transform: uppercase;
-		font-size: 18px;
+		@extend .type-18;
 		font-weight: 600;
 		margin-bottom: 30px;
 		
@@ -497,10 +502,10 @@ p {
 	}
 	span {
 		display: block;
-		text-align: center;
+		@extend .text-centered;
 		overflow: hidden;
 		line-height: 13px;
-		font-size: 14px;
+		@extend .type-14;
 
 		strong {
 			background-color: $brandBlueLight;
@@ -517,7 +522,7 @@ p {
 	.column {
 		height: 80px;
 		line-height: 80px;
-		text-align: center;
+		@extend .text-centered;
 		overflow: hidden;
 		margin-bottom: 20px;
 	}
@@ -544,7 +549,7 @@ p {
 	}
 
 	p {
-		font-size: 24px;
+		@extend .type-24;
 		margin: 0;
 		color: #666;
 	}
@@ -558,7 +563,7 @@ p {
 	border-radius: 5px;
 	line-height: 1.5em;
 	font-family: $header-font-family;
-	text-align: center;
+	@extend .text-centered;
 	text-shadow: 0 -1px 1px rgba(0,0,0,.5);
 	margin: 20px -10px;
 }
@@ -678,7 +683,7 @@ p {
 			line-height: 1.5em;
 			position: relative;
 			font-family: Georgia;
-			font-size: 26px;
+			@extend .type-26;
 		}
 		blockquote:before {
 			content: '';
@@ -716,7 +721,7 @@ p {
 		margin-left: 140px;
 		margin-bottom: 0;
 		color: $grey;
-		font-size: 14px;
+		@extend .type-14;
 	}
 }
 .case-study-sncf,
@@ -724,27 +729,30 @@ p {
 	background-color: #efefef;
 }
 .case-study {
-	text-align: center;
+	@extend .text-centered;
 
 	h3 {
-		font-size: 30px;
+		@extend .type-30;
+		margin-bottom: 30px;
 	}
 	.img {
+		display: block;
 		width: 200px;
-		margin: 0 auto 20px;
+		margin: 0 auto 30px;
+		text-decoration: none; // for links
 		
 		img {
 			margin: 0 auto;
 		}
 	}
-	a {
-		display: inline-block;
-		padding: 10px;
-		text-decoration: none;
-		color: #999;
-		border: 1px solid $lightGrey;
-		border-radius: 2px;
-	}
+}
+.button-flat {
+	display: inline-block;
+	padding: 10px;
+	text-decoration: none;
+	color: #999;
+	border: 1px solid $lightGrey;
+	border-radius: 2px;
 }
 
 .history-stream {
@@ -796,7 +804,7 @@ p {
 }
 .history-item-date {
 	text-transform: uppercase;
-	font-size: 13px;
+	@extend .type-13;
 	margin-bottom: 10px;
 	display: block;
 }
@@ -859,18 +867,18 @@ p {
 	}
 	.name,
 	.role {
-		text-align: center;
+		@extend .text-centered;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		overflow: hidden;
 	}
 	.name {
-		font-size: 16px;
+		@extend .type-16;
 		margin-bottom: 10px;
 	}
 	.role {
 		font-weight: normal;
-		font-size: 14px;
+		@extend .type-14;
 		color: $grey;
 	}
 }
@@ -905,13 +913,13 @@ p {
 		display: block;
 		color: #999;
 		text-transform: uppercase;
-		font-size: 12px;
+		@extend .type-12;
 		font-weight: bold;
 		margin-bottom: 0;
 	}
 	.phone,
 	.hours {
-		font-size: 22px;
+		@extend .type-22;
 		line-height: 26px;
 		color: $brandOrange;
 		font-weight: bold;
@@ -919,7 +927,7 @@ p {
 }
 
 .press {
-	text-align: center;
+	@extend .text-centered;
 	line-height: 60px;
 
 	img {
@@ -998,7 +1006,7 @@ p {
 		display: block;
 		color: #666;
 		text-transform: uppercase;
-		font-size: 12px;
+		@extend .type-12;
 		font-weight: bold;
 	}
 }
@@ -1020,7 +1028,7 @@ p {
 	line-height: 1.5em;
 
 	h3 {
-		font-size: 16px;
+		@extend .type-16;
 		font-weight: 600;
 		box-shadow: inset 0 1px 0 rgba(255,255,255, .4);
 		background-color: #fafbfc;
@@ -1033,7 +1041,7 @@ p {
 		margin: 0;
 	}
 	h4 {
-		font-size: 16px;
+		@extend .type-16;
 		font-weight: normal;
 		font-family: $default-font-family;
 	}
@@ -1105,7 +1113,7 @@ p {
 	color: #666;
 
 	h5 {
-		font-size: 14px;
+		@extend .type-14;
 		margin: 0;
 		color: $grey;
 		line-height: 1.5em;
@@ -1202,7 +1210,7 @@ p {
 	.total-label {
 		display: block;
 		text-transform: uppercase;
-		font-size: 11px;
+		@extend .type-11;
 	}
 	.total-count {
 		display: inline-block;
@@ -1376,7 +1384,7 @@ p {
 				float: left;
 				margin: 0 15px 0 15px;
 				color: #fff;
-				text-align: center;
+				@extend .text-centered;
 				width: 196px;
 				line-height: 184px;
 				font-weight: bold;
@@ -1465,8 +1473,7 @@ p {
 	li {
 		list-style-type: none;
 		color: red;
-
-		font-size: 12px;
+		@extend .type-12;
 	}
 }
 
@@ -1532,7 +1539,7 @@ p {
 		display: block;
 		font-family: $header-font-family;
 		font-weight: bold;
-		font-size: 26px;
+		@extend .type-26;
 	}
 }
 
@@ -1580,4 +1587,32 @@ p {
 .meetings-confcalls .bg,
 .case-studies .bg {
 	margin-top: -10%;
+}
+.case-studies .header h1 {
+	@extend .type-34;
+}
+
+.case-study-la-poste .button-flat {
+	background-color: #ffec27;
+	border-color: #ffec27;
+	@extend .type-white;
+	text-shadow: 0 1px 0 rgba(0,0,0,.1);
+}
+.case-study-sncf .button-flat {
+	background-color: #8c0056;
+	border-color: #8c0056;
+	@extend .type-white;
+	text-shadow: 0 1px 0 rgba(0,0,0,.1);
+}
+.case-study-auchan .button-flat {
+	background-color: #e5001c;
+	border-color: #e5001c;
+	@extend .type-white;
+	text-shadow: 0 1px 0 rgba(0,0,0,.1);
+}
+.case-study-hec .button-flat {
+	background-color: #03447b;
+	border-color: #03447b;
+	@extend .type-white;
+	text-shadow: 0 1px 0 rgba(0,0,0,.1);
 }
