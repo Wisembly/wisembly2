@@ -846,7 +846,7 @@ p {
     padding: 1px; }
 
 .la-poste .header h1 span {
-  border-color: #ffec27; }
+  border-color: #ffa231; }
 .la-poste .header-background .logo {
   width: 300px; }
 
@@ -1521,8 +1521,8 @@ p {
   margin-top: -10%; }
 
 .case-study-la-poste .button-flat {
-  background-color: #ffec27;
-  border-color: #ffec27;
+  background-color: #ffa231;
+  border-color: #ffa231;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
 
 .case-study-sncf .button-flat {
