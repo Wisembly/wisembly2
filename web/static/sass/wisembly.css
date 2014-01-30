@@ -2135,7 +2135,7 @@ form[data-status='testing'] .button-processing {
     display: block;
     text-decoration: none;
     font-size: 16px;
-    padding: 0 12px;
+    padding: 0 11px;
     color: #999999;
     line-height: 70px; }
   .navigation a:hover {
@@ -2182,9 +2182,9 @@ form[data-status='testing'] .button-processing {
 .bottom-header .first {
   width: 156px; }
 .bottom-header .second {
-  width: 768px; }
+  width: 748px; }
 .bottom-header .last {
-  width: 140px; }
+  width: 160px; }
 
 .footer {
   padding: 50px;
