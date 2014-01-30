@@ -10,7 +10,7 @@
 
     "require" : {
         "php"                       : ">=5.3.3",
-        "wisembly/silexcms"         : "dev-master",
+        "wisembly/silexcms"         : "0.2.*",
         "symfony/process"           : "2.4.*",
         "swiftmailer/swiftmailer"   : "5.0.*"
     },
