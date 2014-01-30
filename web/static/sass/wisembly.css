@@ -2203,6 +2203,9 @@ form[data-status='testing'] .button-processing {
     text-transform: uppercase;
     color: #999999;
     margin-top: 0; }
+  .footer .button {
+    padding-right: 8px;
+    padding-left: 8px; }
 
 .page-list li {
   line-height: 1.3em;
