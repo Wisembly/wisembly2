@@ -1370,16 +1370,16 @@
         },
         {
             "name": "wisembly/silexcms",
-            "version": "0.2.6",
+            "version": "0.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Wisembly/SilexCMS.git",
-                "reference": "3427fd99748390d48496150572b94e1d05d73f30"
+                "reference": "058a4e76cc70a1d5302b2bd85be1f1c37dc73e29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Wisembly/SilexCMS/zipball/3427fd99748390d48496150572b94e1d05d73f30",
-                "reference": "3427fd99748390d48496150572b94e1d05d73f30",
+                "url": "https://api.github.com/repos/Wisembly/SilexCMS/zipball/058a4e76cc70a1d5302b2bd85be1f1c37dc73e29",
+                "reference": "058a4e76cc70a1d5302b2bd85be1f1c37dc73e29",
                 "shasum": ""
             },
             "require": {
@@ -1419,7 +1419,7 @@
                 "library",
                 "silex"
             ],
-            "time": "2014-01-30 11:49:22"
+            "time": "2014-01-31 08:52:34"
         }
     ],
     "packages-dev": [
