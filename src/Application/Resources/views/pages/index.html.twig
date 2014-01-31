@@ -277,7 +277,7 @@
                             {% for client in app.featured_client %}
                                 <li class='column three'>
                                     <div class='column-inner'>
-                                        <a href='{{ url('clients') }}#{{ client.name|escape('url')|lower }} '>
+                                        <a href='{{ url('clients') }}#{{ client.name|escape('url')|lower }}'>
                                             <img src='{{ client.logo }}' />
                                         </a>
                                     </div>
@@ -295,22 +295,30 @@
                         <div class='row press'>
                             <div class='column three'>
                                 <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/press/challenges.png") }}' />
+                                    <a href='{{ url('about-press') }}'>
+                                        <img src='{{ asset("/static/images/press/challenges.png") }}' />
+                                    </a>
                                 </div>
                             </div>
                             <div class='column three'>
                                 <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/press/management.png") }}' />
+                                    <a href='{{ url('about-press') }}'>
+                                        <img src='{{ asset("/static/images/press/management.png") }}' />
+                                    </a>
                                 </div>
                             </div>
                             <div class='column three'>
                                 <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/press/les-echos.jpg") }}' />
+                                    <a href='{{ url('about-press') }}'>
+                                        <img src='{{ asset("/static/images/press/les-echos.jpg") }}' />
+                                    </a>
                                 </div>
                             </div>
                             <div class='column three'>
                                 <div class='column-inner'>
-                                    <img src='{{ asset("/static/images/press/latribune.jpeg") }}' />
+                                    <a href='{{ url('about-press') }}'>
+                                        <img src='{{ asset("/static/images/press/latribune.jpeg") }}' />
+                                    </a>
                                 </div>
                             </div>
                         </div>
