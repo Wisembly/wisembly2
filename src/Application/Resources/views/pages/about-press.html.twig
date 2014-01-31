@@ -30,13 +30,14 @@
 				<div class='column three'>
 					{% include 'includes/about-navigation.html.twig' %}
 				</div>
-				<div class='column eight last'>
+				<div class='column nine last'>
 					<div class='column-inner'>
 						<table class='press-list'>
 
-                            {% for press in app.press | reverse %}
+            {% for press in app.press | reverse %}
 							<tr>
-								<td class='src'>{{ press.support }}</td>
+								<td class='logo'>{% if press.logo %}<img src="{{ press.logo }}" />{% endif %}</td>
+								<td class='src'><strong>{{ press.support }}</strong></td>
 								<td class='date'>{{ press.date }}</td>
 								<td class='title'>
 								    {% if press.link is not none %}
@@ -46,7 +47,7 @@
 								    {% endif %}
 								</td>
 							</tr>
-                            {% endfor %}
+            {% endfor %}
 
 						</table>
 						<div class='hero hey-press'>
