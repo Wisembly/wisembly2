@@ -1074,7 +1074,7 @@ p {
 		}
 		.list-dot {
 			display: inline-block;
-			background-color: $brandOrange;
+			background-color: $lightGrey;
 			width: 10px;
 			height: 10px;
 			margin-right: 10px;
@@ -1086,18 +1086,33 @@ p {
 			padding: 20px;
 		}
 	}
-}
-.plan-meetings-conf-calls h3 {
-	border-color: $brandGreen;
-	color: $brandGreen;
-}
-.plan-teaching-training h3 {
-	border-color: $brandOrange;
-	color: $brandOrange;
-}
-.plan-events-seminaries h3 {
-	border-color: $brandBlue;
-	color: $brandBlue;
+	.plan-meetings-conf-calls {
+		h3 {
+			border-color: $brandGreen;
+			color: $brandGreen;
+		}
+		.list-dot {
+			background-color: $brandGreen;
+		}
+	}
+	.plan-teaching-training {
+		h3 {
+			border-color: $brandOrange;
+			color: $brandOrange;
+		}
+		.list-dot {
+			background-color: $brandOrange;
+		}
+	}
+	.plan-events-seminaries {
+		h3 {
+			border-color: $brandBlue;
+			color: $brandBlue;
+		}
+		.list-dot {
+			background-color: $brandBlue;
+		}
+	}
 }
 
 // hp browser animations
