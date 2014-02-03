@@ -179,3 +179,16 @@ $topHeaderHeight: 29px;
 		width: 160px;
 	}
 }
+
+//
+
+.header-notification {
+	background-color: $brandYellowExtraExtraLight;
+	border-bottom: 1px solid #fdf0a6;
+	@extend .type-12;
+	line-height: 30px;
+	
+	a {
+		color: $brandOrange;
+	}
+}

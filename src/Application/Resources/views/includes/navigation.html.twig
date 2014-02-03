@@ -1,4 +1,9 @@
 <div class='top-bar'>
+	<div class='header-notification'>
+		<div class='container text-centered'>
+			<a href='{{ url('jobs') }}'>{{ 'we_are_hiring' | trans }}</a>
+		</div>
+	</div>
 	<div class='top-header'>
 		<div class='container'>
 			<div class='row'>
@@ -8,9 +13,6 @@
 							<ul class='list'>
 								<li class='first'>
 									<ul class='list top-header-list contact-nav'>
-										<li class='item'>
-											<span class='item-text'>{{ 'contact_us_number' | trans({ '%number%': app.phone_number }) | raw }}</span>
-										</li>
 										<li class='item'>
 											<div class='dropdown dropdown-borderless dropdown-lang'>
 												<label class='dropdown-toggle' data-toggle='dropdown'>
@@ -41,7 +43,10 @@
 												</ul>
 											</div>
 										</li>
-										<li class='item item-highlighted last'>
+										<li class='item'>
+											<span class='item-text'>{{ 'contact_us_number' | trans({ '%number%': app.phone_number }) | raw }}</span>
+										</li>
+										<li class='item'>
 											<a href='{{ url('contact') }}' class='item-text'>{{ 'write_to_us' | trans }}</a>
 										</li>
 									</ul>

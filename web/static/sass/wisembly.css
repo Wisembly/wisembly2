@@ -1632,7 +1632,7 @@ h4 {
 .type-11, .quotes-stream li .quote-author, .frame .total-label {
   font-size: 11px; }
 
-.type-12, .features-list a, .phone-sheet .label, .contact-form .label, .parsley-error-list li {
+.type-12, .features-list a, .phone-sheet .label, .contact-form .label, .parsley-error-list li, .header-notification {
   font-size: 12px; }
 
 .type-13, .history-item-date {
@@ -2185,6 +2185,13 @@ form[data-status='testing'] .button-processing {
   width: 748px; }
 .bottom-header .last {
   width: 160px; }
+
+.header-notification {
+  background-color: #fef7d1;
+  border-bottom: 1px solid #fdf0a6;
+  line-height: 30px; }
+  .header-notification a {
+    color: #ff6539; }
 
 .footer {
   padding: 50px;
