@@ -1185,17 +1185,14 @@ p {
     background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     padding: 20px; }
 .plans .plan-meetings-conf-calls h3 {
-  border-color: #66bc58;
   color: #66bc58; }
 .plans .plan-meetings-conf-calls .list-dot {
   background-color: #66bc58; }
 .plans .plan-teaching-training h3 {
-  border-color: #ff6539;
   color: #ff6539; }
 .plans .plan-teaching-training .list-dot {
   background-color: #ff6539; }
 .plans .plan-events-seminaries h3 {
-  border-color: #0786cd;
   color: #0786cd; }
 .plans .plan-events-seminaries .list-dot {
   background-color: #0786cd; }
