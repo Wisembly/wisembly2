@@ -1,19 +1,19 @@
 $(document).ready(function () {
 // page plans visit
 if ($('body.plans').length) {
-  mixpanel.track( 'corpo_visit_plans' );
+  mixpanel.track( 'corpo:page', { app: 'corpo', page: 'plans' });
   mixpanel.people.set( persistCampaign );
 }
 
 // clicks on create wiz button
-mixpanel.track_links('#plan-create-meeting', 'corpo_create_wiz_freemium_meeting');
-mixpanel.track_links('#plan-create-training', 'corpo_create_wiz_freemium_training');
-mixpanel.track_links('#plan-create-event', 'corpo_create_wiz_freemium_event');
+mixpanel.track_links('#plan-create-meeting', 'corpo:wiz:create', { app: 'corpo', context: 'freemium', product: 'confcall' });
+mixpanel.track_links('#plan-create-training', 'corpo:wiz:create', { app: 'corpo', context: 'freemium', product: 'training' });
+mixpanel.track_links('#plan-create-event', 'corpo:wiz:create', { app: 'corpo', context: 'freemium', product: 'event' });
 
 // clicks on home page view product features
-mixpanel.track_links('#hp-feature-meeting', 'corpo_homepage_feature_meeting');
-mixpanel.track_links('#hp-feature-training', 'corpo_homepage_feature_training');
-mixpanel.track_links('#hp-feature-event', 'corpo_homepage_feature_event');
+mixpanel.track_links('#hp-feature-meeting', 'corpo:page', { app: 'corpo', page: 'wiz_feature', product: 'confcall' });
+mixpanel.track_links('#hp-feature-training', 'corpo:page', { app: 'corpo', page: 'wiz_feature', product: 'training' });
+mixpanel.track_links('#hp-feature-event', 'corpo:page', { app: 'corpo', page: 'wiz_feature', product: 'event' });
 
 var persistCampaign = {
     adwordsCampaign: getAdwordsCampaign()
@@ -45,7 +45,7 @@ String.prototype.indexOf = function ( str ) {
     }
 
     return -1;
-}
+};
 
 function getAdwordsCampaign() {
   return null !== getCookie( '__utmz' ) && -1 !== getCookie( '__utmz' ).indexOf( 'gclid' );
