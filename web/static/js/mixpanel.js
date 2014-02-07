@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
+mixpanel.people.set( persistCampaign );
 
 if ($(document.body).hasClass('frontpage')) {
   mixpanel.track( 'corpo:page', { app: 'corpo', page: 'home' });
-  mixpanel.people.set( persistCampaign );
 }
 
 if ($(document.body).hasClass('plans')) {
