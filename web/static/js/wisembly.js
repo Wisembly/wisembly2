@@ -1,7 +1,13 @@
 $(document).ready(function () {
+
+	$('.try_freemium_analytics_action').on('click', function () {
+			_gaq.push(['_trackEvent','Call_to_action', 'user_click', 'freemium_created']);
+		});
+
 	window.config = {
 		baseUrl: 'https://app.wisembly.com'
 	};
+
 	tabs.startListening();
 	joinAnEvent.startListening();
 	login.startListening();
