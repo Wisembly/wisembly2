@@ -293,7 +293,7 @@ var joinAnEvent = {
 	getEvent: function (keyword) {
 		if (this.xhr)
 			this.xhr.abort();
-		return this.xhr = $.ajax({ url: config.baseUrl + '/api/3/event/' + keyword || '' });
+		return this.xhr = $.ajax({ url: config.baseUrl + '/api/4/event/' + keyword || '' });
 	},
 
 	goTo: function (e) {
