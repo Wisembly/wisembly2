@@ -5,7 +5,7 @@ $(document).ready(function () {
 		});
 
 	window.config = {
-		baseUrl: 'https://app.wisembly.com'
+		baseUrl: 'http://app.wisembly.dev:8888/app_dev.php'
 	};
 
 	tabs.startListening();
@@ -193,13 +193,40 @@ window.login = {
 
 	checkSubmit: function (e) {
 		if (!this.$el.find('form').parsley('validate'))
-			e.preventDefault();
+			return e.preventDefault();
+
+		// login using the wisembly API, then redirects to user profile
+		e.preventDefault();
+
+		var credentials = {
+			_username : this.$el.find('[name=_username]').val(),
+			_password : this.$el.find('[name=_password]').val(),
+			_remember_me: 'true'
+		};
+
+		this.ajaxLogin(credentials).done(function (data) {
+			Wiz.console.log(this.name, 'Done', data);
+		});
 	},
 
 	updateStatus: function () {
 		if (true === this.$el.find('input.email').parsley('validate') && 4 > this.$el.find('input.password').val().length)
 			return this.$el.find('form').attr('data-status', 'active');
 		this.$el.find('form').attr('data-status', this.isValid ? 'valid' : 'not-valid');
+	},
+
+	ajaxLogin: function (credentials) {
+		return $.ajax({
+			cache: false,
+			headers: {
+				'X-Requested-With': 'XMLHttpRequest'
+			},
+			contentType: 'application/json',
+			dataType: 'json',
+			url: config.baseUrl + '/login_check',
+			type: 'POST',
+			data: JSON.stringify(credentials)
+		});
 	},
 
 	isLogged: function () {
