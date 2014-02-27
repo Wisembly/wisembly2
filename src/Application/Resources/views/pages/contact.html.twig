@@ -56,7 +56,7 @@
 								</div>
 							</div>
 						</div>
-						<form class='contact-form' method="POST" action="{{ url('contact_send_mail') }}" data-status='active' data-validate="parsley" novalidate>
+						<form class='contact-form' method="POST" action="{{ url('contact_send_mail') }}" data-status='active' data-parsley-validate novalidate>
 							<h3>{{ 'write_to_us' | trans }}</h3>
 
                             {% if app['request'].query.has('success') %}
@@ -82,22 +82,22 @@
     									<div class='column-inner'>
     										<label class='label' for='contact_fullname'>{{ 'fullname' | trans }} *</label>
     										<label class='input-container' for='contact_fullname'>
-    											<input type='text' class='input' id='contact_fullname' name="contact_fullname" placeholder='{{ 'fullname' | trans }}' required />
+    											<input type='text' class='input' id='contact_fullname' name="contact_fullname" placeholder='{{ 'fullname' | trans }}' data-parsley-required />
     											<b class='input-background'></b>
     										</label>
     										<label class='label' for='contact_email'>{{ 'email' | trans }} *</label>
     										<label class='input-container' for='contact_email'>
-    											<input type='email' class='input' id='contact_email' name="contact_email" placeholder='{{ 'email' | trans }}' required />
+    											<input type='email' class='input' id='contact_email' name="contact_email" placeholder='{{ 'email' | trans }}' data-parsley-required />
     											<b class='input-background'></b>
     										</label>
     										<label class='label' for='contact_company'>{{ 'company' | trans }} *</label>
     										<label class='input-container' for='contact_company'>
-    											<input type='text' class='input' id='contact_company' name="contact_company" placeholder='{{ 'company' | trans }}' required />
+    											<input type='text' class='input' id='contact_company' name="contact_company" placeholder='{{ 'company' | trans }}' data-parsley-required />
     											<b class='input-background'></b>
     										</label>
     										<label class='label' for='contact_phone'>{{ 'phone_number' | trans }} *</label>
     										<label class='input-container' for='contact_phone'>
-    											<input type='tel' data-type="phone" class='input' name="contact_phone" id='contact_phone' placeholder='{{ 'phone_number' | trans }}' required />
+    											<input type='tel' data-type="phone" class='input' name="contact_phone" id='contact_phone' placeholder='{{ 'phone_number' | trans }}' data-parsley-required />
     											<b class='input-background'></b>
     										</label>
     									</div>
@@ -117,7 +117,7 @@
                                             </label>
     										<label class='label' for='contact_message'>{{ 'your_message' | trans }} *</label>
     										<label class='textarea-container' for='contact_message'>
-    											<textarea name="contact_message" class='textarea' id='contact_message' placeholder='{{ 'your_message' | trans }}' required></textarea>
+    											<textarea name="contact_message" class='textarea' id='contact_message' placeholder='{{ 'your_message' | trans }}' data-parsley-required></textarea>
     											<b class='textarea-background'></b>
     										</label>
     									</div>

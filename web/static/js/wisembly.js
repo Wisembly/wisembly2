@@ -5,9 +5,7 @@ $(document).ready(function () {
 		});
 
 	window.config = {
-		baseUrl: 'https://app.wisembly.com',
-		app_id: 'wisembly_corpo',
-		app_secret: 'RQ^zyPRdAJFakY2'
+		baseUrl: 'https://app.wisembly.com'
 	};
 
 	tabs.startListening();
@@ -189,19 +187,18 @@ window.login = {
 	},
 
 	checkInput: function (e) {
-		this.isValid = this.$el.find('form').parsley('validate');
+		this.isValid = this.$el.find('form').parsley().validate();
 		this.updateStatus();
 	},
 
 	checkSubmit: function (e) {
-
 		var $form = this.$el.find('form'),
 			email = this.$el.find('[name=_username]').val(),
 			password = this.$el.find('[name=_password]').val(),
-			hash = CryptoJS.SHA1(email + config.app_id + config.app_secret).toString(),
+			hash = CryptoJS.SHA1(email + window.app_id + window.app_secret).toString(),
 			credentials =  {
 				hash: hash,
-				app_id: config.app_id,
+				app_id: window.app_id,
 				email : email,
 				secret : password
 			};
@@ -210,7 +207,7 @@ window.login = {
 			this.xhr.abort();
 		}
 
-		if (!$form.data('registered-user') && $form.parsley('validate')) {
+		if (!$form.data('registered-user') && $form.parsley().validate()) {
 			e.preventDefault();
 
 			// Updates submit button state
@@ -238,7 +235,7 @@ window.login = {
 	},
 
 	updateStatus: function () {
-		if (true === this.$el.find('input.email').parsley('validate') && 4 > this.$el.find('input.password').val().length)
+		if (true === this.$el.find('input.email').parsley().validate() && 4 > this.$el.find('input.password').val().length)
 			return this.$el.find('form').attr('data-status', 'active');
 		this.$el.find('form').attr('data-status', this.isValid ? 'valid' : 'not-valid');
 	},
@@ -276,12 +273,12 @@ window.subscribe = {
 	},
 
 	checkInput: function (e) {
-		this.isValid = this.$el.find('form').parsley('validate');
+		this.isValid = this.$el.find('form').parsley().validate();
 		this.updateStatus();
 	},
 
 	checkSubmit: function (e) {
-		if (!this.$el.find('form').parsley('validate'))
+		if (!this.$el.find('form').parsley().validate())
 			e.preventDefault();
 	},
 
@@ -300,7 +297,7 @@ var joinAnEvent = {
 	},
 
 	checkKeyword: function (e) {
-		if (!this.$el.find('form').parsley('validate')) {
+		if (!this.$el.find('form').parsley().validate()) {
 			if (3 > this.$el.find('input').val().length)
 				return this.$el.find('form').attr('data-status', 'active');
 			this.keywordExists = false;
