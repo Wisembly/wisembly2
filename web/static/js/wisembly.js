@@ -187,19 +187,75 @@ window.login = {
 	},
 
 	checkInput: function (e) {
-		this.isValid = this.$el.find('form').parsley('validate');
+		this.isValid = this.$el.find('form').parsley().validate();
 		this.updateStatus();
 	},
 
 	checkSubmit: function (e) {
-		if (!this.$el.find('form').parsley('validate'))
+		var $form = this.$el.find('form'),
+			email = this.$el.find('[name=_username]').val(),
+			password = this.$el.find('[name=_password]').val(),
+			hash = CryptoJS.SHA1(email + window.app_id + window.app_secret).toString(),
+			credentials =  {
+				hash: hash,
+				app_id: window.app_id,
+				email : email,
+				secret : password
+			};
+
+		if (this.xhr && this.credentialsHasChanged(credentials)) {
+			this.xhr.abort();
+		}
+
+		if (!$form.data('registered-user') && $form.parsley().validate()) {
 			e.preventDefault();
+
+			// Updates submit button state
+			this.$el.find('.button-text, .button-processing').toggle();
+
+			// Stores submitted credentials for comparison
+			this.credentials = credentials;
+
+			// Checks that credentials match an existing user
+			this.xhr = this.checkUser(credentials)
+				.always($.proxy(function () {
+					// Switch back submit button status
+					this.$el.find('.button-text, .button-processing').toggle();
+				}, this))
+				.done($.proxy(function (data) {
+					// Let the submit process continue
+					$form.data('registered-user', true).submit();
+				}, this));
+			}
+
+	},
+
+	credentialsHasChanged: function (credentials) {
+		return JSON.stringify(this.credentials) !== JSON.stringify(credentials);
 	},
 
 	updateStatus: function () {
-		if (true === this.$el.find('input.email').parsley('validate') && 4 > this.$el.find('input.password').val().length)
+		if (true === this.$el.find('input.email').parsley().validate() && 4 > this.$el.find('input.password').val().length)
 			return this.$el.find('form').attr('data-status', 'active');
 		this.$el.find('form').attr('data-status', this.isValid ? 'valid' : 'not-valid');
+	},
+
+	checkUser: function (credentials) {
+		if (this.xhr) {
+			this.xhr.abort();
+		}
+		this.xhr = $.ajax({
+			cache: false,
+			headers: {
+				'X-Requested-With': 'XMLHttpRequest'
+			},
+			contentType: 'application/json',
+			dataType: 'json',
+			url: config.baseUrl + '/api/4/authentication',
+			type: 'POST',
+			data: JSON.stringify(credentials)
+		});
+		return this.xhr;
 	},
 
 	isLogged: function () {
@@ -217,12 +273,12 @@ window.subscribe = {
 	},
 
 	checkInput: function (e) {
-		this.isValid = this.$el.find('form').parsley('validate');
+		this.isValid = this.$el.find('form').parsley().validate();
 		this.updateStatus();
 	},
 
 	checkSubmit: function (e) {
-		if (!this.$el.find('form').parsley('validate'))
+		if (!this.$el.find('form').parsley().validate())
 			e.preventDefault();
 	},
 
@@ -241,7 +297,7 @@ var joinAnEvent = {
 	},
 
 	checkKeyword: function (e) {
-		if (!this.$el.find('form').parsley('validate')) {
+		if (!this.$el.find('form').parsley().validate()) {
 			if (3 > this.$el.find('input').val().length)
 				return this.$el.find('form').attr('data-status', 'active');
 			this.keywordExists = false;
@@ -266,7 +322,7 @@ var joinAnEvent = {
 	getEvent: function (keyword) {
 		if (this.xhr)
 			this.xhr.abort();
-		return this.xhr = $.ajax({ url: config.baseUrl + '/api/3/event/' + keyword || '' });
+		return this.xhr = $.ajax({ url: config.baseUrl + '/api/4/event/' + keyword || '' });
 	},
 
 	goTo: function (e) {

@@ -5,6 +5,7 @@
     "jquery": "~1.10.0",
     "bootstrap": "~2.3.2",
     "parsleyjs": "*",
-    "jquery-easing": "*"
+    "jquery-easing": "*",
+    "crypto-js": "http://crypto-js.googlecode.com/files/CryptoJS%20v3.1.2.zip"
   }
 }

@@ -1428,16 +1428,16 @@ p {
   .quiz-demo .frame .total-count, .quiz-demo .frame .total-label {
     padding: 0; }
 
-.parsley-error-list {
+.parsley-errors-list {
   position: absolute;
   left: 0;
   padding: 0;
   margin-top: 10px; }
-  .parsley-error-list li {
+  .parsley-errors-list li {
     list-style-type: none;
     color: red; }
 
-.select-container .parsley-error-list {
+.select-container .parsley-errors-list {
   margin-top: 5px; }
 
 .contact-form .label {
@@ -1632,7 +1632,7 @@ h4 {
 .type-11, .quotes-stream li .quote-author, .frame .total-label {
   font-size: 11px; }
 
-.type-12, .features-list a, .phone-sheet .label, .contact-form .label, .parsley-error-list li, .header-notification {
+.type-12, .features-list a, .phone-sheet .label, .contact-form .label, .parsley-errors-list li, .header-notification {
   font-size: 12px; }
 
 .type-13, .history-item-date {
