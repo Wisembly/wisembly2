@@ -221,6 +221,7 @@ window.login = {
 				.always($.proxy(function () {
 					// Switch back submit button status
 					this.$el.find('.button-text, .button-processing').toggle();
+					this.$el.find('.wrong_credentials').html('Wrong credentials.');
 				}, this))
 				.done($.proxy(function (data) {
 					// Let the submit process continue
