@@ -203,9 +203,7 @@ window.login = {
 				secret : password
 			};
 
-		if (this.xhr && this.credentialsHasChanged(credentials)) {
-			this.xhr.abort();
-		}
+		this.$el.find('.credentials_info').html('');
 
 		if (!$form.data('registered-user') && $form.parsley().validate()) {
 			e.preventDefault();
@@ -221,18 +219,18 @@ window.login = {
 				.always($.proxy(function () {
 					// Switch back submit button status
 					this.$el.find('.button-text, .button-processing').toggle();
-					this.$el.find('.wrong_credentials').html('Wrong credentials.');
+				}, this))
+				.fail($.proxy(function (data) {
+					$form.removeData('registered-user');
+					this.$el.find('.credentials_info').html('Wrong credentials.');
 				}, this))
 				.done($.proxy(function (data) {
 					// Let the submit process continue
 					$form.data('registered-user', true).submit();
+					this.$el.find('.credentials_info').html('Redirecting...');
 				}, this));
 			}
 
-	},
-
-	credentialsHasChanged: function (credentials) {
-		return JSON.stringify(this.credentials) !== JSON.stringify(credentials);
 	},
 
 	updateStatus: function () {
@@ -242,10 +240,7 @@ window.login = {
 	},
 
 	checkUser: function (credentials) {
-		if (this.xhr) {
-			this.xhr.abort();
-		}
-		this.xhr = $.ajax({
+		this.xhrUser = $.ajax({
 			cache: false,
 			headers: {
 				'X-Requested-With': 'XMLHttpRequest'
@@ -256,7 +251,7 @@ window.login = {
 			type: 'POST',
 			data: JSON.stringify(credentials)
 		});
-		return this.xhr;
+		return this.xhrUser;
 	},
 
 	isLogged: function () {
