@@ -1,0 +1,73 @@
+.picto {
+	display: block;
+	height: 53px;
+	width: 80px;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+}
+
+// features
+.picto-documents-management {
+	background-image: url(/static/images/pictos/documents-management.png);
+}
+.picto-multi-devices {
+	background-image: url(/static/images/pictos/multi-device.png);
+}
+.picto-students-evaluation {
+	background-image: url(/static/images/pictos/students-evaluation.png);
+}
+.picto-trainings-evaluation {
+	background-image: url(/static/images/pictos/training-evaluation.png);
+}
+.picto-stats-reporting {
+	background-image: url(/static/images/pictos/stats-reporting.png);
+}
+.picto-qa {
+	background-image: url(/static/images/pictos/qa.png);
+}
+.picto-quiz {
+	background-image: url(/static/images/pictos/quiz.png);
+}
+.picto-moderation {
+	background-image: url(/static/images/pictos/moderation.png);
+}
+.picto-fullscreen {
+	background-image: url(/static/images/pictos/fullscreen.png);
+}
+.picto-participation {
+	background-image: url(/static/images/pictos/questions-ideas.png);
+}
+.picto-agenda {
+	background-image: url(/static/images/pictos/agenda.png);
+}
+.picto-votes {
+	background-image: url(/static/images/pictos/votes.png);
+}
+.picto-fullscreen {
+	background-image: url(/static/images/pictos/fullscreen.png);
+}
+.picto-satisfaction-study {
+	background-image: url(/static/images/pictos/satisfaction-study.png);
+}
+.picto-document-sharing {
+	background-image: url(/static/images/pictos/document-sharing.png);
+}
+
+// others
+.picto.down-chevron {
+	display: inline-block;
+	width: 21px;
+	height: 13px;
+	background-image: url(/static/images/down-chevron.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.icon {
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+.icon-person {
+	background-image: url(/static/images/person.png);
+}

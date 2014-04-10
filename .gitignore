@@ -8,3 +8,5 @@ web/vendor
 .DS_Store
 web/static/sass/.sass-cache/*
 .sass-cache/*
+node_modules/
+web/src/scss/unprefixed

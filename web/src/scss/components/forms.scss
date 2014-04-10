@@ -1,0 +1,129 @@
+.label {
+	&.inline {
+		line-height: $form-label-line-height;
+	}
+}
+.textarea-container,
+.input-container {
+	display: block;
+	position: relative;
+	padding: 6px 10px;
+	background-color: $white;
+	cursor	: text;
+}
+.textarea-container .textarea,
+.input-container .input {
+	position: relative;
+	background-color: transparent;
+	display: block;
+	width: 100%;
+	appearance: none;
+	border: 0;
+	line-height: 1.3em;
+	outline: none;
+	z-index: 6;
+	
+	&::-webkit-input-placeholder {
+		 line-height: 1.4em;
+		 transition: color .2s ease-in;
+	}
+	&:-moz-placeholder {
+		 line-height: 1.4em;
+	}
+	&::-moz-placeholder {
+		 line-height: 1.4em;
+	}
+	&:-ms-input-placeholder {  
+		 line-height: 1.4em;
+	}
+	&:focus {
+		&::-webkit-input-placeholder {
+			 line-height: 1.4em;
+			 color: #ccc;
+		}
+		&:-moz-placeholder {
+			 line-height: 1.4em;
+			 color: #ccc;
+		}
+		&::-moz-placeholder {
+			 line-height: 1.4em;
+			 color: #ccc;
+		}
+		&:-ms-input-placeholder {  
+			 line-height: 1.4em;
+			 color: #ccc;
+		}
+	}
+}
+.textarea-container .textarea {
+	resize: none;
+}
+.textarea-container .textarea:focus + .textarea-background,
+.input-container .input:focus + .input-background {
+	background-color: $brandYellowExtraExtraExtraLight;
+	border: 1px solid #c0c0c0;
+}
+.textarea-container .textarea-background,
+.input-container .input-background {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 5;
+	box-shadow: inset 0 0 5px rgba(0,0,0, .1);
+	border: 1px solid $lightGrey;
+}
+select {
+	width: 100%;
+	padding: 6px 10px;
+	background-color: $form-element-background-color;
+	background-image: $form-element-background;
+	box-shadow: $form-element-shadow;
+	border-radius: $form-element-radius;
+	border: 1px solid $lightGrey;
+	outline: none;
+	-webkit-appearance: none;
+	color: $form-element-color;
+}
+// form status
+form {
+	&[data-status='none'],
+	&[data-status='testing'] {
+		.button {
+			box-shadow: none;
+			pointer-events: none;
+			cursor: not-allowed;
+			color: #999;
+			text-shadow: 0 -1px 0 rgba(255,255,255,.5);
+			outline: none;	
+		}
+	}
+	&[data-status='valid'] {
+		.button {
+			background-color: $brandGreen;
+			color: $white;
+		}
+	}
+	&[data-status='not-valid'] {
+		.button {
+			background-color: $brandRed;
+			color: $white;
+			pointer-events: none;
+			cursor: not-allowed;
+		}
+		.input-background,
+		.input:focus + .input-background {
+			background-color: $brandRedExtraExtraExtraLight;
+		}
+	}
+	&[data-status='testing'] {
+		.button-text {
+			display: none;
+		}
+		.button-processing {
+			display: block;
+		}
+	}
+}

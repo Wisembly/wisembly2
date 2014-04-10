@@ -1,0 +1,194 @@
+$topHeaderHeight: 29px;
+
+.top-bar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: $white;
+	@include clearfix;
+	box-shadow: 0 0 2px 0 rgba(0,0,0, .5);
+	font-family: $header-font-family;
+	z-index: 10;
+}
+
+.top-bar .container {
+	position: relative;		
+}
+
+.brand {
+	display: block;
+	float: left;
+	width: 120px;
+	height: 28px;
+	background-image: url(../images/logos/logo.png);
+	@include image-replacement;
+	margin-top: 21px;
+}
+
+.top-header-list {
+	border-left: 1px solid #f1f1f1;
+}
+.top-header-list > .item {
+	float: left;
+	border-right: 1px solid #f1f1f1;
+}
+.top-header-list > .item.last {
+	border-right: 0;
+}
+.top-header {
+	background-color: #fafafa;
+	border-bottom: 1px solid #f1f1f1;
+	font-size: 14px;
+	
+	.list {
+		@include clearfix;
+		
+		a {
+			text-decoration: none;
+			color: $grey;
+			box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+			
+			&:hover {
+				background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0), rgba(0,0,0,0.05));
+				color: $darkGrey;
+			}
+			&:active {
+				padding-top: 6px;
+				padding-bottom: 4px;
+			}
+		}
+		a,
+		.item-text {
+			display: block;
+			padding: 5px 10px;
+		}
+		.item-text {
+			color: #666;
+		}
+		.item-highlighted {
+			a {
+				background-color: $brandGreenLight;
+				color: $white;
+			}
+		}
+	}
+}
+.app-nav {
+	float: right;
+	.list {
+		height: $topHeaderHeight;
+	}
+}
+.bottom-header {
+	padding: 0;
+	
+	.button {
+		margin-top: 19px;
+	}
+}
+
+.navigation {
+	@include clearfix;
+	
+	ul {
+		float: right;
+		height: 70px;
+	}
+	ul li {
+		float: left;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		font-size: 16px;
+		padding: 0 11px;
+		color: $grey;
+		line-height: 70px;
+	}
+	a:hover {
+		background-color: $brandBlue;
+		color: $white;
+	}
+	// colors
+	/* .nav-classes-trainings a:hover {
+		background-color: $brandRed;
+	}
+	.nav-meetings-confcalls a:hover {
+		background-color: $brandGreen;
+	}
+	.nav-events-seminaries a:hover {
+		background-color: $brandBlue;
+	}
+	.nav-case-studies a:hover {
+		background-color: $brandOrange;
+	} */
+	li.last {
+		margin: 19px 0 19px 20px;
+		a {
+			background-color: $brandBlue;
+			display: block;
+			padding: 7px 10px;
+			border: 1px solid rgba(0,0,0,.05);
+			border-radius: 1px;
+			box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+			background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.1), rgba(255,255,255,0));
+			text-shadow: 0 1px 0 rgba(0,0,0,.2);
+			color: $white;
+			text-transform: lowercase;
+			line-height: 1;
+			font-weight: 100;
+			font-size: 16px;
+			
+			&:first-letter {
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+.classes-trainings .nav-classes-trainings a {
+	background-color: $brandRed;
+}
+.meetings-confcalls .nav-meetings-confcalls a {
+	background-color: $brandGreen;
+}
+.events-seminaries .nav-events-seminaries a {
+	background-color: $brandBlue;
+}
+.case-studies .nav-case-studies a {
+	background-color: $brandOrange;
+}
+.classes-trainings .nav-classes-trainings a,
+.meetings-confcalls .nav-meetings-confcalls a,
+.events-seminaries .nav-events-seminaries a,
+.case-studies .nav-case-studies a {
+	background-color: $brandBlue;
+	color: $white;
+}
+
+// columns 
+
+.bottom-header {
+	.first {
+		width: 156px;
+	}
+	.second {
+		width: 748px;
+	}
+	.last {
+		width: 160px;
+	}
+}
+
+//
+
+.header-notification {
+	background-color: $brandYellowExtraExtraLight;
+	border-bottom: 1px solid #fdf0a6;
+	@extend .type-12;
+	line-height: 30px;
+	
+	a {
+		color: $brandOrange;
+	}
+}

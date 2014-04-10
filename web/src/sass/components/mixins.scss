@@ -1,0 +1,45 @@
+/*
+ * Mixins
+ */
+
+// CSS3 transitions
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+// Transparent background
+@mixin transparent($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: transparent;
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+  zoom: 1;
+}
+
+// clear floats with clearfix
+@mixin clearfix() {
+	*zoom:1;
+
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+.clearfix {
+	@include clearfix;
+}
+
+@mixin image-replacement() {
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	text-indent: -1000%;
+}

@@ -1,0 +1,81 @@
+h1,
+h2,
+h3,
+h4 {
+	font-family: $header-font-family;
+}
+.text-centered {
+	text-align: center;
+}
+
+// type sizes helpers
+
+.type-11 {
+	font-size: 11px;
+}
+.type-12 {
+	font-size: 12px;
+}
+.type-13 {
+	font-size: 13px;
+}
+.type-14 {
+	font-size: 14px;
+}
+.type-16 {
+	font-size: 16px;
+}
+.type-18 {
+	font-size: 18px;
+}
+.type-22 {
+	font-size: 22px;
+}
+.type-24 {
+	font-size: 24px;
+}
+.type-26 {
+	font-size: 26px;
+}
+.type-28 {
+	font-size: 28px;
+}
+.type-30 {
+	font-size: 30px;
+}
+.type-32 {
+	font-size: 32px;
+}
+.type-34 {
+	font-size: 34px;
+}
+.type-36 {
+	font-size: 36px;
+}
+.type-38 {
+	font-size: 38px;
+}
+.type-40 {
+	font-size: 40px;
+}
+
+// type colors
+
+.type-white {
+	color: $white;
+}
+
+// type weights
+
+.type-weight-light {
+	font-weight: 300;
+}
+.type-weight-default {
+	font-weight: 400;
+}
+.type-weight-semibold {
+	font-weight: 600;
+}
+.type-weight-bold {
+	font-weight: 700;
+}
