@@ -13,42 +13,170 @@
 {% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
 
 {% block content %}
-	<div class='section header'>
-		<div class='header-background'>
-			<img class='bg' src='{{ asset("/static/images/wallpapers/case-studies.jpg") }}'>
+	<div class='section page-headline'>
+		<div class='container'>
+			<h1>{{ 'case_studies_global_page_title' | trans }}</h1>
+			<h2>{{ 'case_studies_global_page_desc' | trans }}</h2>
 		</div>
+	</div>
+	<div class='section'>
 		<div class='container'>
 			<div class='row'>
-				<div class='column twelve'>
-					<div class='column-inner'>
-						<div class='id'>
-							<h1>
-								<span>{{ 'case_studies_global_page_title' | trans }}</span>
-							</h1>
-							<h2>
-								<span>{{ 'case_studies_global_page_desc' | trans }}</span>
-							</h2>
+				{% for case in app.cases %}
+					<div class='column six'>
+						<div class='column-inner'>
+							<div class='box case case-{{ case.slug }}'>
+								<div class='box-head'>
+									<div class='case-logo'>
+										<img class='case-logo-img' src='{{ asset(case.client_logo) }}'>
+									</div>
+								</div>
+								<div class='box-body'>
+									<h3 class='case-title'>{{ case.title }}</h3>
+									<p class='case-comment-quote'>“{{ case.blockquote }}”</p>
+									<div class='case-comment-author'>
+										<img class='case-comment-author-photo' src='{{ case.blockquote_logo }}'>
+										<div class='case-comment-author-name'>{{ case.interviewed }}</div>
+									</div>
+								</div>
+								<div class='box-foot'>
+									<a href='{{ url('case-detail', { slug: case.slug }) }}' class='button button-attention button-light'>{{ 'read_case_study_link' | trans }} {{ case.client }}</a>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
+				{% endfor %}
+			</div>
+			<h3><h2>{{ 'testimonials_clients' | trans }}</h2></h3>
+			<ul class='row list clients-grid'>
+				{% for case in app.cases %}
+					<li class='column three'>
+						<div class='column-inner'>
+							<div class='box'>
+								<div class='box-body'>
+									<div class='client-logo'>
+										<img class='client-logo-image' src='{{ asset(case.client_logo) }}'>
+									</div>
+									<div class='testimonial'>
+										<blockquote class='testimonial-quote'>{{ case.blockquote }}</blockquote>
+										<div class='testimonial-details media'>
+											<div class='media'>
+												<div class='hd'>
+													<img class='testimonial-author-photo' src='{{ case.blockquote_logo }}'>
+												</div>
+												<div class='bd testimonial-author'>
+													<div class='testimonial-author-name'>Jean-Jacques Rousseau</div>
+													<div class='testimonial-author-position'>Consultant, Deloitte</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				{% endfor %}
+				{% for case in app.cases %}
+					<li class='column three'>
+						<div class='column-inner'>
+							<div class='box'>
+								<div class='box-body'>
+									<div class='client-logo'>
+										<img class='client-logo-image' src='{{ asset(case.client_logo) }}'>
+									</div>
+									<div class='testimonial'>
+										<blockquote class='testimonial-quote'>{{ case.blockquote }}</blockquote>
+										<div class='testimonial-details media'>
+											<div class='hd'>
+												<img class='testimonial-author-photo' src='{{ case.blockquote_logo }}'>
+											</div>
+											<div class='bd testimonial-author'>
+												<div class='testimonial-author-name'>Jean-Jacques Rousseau</div>
+												<div class='testimonial-author-position'>Consultant, Deloitte</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				{% endfor %}
+				{% for case in app.cases %}
+					<li class='column three'>
+						<div class='column-inner'>
+							<div class='box'>
+								<div class='box-body'>
+									<div class='client-logo'>
+										<img class='client-logo-image' src='{{ asset(case.client_logo) }}'>
+									</div>
+									<div class='testimonial'>
+										<blockquote class='testimonial-quote'>{{ case.blockquote }}</blockquote>
+										<div class='testimonial-details media'>
+											<div class='hd'>
+												<img class='testimonial-author-photo' src='{{ case.blockquote_logo }}'>
+											</div>
+											<div class='bd testimonial-author'>
+												<div class='testimonial-author-name'>Jean-Jacques Rousseau</div>
+												<div class='testimonial-author-position'>Consultant, Deloitte</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				{% endfor %}
+				{% for case in app.cases %}
+					<li class='column three'>
+						<div class='column-inner'>
+							<div class='box'>
+								<div class='box-body'>
+									<div class='client-logo'>
+										<img class='client-logo-image' src='{{ asset(case.client_logo) }}'>
+									</div>
+									<div class='testimonial'>
+										<blockquote class='testimonial-quote'>{{ case.blockquote }}</blockquote>
+										<div class='testimonial-details media'>
+											<div class='hd'>
+												<img class='testimonial-author-photo' src='{{ case.blockquote_logo }}'>
+											</div>
+											<div class='bd testimonial-author'>
+												<div class='testimonial-author-name'>Jean-Jacques Rousseau</div>
+												<div class='testimonial-author-position'>Consultant, Deloitte</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				{% endfor %}
+				{% for case in app.cases %}
+					<li class='column three'>
+						<div class='column-inner'>
+							<div class='box'>
+								<div class='box-body'>
+									<div class='client-logo'>
+										<img class='client-logo-image' src='{{ asset(case.client_logo) }}'>
+									</div>
+									<div class='testimonial'>
+										<blockquote class='testimonial-quote'>{{ case.blockquote }}</blockquote>
+										<div class='testimonial-details media'>
+											<div class='hd'>
+												<img class='testimonial-author-photo' src='{{ case.blockquote_logo }}'>
+											</div>
+											<div class='bd testimonial-author'>
+												<div class='testimonial-author-name'>Jean-Jacques Rousseau</div>
+												<div class='testimonial-author-position'>Consultant, Deloitte</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
-  {% for case in app.cases %}
-    <div class='section section-small case-study case-study-{{ case.slug }}'>
-	    	<div class='container'>
-	    		<div class='row'>
-	    			<div class='column seven centered'>
-	    				<div class='column-inner'>
-	    					<a href='{{ url('case-detail', { slug: case.slug }) }}' class='img'>
-	    						<img src='{{ asset(case.client_logo) }}'>
-	    					</a>
-	    					<h3>{{ case.title }}</h3>
-	    					<a href='{{ url('case-detail', { slug: case.slug }) }}' class='button-flat'>{{ 'read_case_study_link' | trans }} {{ case.client }}</a>
-	    				</div>
-	    			</div>
-	    		</div>
-	    	</div>
-    	</div>
-  {% endfor %}
 {% endblock %}

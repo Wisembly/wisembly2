@@ -7,6 +7,7 @@
 html {
 	color: $black;
 	font-family: $default-font-family;
+	//line-height: 1.5em;
 }
 html,
 body {
@@ -332,55 +333,6 @@ p {
 	}
 }
 
-.media {
-	.hd {
-		float: left;
-		width: 90px;
-		height: 90px;
-		margin-right: 30px;
-		overflow: hidden;
-	}
-	.bd {
-		overflow: hidden;
-	}
-}
-
-.testimonials {
-	li {
-		margin: 20px 0;
-	}
-	p {
-		margin-top: 0;
-		line-height: 1.5;
-	}
-	.hd {
-		border: 1px solid $lightGrey;
-		padding: 1px;
-	}
-	.quote {
-		margin-bottom: 10px;
-		font-family: Georgia, serif;
-		position: relative;
-		text-indent: 23px;
-
-		&:before {
-			content: '';
-			position: absolute;
-			width: 13px;
-			height: 10px;
-			background-repeat: no-repeat;
-		}
-		&:before {
-			background-image: url(/static/images/quote-left.png);
-			top: 0;
-			left: 0;
-		}
-	}
-	.author {
-		color: $grey;
-	}
-}
-
 .headline {
 	height: 100%;
 	padding: 0;
@@ -405,7 +357,7 @@ p {
 }
 .headline {
 	background-color: $brandBlueExtraLight;
-	background-image: url(/static/images/edito/headline-graph-alt.png);
+	background-image: url(/static/images/headline-graph-alt.png);
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	-webkit-animation: mute 10s infinite;
@@ -896,7 +848,7 @@ p {
 }
 
 .hey-press {
-	background-image: url(/static/images/patterns/tiny_grid.png);
+	background-image: url(/static/images/tiny_grid.png);
 	border-width: 0 1px 1px 0;
 
 	.button {

@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');  // npm install grunt-contrib-watch --save-dev
     grunt.loadNpmTasks('grunt-contrib-sass');   // npm install grunt-contrib-sass --save-dev
-    //grunt.loadNpmTasks('grunt-contrib-jade');   // npm install grunt-contrib-jade --save-dev
     grunt.loadNpmTasks('grunt-autoprefixer');   // npm install grunt-autoprefixer --save-dev
     grunt.loadNpmTasks('grunt-contrib-cssmin'); // npm install grunt-contrib-cssmin --save-dev
     grunt.loadNpmTasks('grunt-contrib-copy');   // npm install grunt-contrib-copy --save-dev
@@ -42,30 +41,13 @@ module.exports = function(grunt) {
           }
         },
 
-        // Jade
-
-        // jade: {
-        //   compile: {
-        //     options: {
-        //       pretty: true,
-        //       data: {
-        //         debug: false
-        //       }
-        //     },
-        //     files: {
-        //       "web/static/index.html": ["web/src/jade/index.jade"],
-        //       "web/static/product.html": ["web/src/jade/product.jade"]
-        //     }
-        //   }
-        // },
-
         // Copy
 
         copy: {
           img: {
             expand: true,
-            src: 'web/src/img/**',
-            dest: 'web/static/img/',
+            src: 'web/src/images/**',
+            dest: 'web/static/images/',
             flatten: true,
             filter: 'isFile'
           },
@@ -88,8 +70,8 @@ module.exports = function(grunt) {
         // Watch & reload
         watch: {
           dev: {
-            files: ['web/src/scss/**/*.scss', 'web/src/jade/**/*.jade', 'web/src/js/**/*.js', 'web/src/fonts/*.*'],
-            tasks: ['sass', 'autoprefixer', 'jade', 'copy:js', 'copy:font'],
+            files: ['web/src/scss/**/*.scss', 'web/src/js/**/*.js', 'web/src/fonts/*.*'],
+            tasks: ['sass', 'autoprefixer', 'cssmin', 'copy:js', 'copy:font'],
             options: { livereload: false },
           },
           livereload: {

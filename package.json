@@ -8,8 +8,7 @@
     "grunt-contrib-sass": "*",
     "grunt-autoprefixer": "*",
     "grunt-contrib-cssmin": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-jade": "*"
+    "grunt-contrib-copy": "*"
   },
   "repository": {
     "type": "git",

@@ -51,27 +51,27 @@
 
 						<div class='dropdown dropdown-lang'>
 							<label class='dropdown-toggle' data-toggle='dropdown'>
-								<img src='{{ asset("/static/images/flags/" ~ app['country'] ~ ".png") }}'>
+								<img src='{{ asset("/static/images/" ~ app['country'] ~ ".png") }}'>
 							</label>
 							<ul class='list dropdown-list'>
 								{% if app['country'] != 'fr' %}
 								<li>
 									<a href='{{ app.host }}/fr/'>
-										<img src='{{ asset("/static/images/flags/fr.png") }}'>
+										<img src='{{ asset("/static/images/fr.png") }}'>
 									</a>
 								</li>
 								{% endif %}
 								{% if app['country'] != 'en' %}
 								<li>
 									<a href='{{ app.host }}/en/'>
-										<img src='{{ asset("/static/images/flags/en.png") }}'>
+										<img src='{{ asset("/static/images/en.png") }}'>
 									</a>
 								</li>
 								{% endif %}
 								{% if app['country'] != 'it' %}
 								<li>
 									<a href='{{ app.host }}/it/'>
-										<img src='{{ asset("/static/images/flags/it.png") }}'>
+										<img src='{{ asset("/static/images/it.png") }}'>
 									</a>
 								</li>
 								{% endif %}

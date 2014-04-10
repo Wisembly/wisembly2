@@ -21,7 +21,7 @@ $topHeaderHeight: 29px;
 	float: left;
 	width: 120px;
 	height: 28px;
-	background-image: url(../images/logos/logo.png);
+	background-image: url(../images/logo.png);
 	@include image-replacement;
 	margin-top: 21px;
 }
@@ -107,22 +107,8 @@ $topHeaderHeight: 29px;
 		line-height: 70px;
 	}
 	a:hover {
-		background-color: $brandBlue;
-		color: $white;
+		color: $brandBlue;
 	}
-	// colors
-	/* .nav-classes-trainings a:hover {
-		background-color: $brandRed;
-	}
-	.nav-meetings-confcalls a:hover {
-		background-color: $brandGreen;
-	}
-	.nav-events-seminaries a:hover {
-		background-color: $brandBlue;
-	}
-	.nav-case-studies a:hover {
-		background-color: $brandOrange;
-	} */
 	li.last {
 		margin: 19px 0 19px 20px;
 		a {
@@ -146,24 +132,11 @@ $topHeaderHeight: 29px;
 		}
 	}
 }
-.classes-trainings .nav-classes-trainings a {
-	background-color: $brandRed;
-}
-.meetings-confcalls .nav-meetings-confcalls a {
-	background-color: $brandGreen;
-}
-.events-seminaries .nav-events-seminaries a {
-	background-color: $brandBlue;
-}
-.case-studies .nav-case-studies a {
-	background-color: $brandOrange;
-}
 .classes-trainings .nav-classes-trainings a,
 .meetings-confcalls .nav-meetings-confcalls a,
 .events-seminaries .nav-events-seminaries a,
 .case-studies .nav-case-studies a {
-	background-color: $brandBlue;
-	color: $white;
+	color: $brandBlue;
 }
 
 // columns 

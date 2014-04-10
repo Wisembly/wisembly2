@@ -1,0 +1,88 @@
+.case {
+	.box-body {
+		padding: 30px;
+	}
+	.case-title,
+	.case-comment-quote,
+	.case-comment-author {
+		//padding: 0 20px;
+	}
+	.case-title {
+		font-weight: 600;
+		font-size: 16px;
+		//text-align: center;
+		margin-bottom: 25px;
+	}
+	.case-logo {
+		width: 80px;
+		height: 80px;
+		line-height: 80px;
+		margin: 0 auto;
+	}
+	.case-logo-img {
+		width: auto;
+		max-width: 100%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.case-comment-quote {
+		//background-color: #eff8fb;
+		font-family: Georgia;
+		position: relative;
+		font-size: 18px;
+		//margin-top: 0;
+		margin-bottom: 20px;
+	}
+	.case-comment-author {
+		font-size: 13px;
+		color: #999;
+	}
+	.case-comment-author-photo,
+	.case-comment-author-name {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 30px;
+	}
+	.case-comment-author-photo {
+		border-radius: 2px;
+		width: 30px;
+		height: 30px;
+		margin-right: 4px;
+	}
+	.box-head {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.box-foot {
+		text-align: center;
+	}
+	.button {
+		display: inline-block;
+	}
+}
+.case-hec {
+	.box-body {
+		padding-bottom: 66px;
+	}
+}
+.page-headline {
+	background-color: $brandBlueExtraLight;
+	background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.1));
+	
+	.container {
+		padding: 40px 0;
+	}
+	
+	h1,
+	h2 {
+		color: #fff;
+		text-shadow: 0 0 5px rgba(0,0,0,.2);
+	}
+	h1 {
+		font-weight: 100;
+		font-size: 34px;
+	}
+	h2 {
+		font-weight: 300;
+	}
+}

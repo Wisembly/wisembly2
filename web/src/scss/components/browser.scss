@@ -9,10 +9,10 @@
 	background-position: top center;
 	
 	&.first {
-		background-image: url(/static/images/homepage/organizer.png);
+		background-image: url(/static/images/organizer.png);
 	}
 	&.last {
-		background-image: url(/static/images/homepage/participant.png);	
+		background-image: url(/static/images/participant.png);	
 	}
 }
 
@@ -55,7 +55,7 @@
 	width: 90px;
 	height: 20px;
 	margin: 0 auto;
-	background-image: url(/static/images/logos/wisembly.png);
+	background-image: url(/static/images/wisembly.png);
 	@include image-replacement;
 }
 
