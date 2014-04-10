@@ -81,6 +81,15 @@
 	.testimonial-author-position {
 		color: #999;
 	}
+	.testimonial-company-logo-container {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+	}
+	.testimonial-company-logo {
+		display: inline-block;
+		vertical-align: middle;
+	}
 }
 
 .clients-grid {
@@ -104,9 +113,9 @@
 	}
 }
 .client-logo {
-	width: 100px;
-	height: 100px;
-	line-height: 100px;
+	width: 120px;
+	height: 120px;
+	line-height: 120px;
 	margin: 0 auto;
 	display: inline-block;
 }

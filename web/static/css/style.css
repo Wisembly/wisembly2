@@ -427,6 +427,14 @@ table {
   font-size: 13px;
 }
 
+.pull {
+  float: left;
+}
+
+.push {
+  float: right;
+}
+
 html {
   color: #444444;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2852,6 +2860,7 @@ form[data-status='testing'] .button-processing {
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 25px;
+  margin-top: 0;
 }
 .case .case-logo {
   width: 80px;
@@ -2921,6 +2930,14 @@ form[data-status='testing'] .button-processing {
 }
 .page-headline h2 {
   font-weight: 300;
+}
+
+.case-studies .section .container {
+  padding: 40px 0;
+}
+.case-studies h3 {
+  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 .testimonials {
@@ -3004,6 +3021,15 @@ form[data-status='testing'] .button-processing {
 .testimonial .testimonial-author-position {
   color: #999;
 }
+.testimonial .testimonial-company-logo-container {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+.testimonial .testimonial-company-logo {
+  display: inline-block;
+  vertical-align: middle;
+}
 
 .clients-grid .box-body {
   height: 144px;
@@ -3028,9 +3054,9 @@ form[data-status='testing'] .button-processing {
 }
 
 .client-logo {
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
   margin: 0 auto;
   display: inline-block;
 }

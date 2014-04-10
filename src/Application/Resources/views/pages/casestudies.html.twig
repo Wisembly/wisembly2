@@ -47,7 +47,7 @@
 					</div>
 				{% endfor %}
 			</div>
-			<h3><h2>{{ 'testimonials_clients' | trans }}</h2></h3>
+			<h3 class='text-centered'>{{ "See our 250 other clients and what they're saying" | trans }}</h3>
 			<ul class='row list clients-grid'>
 				{% for case in app.cases %}
 					<li class='column three'>
@@ -59,8 +59,8 @@
 									</div>
 									<div class='testimonial'>
 										<blockquote class='testimonial-quote'>{{ case.blockquote }}</blockquote>
-										<div class='testimonial-details media'>
-											<div class='media'>
+										<div class='testimonial-details clearfix'>
+											<div class='media pull'>
 												<div class='hd'>
 													<img class='testimonial-author-photo' src='{{ case.blockquote_logo }}'>
 												</div>
@@ -69,30 +69,8 @@
 													<div class='testimonial-author-position'>Consultant, Deloitte</div>
 												</div>
 											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-				{% endfor %}
-				{% for case in app.cases %}
-					<li class='column three'>
-						<div class='column-inner'>
-							<div class='box'>
-								<div class='box-body'>
-									<div class='client-logo'>
-										<img class='client-logo-image' src='{{ asset(case.client_logo) }}'>
-									</div>
-									<div class='testimonial'>
-										<blockquote class='testimonial-quote'>{{ case.blockquote }}</blockquote>
-										<div class='testimonial-details media'>
-											<div class='hd'>
-												<img class='testimonial-author-photo' src='{{ case.blockquote_logo }}'>
-											</div>
-											<div class='bd testimonial-author'>
-												<div class='testimonial-author-name'>Jean-Jacques Rousseau</div>
-												<div class='testimonial-author-position'>Consultant, Deloitte</div>
+											<div class='push testimonial-company-logo-container'>
+												<img class='testimonial-company-logo' src='{{ asset(case.client_logo) }}'>
 											</div>
 										</div>
 									</div>
@@ -111,38 +89,18 @@
 									</div>
 									<div class='testimonial'>
 										<blockquote class='testimonial-quote'>{{ case.blockquote }}</blockquote>
-										<div class='testimonial-details media'>
-											<div class='hd'>
-												<img class='testimonial-author-photo' src='{{ case.blockquote_logo }}'>
+										<div class='testimonial-details clearfix'>
+											<div class='media pull'>
+												<div class='hd'>
+													<img class='testimonial-author-photo' src='{{ case.blockquote_logo }}'>
+												</div>
+												<div class='bd testimonial-author'>
+													<div class='testimonial-author-name'>Jean-Jacques Rousseau</div>
+													<div class='testimonial-author-position'>Consultant, Deloitte</div>
+												</div>
 											</div>
-											<div class='bd testimonial-author'>
-												<div class='testimonial-author-name'>Jean-Jacques Rousseau</div>
-												<div class='testimonial-author-position'>Consultant, Deloitte</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-				{% endfor %}
-				{% for case in app.cases %}
-					<li class='column three'>
-						<div class='column-inner'>
-							<div class='box'>
-								<div class='box-body'>
-									<div class='client-logo'>
-										<img class='client-logo-image' src='{{ asset(case.client_logo) }}'>
-									</div>
-									<div class='testimonial'>
-										<blockquote class='testimonial-quote'>{{ case.blockquote }}</blockquote>
-										<div class='testimonial-details media'>
-											<div class='hd'>
-												<img class='testimonial-author-photo' src='{{ case.blockquote_logo }}'>
-											</div>
-											<div class='bd testimonial-author'>
-												<div class='testimonial-author-name'>Jean-Jacques Rousseau</div>
-												<div class='testimonial-author-position'>Consultant, Deloitte</div>
+											<div class='push testimonial-company-logo-container'>
+												<img class='testimonial-company-logo' src='{{ asset(case.client_logo) }}'>
 											</div>
 										</div>
 									</div>
@@ -161,13 +119,18 @@
 									</div>
 									<div class='testimonial'>
 										<blockquote class='testimonial-quote'>{{ case.blockquote }}</blockquote>
-										<div class='testimonial-details media'>
-											<div class='hd'>
-												<img class='testimonial-author-photo' src='{{ case.blockquote_logo }}'>
+										<div class='testimonial-details clearfix'>
+											<div class='media pull'>
+												<div class='hd'>
+													<img class='testimonial-author-photo' src='{{ case.blockquote_logo }}'>
+												</div>
+												<div class='bd testimonial-author'>
+													<div class='testimonial-author-name'>Jean-Jacques Rousseau</div>
+													<div class='testimonial-author-position'>Consultant, Deloitte</div>
+												</div>
 											</div>
-											<div class='bd testimonial-author'>
-												<div class='testimonial-author-name'>Jean-Jacques Rousseau</div>
-												<div class='testimonial-author-position'>Consultant, Deloitte</div>
+											<div class='push testimonial-company-logo-container'>
+												<img class='testimonial-company-logo' src='{{ asset(case.client_logo) }}'>
 											</div>
 										</div>
 									</div>
