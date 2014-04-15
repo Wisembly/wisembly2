@@ -2979,7 +2979,6 @@ form[data-status='testing'] .button-processing {
 
 .testimonial {
   line-height: 1.5em;
-  display: none;
   text-align: left;
 }
 .testimonial .hd {
@@ -3031,26 +3030,18 @@ form[data-status='testing'] .button-processing {
   vertical-align: middle;
 }
 
-.clients-grid .box-body {
+.testimonials-grid .box-body {
   height: 144px;
   line-height: 136px;
   text-align: center;
 }
-.clients-grid .client-logo,
-.clients-grid .testimonial {
+.testimonials-grid .testimonial {
   vertical-align: middle;
-}
-.clients-grid li:nth-child(5),
-.clients-grid li:nth-child(10) {
-  width: 50%;
-}
-.clients-grid li:nth-child(5) .client-logo,
-.clients-grid li:nth-child(10) .client-logo {
-  display: none;
-}
-.clients-grid li:nth-child(5) .testimonial,
-.clients-grid li:nth-child(10) .testimonial {
   display: inline-block;
+}
+
+.clients-grid .box-body {
+  text-align: center;
 }
 
 .client-logo {

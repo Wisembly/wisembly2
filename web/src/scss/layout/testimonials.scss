@@ -38,7 +38,6 @@
 }
 .testimonial {
 	line-height: 1.5em;
-	display: none;
 	text-align: left;
 	
 	.hd {
@@ -92,24 +91,20 @@
 	}
 }
 
-.clients-grid {
+.testimonials-grid {
 	.box-body {
 		height: 144px;
 		line-height: 136px;
 		text-align: center;
 	}
-	.client-logo,
 	.testimonial {
 		vertical-align: middle;
+		display: inline-block;
 	}
-	li:nth-child(5),
-	li:nth-child(10) {
-		width: 50%;
-		
-		.client-logo {display: none;}
-		.testimonial {
-			display: inline-block;
-		}
+}
+.clients-grid {
+	.box-body {
+		text-align: center;
 	}
 }
 .client-logo {
