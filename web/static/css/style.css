@@ -2957,11 +2957,13 @@ form[data-status='testing'] .button-processing {
 }
 .pagination .pagination-title {
   line-height: 48px;
-  margin: 33px 0;
 }
 .pagination .box {
   display: inline-block;
   margin-left: 24px;
+}
+.pagination .button {
+  display: inline-block;
 }
 
 .testimonials {
