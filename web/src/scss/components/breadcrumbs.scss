@@ -2,14 +2,16 @@
 	@include clearfix;
 	border-bottom: 1px solid $lightGrey;
 	
-	ul {
-		margin: 0 -15px;
-	}
 	li {
 		float: left;
 		background-image: url(/static/images/right-chevron.png);
 		background-position: center right;
 		background-repeat: no-repeat;
+	}
+	.first {
+		a {
+			padding-left: 0;
+		}
 	}
 	.last {
 		background-image: none;

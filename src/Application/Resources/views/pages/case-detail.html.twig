@@ -13,101 +13,172 @@
 {% block meta_keywords %}{{ app.meta[page].keywords }}{% endblock %}
 
 {% block content %}
-	<div class='section header'>
-		{% if case.illustration_image %}
-			<div class='header-background'>
-				<div class='table'>
-					<div class='tr'>
-						<div class='td middle'>
-							<!-- .wallpaper or .logo -->
-							<img class='{{ case.illustration_type }}' src='{{ asset(case.illustration_image) }}'>
+	<div class='section page-headline'>
+		<div class='container clearfix'>
+			{% if case.illustration_image %}
+				<img class='{{ case.illustration_type }} centered' src='{{ asset(case.illustration_image) }}' width='160'>
+			{% endif %}
+			<div class='id tac'>
+				<h1>{{ case.title }}</h1>
+			</div>
+		</div>
+	</div>
+  	<div class='section page-body'>
+  		<div class='container'>
+  			<div class='row mbl'>
+	  			<div class='column six'>
+		  			<div class='column-inner'>
+			  			<h3 class='hide'>Introduction</h3>
+			  			<p>La SNCF utilise Wisembly pour animer le <strong>Tchat du Président</strong>, un management call mensuel du COMEX où sont présentés les résultats et orientations stratégiques aux 600 top managers.</p>
+			  			<p>L'utilisation de Wisembly pour présenter des documents, recueillir les réactions des managers en direct, et réunir leurs avis a permis de multiplier par 50 l'engagement des managers.</p>
+			  		</div>
+		  		</div>
+				<div class='column six'>
+					<div class='column-inner'>
+						<div class='testimonial box'>
+							<div class='box-body'>
+								<blockquote class='testimonial-quote'>{{ case.blockquote }}</blockquote>
+								<div class='testimonial-details media'>
+									<div class='hd'>
+										<img src='{{ case.blockquote_logo }}' class='testimonial-author-photo'>
+									</div>
+									<div class='bd testimonial-author'>
+										<div class='testimonial-author-name'>{{ case.interviewed }}</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				  	</div>
+				</div>
+			</div>
+			<div class='row mbl'>
+				<div class='column six'>
+					<div class='column-inner'>
+						<h3>Les enjeux</h3>
+						<ul class='bulleted-list'>
+							<li>Transmission du projet d'entreprise</li>
+							<li>Points d'étape clairs</li>
+							<li>Identification des blocages</li>
+						</ul>
+				  	</div>
+				</div>
+				<div class='column six'>
+					<div class='column-inner'>
+						<!-- <h3>{{ 'case_context_title' | trans }}</h3>
+						{{ case.context | raw }} -->
+						<h3>La solution</h3>
+						<ul class='bulleted-list'>
+							<li><span class='number number-medium'>1h30</span> de management call mensuel</li>
+							<li><span class='number number-medium'>600</span> top managers connectés en région</li>
+							<li><span class='number number-medium'>COMEX</span> présentant les résultats et les orientations stratégiques</li>
+					</div>
+				</div>
+			</div>
+			<div class='row mbl hide'>
+				<div class='column six centered'>
+					<div class='column-inner'>
+						<!-- <h3>{{ 'case_usage_title' | trans }}</h3>
+						{{ case.usage | raw }} -->
+						<h3>L'utilisation de Wisembly</h3>
+						<ul>
+							<li>Présentation et partage des slides sur la plateforme en live</li>
+							<li>Réaction et questions en live des managers depuis leur ordinateur</li>
+							<li>Vote des managers pour les questions qui les intéressent</li>
+							<li>Réponses du président aux questions par ordre de popularité</li>
+							<li>Questionnaire de satisfaction auquel les managers répondent à la fin</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='column twelve'>
+					<div class='column-inner'>
+						<!-- <h3>{{ 'case_results_title' | trans }}</h3>
+						{{ case.results | raw }} -->
+						<h3>Le résultat</h3>
+						<p class='hide'>Conf-calls structurés et efficaces</p>
+						<table class='value-table mbl'>
+							<thead>
+								<tr>
+									<th></th>
+									<th>Questions posées</th>
+									<th>Participants actifs</th>
+									<th>Thèmes abordés</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>
+										Avant
+									</th>
+									<td>
+										<span class='number'>3</span>
+									</td>
+									<td>
+										<span class='number'>2%</span>
+									</td>
+									<td>
+										<span class='number'>2</span>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										Après
+									</th>
+									<td>
+										<span class='number number-large number-good'>150</span>
+									</td>
+									<td>
+										<span class='number number-large number-good'>65%</span>
+									</td>
+									<td>
+										<span class='number number-large number-good'>10</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='pagination section'>
+		<div class='container'>
+			<div class='row'>
+				<div class='column five'>
+					<div class='column-inner'>
+						<h3 class='pull pagination-title'>Discover how our other clients use Wisembly</h3>
+					</div>
+				</div>
+				<div class='column seven'>
+					<div class='column-inner'>
+						<div class='push'>
+							<a href='' class='box'>
+								<div class='box-body'>
+									<div class='client-logo'>
+										<img src='http://corpo.wisembly.dev:8888//static/images/hec.png?v=43' class='client-logo-image'>
+									</div>
+								</div>
+							</a>
+							<a href='' class='box'>
+								<div class='box-body'>
+									<div class='client-logo'>
+										<img src='http://corpo.wisembly.dev:8888//static/images/auchan.png?v=43' class='client-logo-image'>
+									</div>
+								</div>
+							</a>
+							<a href='' class='box'>
+								<div class='box-body'>
+									<div class='client-logo'>
+										<img src='http://corpo.wisembly.dev:8888//static/images/auchan.png?v=43' class='client-logo-image'>
+									</div>
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-		{% endif %}
-		<div class='container'>
-			<div class='id'>
-				<h1><span>{{ case.title }}</span></h1>
-			</div>
 		</div>
 	</div>
-	<div class='breadcrumbs'>
-		<div class='container'>
-			<ul class='list'>
-				<li class='first'>
-    				<a href='{{ url('case-studies') }}'>{{ 'case_studies' | trans }}</a>
-    			</li>
-    			<li class='last'>
-    				<a href='{{ url('case-detail', { slug: case.slug }) }}'>{{ case.client }}</a>
-    			</li>
-    		</ul>
-    </div>
-  </div>
-	<div class='section'>
-		<div class='container'>
-			<div class='row'>
-				<div class='column four'>
-					<div class='column-inner'>
-						<h3>{{ 'case_context_title' | trans }}</h3>
-					</div>
-				</div>
-				<div class='column seven last'>
-					<div class='column-inner'>
-						{{ case.context | raw }}
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class='section'>
-		<div class='container'>
-			<div class='row'>
-				<div class='column four'>
-					<div class='column-inner'>
-						<h3>{{ 'case_usage_title' | trans }}</h3>
-					</div>
-				</div>
-				<div class='column seven last'>
-					<div class='column-inner'>
-						{{ case.usage | raw }}
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class='section'>
-		<div class='container'>
-			<div class='row'>
-				<div class='column eight centered'>
-					<div class='comment-wrapper'>
-						<div class='comment-photo'>
-							<img src='{{ case.blockquote_logo }}'>
-						</div>
-						<div class='comment'>
-							<blockquote>{{ case.blockquote }}</blockquote>
-						</div>
-						<p class='comment-author-name'>{{ case.interviewed }}</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class='section'>
-		<div class='container'>
-			<div class='row'>
-				<div class='column four'>
-					<div class='column-inner'>
-						<h3>{{ 'case_results_title' | trans }}</h3>
-					</div>
-				</div>
-				<div class='column seven last'>
-					<div class='column-inner'>
-						{{ case.results | raw }}
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	{% include 'includes/features/try-now.html.twig' %}
+	{# {% include 'includes/features/try-now.html.twig' %} #}
 {% endblock %}
