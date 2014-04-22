@@ -29,8 +29,8 @@
 	  			<div class='column six'>
 		  			<div class='column-inner'>
 			  			<h3 class='hide'>Introduction</h3>
-			  			<p>La SNCF utilise Wisembly pour animer le <strong>Tchat du Président</strong>, un management call mensuel du COMEX où sont présentés les résultats et orientations stratégiques aux 600 top managers.</p>
-			  			<p>L'utilisation de Wisembly pour présenter des documents, recueillir les réactions des managers en direct, et réunir leurs avis a permis de multiplier par 50 l'engagement des managers.</p>
+			  			<p>La SNCF utilise Wisembly pour animer le <strong>Tchat du Président</strong>, un <strong>management call mensuel du COMEX</strong> où sont présentés les résultats et orientations stratégiques aux 600 top managers.</p>
+			  			<p>L'utilisation de Wisembly pour présenter des documents, recueillir les réactions des managers en direct, et réunir leurs avis a permis de multiplier par 50 leur engagement.</p>
 			  		</div>
 		  		</div>
 				<div class='column six'>
@@ -54,89 +54,22 @@
 			<div class='row mbl'>
 				<div class='column six'>
 					<div class='column-inner'>
-						<h3>Les enjeux</h3>
-						<ul class='bulleted-list'>
-							<li>Transmission du projet d'entreprise</li>
-							<li>Points d'étape clairs</li>
-							<li>Identification des blocages</li>
-						</ul>
+						<h3>{{ 'case_context_title' | trans }}</h3>
+						{{ case.context | raw }}
 				  	</div>
 				</div>
 				<div class='column six'>
 					<div class='column-inner'>
-						<!-- <h3>{{ 'case_context_title' | trans }}</h3>
-						{{ case.context | raw }} -->
-						<h3>La solution</h3>
-						<ul class='bulleted-list'>
-							<li><span class='number number-medium'>1h30</span> de management call mensuel</li>
-							<li><span class='number number-medium'>600</span> top managers connectés en région</li>
-							<li><span class='number number-medium'>COMEX</span> présentant les résultats et les orientations stratégiques</li>
-					</div>
-				</div>
-			</div>
-			<div class='row mbl hide'>
-				<div class='column six centered'>
-					<div class='column-inner'>
-						<!-- <h3>{{ 'case_usage_title' | trans }}</h3>
-						{{ case.usage | raw }} -->
-						<h3>L'utilisation de Wisembly</h3>
-						<ul>
-							<li>Présentation et partage des slides sur la plateforme en live</li>
-							<li>Réaction et questions en live des managers depuis leur ordinateur</li>
-							<li>Vote des managers pour les questions qui les intéressent</li>
-							<li>Réponses du président aux questions par ordre de popularité</li>
-							<li>Questionnaire de satisfaction auquel les managers répondent à la fin</li>
-						</ul>
+						<h3>{{ 'case_usage_title' | trans }}</h3>
+						{{ case.usage | raw }}
 					</div>
 				</div>
 			</div>
 			<div class='row'>
 				<div class='column twelve'>
 					<div class='column-inner'>
-						<!-- <h3>{{ 'case_results_title' | trans }}</h3>
-						{{ case.results | raw }} -->
-						<h3>Le résultat</h3>
-						<p class='hide'>Conf-calls structurés et efficaces</p>
-						<table class='value-table mbl'>
-							<thead>
-								<tr>
-									<th></th>
-									<th>Questions posées</th>
-									<th>Participants actifs</th>
-									<th>Thèmes abordés</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th>
-										Avant
-									</th>
-									<td>
-										<span class='number'>3</span>
-									</td>
-									<td>
-										<span class='number'>2%</span>
-									</td>
-									<td>
-										<span class='number'>2</span>
-									</td>
-								</tr>
-								<tr>
-									<th>
-										Après
-									</th>
-									<td>
-										<span class='number number-large number-good'>150</span>
-									</td>
-									<td>
-										<span class='number number-large number-good'>65%</span>
-									</td>
-									<td>
-										<span class='number number-large number-good'>10</span>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+						<h3>{{ 'case_results_title' | trans }}</h3>
+						{{ case.results | raw }}
 					</div>
 				</div>
 			</div>
@@ -147,8 +80,8 @@
 			<div class='row'>
 				<div class='column five'>
 					<div class='column-inner'>
-						<h3 class='pull pagination-title'>Discover how our other clients use Wisembly</h3>
-						<a href='' class='button button-validate'>Read the case studies</a>
+						<h3 class='pull pagination-title'>{{ 'Discover how our other clients use Wisembly' | trans }}</h3>
+						<a href='' class='button button-validate'>{{ 'Read the case studies' | trans }}</a>
 					</div>
 				</div>
 				<div class='column seven'>
