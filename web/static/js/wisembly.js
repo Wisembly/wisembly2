@@ -5,7 +5,7 @@ $(document).ready(function () {
 		});
 
 	window.config = {
-		baseUrl: 'https://app.wisembly.com'
+		baseUrl: window.api_url
 	};
 
 	tabs.startListening();
@@ -146,6 +146,21 @@ $(document).ready(function () {
 		cleanup: 'indexCleanup'
 	});
 
+	// try to detect if user is logged on app
+	if (window.Basil) {
+		basil = new window.Basil({ type: 'cookie', namespace: null });
+
+		if (basil.get('wisembly_remember_me')) {
+			window.isLogged = true;
+
+			// hide and show
+			$('#login_link').hide();
+			$('#go_to_app_link')
+				.attr('href', window.config.baseUrl) // update url to wisembly solution url
+				.show();
+		}
+	}
+
 });
 
 var tabs = {
@@ -178,7 +193,7 @@ window.login = {
 	isValid: false,
 
 	startListening: function () {
-		if (this.isLogged())
+		if (window.isLogged)
 			return;
 
 		this.$el.find('input.email').on('change', $.proxy(this.checkInput, this));
@@ -252,10 +267,6 @@ window.login = {
 			data: JSON.stringify(credentials)
 		});
 		return this.xhrUser;
-	},
-
-	isLogged: function () {
-		return -1 !== document.cookie.indexOf('wisembly_remember_me');
 	}
 };
 
