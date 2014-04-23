@@ -146,11 +146,11 @@ $(document).ready(function () {
 		cleanup: 'indexCleanup'
 	});
 
-	// try to detect if user is logged on app
+	// try to detect if user is logged on app. if so, display a direct link to app
 	if (window.Basil) {
-		basil = new window.Basil({ type: 'cookie', namespace: null });
+		var basil = new window.Basil();
 
-		if (basil.get('wisembly_remember_me')) {
+		if (basil.cookie.get('wisembly_remember_me')) {
 			window.isLogged = true;
 
 			// hide and show
@@ -235,7 +235,7 @@ window.login = {
 					// Switch back submit button status
 					this.$el.find('.button-text, .button-processing').toggle();
 				}, this))
-				.fail($.proxy(function (data) {
+				.fail($.proxy(function (jqXHR, textStatus, errorThrown) {
 					$form.removeData('registered-user');
 					this.$el.find('.credentials_info').html('Wrong credentials.');
 				}, this))
@@ -255,18 +255,17 @@ window.login = {
 	},
 
 	checkUser: function (credentials) {
-		this.xhrUser = $.ajax({
+		return $.ajax({
 			cache: false,
 			headers: {
 				'X-Requested-With': 'XMLHttpRequest'
 			},
 			contentType: 'application/json',
-			dataType: 'json',
+			dataType: 'jsonp',
 			url: config.baseUrl + '/api/4/authentication',
 			type: 'POST',
 			data: JSON.stringify(credentials)
 		});
-		return this.xhrUser;
 	}
 };
 
@@ -275,8 +274,8 @@ window.subscribe = {
 	isValid: false,
 
 	startListening: function () {
-		this.$el.find('input.email').on('keyup', 	$.proxy(this.checkInput, 	this));
-		this.$el.find('form').on('submit', 			$.proxy(this.checkSubmit, 	this));
+		this.$el.find('input.email').on('keyup', $.proxy(this.checkInput, this));
+		this.$el.find('form').on('submit', $.proxy(this.checkSubmit, this));
 	},
 
 	checkInput: function (e) {
@@ -319,8 +318,8 @@ var joinAnEvent = {
 				this.updateStatus();
 				delete this.xhr;
 			}, this))
-			.fail($.proxy(function () {
-				this.keywordExists = false;
+			.fail($.proxy(function (jqXHR) {
+				this.keywordExists = (404 !== jqXHR.status);
 				this.updateStatus();
 				delete this.xhr;
 			}, this));
@@ -329,7 +328,7 @@ var joinAnEvent = {
 	getEvent: function (keyword) {
 		if (this.xhr)
 			this.xhr.abort();
-		return this.xhr = $.ajax({ url: config.baseUrl + '/api/4/event/' + keyword || '' });
+		return this.xhr = $.ajax({ url: config.baseUrl + '/api/4/event/' + keyword || '', dataType: 'json' });
 	},
 
 	goTo: function (e) {

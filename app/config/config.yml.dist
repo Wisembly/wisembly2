@@ -7,9 +7,9 @@ global:
   mysql: /Applications/MAMP/Library/bin/mysql
 
 third_party:
-  mixpanel:  trackingnumber
-  analytics: trackingnumber
-  iadvize:   trackingnumber
+  mixpanel:  null
+  analytics: null
+  iadvize:   null
   wisembly:
     app_id:  app_id
     app_secret:  app_secret
