@@ -5,6 +5,9 @@
 {# automatically get case in app.set provided by slug in url #}
 {% set case = app.set %}
 
+{# get all cases for related cases #}
+{% block cases %}{% endblock %}
+
 {# SEO #}
 {% set page = 'casestudies' %}
 {% block meta %}{% endblock %}
@@ -28,9 +31,7 @@
   			<div class='row mbl'>
 	  			<div class='column six'>
 		  			<div class='column-inner'>
-			  			<h3 class='hide'>Introduction</h3>
-			  			<p>La SNCF utilise Wisembly pour animer le <strong>Tchat du Président</strong>, un <strong>management call mensuel du COMEX</strong> où sont présentés les résultats et orientations stratégiques aux 600 top managers.</p>
-			  			<p>L'utilisation de Wisembly pour présenter des documents, recueillir les réactions des managers en direct, et réunir leurs avis a permis de multiplier par 50 leur engagement.</p>
+			  			{{ case.intro | raw }}
 			  		</div>
 		  		</div>
 				<div class='column six'>
@@ -84,33 +85,24 @@
 						<a href='' class='button button-validate'>{{ 'Read the case studies' | trans }}</a>
 					</div>
 				</div>
+
 				<div class='column seven'>
 					<div class='column-inner'>
 						<div class='push'>
-							<a href='' class='box'>
-								<div class='box-body'>
-									<div class='client-logo'>
-										<img src='http://corpo.wisembly.dev:8888//static/images/hec.png?v=43' class='client-logo-image'>
+							{% for id in case.related_cases | split(',') %}
+								{% set related_case = foreign(app.cases, id) %}
+								<a href='{{ url('case-detail', { slug: related_case.slug }) }}' class='box'>
+									<div class='box-body'>
+										<div class='client-logo'>
+											<img src='{{ asset(related_case.client_logo) }}' class='client-logo-image'>
+										</div>
 									</div>
-								</div>
-							</a>
-							<a href='' class='box'>
-								<div class='box-body'>
-									<div class='client-logo'>
-										<img src='http://corpo.wisembly.dev:8888//static/images/auchan.png?v=43' class='client-logo-image'>
-									</div>
-								</div>
-							</a>
-							<a href='' class='box'>
-								<div class='box-body'>
-									<div class='client-logo'>
-										<img src='http://corpo.wisembly.dev:8888//static/images/auchan.png?v=43' class='client-logo-image'>
-									</div>
-								</div>
-							</a>
+								</a>
+							{% endfor %}
 						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
