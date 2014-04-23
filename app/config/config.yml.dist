@@ -9,7 +9,7 @@ global:
 third_party:
   mixpanel:  trackingnumber
   analytics: trackingnumber
-  olark:     trackingnumber
+  iadvize:   trackingnumber
   wisembly:
     app_id:  app_id
     app_secret:  app_secret
