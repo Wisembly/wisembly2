@@ -2855,7 +2855,6 @@ form[data-status='testing'] .button-processing {
 }
 .case-detail .page-headline h1 {
   font-weight: 400;
-  text-shadow: none;
 }
 .case-detail .page-headline .container {
   padding: 60px 0 30px !important;
