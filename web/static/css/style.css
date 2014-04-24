@@ -2835,41 +2835,16 @@ form[data-status='testing'] .button-processing {
   margin-bottom: 60px;
 }
 
-.case-detail {
-  background-image: -webkit-linear-gradient(top, #7fc4e2, white 550px);
-  background-image: linear-gradient(to bottom, #7fc4e2, white 550px);
-}
-.case-detail.sncf {
-  background-image: -webkit-linear-gradient(top, #3f3f41, white 500px);
-  background-image: linear-gradient(to bottom, #3f3f41, white 500px);
-}
-.case-detail.la-poste {
-  background-image: -webkit-linear-gradient(top, #052c7a, white 500px);
-  background-image: linear-gradient(to bottom, #052c7a, white 500px);
-}
-.case-detail .page-headline {
-  background-color: transparent;
-  background-image: none;
-  border: 0;
-  box-shadow: none;
-}
 .case-detail .page-headline h1 {
-  font-weight: 400;
-}
-.case-detail .page-headline .container {
-  padding: 60px 0 30px !important;
-}
-.case-detail .page-body {
-  border: 0;
-  box-shadow: none;
-}
-.case-detail .page-body .container {
-  padding: 0 0 60px 0;
+  margin-bottom: 0;
 }
 .case-detail .page-body p,
 .case-detail .page-body li {
   line-height: 24px;
   margin: 24px 0;
+}
+.case-detail .page-body .container {
+  padding: 60px 0;
 }
 .case-detail .testimonial {
   padding: 24px;
@@ -2890,6 +2865,39 @@ form[data-status='testing'] .button-processing {
   font-weight: 500;
   line-height: 32px;
   margin-bottom: 32px;
+}
+
+.cssgradients .case-detail {
+  background-image: -webkit-linear-gradient(top, #7fc4e2, white 550px);
+  background-image: linear-gradient(to bottom, #7fc4e2, white 550px);
+}
+.cssgradients .case-detail.sncf {
+  background-image: -webkit-linear-gradient(top, #3f3f41, white 500px);
+  background-image: linear-gradient(to bottom, #3f3f41, white 500px);
+}
+.cssgradients .case-detail.la-poste {
+  background-image: -webkit-linear-gradient(top, #052c7a, white 500px);
+  background-image: linear-gradient(to bottom, #052c7a, white 500px);
+}
+.cssgradients .case-detail .page-headline {
+  background-color: transparent;
+  background-image: none;
+  border: 0;
+  box-shadow: none;
+}
+.cssgradients .case-detail .page-headline h1 {
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.cssgradients .case-detail .page-headline .container {
+  padding: 60px 0 30px !important;
+}
+.cssgradients .case-detail .page-body {
+  border: 0;
+  box-shadow: none;
+}
+.cssgradients .case-detail .page-body .container {
+  padding: 0 0 60px 0;
 }
 
 .number {
