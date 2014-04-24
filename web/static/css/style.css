@@ -2753,6 +2753,7 @@ form[data-status='testing'] .button-processing {
 
 .case .box-body {
   padding: 30px;
+  height: 277px;
 }
 .case .case-title {
   font-weight: 600;
@@ -2803,10 +2804,6 @@ form[data-status='testing'] .button-processing {
 }
 .case .button {
   display: inline-block;
-}
-
-.case-hec .box-body {
-  padding-bottom: 66px;
 }
 
 .page-headline {

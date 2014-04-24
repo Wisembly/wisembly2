@@ -1,6 +1,7 @@
 .case {
 	.box-body {
 		padding: 30px;
+		height: 277px;
 	}
 	.case-title,
 	.case-comment-quote,
@@ -59,11 +60,6 @@
 	}
 	.button {
 		display: inline-block;
-	}
-}
-.case-hec {
-	.box-body {
-		padding-bottom: 66px;
 	}
 }
 .page-headline {
