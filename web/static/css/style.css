@@ -389,52 +389,6 @@ table {
   clear: both;
 }
 
-.list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.hide {
-  display: none;
-}
-
-.relative {
-  position: relative;
-}
-
-.affix {
-  position: fixed;
-  top: 0;
-  z-index: 5;
-  width: 100%;
-  zoom: 1;
-}
-
-.force-white {
-  background-color: white !important;
-}
-
-.inline {
-  line-height: 40px !important;
-}
-
-.type-light, .plans .plan h5 {
-  color: #999;
-}
-
-.type-small {
-  font-size: 13px;
-}
-
-.pull {
-  float: left;
-}
-
-.push {
-  float: right;
-}
-
 html {
   color: #444444;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -464,6 +418,11 @@ hr {
 
 p {
   line-height: 20px;
+}
+
+blockquote {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #back-to-top {
@@ -915,7 +874,7 @@ p {
 
 .try-me-choices {
   *zoom: 1;
-  padding: 20px 10px;
+  padding: 20px 10px !important;
 }
 .try-me-choices:before, .try-me-choices:after {
   content: " ";
@@ -991,69 +950,6 @@ p {
 
 .hec .header h1 span {
   border-color: #03447b;
-}
-
-.case-detail .section li {
-  line-height: 1.5em;
-  margin-bottom: 10px;
-}
-.case-detail .section {
-  background-image: none;
-}
-.case-detail .comment {
-  display: block;
-  padding: 30px;
-  background-color: #eff8fb;
-  overflow: hidden;
-  border-radius: 5px;
-}
-.case-detail .comment blockquote {
-  padding: 24px 34px;
-  margin: 0;
-  line-height: 1.5em;
-  position: relative;
-  font-family: Georgia;
-}
-.case-detail .comment blockquote:before {
-  content: '';
-  display: block;
-  background-image: url(/static/images/double-quotes-left.png);
-  width: 30px;
-  height: 24px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.case-detail .comment blockquote:after {
-  content: '';
-  display: block;
-  background-image: url(/static/images/double-quotes-right.png);
-  width: 30px;
-  height: 24px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.case-detail .comment-photo {
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  float: left;
-  margin-right: 40px;
-  border-radius: 5px;
-}
-.case-detail .comment-photo img {
-  width: 100%;
-}
-.case-detail .comment-author-name {
-  margin-left: 140px;
-  margin-bottom: 0;
-  color: #999999;
-}
-
-.case-study-sncf,
-.case-study-hec {
-  background-color: #efefef;
 }
 
 .case-study h3 {
@@ -1970,7 +1866,7 @@ h4 {
   font-size: 13px;
 }
 
-.type-14, .jump-after-fold span, .case-detail .comment-author-name, .team-list .role, .frame h5 {
+.type-14, .jump-after-fold span, .team-list .role, .frame h5 {
   font-size: 14px;
 }
 
@@ -1991,7 +1887,7 @@ h4 {
   font-size: 24px;
 }
 
-.type-26, .case-detail .comment blockquote, .kpi-table td span {
+.type-26, .kpi-table td span {
   font-size: 26px;
 }
 
@@ -2618,7 +2514,8 @@ form[data-status='testing'] .button-processing {
 .classes-trainings .nav-classes-trainings a,
 .meetings-confcalls .nav-meetings-confcalls a,
 .events-seminaries .nav-events-seminaries a,
-.case-studies .nav-case-studies a {
+.case-studies .nav-case-studies a,
+.case-detail .nav-case-studies a {
   color: #0786cd;
 }
 
@@ -2695,14 +2592,14 @@ form[data-status='testing'] .button-processing {
 .breadcrumbs:after {
   clear: both;
 }
-.breadcrumbs ul {
-  margin: 0 -15px;
-}
 .breadcrumbs li {
   float: left;
   background-image: url(/static/images/right-chevron.png);
   background-position: center right;
   background-repeat: no-repeat;
+}
+.breadcrumbs .first a {
+  padding-left: 0;
 }
 .breadcrumbs .last {
   background-image: none;
@@ -2823,6 +2720,7 @@ form[data-status='testing'] .button-processing {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin-bottom: 40px;
+  background-color: #fff;
 }
 .box .box-head,
 .box .box-body,
@@ -2855,6 +2753,7 @@ form[data-status='testing'] .button-processing {
 
 .case .box-body {
   padding: 30px;
+  height: 277px;
 }
 .case .case-title {
   font-weight: 600;
@@ -2907,14 +2806,8 @@ form[data-status='testing'] .button-processing {
   display: inline-block;
 }
 
-.case-hec .box-body {
-  padding-bottom: 66px;
-}
-
 .page-headline {
   background-color: #7fc4e2;
-  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
 }
 .page-headline .container {
   padding: 40px 0;
@@ -2922,11 +2815,13 @@ form[data-status='testing'] .button-processing {
 .page-headline h1,
 .page-headline h2 {
   color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
 .page-headline h1 {
   font-weight: 100;
   font-size: 34px;
+  line-height: 48px;
+  margin: 24px 0;
 }
 .page-headline h2 {
   font-weight: 300;
@@ -2938,6 +2833,147 @@ form[data-status='testing'] .button-processing {
 .case-studies h3 {
   margin-top: 20px;
   margin-bottom: 60px;
+}
+
+.case-detail .page-headline h1 {
+  margin-bottom: 0;
+}
+.case-detail .page-body p,
+.case-detail .page-body li {
+  line-height: 24px;
+  margin: 24px 0;
+}
+.case-detail .page-body .container {
+  padding: 60px 0;
+}
+.case-detail .testimonial {
+  padding: 24px;
+  background-color: #fff;
+}
+.case-detail .testimonial-quote {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.case-detail .testimonial-details {
+  margin-top: 20px;
+}
+.case-detail .testimonial-author-name {
+  margin: 10px 0;
+}
+.case-detail h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom: 32px;
+}
+
+.cssgradients .case-detail {
+  background-image: -webkit-linear-gradient(top, #7fc4e2, white 550px);
+  background-image: linear-gradient(to bottom, #7fc4e2, white 550px);
+}
+.cssgradients .case-detail.sncf {
+  background-image: -webkit-linear-gradient(top, #3f3f41, white 500px);
+  background-image: linear-gradient(to bottom, #3f3f41, white 500px);
+}
+.cssgradients .case-detail.la-poste {
+  background-image: -webkit-linear-gradient(top, #052c7a, white 500px);
+  background-image: linear-gradient(to bottom, #052c7a, white 500px);
+}
+.cssgradients .case-detail .page-headline {
+  background-color: transparent;
+  background-image: none;
+  border: 0;
+  box-shadow: none;
+}
+.cssgradients .case-detail .page-headline h1 {
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.cssgradients .case-detail .page-headline .container {
+  padding: 60px 0 30px !important;
+}
+.cssgradients .case-detail .page-body {
+  border: 0;
+  box-shadow: none;
+}
+.cssgradients .case-detail .page-body .container {
+  padding: 0 0 60px 0;
+}
+
+.number {
+  font-weight: 500;
+  color: #0786cd;
+}
+
+.number-small {
+  font-size: 14px;
+}
+
+.number-medium {
+  font-size: 18px;
+}
+
+.number-large {
+  font-size: 30px;
+}
+
+.number-good {
+  color: #66bc58;
+}
+
+.number-bad {
+  color: #ff6539;
+}
+
+.value-table {
+  border: 1px solid #eee;
+  width: 100%;
+}
+.value-table th,
+.value-table td {
+  padding: 24px;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+.value-table th {
+  color: #666;
+}
+.value-table thead th {
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.value-table tbody th {
+  width: 15%;
+  color: #999;
+  font-weight: 400;
+}
+
+.bulleted-list {
+  list-style: disc;
+  padding-left: 24px;
+}
+
+.pagination {
+  background-color: #fcfcfc;
+}
+.pagination .container {
+  padding: 40px 0;
+}
+.pagination a {
+  margin-bottom: 0;
+  display: block;
+  text-align: center;
+}
+.pagination .pagination-title {
+  line-height: 48px;
+}
+.pagination .box {
+  display: inline-block;
+  margin-left: 24px;
+}
+.pagination .button {
+  display: inline-block;
 }
 
 .testimonials {
@@ -3031,8 +3067,8 @@ form[data-status='testing'] .button-processing {
 }
 
 .testimonials-grid .box-body {
-  height: 144px;
-  line-height: 136px;
+  height: 170px;
+  line-height: 170px;
   text-align: center;
 }
 .testimonials-grid .testimonial {
@@ -4684,4 +4720,70 @@ a [class*=" icon-"] {
 
 .icon-renren:before {
   content: "\f18b";
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hide {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.affix {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  zoom: 1;
+}
+
+.force-white {
+  background-color: white !important;
+}
+
+.inline {
+  line-height: 40px !important;
+}
+
+.type-light, .plans .plan h5 {
+  color: #999;
+}
+
+.type-small {
+  font-size: 13px;
+}
+
+.pull {
+  float: left;
+}
+
+.push {
+  float: right;
+}
+
+.tar {
+  text-align: right;
+}
+
+.tac {
+  text-align: center;
+}
+
+.tal {
+  text-align: left;
+}
+
+.mbl {
+  margin-bottom: 24px;
+}
+
+.mll {
+  margin-left: 24px;
 }

@@ -29,6 +29,10 @@ hr {
 p {
 	line-height: $base-line-height;
 }
+blockquote {
+	margin: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
 
 // back to top
 
@@ -524,7 +528,7 @@ p {
 }
 .try-me-choices {
 	@include clearfix;
-	padding: 20px 10px;
+	padding: 20px 10px !important;
 
 	li {
 		float: left;
@@ -611,75 +615,6 @@ p {
 	}
 }
 
-.case-detail {
-	.section {
-		li {
-			line-height: 1.5em;
-			margin-bottom: 10px;
-		}
-	}
-	.section {
-		background-image: none;
-	}
-	.comment {
-		display: block;
-		padding: 30px;
-		background-color: $brandBlueExtraExtraExtraLight;
-		//border: 1px solid $brandBlueExtraLight;
-		overflow: hidden;
-		border-radius: 5px;
-
-		blockquote {
-			padding: 24px 34px;
-			margin: 0;
-			line-height: 1.5em;
-			position: relative;
-			font-family: Georgia;
-			@extend .type-26;
-		}
-		blockquote:before {
-			content: '';
-			display: block;
-			background-image: url(/static/images/double-quotes-left.png);
-			width: 30px;
-			height: 24px;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-		blockquote:after {
-			content: '';
-			display: block;
-			background-image: url(/static/images/double-quotes-right.png);
-			width: 30px;
-			height: 24px;
-			position: absolute;
-			bottom: 0;
-			right: 0;
-		}
-	}
-	.comment-photo {
-		width: 100px;
-		height: 100px;
-		overflow: hidden;
-		float: left;
-		margin-right: 40px;
-		border-radius: 5px;
-		img {
-			width: 100%;
-		}
-	}
-	.comment-author-name {
-		margin-left: 140px;
-		margin-bottom: 0;
-		color: $grey;
-		@extend .type-14;
-	}
-}
-.case-study-sncf,
-.case-study-hec {
-	background-color: #efefef;
-}
 .case-study {
 	@extend .text-centered;
 

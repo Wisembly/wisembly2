@@ -40,6 +40,7 @@ try {
 
 // add useful extensions / providers
 $app['twig']->addExtension(new Application\Twig\Extension\AssetsExtension($config['global']['host'], $config['global']['assets_version']));
+$app['twig']->addExtension(new SilexCMS\Twig\Extension\ForeignKeyExtension($app));
 
 if ($app['debug']) {
     $app['twig']->addExtension(new Twig_Extensions_Extension_Debug());

@@ -3,6 +3,9 @@
 {# load cases DataSet #}
 {% block cases %}{% endblock %}
 
+{# Load testimonial DataSet #}
+{% block cases_testimonials %}{% endblock %}
+
 {% block body_class %}case-studies{% endblock %}
 
 {# SEO #}
@@ -49,25 +52,25 @@
 			</div>
 			<h3 class='text-centered'>{{ "See what our other clients are saying" | trans }}</h3>
 			<ul class='row list testimonials-grid'>
-				{% for case in app.cases %}
+				{% for testimonial in app.cases_testimonials %}
 					<li class='column six'>
 						<div class='column-inner'>
 							<div class='box'>
 								<div class='box-body'>
 									<div class='testimonial'>
-										<blockquote class='testimonial-quote'>{{ case.blockquote }}</blockquote>
+										<blockquote class='testimonial-quote'>{{ testimonial.quote | raw }}</blockquote>
 										<div class='testimonial-details clearfix'>
 											<div class='media pull'>
 												<div class='hd'>
-													<img class='testimonial-author-photo' src='{{ case.blockquote_logo }}'>
+													<img class='testimonial-author-photo' src='{{ asset(testimonial.picture) }}'>
 												</div>
 												<div class='bd testimonial-author'>
-													<div class='testimonial-author-name'>Jean-Jacques Rousseau</div>
-													<div class='testimonial-author-position'>Consultant, Deloitte</div>
+													<div class='testimonial-author-name'>{{ testimonial.name }}</div>
+													<div class='testimonial-author-position'>{{ testimonial.title }}</div>
 												</div>
 											</div>
 											<div class='push testimonial-company-logo-container'>
-												<img class='testimonial-company-logo' src='{{ asset(case.client_logo) }}'>
+												<img class='testimonial-company-logo' src='{{ asset(testimonial.logo) }}'>
 											</div>
 										</div>
 									</div>

@@ -3,6 +3,9 @@
 {# Load client DataSet #}
 {% block featured_client %}{% endblock %}
 
+{# Load testimonial DataSet #}
+{% block home_testimonials %}{% endblock %}
+
 {# load homepage localization keys #}
 {% block homepage %}{% endblock %}
 
@@ -245,52 +248,19 @@
                     <div class='column-inner'>
                         <h3><span>{{ 'testimonials' | trans }}</span></h3>
                         <ul class='list testimonials'>
-                            <li>
-                                <div class='media'>
-                                    <div class='hd'>
-                                        <img src='{{ asset("/static/images/dias.JPG") }}'>
+                            {% for testimonial in app.home_testimonials %}
+                                <li>
+                                    <div class='media'>
+                                        <div class='hd'>
+                                            <img src='{{ asset(testimonial.picture) }}'>
+                                        </div>
+                                        <div class='bd'>
+                                            <p class='quote'>{{ testimonial.quote | raw }}</p>
+                                            <p class='author'><small>{{ testimonial.name }}, {{ testimonial.title }}</small></p>
+                                        </div>
                                     </div>
-                                    <div class='bd'>
-                                        <p class='quote'>{{ 'quote_dias' | trans }}</p>
-                                        <p class='author'><small>Georges-Edouard Dias, L'Oréal</small></p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class='media'>
-                                    <div class='hd'>
-                                        <img src='{{ asset("http://wisembly-content.s3.amazonaws.com/corpo/testimonial/guillaumevraux.png") }}'>
-                                    </div>
-                                    <div class='bd'>
-                                        <p class='quote'>{{ 'quote_guillaumevraux' | trans }}</p>
-                                        <p class='author'><small>Guillaume Vraux, Cofely Services, Groupe GDF SUEZ</small></p>
-                                    </div>
-                                </div>
-                            </li>
-<!--
-                            <li>
-                                <div class='media'>
-                                    <div class='hd'>
-                                        <img src='{{ asset("/static/images/stelmaszyk.jpg") }}'>
-                                    </div>
-                                    <div class='bd'>
-                                        <p class='quote'>{{ 'quote_stelmaszyk' | trans }}</p>
-                                        <p class='author'><small>Patric Stelmaszyk, Capgemini Consulting</small></p>
-                                    </div>
-                                </div>
-                            </li>
--->
-                            <li>
-                                <div class='media'>
-                                    <div class='hd'>
-                                        <img src='{{ asset("http://wisembly-content.s3.amazonaws.com/corpo/testimonial/clairebussac.png") }}'>
-                                    </div>
-                                    <div class='bd'>
-                                        <p class='quote'>{{ 'quote_bussac' | trans }}</p>
-                                        <p class='author'><small>Claire Bussac, Responsable Marketing et Innovation RH, Crédit Agricole S.A</small></p>
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
