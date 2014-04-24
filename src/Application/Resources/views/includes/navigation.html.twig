@@ -24,7 +24,7 @@
 													{% if app['country'] != 'en' %}
 													<li>
 														<a href='{{ app.host }}/en/'>
-															<img src='{{ asset("/static/images/en.png") }}'>
+															<img src='{{ asset("/static/images/gb.png") }}'>
 														</a>
 													</li>
 													{% endif %}
@@ -83,7 +83,8 @@
 								</li>
 								<li class='item' data-name='login'>
 									<div class='dropdown'>
-										<a href='#' class='dropdown-toggle tab_link'>{{ 'login' | trans }}</a>
+										<a href='#' id="login_link" class='dropdown-toggle tab_link'>{{ 'login' | trans }}</a>
+										<a href='#' id="go_to_app_link" class='dropdown-toggle tab_link' style="display:none;">{{ 'goto_app' | trans }}</a>
 										<div class='dropdown-bottom' data-name='dropdown'>
 											<form action='https://app.wisembly.com/login_check' method='POST' class='login clearfix' data-status='none' data-parsley-validate data-parsley-ui-enabled='false'>
 												<div class='input-container'>

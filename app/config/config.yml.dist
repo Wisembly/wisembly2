@@ -7,10 +7,11 @@ global:
   mysql: /Applications/MAMP/Library/bin/mysql
 
 third_party:
-  mixpanel:  trackingnumber
-  analytics: trackingnumber
-  olark:     trackingnumber
+  mixpanel:  null
+  analytics: null
+  iadvize:   null
   wisembly:
+    api_url: 'https://app.wisembly.com'
     app_id:  app_id
     app_secret:  app_secret
 
