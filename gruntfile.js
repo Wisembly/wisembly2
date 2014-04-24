@@ -69,5 +69,5 @@ module.exports = function(grunt) {
     });
 
     // Tasks registred
-    grunt.registerTask('css-dev', ['sass', 'autoprefixer', 'cssmin', 'uglify:min', 'watch']);
+    grunt.registerTask('css-dev', ['sass', 'autoprefixer', 'cssmin', 'watch']);
 };

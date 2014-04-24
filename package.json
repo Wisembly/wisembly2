@@ -13,8 +13,5 @@
   "repository": {
     "type": "git",
     "url": ""
-  },
-  "dependencies": {
-    "grunt-contrib-uglify": "~0.4.0"
   }
 }
