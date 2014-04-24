@@ -64,7 +64,7 @@
 }
 .page-headline {
 	background-color: $brandBlueExtraLight;
-	background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.6));
+	//background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.6));
 	
 	.container {
 		padding: 40px 0;
@@ -95,20 +95,23 @@
 	}
 }
 .case-detail {
-	background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.6)), linear-gradient(to bottom, $brandBlueExtraLight, #fff 450px);
+	background-image: linear-gradient(to bottom, $brandBlueExtraLight, #fff 550px);
 	
 	&.sncf {
-		background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.6)), linear-gradient(to bottom, #3f3f41, #fff 450px);
+		background-image: linear-gradient(to bottom, #3f3f41, #fff 500px);
 	}
 	&.la-poste {
-		background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.6)), linear-gradient(to bottom, #052c7a, #fff 450px);
+		background-image: linear-gradient(to bottom, #052c7a, #fff 500px);
 	}
 	.page-headline {
 		background-color: transparent;
 		background-image: none;
 		border: 0;
 		box-shadow: none;
-		
+		h1 {
+			font-weight: 400;
+			text-shadow: none;
+		}
 		.container {
 			padding: 60px 0 30px !important;
 		}

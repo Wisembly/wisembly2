@@ -2808,8 +2808,6 @@ form[data-status='testing'] .button-processing {
 
 .page-headline {
   background-color: #7fc4e2;
-  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6));
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6));
 }
 .page-headline .container {
   padding: 40px 0;
@@ -2838,22 +2836,26 @@ form[data-status='testing'] .button-processing {
 }
 
 .case-detail {
-  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), -webkit-linear-gradient(top, #7fc4e2, white 450px);
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), linear-gradient(to bottom, #7fc4e2, white 450px);
+  background-image: -webkit-linear-gradient(top, #7fc4e2, white 550px);
+  background-image: linear-gradient(to bottom, #7fc4e2, white 550px);
 }
 .case-detail.sncf {
-  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), -webkit-linear-gradient(top, #3f3f41, white 450px);
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), linear-gradient(to bottom, #3f3f41, white 450px);
+  background-image: -webkit-linear-gradient(top, #3f3f41, white 500px);
+  background-image: linear-gradient(to bottom, #3f3f41, white 500px);
 }
 .case-detail.la-poste {
-  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), -webkit-linear-gradient(top, #052c7a, white 450px);
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6)), linear-gradient(to bottom, #052c7a, white 450px);
+  background-image: -webkit-linear-gradient(top, #052c7a, white 500px);
+  background-image: linear-gradient(to bottom, #052c7a, white 500px);
 }
 .case-detail .page-headline {
   background-color: transparent;
   background-image: none;
   border: 0;
   box-shadow: none;
+}
+.case-detail .page-headline h1 {
+  font-weight: 400;
+  text-shadow: none;
 }
 .case-detail .page-headline .container {
   padding: 60px 0 30px !important;
