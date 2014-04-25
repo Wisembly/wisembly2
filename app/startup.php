@@ -28,7 +28,8 @@ $app->register(new KeyValueSet('meta', 'meta', 'page'));
 
 $app->register(new DataSet('client', 'client'));
 $app->register(new DataSet('client_category', 'client_category'));
-$app->register(new DataSet('featured_client', 'client', array('featured' => 1)));
+$app->register(new DataSet('home_featured_client', 'client', array('home_featured' => 1)));
+$app->register(new DataSet('cases_featured_client', 'client', array('cases_featured' => 1)));
 
 $app->register(new DataSet('home_testimonials', 'testimonial', array('home_featured' => 1)));
 $app->register(new DataSet('cases_testimonials', 'testimonial', array('cases_featured' => 1)));

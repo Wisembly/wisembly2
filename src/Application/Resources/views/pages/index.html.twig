@@ -1,7 +1,7 @@
 {% extends 'layouts/main.html.twig' %}
 
 {# Load client DataSet #}
-{% block featured_client %}{% endblock %}
+{% block home_featured_client %}{% endblock %}
 
 {# Load testimonial DataSet #}
 {% block home_testimonials %}{% endblock %}
@@ -268,7 +268,7 @@
                     <div class='column-inner'>
                         <h3><a href='{{ url('clients') }}'>{{ 'clients' | trans }}</a></h3>
                         <ul class='row list clients-list'>
-                            {% for client in app.featured_client %}
+                            {% for client in app.home_featured_client %}
                                 <li class='column three'>
                                     <div class='column-inner'>
                                         <a href='{{ url('clients') }}#{{ client.name|escape('url')|lower }}'>

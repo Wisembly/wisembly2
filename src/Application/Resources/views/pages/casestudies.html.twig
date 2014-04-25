@@ -6,6 +6,9 @@
 {# Load testimonial DataSet #}
 {% block cases_testimonials %}{% endblock %}
 
+{# Load client DataSet #}
+{% block cases_featured_client %}{% endblock %}
+
 {% block body_class %}case-studies{% endblock %}
 
 {# SEO #}
@@ -82,13 +85,15 @@
 			</ul>
 			<h3 class='text-centered'>{{ "Meet our 351 other equally lovely clients" | trans }}</h3>
 			<ul class='row list clients-grid'>
-				{% for case in app.cases %}
+				{% for client in app.cases_featured_client %}
 					<li class='column three'>
 						<div class='column-inner'>
 							<div class='box'>
 								<div class='box-body'>
 									<div class='client-logo'>
-										<img src='{{ asset(case.client_logo) }}' class='client-logo-image'>
+										<a href='{{ url('clients') }}#{{ client.name|escape('url')|lower }}'>
+											<img src='{{ asset(client.logo) }}' class='client-logo-image'>
+										</a>
 									</div>
 								</div>
 							</div>
