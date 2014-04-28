@@ -40,6 +40,7 @@
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
           ga('create', '{{ app['third_party'].analytics }}', 'wisembly.com');
+          ga('require', 'displayfeatures');
           ga('send', 'pageview');
         </script>
     {% endif %}
