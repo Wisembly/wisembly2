@@ -146,21 +146,53 @@ $(document).ready(function () {
 		cleanup: 'indexCleanup'
 	});
 
-	// try to detect if user is logged on app. if so, display a direct link to app
-	if (window.Basil) {
-		var basil = new window.Basil();
+	// detect if user is logged on app
+	var detectLoggedUser = function () {
+		if (basil.get('api_session:current', { storages: ['cookie'] }) && basil.get('api_session:current', { storages: ['cookie'] }).token) {
+			if (basil.get('api_session:anonymous', { storages: ['cookie'] }) && basil.get('api_session:anonymous', { storages: ['cookie'] }).token === basil.get('api_session:current', { storages: ['cookie'] }).token) {
+				window.isLogged = false;
+				return;
+			}
 
-		if (basil.cookie.get('wisembly_remember_me')) {
 			window.isLogged = true;
 
 			// hide and show
 			$('#login_link').hide();
 			$('#go_to_app_link')
-				.attr('href', window.config.baseUrl) // update url to wisembly solution url
+				.attr('href', '//app.' + window.secondLevelDomain) // update url to wisembly solution url
 				.show();
 		}
-	}
+	};
 
+	$.extend(String.prototype, {
+		parseURI: function (part) {
+			var uri = {},
+				uriPartNames = ['url', '', 'protocol', '', 'user', 'password', 'host', 'port', 'pathname', 'query', 'hash'],
+				uriParts = /^((\w+):\/\/)?((\w+):?(\w+)?@)?([^\/\?:]+):?(\d+)?(\/?[^\?#]+)?\??([^#]+)?(#?.*)/.exec(this);
+			if (!uriParts)
+				return uri;
+			$.each(uriPartNames, function(pos, name) {
+				if (name !== '')
+					uri[name] = (uriParts[pos] ? uriParts[pos] : '');
+			});
+			var hostParts = uri['host'] ? uri['host'].split('.') : [];
+			if (hostParts.length > 2)
+				uri.subdomain = hostParts[0];
+			// second-level domain
+			uri.sld = hostParts.slice(-2).join('.');
+			// top-level domain
+			uri.tld = hostParts[hostParts.length - 1];
+
+			uri.protocol = uri.protocol.toLowerCase();
+			// uri.query_args = uri.query.parseQuery();
+			if (part)
+				return uri[part] || null;
+			return uri;
+		}
+	});
+
+	window.secondLevelDomain = window.location.href.parseURI()['sld'];
+	detectLoggedUser();
 });
 
 var tabs = {
@@ -240,9 +272,25 @@ window.login = {
 					this.$el.find('.credentials_info').html('Wrong credentials.');
 				}, this))
 				.done($.proxy(function (data) {
-					// Let the submit process continue
-					$form.data('registered-user', true).submit();
-					this.$el.find('.credentials_info').html('Redirecting...');
+					var session = data.success.data;
+
+					if (null !== session.user) {
+						window.basil.set('api_session:current', {
+							token: session.token,
+							refresh_token: session.refresh_token,
+							expires_at: session.expires_at
+						}, {
+							storages: ['cookie'],
+							domain: window.secondLevelDomain
+						});
+
+						this.$el.find('.credentials_info').html('Redirecting...');
+						window.location = '//app.' + window.secondLevelDomain;
+						return;
+					}
+
+					$form.removeData('registered-user');
+					this.$el.find('.credentials_info').html('Wrong credentials.');
 				}, this));
 			}
 
@@ -261,7 +309,6 @@ window.login = {
 				'X-Requested-With': 'XMLHttpRequest'
 			},
 			contentType: 'application/json',
-			dataType: 'jsonp',
 			url: config.baseUrl + '/api/4/authentication',
 			type: 'POST',
 			data: JSON.stringify(credentials)

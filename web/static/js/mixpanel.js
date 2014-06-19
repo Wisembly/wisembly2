@@ -69,11 +69,6 @@ $(document).ready(function () {
   };
 
   function getAdwordsCampaign() {
-    if (!window.Basil)
-      throw new Error('Basil should be defined');
-
-    var basil = new window.Basil();
-
     if (!basil.cookie.get('__utmz'))
       return false;
 

@@ -7,6 +7,6 @@
     "parsleyjs": "2.0.0",
     "jquery-easing": "*",
     "crypto-js": "http://crypto-js.googlecode.com/files/CryptoJS%20v3.1.2.zip",
-    "basil.js": "~0.1.25"
+    "basil.js": "~0.2.0"
   }
 }
