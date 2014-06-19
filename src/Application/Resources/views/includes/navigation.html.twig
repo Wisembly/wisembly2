@@ -84,9 +84,9 @@
 								<li class='item' data-name='login'>
 									<div class='dropdown'>
 										<a href='#' id="login_link" class='dropdown-toggle tab_link'>{{ 'login' | trans }}</a>
-										<a href='#' id="go_to_app_link" class='dropdown-toggle tab_link' style="display:none;">{{ 'goto_app' | trans }}</a>
+										<a href='{{ app['third_party']['wisembly']['app_url'] }}' id="go_to_app_link" class='dropdown-toggle tab_link' style="display:none;">{{ 'goto_app' | trans }}</a>
 										<div class='dropdown-bottom' data-name='dropdown'>
-											<form action='https://app.wisembly.com/login_check' method='POST' class='login clearfix' data-status='none' data-parsley-validate data-parsley-ui-enabled='false'>
+											<form class='login clearfix' data-status='none' data-parsley-validate data-parsley-ui-enabled='false'>
 												<div class='input-container'>
 													<input name='_username' class='input email' placeholder='{{ 'email' | trans }}' data-parsley-required data-parsley-type='email' />
 													<span class='input-background'></span>

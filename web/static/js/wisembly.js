@@ -5,7 +5,8 @@ $(document).ready(function () {
 		});
 
 	window.config = {
-		baseUrl: window.api_url
+		apiUrl: window.api_url,
+		appUrl: window.app_url
 	};
 
 	tabs.startListening();
@@ -160,9 +161,7 @@ $(document).ready(function () {
 			$('#login_link').hide();
 			$('[data-name=login] a').off('click');
 
-			$('#go_to_app_link')
-				.attr('href', '//app.' + window.secondLevelDomain) // update url to wisembly solution url
-				.show();
+			$('#go_to_app_link').show();
 		}
 	};
 
@@ -287,7 +286,7 @@ window.login = {
 						});
 
 						this.$el.find('.credentials_info').html('Redirecting...');
-						window.location = '//app.' + window.secondLevelDomain;
+						window.location = window.config.appUrl;
 						return;
 					}
 
@@ -311,7 +310,7 @@ window.login = {
 				'X-Requested-With': 'XMLHttpRequest'
 			},
 			contentType: 'application/json',
-			url: config.baseUrl + '/api/4/authentication',
+			url: config.apiUrl + '/api/4/authentication',
 			type: 'POST',
 			data: JSON.stringify(credentials)
 		});
@@ -377,14 +376,14 @@ var joinAnEvent = {
 	getEvent: function (keyword) {
 		if (this.xhr)
 			this.xhr.abort();
-		return this.xhr = $.ajax({ url: config.baseUrl + '/api/4/event/' + keyword || '', dataType: 'json' });
+		return this.xhr = $.ajax({ url: config.apiUrl + '/api/4/event/' + keyword || '', dataType: 'json' });
 	},
 
 	goTo: function (e) {
 		e.preventDefault();
 		if (!this.keywordExists)
 			return;
-		window.open(config.baseUrl + '/' + this.$el.find('input').val());
+		window.open(config.apiUrl + '/' + this.$el.find('input').val());
 	},
 
 	updateStatus: function () {

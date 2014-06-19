@@ -11,6 +11,7 @@ third_party:
   analytics: null
   iadvize:   null
   wisembly:
+    app_url: 'https://app.wisembly.com'
     api_url: 'https://app.wisembly.com'
     app_id:  app_id
     app_secret:  app_secret
