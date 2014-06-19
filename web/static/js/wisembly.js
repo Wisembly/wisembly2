@@ -156,8 +156,10 @@ $(document).ready(function () {
 
 			window.isLogged = true;
 
-			// hide and show
+			// hide and show, deactivate toggle
 			$('#login_link').hide();
+			$('[data-name=login] a').off('click');
+
 			$('#go_to_app_link')
 				.attr('href', '//app.' + window.secondLevelDomain) // update url to wisembly solution url
 				.show();
