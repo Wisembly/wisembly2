@@ -2384,13 +2384,14 @@ form[data-status='testing'] .button-processing {
 .brand {
   display: block;
   float: left;
-  width: 120px;
-  height: 28px;
-  background-image: url(../images/logo.png);
+  width: 112px;
+  height: 25px;
   background-position: 0 0;
   background-repeat: no-repeat;
-  text-indent: -1000%;
-  margin-top: 21px;
+  background-image: url('../images/wisembly-logo.png');
+  background-image: url('../images/wisembly-logo.svg'), none;
+  font-size: 0;
+  margin-top: 21px
 }
 
 .top-header-list {
