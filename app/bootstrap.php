@@ -43,7 +43,7 @@ $app['twig']->addExtension(new Application\Twig\Extension\AssetsExtension($confi
 $app['twig']->addExtension(new SilexCMS\Twig\Extension\ForeignKeyExtension($app));
 
 if ($app['debug']) {
-    $app['twig']->addExtension(new Twig_Extensions_Extension_Debug());
+    $app['twig']->addExtension(new Twig_Extension_Debug());
     $app['twig']->enableDebug();
 }
 
