@@ -9,6 +9,7 @@ http://wisembly.com
 - edit `config.yml` accordingly
 - get composer (if not globally installed)
 - `php composer.phar install`
+- `bower install`
 - create `wisembly_en` database
 - `./app/console wisembly:database --import`
 - create a virtual host that point to `/web`
