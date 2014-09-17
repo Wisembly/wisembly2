@@ -11,4 +11,5 @@ http://wisembly.com
 - `php composer.phar install`
 - create `wisembly_en` database
 - `./app/console wisembly:database --import`
+- create a virtual host that point to `/web`
 - you're done!
