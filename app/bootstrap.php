@@ -31,6 +31,10 @@ $app['country'] = isset($country) ? $country : 'fr';
 $app['phone_number'] = $config['phone.numbers'][$app['country']];
 $app['host'] = $config['global']['host'];
 
+// email form
+$app['mailto'] = $config['mailer']['mailto'];
+$app['mailfrom'] = $config['mailer']['mailfrom'];
+
 // ** load DB messages through LocalizationsSet if message table exist**
 try {
     $messages = new LocalizationSet('messages', 'messages', 'key');

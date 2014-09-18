@@ -32,8 +32,8 @@ class Contact implements ServiceProviderInterface
 
             $message = \Swift_Message::newInstance()
                     ->setSubject('[Contact Wisembly2] De la grosse caillasse en perspective!')
-                    ->setFrom(array('no-reply@wisembly.com'))
-                    ->setTo(array('contact@wisembly.com'))
+                    ->setFrom(array($app['mailfrom']))
+                    ->setTo(array($app['mailto']))
                     ->setBody($body);
 
             $result = $app['mailer']->send($message);

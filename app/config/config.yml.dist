@@ -30,6 +30,8 @@ mailer:
   password:   ******
   encryption: ssl
   auth_mode:  login
+  mailto:     *****@mail.com
+  mailfrom:   *****@mail.com
 
 databases:
     default:
