@@ -52,6 +52,9 @@ $app->register(new StaticPage('plans', '/plans', 'pages/plans.html.twig'));
 // clients page
 $app->register(new StaticPage('clients', '/our-clients', 'pages/clients.html.twig'));
 
+// events page
+$app->register(new StaticPage('events', '/events', 'pages/events.html.twig'));
+
 // about pages
 $app->register(new StaticPage('about-story', '/about/story', 'pages/about.html.twig'));
 $app->register(new StaticPage('about-team', '/about', 'pages/about-team.html.twig'));

@@ -65,6 +65,15 @@ $(document).ready(function () {
 
 	window.secondLevelDomain = window.location.href.parseURI()['sld'];
 	detectLoggedUser();
+
+	// Events filter
+	$('.event-filter').on('click', function (event) {
+		event.preventDefault();
+		var filter = $(event.currentTarget).attr('data-filter');
+		$('.history-item').hide();
+		$('.' + filter).show();
+	});
+
 });
 
 var tabs = {

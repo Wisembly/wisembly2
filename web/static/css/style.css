@@ -4697,3 +4697,9 @@ a [class*=" icon-"] {
 .mll {
   margin-left: 24px;
 }
+.afterwork .history-item-dot {
+  background-color: green;
+}
+.breakfast .history-item-dot {
+  background-color: #ff8c6b;
+}
