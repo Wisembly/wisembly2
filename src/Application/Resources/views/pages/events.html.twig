@@ -50,6 +50,20 @@
             <div class='history-stream'>
               <b class='history-stream-line'></b>
 
+              {% for event in app.events %}
+                <div class='history-item {{ event.type }}'>
+                  <b class='history-item-dot'></b>
+                  <h2 class='calendar-item-title'>{{ event.title }}</h2>
+                  <div class='calendar-item-date type-light clearfix'>
+                    <div class='calendar-item-day pull'><i class='icon icon-calendar' style='display:inline-block'></i>{{ event.date }}</div>
+                    <div class='calendar-item-time push'><i class='icon icon-time' style='display:inline-block'></i>{{ event.time }}</div>
+                  </div>
+                  <div class='calendar-item-address type-light pvm'><i class='icon icon-map-marker' style='display:inline-block'></i>{{ event.address }}</div>
+                  <div class='calendar-item-description mbl'>{{ event.description }}</div>
+                  <a href='{{ event.url }}' class='button'>{{ 'im_interested' | trans }}</button>
+                </div>
+              {% endfor %}
+
               <div class='history-item breakfast'>
                 <b class='history-item-dot'></b>
                 <h2 class='calendar-item-title'>Petit-déjeuner thématique - Collaboratif et création de valeur</h2>

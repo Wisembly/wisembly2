@@ -24,6 +24,7 @@ $app->register(new DataSet('cases', 'cases'));
 $app->register(new DataSet('history', 'history'));
 $app->register(new DataSet('team', 'team'));
 $app->register(new DataSet('press', 'press'));
+$app->register(new DataSet('events', 'events'));
 $app->register(new KeyValueSet('meta', 'meta', 'page'));
 
 $app->register(new DataSet('client', 'client'));

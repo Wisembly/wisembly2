@@ -76,10 +76,10 @@ class DatabaseCommand extends Command
             $process->setTimeout(3600);
             $process->run();
 
-            if (!$process->isSuccessful()) {
-                $output->writeln('<error>'. $process->getErrorOutput() .'</error>');
-                return;
-            }
+            // if (!$process->isSuccessful()) {
+            //     $output->writeln('<error>'. $process->getErrorOutput() .'</error>');
+            //     return;
+            // }
         }
         $output->writeln('<info>Done!</info>');
     }
@@ -99,13 +99,14 @@ class DatabaseCommand extends Command
 
             $output->writeln("<info>Dumping {$name} database if exists..</info>");
             $command = 'echo "DROP DATABASE IF EXISTS '. $db['dbname'] . '" | ' . $mysql . ' && echo "CREATE DATABASE ' . $db['dbname'] . '" | ' . $mysql;
+
             $process = new Process($command);
             $process->run();
 
-            if (!$process->isSuccessful()) {
-                $output->writeln('<error>'. $process->getErrorOutput() .'</error>');
-                return;
-            }
+            // if (!$process->isSuccessful()) {
+            //     $output->writeln('<error>'. $process->getErrorOutput() .'</error>');
+            //     return;
+            // }
 
             $output->writeln("<info>Importing {$name} database..</info>");
             $command = $mysql . ' ' . $db['dbname'] . ' < ' . __DIR__ . '/../../../db/dump_db_' . $name . '.sql';
