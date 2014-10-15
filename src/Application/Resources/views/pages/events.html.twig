@@ -58,93 +58,13 @@
                     <div class='calendar-item-day pull'><i class='icon icon-calendar' style='display:inline-block'></i>{{ event.date }}</div>
                     <div class='calendar-item-time push'><i class='icon icon-time' style='display:inline-block'></i>{{ event.time }}</div>
                   </div>
+                  {% if event.address %}
                   <div class='calendar-item-address type-light pvm'><i class='icon icon-map-marker' style='display:inline-block'></i>{{ event.address }}</div>
+                  {% endif %}
                   <div class='calendar-item-description mbl'>{{ event.description }}</div>
-                  <a href='{{ event.url }}' class='button'>{{ 'im_interested' | trans }}</button>
+                  <a href='{{ event.url }}' class='button mbl'>{{ 'im_interested' | trans }}</a>
                 </div>
               {% endfor %}
-
-              <div class='history-item breakfast'>
-                <b class='history-item-dot'></b>
-                <h2 class='calendar-item-title'>Petit-déjeuner thématique - Collaboratif et création de valeur</h2>
-                <div class='calendar-item-date type-light clearfix'>
-                  <div class='calendar-item-day pull'><i class='icon icon-calendar' style='display:inline-block'></i>Jeudi 9 octobre</div>
-                  <div class='calendar-item-time push'><i class='icon icon-time' style='display:inline-block'></i>8h30</div>
-                </div>
-                <div class='calendar-item-address type-light pvm'><i class='icon icon-map-marker' style='display:inline-block'></i>87 rue d'Aboukir, 75002, Paris</div>
-                <div class='calendar-item-description mbl'>Interview croisée entre Sara Sreberny-Mohammadi, Head of Media Logistics à l'OCDE, et Romain David, CEO de Wisembly</div>
-              </div>
-
-              <div class='history-item webinar'>
-                <b class='history-item-dot'></b>
-                <h2 class='calendar-item-title'>Webinar sur le thème : séminaire interactif</h2>
-                <div class='calendar-item-date type-light clearfix'>
-                  <div class='calendar-item-day pull'><i class='icon icon-calendar' style='display:inline-block'></i>Mardi 21 octobre</div>
-                  <div class='calendar-item-time push'><i class='icon icon-time' style='display:inline-block'></i>9h30 à 10h</div>
-                </div>
-                <div class='calendar-item-description mbl mtm'>Privilège Clients Wisembly.</div>
-              </div>
-
-              <div class='history-item afterwork'>
-                <b class='history-item-dot'></b>
-                <h2 class='calendar-item-title'>Afterwork Wisembly</h2>
-                <div class='calendar-item-date type-light clearfix'>
-                  <div class='calendar-item-day pull'><i class='icon icon-calendar' style='display:inline-block'></i>Jeudi 6 novembre</div>
-                  <div class='calendar-item-time push'><i class='icon icon-time' style='display:inline-block'></i>19h00</div>
-                </div>
-                <div class='calendar-item-address pvm type-light'><i class='icon icon-map-marker' style='display:inline-block'></i>20 rue Sainte-Croix de la Bretonnerie, 75001 Paris</div>
-                <div class='calendar-item-description mbl'>Mojito Party à la Wisembly Factory</div>
-              </div>
-
-              <div class='history-item webinar'>
-                <b class='history-item-dot'></b>
-                <h2 class='calendar-item-title'>Webinar sur le thème : séminaire participatif</h2>
-                <div class='calendar-item-date type-light clearfix'>
-                  <div class='calendar-item-day pull'><i class='icon icon-calendar' style='display:inline-block'></i>Jeudi 13 novembre</div>
-                  <div class='calendar-item-time push'><i class='icon icon-time' style='display:inline-block'></i>9h30 à 10h</div>
-                </div>
-                <div class='calendar-item-description mbl mtm'>Privilège Clients Wisembly.</div>
-              </div>
-
-              <div class='history-item webinar'>
-                <b class='history-item-dot'></b>
-                <h2 class='calendar-item-title'>Webinar sur le thème : séminaire collaboratif</h2>
-                <div class='calendar-item-date type-light clearfix'>
-                  <div class='calendar-item-day pull'><i class='icon icon-calendar' style='display:inline-block'></i>Mardi 25 novembre</div>
-                  <div class='calendar-item-time push'><i class='icon icon-time' style='display:inline-block'></i>9h30 à 10h</div>
-                </div>
-                <div class='calendar-item-description mbl mtm'>Privilège Clients Wisembly.</div>
-              </div>
-
-              <div class='history-item breakfast'>
-                <b class='history-item-dot'></b>
-                <h2 class='calendar-item-title'>Petit-déjeuner thématique</h2>
-                <div class='calendar-item-date type-light clearfix'>
-                  <div class='calendar-item-day pull'><i class='icon icon-calendar' style='display:inline-block'></i>Jeudi 4 décembre</div>
-                  <div class='calendar-item-time push'><i class='icon icon-time' style='display:inline-block'></i>19h</div>
-                </div>
-                <div class='calendar-item-description mbl mtm'>Informations et détails seront disponibles très prochainement.</div>
-              </div>
-
-              <div class='history-item webinar'>
-                <b class='history-item-dot'></b>
-                <h2 class='calendar-item-title'>Webinar sur le thème : la classe digitale</h2>
-                <div class='calendar-item-date type-light clearfix'>
-                  <div class='calendar-item-day pull'><i class='icon icon-calendar' style='display:inline-block'></i>Jeudi 11 décembre</div>
-                  <div class='calendar-item-time push'><i class='icon icon-time' style='display:inline-block'></i>9h30 à 10h</div>
-                </div>
-                <div class='calendar-item-description mbl mtm'>Privilège Clients Wisembly.</div>
-              </div>
-
-              <div class='history-item webinar'>
-                <b class='history-item-dot'></b>
-                <h2 class='calendar-item-title'>Webinar sur le thème : Réunions virtuelles</h2>
-                <div class='calendar-item-date type-light clearfix'>
-                  <div class='calendar-item-day pull'><i class='icon icon-calendar' style='display:inline-block'></i>Mardi 23 décembre</div>
-                  <div class='calendar-item-time push'><i class='icon icon-time' style='display:inline-block'></i>9h30 à 10h</div>
-                </div>
-                <div class='calendar-item-description mbl mtm'>Privilège Clients Wisembly.</div>
-              </div>
 
             </div>
           </div>
