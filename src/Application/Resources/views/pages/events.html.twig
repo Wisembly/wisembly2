@@ -52,7 +52,7 @@
               <b class='history-stream-line'></b>
 
               {% for event in app.events %}
-                <div class='history-item {{ event.type }}'>
+                <div class='history-item {{ event.type }} {% if loop.last %}last{% endif %}'>
                   <b class='history-item-dot'></b>
                   <h2 class='calendar-item-title'>{{ event.title }}</h2>
                   <div class='calendar-item-date type-light clearfix mbm'>
