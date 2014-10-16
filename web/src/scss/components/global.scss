@@ -65,7 +65,7 @@ blockquote {
 .section {
 	border-bottom: 1px solid $lightGrey;
 	box-shadow: inset 0 -1px 5px 0 rgba(0,0,0, .06);
-	
+
 	&.even {
 		background-color: #f3f6f7;
 	}
@@ -112,7 +112,7 @@ blockquote {
 	border-bottom: 0;
 	position: relative;
 	overflow: hidden;
-	
+
 	img,
 	.bd {
 		min-width: 1024px;
@@ -416,7 +416,7 @@ blockquote {
 		@extend .type-18;
 		@extend .type-weight-semibold;
 		margin-bottom: 30px;
-		
+
 		a,
 		span {
 			background-color: $brandBlueExtraLight;
@@ -627,7 +627,7 @@ blockquote {
 		width: 200px;
 		margin: 0 auto 30px;
 		text-decoration: none; // for links
-		
+
 		img {
 			margin: 0 auto;
 		}
@@ -669,6 +669,18 @@ blockquote {
 	top: 0;
 	border: 1px solid $white;
 	box-shadow: 0 0 2px rgba($black,.2);
+}
+.webinar .history-item-dot {
+	background-color: $brandYellow;
+}
+.afterwork .history-item-dot {
+	background-color: $brandRed;
+}
+.breakfast .history-item-dot {
+	background-color: $brandOrangeLight;
+}
+.passed .history-item-dot {
+	background-color: $brandGrey;
 }
 .history-item-cover {
 	position: relative;
@@ -871,7 +883,7 @@ blockquote {
 	border: 1px solid $lightGrey;
 	box-shadow: 0 1px 2px rgba(0,0,0,.1);
 	padding: 30px;
-	
+
 	h3 {
 		margin-bottom: 0;
 	}
@@ -912,7 +924,7 @@ blockquote {
 		box-shadow: 0 1px 5px rgba(0,0,0,.1);
 		overflow: hidden;
 		line-height: 1.5em;
-	
+
 		h3 {
 			@extend .type-16;
 			@extend .type-weight-semibold;
@@ -948,7 +960,7 @@ blockquote {
 		li {
 			padding: 10px 20px;
 			color: #888;
-	
+
 			&:nth-child(even) {
 				background-color: #fefefe;
 				border-width: 1px 0;
@@ -1410,7 +1422,7 @@ blockquote {
 .kpi-table {
 	table-layout: fixed;
 	width: 100%;
-	
+
 	tr {
 		border-bottom: 1px solid $brandBlueExtraExtraLight;
 	}
@@ -1458,7 +1470,7 @@ blockquote {
 }
 .middle {
 	vertical-align: middle;
-	
+
 	img {
 		position: static;
 		margin: 0 auto;
@@ -1474,7 +1486,7 @@ blockquote {
 	right: 0;
 	left: 0;
 	bottom: 0;
-	
+
 	img {
 		margin: -20% auto 0;
 	}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
 	 HTML5 display definitions
@@ -133,7 +134,6 @@ dfn {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -315,7 +315,6 @@ html input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -330,7 +329,6 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
 }
@@ -390,7 +388,7 @@ table {
 }
 
 html {
-  color: #444444;
+  color: #444;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -474,9 +472,9 @@ blockquote {
   display: block;
   margin: 0 auto;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   pointer-events: none;
 }
 
@@ -520,7 +518,7 @@ blockquote {
 }
 .header h1 span,
 .header h2 span {
-  background-color: #444444;
+  background-color: #444;
   background-color: rgba(68, 68, 68, 0.7);
   line-height: 1.5em;
   padding: 2px 10px;
@@ -539,7 +537,7 @@ blockquote {
 .features-list {
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
   background-image: none;
-  background-color: white !important;
+  background-color: #fff !important;
 }
 .features-list .container {
   padding: 0;
@@ -574,7 +572,7 @@ blockquote {
   padding: 20px 20px;
   text-decoration: none;
   line-height: 20px;
-  color: #999999;
+  color: #999;
   height: 110px;
   text-transform: uppercase;
 }
@@ -586,6 +584,7 @@ blockquote {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
+
 .quiz-demo {
   height: 220px;
   padding: 20px 30px;
@@ -668,7 +667,6 @@ blockquote {
   outline: none;
   resize: none;
   width: 100%;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: 1px solid #e0e0e0;
   overflow: hidden;
@@ -695,7 +693,7 @@ blockquote {
   margin-bottom: 5px;
 }
 .quotes-stream li .quote-author {
-  color: #999999;
+  color: #999;
 }
 
 .headline {
@@ -716,9 +714,7 @@ blockquote {
 .headline .row-bump {
   margin-top: 100px;
 }
-.embeddedvideo {
-  margin-top: 100px;
-}
+
 .headline {
   background-color: #7fc4e2;
   background-image: url(/static/images/headline-graph-alt.png);
@@ -743,7 +739,7 @@ blockquote {
   left: 0;
   height: 20px;
   width: 100%;
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.075));
+  background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.075));
 }
 .headline .container-shadow:before {
   content: '';
@@ -1003,8 +999,24 @@ blockquote {
   position: absolute;
   left: -34px;
   top: 0;
-  border: 1px solid white;
+  border: 1px solid #fff;
   box-shadow: 0 0 2px rgba(68, 68, 68, 0.2);
+}
+
+.webinar .history-item-dot {
+  background-color: #fbe239;
+}
+
+.afterwork .history-item-dot {
+  background-color: #fd5364;
+}
+
+.breakfast .history-item-dot {
+  background-color: #ff8c6b;
+}
+
+.passed .history-item-dot {
+  background-color: #326279;
 }
 
 .history-item-cover {
@@ -1035,7 +1047,7 @@ blockquote {
 
 .history-item-title {
   margin: 0;
-  color: white !important;
+  color: #fff !important;
 }
 .history-item-title span {
   background-color: rgba(68, 68, 68, 0.7);
@@ -1092,7 +1104,7 @@ blockquote {
 }
 .team-list .img {
   margin-bottom: 10px;
-  border: 1px solid white;
+  border: 1px solid #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .team-list .name,
@@ -1105,7 +1117,7 @@ blockquote {
   margin-bottom: 10px;
 }
 .team-list .role {
-  color: #999999;
+  color: #999;
 }
 
 .hero {
@@ -1174,11 +1186,11 @@ blockquote {
   width: 20%;
 }
 .press-list .date {
-  color: #999999;
+  color: #999;
 }
 .press-list a {
   text-decoration: none;
-  color: #444444;
+  color: #444;
 }
 .press-list a:hover {
   color: #006697;
@@ -1189,7 +1201,7 @@ blockquote {
 }
 .contact .phone-sheet {
   margin-bottom: 20px;
-  border: 1px solid white;
+  border: 1px solid #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -1220,6 +1232,7 @@ blockquote {
   color: #666;
   text-transform: uppercase;
 }
+
 .plans h3 {
   margin-bottom: 0px;
 }
@@ -1315,15 +1328,15 @@ blockquote {
   position: relative;
   pointer-events: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-font-smoothing: antialiased;
   color: #666;
 }
 .frame h5 {
   margin: 0;
-  color: #999999;
+  color: #999;
   line-height: 1.5em;
 }
 .frame li {
@@ -1489,6 +1502,85 @@ blockquote {
   left: 50%;
   margin-top: -10px;
   margin-left: -40px;
+}
+
+[data-name=home-browsers-loop] .app-body {
+  height: 307px;
+}
+[data-name=home-browsers-loop] .frame-loading {
+  width: 98%;
+  height: 307px;
+  line-height: 307px;
+}
+[data-name=home-browsers-loop] .frame-loading .overlay {
+  width: 100%;
+  height: 100%;
+}
+[data-name=home-browsers-loop] .frame-poll {
+  position: absolute;
+  overflow: hidden;
+}
+[data-name=home-browsers-loop] .frame-doc {
+  position: absolute;
+  overflow: hidden;
+}
+[data-name=home-browsers-loop] .frame-doc .frame-inner {
+  padding-top: 64px;
+}
+[data-name=home-browsers-loop] .frame-doc ul.slides {
+  *zoom: 1;
+  position: absolute;
+  left: 0;
+  width: 1000px;
+}
+[data-name=home-browsers-loop] .frame-doc ul.slides:before, [data-name=home-browsers-loop] .frame-doc ul.slides:after {
+  content: " ";
+  display: table;
+}
+[data-name=home-browsers-loop] .frame-doc ul.slides:after {
+  clear: both;
+}
+[data-name=home-browsers-loop] .frame-doc ul.slides li.slide {
+  float: left;
+  margin: 0 15px 0 15px;
+  color: #fff;
+  width: 196px;
+  line-height: 184px;
+}
+[data-name=home-browsers-loop] .frame-doc ul.slides li.first {
+  margin-left: 0;
+}
+[data-name=home-browsers-loop] .frame-doc .participant-help {
+  color: #999;
+}
+[data-name=home-browsers-loop] .frame-doc .controls, [data-name=home-browsers-loop] .frame-doc .participant-help {
+  margin-top: 162px;
+}
+[data-name=home-browsers-loop] .frame-doc .controls .progress-bar-container, [data-name=home-browsers-loop] .frame-doc .participant-help .progress-bar-container {
+  margin-top: 4px;
+}
+[data-name=home-browsers-loop] .frame-doc .controls .progress-bar-container .progress-bar, [data-name=home-browsers-loop] .frame-doc .participant-help .progress-bar-container .progress-bar {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: none;
+  width: 130px;
+  height: 10px;
+  border-radius: 5px;
+  display: block;
+  background: #eaedef;
+}
+[data-name=home-browsers-loop] .frame-doc .controls .progress-bar-container .progress-bar .progress-bar-value, [data-name=home-browsers-loop] .frame-doc .participant-help .progress-bar-container .progress-bar .progress-bar-value {
+  text-indent: -100%;
+  height: 10px;
+  max-width: 100%;
+  background: #c7d1d5;
+  border-radius: 5px;
+}
+[data-name=home-browsers-loop] .frame-doc .controls .controls-progress-stop, [data-name=home-browsers-loop] .frame-doc .participant-help .controls-progress-stop {
+  padding: 0;
+  text-align: right;
 }
 
 .quiz-demo .frame-loading {
@@ -1691,8 +1783,24 @@ blockquote {
   margin-bottom: 0;
 }
 
+.mbm {
+  margin-bottom: 15px;
+}
+
+.mbl {
+  margin-bottom: 24px;
+}
+
 .mtn {
   margin-top: 0;
+}
+
+.mtm {
+  margin-top: 15px;
+}
+
+.mll {
+  margin-left: 24px;
 }
 
 .container {
@@ -1842,7 +1950,7 @@ h4 {
 
 .type-white, .header, .features-list li.active a, .features-list a:hover, .headline, .section.clients h3 a,
 .section.clients h3 span, .jump-after-fold, .try-me-choices a, .history-item-cover, .about-navigation a, .case-study-la-poste .button-flat, .case-study-sncf .button-flat, .case-study-auchan .button-flat, .case-study-hec .button-flat {
-  color: white;
+  color: #fff;
 }
 
 .type-weight-light, .section h3, .section .h4, .header h1, .header h2, .headline h2, .try-me-choices a, .about-navigation {
@@ -1952,21 +2060,21 @@ h4 {
 .button {
   display: block;
   padding: 7px 10px;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   background-image: linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 1px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
-  color: #666666;
+  color: #666;
   text-align: center;
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
   appearance: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -1986,7 +2094,7 @@ h4 {
 
 .button-attention {
   background-color: #0786cd;
-  color: white;
+  color: #fff;
 }
 .button-attention:hover {
   background-color: #45a4da;
@@ -1997,7 +2105,7 @@ h4 {
 
 .button-validate {
   background-color: #45a4da;
-  color: white;
+  color: #fff;
 }
 .button-validate:hover {
   background-color: #7fc4e2;
@@ -2007,7 +2115,7 @@ h4 {
 }
 
 .button-disabled, .frame.sending .button {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   background-image: none;
   box-shadow: none;
   color: #999;
@@ -2016,7 +2124,7 @@ h4 {
 
 .button-call {
   background-color: #ff8c6b;
-  color: white;
+  color: #fff;
 }
 
 .button-small {
@@ -2044,7 +2152,7 @@ h4 {
   display: block;
   position: relative;
   padding: 6px 10px;
-  background-color: white;
+  background-color: #fff;
   cursor: text;
 }
 
@@ -2064,7 +2172,7 @@ h4 {
 .input-container .input::-webkit-input-placeholder {
   line-height: 1.4em;
   -webkit-transition: color .2s ease-in;
-  transition: color .2s ease-in;
+          transition: color .2s ease-in;
 }
 .textarea-container .textarea:-moz-placeholder,
 .input-container .input:-moz-placeholder {
@@ -2125,7 +2233,7 @@ h4 {
 select {
   width: 100%;
   padding: 6px 10px;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   background-image: linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -2133,7 +2241,7 @@ select {
   border: 1px solid #e0e0e0;
   outline: none;
   -webkit-appearance: none;
-  color: #666666;
+  color: #666;
 }
 
 form[data-status='none'] .button, form[data-status='testing'] .button {
@@ -2146,11 +2254,11 @@ form[data-status='none'] .button, form[data-status='testing'] .button {
 }
 form[data-status='valid'] .button {
   background-color: #66bc58;
-  color: white;
+  color: #fff;
 }
 form[data-status='not-valid'] .button {
   background-color: #fd5364;
-  color: white;
+  color: #fff;
   pointer-events: none;
   cursor: not-allowed;
 }
@@ -2180,7 +2288,7 @@ form[data-status='testing'] .button-processing {
   position: absolute;
   right: -1px;
   z-index: 3;
-  background-color: white;
+  background-color: #fff;
   border: 1px solid #e0e0e0;
 }
 
@@ -2211,7 +2319,7 @@ form[data-status='testing'] .button-processing {
 }
 
 .dropdown.active .dropdown-toggle {
-  background-color: white;
+  background-color: #fff;
   background-image: none;
 }
 .dropdown.active .dropdown-list,
@@ -2284,7 +2392,7 @@ form[data-status='testing'] .button-processing {
   top: 0;
   right: 0;
   left: 0;
-  background-color: white;
+  background-color: #fff;
   *zoom: 1;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2309,10 +2417,10 @@ form[data-status='testing'] .button-processing {
   height: 25px;
   background-position: 0 0;
   background-repeat: no-repeat;
-  background-image: url('../images/wisembly-logo.png');
-  background-image: url('../images/wisembly-logo.svg'), none;
+  background-image: url("../images/wisembly-logo.png");
+  background-image: url("../images/wisembly-logo.svg"), none;
   font-size: 0;
-  margin-top: 21px
+  margin-top: 21px;
 }
 
 .top-header-list {
@@ -2345,12 +2453,12 @@ form[data-status='testing'] .button-processing {
 }
 .top-header .list a {
   text-decoration: none;
-  color: #999999;
+  color: #999;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 .top-header .list a:hover {
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05));
-  color: #666666;
+  background-image: -webkit-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.05));
+  color: #666;
 }
 .top-header .list a:active {
   padding-top: 6px;
@@ -2366,7 +2474,7 @@ form[data-status='testing'] .button-processing {
 }
 .top-header .list .item-highlighted a {
   background-color: #8ccd82;
-  color: white;
+  color: #fff;
 }
 
 .app-nav {
@@ -2405,7 +2513,7 @@ form[data-status='testing'] .button-processing {
   text-decoration: none;
   font-size: 16px;
   padding: 0 11px;
-  color: #999999;
+  color: #999;
   line-height: 70px;
 }
 .navigation a:hover {
@@ -2423,7 +2531,7 @@ form[data-status='testing'] .button-processing {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-  color: white;
+  color: #fff;
   text-transform: lowercase;
   line-height: 1;
   font-weight: 100;
@@ -2480,7 +2588,7 @@ form[data-status='testing'] .button-processing {
 }
 .footer h5 {
   text-transform: uppercase;
-  color: #999999;
+  color: #999;
   margin-top: 0;
 }
 .footer .button {
@@ -2493,7 +2601,7 @@ form[data-status='testing'] .button-processing {
   margin-bottom: 5px;
 }
 .page-list li a {
-  color: #999999;
+  color: #999;
   text-decoration: none;
 }
 
@@ -2533,7 +2641,7 @@ form[data-status='testing'] .button-processing {
   display: block;
   padding: 20px 29px 20px 15px;
   text-decoration: none;
-  color: #999999;
+  color: #999;
 }
 .breadcrumbs a:hover {
   color: #666;
@@ -2544,11 +2652,23 @@ form[data-status='testing'] .button-processing {
   height: 100%;
 }
 
+.browser-wrapper {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.browser-wrapper.first {
+  background-image: url(/static/images/organizer.png);
+}
+.browser-wrapper.last {
+  background-image: url(/static/images/participant.png);
+}
+
 .browser {
   width: 80%;
   margin: 0 auto;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  color: #999999;
+  color: #999;
 }
 
 .browser-window {
@@ -2556,7 +2676,7 @@ form[data-status='testing'] .button-processing {
   border-color: #979797;
   border-style: solid;
   border-radius: 3px;
-  background-color: white;
+  background-color: #fff;
   overflow: hidden;
 }
 
@@ -2778,16 +2898,16 @@ form[data-status='testing'] .button-processing {
 }
 
 .cssgradients .case-detail {
-  background-image: -webkit-linear-gradient(top, #7fc4e2, white 550px);
-  background-image: linear-gradient(to bottom, #7fc4e2, white 550px);
+  background-image: -webkit-linear-gradient(top, #7fc4e2, #fff 550px);
+  background-image: linear-gradient(to bottom, #7fc4e2, #fff 550px);
 }
 .cssgradients .case-detail.sncf {
-  background-image: -webkit-linear-gradient(top, #3f3f41, white 500px);
-  background-image: linear-gradient(to bottom, #3f3f41, white 500px);
+  background-image: -webkit-linear-gradient(top, #3f3f41, #fff 500px);
+  background-image: linear-gradient(to bottom, #3f3f41, #fff 500px);
 }
 .cssgradients .case-detail.la-poste {
-  background-image: -webkit-linear-gradient(top, #052c7a, white 500px);
-  background-image: linear-gradient(to bottom, #052c7a, white 500px);
+  background-image: -webkit-linear-gradient(top, #052c7a, #fff 500px);
+  background-image: linear-gradient(to bottom, #052c7a, #fff 500px);
 }
 .cssgradients .case-detail .page-headline {
   background-color: transparent;
@@ -2919,7 +3039,7 @@ form[data-status='testing'] .button-processing {
   left: 0;
 }
 .testimonials .author {
-  color: #999999;
+  color: #999;
   font-size: 13px;
 }
 
@@ -3037,7 +3157,6 @@ form[data-status='testing'] .button-processing {
   font-weight: normal;
   font-style: normal;
 }
-
 /* FONT AWESOME CORE
  * -------------------------- */
 [class^="icon-"],
@@ -3172,1464 +3291,1464 @@ a [class*=" icon-"] {
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
  * readers do not read off random characters that represent icons */
 .icon-glass:before {
-  content: "\f000";
+  content: "";
 }
 
 .icon-music:before {
-  content: "\f001";
+  content: "";
 }
 
 .icon-search:before {
-  content: "\f002";
+  content: "";
 }
 
 .icon-envelope-alt:before {
-  content: "\f003";
+  content: "";
 }
 
 .icon-heart:before {
-  content: "\f004";
+  content: "";
 }
 
 .icon-star:before {
-  content: "\f005";
+  content: "";
 }
 
 .icon-star-empty:before {
-  content: "\f006";
+  content: "";
 }
 
 .icon-user:before {
-  content: "\f007";
+  content: "";
 }
 
 .icon-film:before {
-  content: "\f008";
+  content: "";
 }
 
 .icon-th-large:before {
-  content: "\f009";
+  content: "";
 }
 
 .icon-th:before {
-  content: "\f00a";
+  content: "";
 }
 
 .icon-th-list:before {
-  content: "\f00b";
+  content: "";
 }
 
 .icon-ok:before {
-  content: "\f00c";
+  content: "";
 }
 
 .icon-remove:before {
-  content: "\f00d";
+  content: "";
 }
 
 .icon-zoom-in:before {
-  content: "\f00e";
+  content: "";
 }
 
 .icon-zoom-out:before {
-  content: "\f010";
+  content: "";
 }
 
 .icon-power-off:before,
 .icon-off:before {
-  content: "\f011";
+  content: "";
 }
 
 .icon-signal:before {
-  content: "\f012";
+  content: "";
 }
 
 .icon-gear:before,
 .icon-cog:before {
-  content: "\f013";
+  content: "";
 }
 
 .icon-trash:before {
-  content: "\f014";
+  content: "";
 }
 
 .icon-home:before {
-  content: "\f015";
+  content: "";
 }
 
 .icon-file-alt:before {
-  content: "\f016";
+  content: "";
 }
 
 .icon-time:before {
-  content: "\f017";
+  content: "";
 }
 
 .icon-road:before {
-  content: "\f018";
+  content: "";
 }
 
 .icon-download-alt:before {
-  content: "\f019";
+  content: "";
 }
 
 .icon-download:before {
-  content: "\f01a";
+  content: "";
 }
 
 .icon-upload:before {
-  content: "\f01b";
+  content: "";
 }
 
 .icon-inbox:before {
-  content: "\f01c";
+  content: "";
 }
 
 .icon-play-circle:before {
-  content: "\f01d";
+  content: "";
 }
 
 .icon-rotate-right:before,
 .icon-repeat:before {
-  content: "\f01e";
+  content: "";
 }
 
 .icon-refresh:before {
-  content: "\f021";
+  content: "";
 }
 
 .icon-list-alt:before {
-  content: "\f022";
+  content: "";
 }
 
 .icon-lock:before {
-  content: "\f023";
+  content: "";
 }
 
 .icon-flag:before {
-  content: "\f024";
+  content: "";
 }
 
 .icon-headphones:before {
-  content: "\f025";
+  content: "";
 }
 
 .icon-volume-off:before {
-  content: "\f026";
+  content: "";
 }
 
 .icon-volume-down:before {
-  content: "\f027";
+  content: "";
 }
 
 .icon-volume-up:before {
-  content: "\f028";
+  content: "";
 }
 
 .icon-qrcode:before {
-  content: "\f029";
+  content: "";
 }
 
 .icon-barcode:before {
-  content: "\f02a";
+  content: "";
 }
 
 .icon-tag:before {
-  content: "\f02b";
+  content: "";
 }
 
 .icon-tags:before {
-  content: "\f02c";
+  content: "";
 }
 
 .icon-book:before {
-  content: "\f02d";
+  content: "";
 }
 
 .icon-bookmark:before {
-  content: "\f02e";
+  content: "";
 }
 
 .icon-print:before {
-  content: "\f02f";
+  content: "";
 }
 
 .icon-camera:before {
-  content: "\f030";
+  content: "";
 }
 
 .icon-font:before {
-  content: "\f031";
+  content: "";
 }
 
 .icon-bold:before {
-  content: "\f032";
+  content: "";
 }
 
 .icon-italic:before {
-  content: "\f033";
+  content: "";
 }
 
 .icon-text-height:before {
-  content: "\f034";
+  content: "";
 }
 
 .icon-text-width:before {
-  content: "\f035";
+  content: "";
 }
 
 .icon-align-left:before {
-  content: "\f036";
+  content: "";
 }
 
 .icon-align-center:before {
-  content: "\f037";
+  content: "";
 }
 
 .icon-align-right:before {
-  content: "\f038";
+  content: "";
 }
 
 .icon-align-justify:before {
-  content: "\f039";
+  content: "";
 }
 
 .icon-list:before {
-  content: "\f03a";
+  content: "";
 }
 
 .icon-indent-left:before {
-  content: "\f03b";
+  content: "";
 }
 
 .icon-indent-right:before {
-  content: "\f03c";
+  content: "";
 }
 
 .icon-facetime-video:before {
-  content: "\f03d";
+  content: "";
 }
 
 .icon-picture:before {
-  content: "\f03e";
+  content: "";
 }
 
 .icon-pencil:before {
-  content: "\f040";
+  content: "";
 }
 
 .icon-map-marker:before {
-  content: "\f041";
+  content: "";
 }
 
 .icon-adjust:before {
-  content: "\f042";
+  content: "";
 }
 
 .icon-tint:before {
-  content: "\f043";
+  content: "";
 }
 
 .icon-edit:before {
-  content: "\f044";
+  content: "";
 }
 
 .icon-share:before {
-  content: "\f045";
+  content: "";
 }
 
 .icon-check:before {
-  content: "\f046";
+  content: "";
 }
 
 .icon-move:before {
-  content: "\f047";
+  content: "";
 }
 
 .icon-step-backward:before {
-  content: "\f048";
+  content: "";
 }
 
 .icon-fast-backward:before {
-  content: "\f049";
+  content: "";
 }
 
 .icon-backward:before {
-  content: "\f04a";
+  content: "";
 }
 
 .icon-play:before {
-  content: "\f04b";
+  content: "";
 }
 
 .icon-pause:before {
-  content: "\f04c";
+  content: "";
 }
 
 .icon-stop:before {
-  content: "\f04d";
+  content: "";
 }
 
 .icon-forward:before {
-  content: "\f04e";
+  content: "";
 }
 
 .icon-fast-forward:before {
-  content: "\f050";
+  content: "";
 }
 
 .icon-step-forward:before {
-  content: "\f051";
+  content: "";
 }
 
 .icon-eject:before {
-  content: "\f052";
+  content: "";
 }
 
 .icon-chevron-left:before {
-  content: "\f053";
+  content: "";
 }
 
 .icon-chevron-right:before {
-  content: "\f054";
+  content: "";
 }
 
 .icon-plus-sign:before {
-  content: "\f055";
+  content: "";
 }
 
 .icon-minus-sign:before {
-  content: "\f056";
+  content: "";
 }
 
 .icon-remove-sign:before {
-  content: "\f057";
+  content: "";
 }
 
 .icon-ok-sign:before {
-  content: "\f058";
+  content: "";
 }
 
 .icon-question-sign:before {
-  content: "\f059";
+  content: "";
 }
 
 .icon-info-sign:before {
-  content: "\f05a";
+  content: "";
 }
 
 .icon-screenshot:before {
-  content: "\f05b";
+  content: "";
 }
 
 .icon-remove-circle:before {
-  content: "\f05c";
+  content: "";
 }
 
 .icon-ok-circle:before {
-  content: "\f05d";
+  content: "";
 }
 
 .icon-ban-circle:before {
-  content: "\f05e";
+  content: "";
 }
 
 .icon-arrow-left:before {
-  content: "\f060";
+  content: "";
 }
 
 .icon-arrow-right:before {
-  content: "\f061";
+  content: "";
 }
 
 .icon-arrow-up:before {
-  content: "\f062";
+  content: "";
 }
 
 .icon-arrow-down:before {
-  content: "\f063";
+  content: "";
 }
 
 .icon-mail-forward:before,
 .icon-share-alt:before {
-  content: "\f064";
+  content: "";
 }
 
 .icon-resize-full:before {
-  content: "\f065";
+  content: "";
 }
 
 .icon-resize-small:before {
-  content: "\f066";
+  content: "";
 }
 
 .icon-plus:before {
-  content: "\f067";
+  content: "";
 }
 
 .icon-minus:before {
-  content: "\f068";
+  content: "";
 }
 
 .icon-asterisk:before {
-  content: "\f069";
+  content: "";
 }
 
 .icon-exclamation-sign:before {
-  content: "\f06a";
+  content: "";
 }
 
 .icon-gift:before {
-  content: "\f06b";
+  content: "";
 }
 
 .icon-leaf:before {
-  content: "\f06c";
+  content: "";
 }
 
 .icon-fire:before {
-  content: "\f06d";
+  content: "";
 }
 
 .icon-eye-open:before {
-  content: "\f06e";
+  content: "";
 }
 
 .icon-eye-close:before {
-  content: "\f070";
+  content: "";
 }
 
 .icon-warning-sign:before {
-  content: "\f071";
+  content: "";
 }
 
 .icon-plane:before {
-  content: "\f072";
+  content: "";
 }
 
 .icon-calendar:before {
-  content: "\f073";
+  content: "";
 }
 
 .icon-random:before {
-  content: "\f074";
+  content: "";
 }
 
 .icon-comment:before {
-  content: "\f075";
+  content: "";
 }
 
 .icon-magnet:before {
-  content: "\f076";
+  content: "";
 }
 
 .icon-chevron-up:before {
-  content: "\f077";
+  content: "";
 }
 
 .icon-chevron-down:before {
-  content: "\f078";
+  content: "";
 }
 
 .icon-retweet:before {
-  content: "\f079";
+  content: "";
 }
 
 .icon-shopping-cart:before {
-  content: "\f07a";
+  content: "";
 }
 
 .icon-folder-close:before {
-  content: "\f07b";
+  content: "";
 }
 
 .icon-folder-open:before {
-  content: "\f07c";
+  content: "";
 }
 
 .icon-resize-vertical:before {
-  content: "\f07d";
+  content: "";
 }
 
 .icon-resize-horizontal:before {
-  content: "\f07e";
+  content: "";
 }
 
 .icon-bar-chart:before {
-  content: "\f080";
+  content: "";
 }
 
 .icon-twitter-sign:before {
-  content: "\f081";
+  content: "";
 }
 
 .icon-facebook-sign:before {
-  content: "\f082";
+  content: "";
 }
 
 .icon-camera-retro:before {
-  content: "\f083";
+  content: "";
 }
 
 .icon-key:before {
-  content: "\f084";
+  content: "";
 }
 
 .icon-gears:before,
 .icon-cogs:before {
-  content: "\f085";
+  content: "";
 }
 
 .icon-comments:before {
-  content: "\f086";
+  content: "";
 }
 
 .icon-thumbs-up-alt:before {
-  content: "\f087";
+  content: "";
 }
 
 .icon-thumbs-down-alt:before {
-  content: "\f088";
+  content: "";
 }
 
 .icon-star-half:before {
-  content: "\f089";
+  content: "";
 }
 
 .icon-heart-empty:before {
-  content: "\f08a";
+  content: "";
 }
 
 .icon-signout:before {
-  content: "\f08b";
+  content: "";
 }
 
 .icon-linkedin-sign:before {
-  content: "\f08c";
+  content: "";
 }
 
 .icon-pushpin:before {
-  content: "\f08d";
+  content: "";
 }
 
 .icon-external-link:before {
-  content: "\f08e";
+  content: "";
 }
 
 .icon-signin:before {
-  content: "\f090";
+  content: "";
 }
 
 .icon-trophy:before {
-  content: "\f091";
+  content: "";
 }
 
 .icon-github-sign:before {
-  content: "\f092";
+  content: "";
 }
 
 .icon-upload-alt:before {
-  content: "\f093";
+  content: "";
 }
 
 .icon-lemon:before {
-  content: "\f094";
+  content: "";
 }
 
 .icon-phone:before {
-  content: "\f095";
+  content: "";
 }
 
 .icon-unchecked:before,
 .icon-check-empty:before {
-  content: "\f096";
+  content: "";
 }
 
 .icon-bookmark-empty:before {
-  content: "\f097";
+  content: "";
 }
 
 .icon-phone-sign:before {
-  content: "\f098";
+  content: "";
 }
 
 .icon-twitter:before {
-  content: "\f099";
+  content: "";
 }
 
 .icon-facebook:before {
-  content: "\f09a";
+  content: "";
 }
 
 .icon-github:before {
-  content: "\f09b";
+  content: "";
 }
 
 .icon-unlock:before {
-  content: "\f09c";
+  content: "";
 }
 
 .icon-credit-card:before {
-  content: "\f09d";
+  content: "";
 }
 
 .icon-rss:before {
-  content: "\f09e";
+  content: "";
 }
 
 .icon-hdd:before {
-  content: "\f0a0";
+  content: "";
 }
 
 .icon-bullhorn:before {
-  content: "\f0a1";
+  content: "";
 }
 
 .icon-bell:before {
-  content: "\f0a2";
+  content: "";
 }
 
 .icon-certificate:before {
-  content: "\f0a3";
+  content: "";
 }
 
 .icon-hand-right:before {
-  content: "\f0a4";
+  content: "";
 }
 
 .icon-hand-left:before {
-  content: "\f0a5";
+  content: "";
 }
 
 .icon-hand-up:before {
-  content: "\f0a6";
+  content: "";
 }
 
 .icon-hand-down:before {
-  content: "\f0a7";
+  content: "";
 }
 
 .icon-circle-arrow-left:before {
-  content: "\f0a8";
+  content: "";
 }
 
 .icon-circle-arrow-right:before {
-  content: "\f0a9";
+  content: "";
 }
 
 .icon-circle-arrow-up:before {
-  content: "\f0aa";
+  content: "";
 }
 
 .icon-circle-arrow-down:before {
-  content: "\f0ab";
+  content: "";
 }
 
 .icon-globe:before {
-  content: "\f0ac";
+  content: "";
 }
 
 .icon-wrench:before {
-  content: "\f0ad";
+  content: "";
 }
 
 .icon-tasks:before {
-  content: "\f0ae";
+  content: "";
 }
 
 .icon-filter:before {
-  content: "\f0b0";
+  content: "";
 }
 
 .icon-briefcase:before {
-  content: "\f0b1";
+  content: "";
 }
 
 .icon-fullscreen:before {
-  content: "\f0b2";
+  content: "";
 }
 
 .icon-group:before {
-  content: "\f0c0";
+  content: "";
 }
 
 .icon-link:before {
-  content: "\f0c1";
+  content: "";
 }
 
 .icon-cloud:before {
-  content: "\f0c2";
+  content: "";
 }
 
 .icon-beaker:before {
-  content: "\f0c3";
+  content: "";
 }
 
 .icon-cut:before {
-  content: "\f0c4";
+  content: "";
 }
 
 .icon-copy:before {
-  content: "\f0c5";
+  content: "";
 }
 
 .icon-paperclip:before,
 .icon-paper-clip:before {
-  content: "\f0c6";
+  content: "";
 }
 
 .icon-save:before {
-  content: "\f0c7";
+  content: "";
 }
 
 .icon-sign-blank:before {
-  content: "\f0c8";
+  content: "";
 }
 
 .icon-reorder:before {
-  content: "\f0c9";
+  content: "";
 }
 
 .icon-list-ul:before {
-  content: "\f0ca";
+  content: "";
 }
 
 .icon-list-ol:before {
-  content: "\f0cb";
+  content: "";
 }
 
 .icon-strikethrough:before {
-  content: "\f0cc";
+  content: "";
 }
 
 .icon-underline:before {
-  content: "\f0cd";
+  content: "";
 }
 
 .icon-table:before {
-  content: "\f0ce";
+  content: "";
 }
 
 .icon-magic:before {
-  content: "\f0d0";
+  content: "";
 }
 
 .icon-truck:before {
-  content: "\f0d1";
+  content: "";
 }
 
 .icon-pinterest:before {
-  content: "\f0d2";
+  content: "";
 }
 
 .icon-pinterest-sign:before {
-  content: "\f0d3";
+  content: "";
 }
 
 .icon-google-plus-sign:before {
-  content: "\f0d4";
+  content: "";
 }
 
 .icon-google-plus:before {
-  content: "\f0d5";
+  content: "";
 }
 
 .icon-money:before {
-  content: "\f0d6";
+  content: "";
 }
 
 .icon-caret-down:before {
-  content: "\f0d7";
+  content: "";
 }
 
 .icon-caret-up:before {
-  content: "\f0d8";
+  content: "";
 }
 
 .icon-caret-left:before {
-  content: "\f0d9";
+  content: "";
 }
 
 .icon-caret-right:before {
-  content: "\f0da";
+  content: "";
 }
 
 .icon-columns:before {
-  content: "\f0db";
+  content: "";
 }
 
 .icon-sort:before {
-  content: "\f0dc";
+  content: "";
 }
 
 .icon-sort-down:before {
-  content: "\f0dd";
+  content: "";
 }
 
 .icon-sort-up:before {
-  content: "\f0de";
+  content: "";
 }
 
 .icon-envelope:before {
-  content: "\f0e0";
+  content: "";
 }
 
 .icon-linkedin:before {
-  content: "\f0e1";
+  content: "";
 }
 
 .icon-rotate-left:before,
 .icon-undo:before {
-  content: "\f0e2";
+  content: "";
 }
 
 .icon-legal:before {
-  content: "\f0e3";
+  content: "";
 }
 
 .icon-dashboard:before {
-  content: "\f0e4";
+  content: "";
 }
 
 .icon-comment-alt:before {
-  content: "\f0e5";
+  content: "";
 }
 
 .icon-comments-alt:before {
-  content: "\f0e6";
+  content: "";
 }
 
 .icon-bolt:before {
-  content: "\f0e7";
+  content: "";
 }
 
 .icon-sitemap:before {
-  content: "\f0e8";
+  content: "";
 }
 
 .icon-umbrella:before {
-  content: "\f0e9";
+  content: "";
 }
 
 .icon-paste:before {
-  content: "\f0ea";
+  content: "";
 }
 
 .icon-lightbulb:before {
-  content: "\f0eb";
+  content: "";
 }
 
 .icon-exchange:before {
-  content: "\f0ec";
+  content: "";
 }
 
 .icon-cloud-download:before {
-  content: "\f0ed";
+  content: "";
 }
 
 .icon-cloud-upload:before {
-  content: "\f0ee";
+  content: "";
 }
 
 .icon-user-md:before {
-  content: "\f0f0";
+  content: "";
 }
 
 .icon-stethoscope:before {
-  content: "\f0f1";
+  content: "";
 }
 
 .icon-suitcase:before {
-  content: "\f0f2";
+  content: "";
 }
 
 .icon-bell-alt:before {
-  content: "\f0f3";
+  content: "";
 }
 
 .icon-coffee:before {
-  content: "\f0f4";
+  content: "";
 }
 
 .icon-food:before {
-  content: "\f0f5";
+  content: "";
 }
 
 .icon-file-text-alt:before {
-  content: "\f0f6";
+  content: "";
 }
 
 .icon-building:before {
-  content: "\f0f7";
+  content: "";
 }
 
 .icon-hospital:before {
-  content: "\f0f8";
+  content: "";
 }
 
 .icon-ambulance:before {
-  content: "\f0f9";
+  content: "";
 }
 
 .icon-medkit:before {
-  content: "\f0fa";
+  content: "";
 }
 
 .icon-fighter-jet:before {
-  content: "\f0fb";
+  content: "";
 }
 
 .icon-beer:before {
-  content: "\f0fc";
+  content: "";
 }
 
 .icon-h-sign:before {
-  content: "\f0fd";
+  content: "";
 }
 
 .icon-plus-sign-alt:before {
-  content: "\f0fe";
+  content: "";
 }
 
 .icon-double-angle-left:before {
-  content: "\f100";
+  content: "";
 }
 
 .icon-double-angle-right:before {
-  content: "\f101";
+  content: "";
 }
 
 .icon-double-angle-up:before {
-  content: "\f102";
+  content: "";
 }
 
 .icon-double-angle-down:before {
-  content: "\f103";
+  content: "";
 }
 
 .icon-angle-left:before {
-  content: "\f104";
+  content: "";
 }
 
 .icon-angle-right:before {
-  content: "\f105";
+  content: "";
 }
 
 .icon-angle-up:before {
-  content: "\f106";
+  content: "";
 }
 
 .icon-angle-down:before {
-  content: "\f107";
+  content: "";
 }
 
 .icon-desktop:before {
-  content: "\f108";
+  content: "";
 }
 
 .icon-laptop:before {
-  content: "\f109";
+  content: "";
 }
 
 .icon-tablet:before {
-  content: "\f10a";
+  content: "";
 }
 
 .icon-mobile-phone:before {
-  content: "\f10b";
+  content: "";
 }
 
 .icon-circle-blank:before {
-  content: "\f10c";
+  content: "";
 }
 
 .icon-quote-left:before {
-  content: "\f10d";
+  content: "";
 }
 
 .icon-quote-right:before {
-  content: "\f10e";
+  content: "";
 }
 
 .icon-spinner:before {
-  content: "\f110";
+  content: "";
 }
 
 .icon-circle:before {
-  content: "\f111";
+  content: "";
 }
 
 .icon-mail-reply:before,
 .icon-reply:before {
-  content: "\f112";
+  content: "";
 }
 
 .icon-github-alt:before {
-  content: "\f113";
+  content: "";
 }
 
 .icon-folder-close-alt:before {
-  content: "\f114";
+  content: "";
 }
 
 .icon-folder-open-alt:before {
-  content: "\f115";
+  content: "";
 }
 
 .icon-expand-alt:before {
-  content: "\f116";
+  content: "";
 }
 
 .icon-collapse-alt:before {
-  content: "\f117";
+  content: "";
 }
 
 .icon-smile:before {
-  content: "\f118";
+  content: "";
 }
 
 .icon-frown:before {
-  content: "\f119";
+  content: "";
 }
 
 .icon-meh:before {
-  content: "\f11a";
+  content: "";
 }
 
 .icon-gamepad:before {
-  content: "\f11b";
+  content: "";
 }
 
 .icon-keyboard:before {
-  content: "\f11c";
+  content: "";
 }
 
 .icon-flag-alt:before {
-  content: "\f11d";
+  content: "";
 }
 
 .icon-flag-checkered:before {
-  content: "\f11e";
+  content: "";
 }
 
 .icon-terminal:before {
-  content: "\f120";
+  content: "";
 }
 
 .icon-code:before {
-  content: "\f121";
+  content: "";
 }
 
 .icon-reply-all:before {
-  content: "\f122";
+  content: "";
 }
 
 .icon-mail-reply-all:before {
-  content: "\f122";
+  content: "";
 }
 
 .icon-star-half-full:before,
 .icon-star-half-empty:before {
-  content: "\f123";
+  content: "";
 }
 
 .icon-location-arrow:before {
-  content: "\f124";
+  content: "";
 }
 
 .icon-crop:before {
-  content: "\f125";
+  content: "";
 }
 
 .icon-code-fork:before {
-  content: "\f126";
+  content: "";
 }
 
 .icon-unlink:before {
-  content: "\f127";
+  content: "";
 }
 
 .icon-question:before {
-  content: "\f128";
+  content: "";
 }
 
 .icon-info:before {
-  content: "\f129";
+  content: "";
 }
 
 .icon-exclamation:before {
-  content: "\f12a";
+  content: "";
 }
 
 .icon-superscript:before {
-  content: "\f12b";
+  content: "";
 }
 
 .icon-subscript:before {
-  content: "\f12c";
+  content: "";
 }
 
 .icon-eraser:before {
-  content: "\f12d";
+  content: "";
 }
 
 .icon-puzzle-piece:before {
-  content: "\f12e";
+  content: "";
 }
 
 .icon-microphone:before {
-  content: "\f130";
+  content: "";
 }
 
 .icon-microphone-off:before {
-  content: "\f131";
+  content: "";
 }
 
 .icon-shield:before {
-  content: "\f132";
+  content: "";
 }
 
 .icon-calendar-empty:before {
-  content: "\f133";
+  content: "";
 }
 
 .icon-fire-extinguisher:before {
-  content: "\f134";
+  content: "";
 }
 
 .icon-rocket:before {
-  content: "\f135";
+  content: "";
 }
 
 .icon-maxcdn:before {
-  content: "\f136";
+  content: "";
 }
 
 .icon-chevron-sign-left:before {
-  content: "\f137";
+  content: "";
 }
 
 .icon-chevron-sign-right:before {
-  content: "\f138";
+  content: "";
 }
 
 .icon-chevron-sign-up:before {
-  content: "\f139";
+  content: "";
 }
 
 .icon-chevron-sign-down:before {
-  content: "\f13a";
+  content: "";
 }
 
 .icon-html5:before {
-  content: "\f13b";
+  content: "";
 }
 
 .icon-css3:before {
-  content: "\f13c";
+  content: "";
 }
 
 .icon-anchor:before {
-  content: "\f13d";
+  content: "";
 }
 
 .icon-unlock-alt:before {
-  content: "\f13e";
+  content: "";
 }
 
 .icon-bullseye:before {
-  content: "\f140";
+  content: "";
 }
 
 .icon-ellipsis-horizontal:before {
-  content: "\f141";
+  content: "";
 }
 
 .icon-ellipsis-vertical:before {
-  content: "\f142";
+  content: "";
 }
 
 .icon-rss-sign:before {
-  content: "\f143";
+  content: "";
 }
 
 .icon-play-sign:before {
-  content: "\f144";
+  content: "";
 }
 
 .icon-ticket:before {
-  content: "\f145";
+  content: "";
 }
 
 .icon-minus-sign-alt:before {
-  content: "\f146";
+  content: "";
 }
 
 .icon-check-minus:before {
-  content: "\f147";
+  content: "";
 }
 
 .icon-level-up:before {
-  content: "\f148";
+  content: "";
 }
 
 .icon-level-down:before {
-  content: "\f149";
+  content: "";
 }
 
 .icon-check-sign:before {
-  content: "\f14a";
+  content: "";
 }
 
 .icon-edit-sign:before {
-  content: "\f14b";
+  content: "";
 }
 
 .icon-external-link-sign:before {
-  content: "\f14c";
+  content: "";
 }
 
 .icon-share-sign:before {
-  content: "\f14d";
+  content: "";
 }
 
 .icon-compass:before {
-  content: "\f14e";
+  content: "";
 }
 
 .icon-collapse:before {
-  content: "\f150";
+  content: "";
 }
 
 .icon-collapse-top:before {
-  content: "\f151";
+  content: "";
 }
 
 .icon-expand:before {
-  content: "\f152";
+  content: "";
 }
 
 .icon-euro:before,
 .icon-eur:before {
-  content: "\f153";
+  content: "";
 }
 
 .icon-gbp:before {
-  content: "\f154";
+  content: "";
 }
 
 .icon-dollar:before,
 .icon-usd:before {
-  content: "\f155";
+  content: "";
 }
 
 .icon-rupee:before,
 .icon-inr:before {
-  content: "\f156";
+  content: "";
 }
 
 .icon-yen:before,
 .icon-jpy:before {
-  content: "\f157";
+  content: "";
 }
 
 .icon-renminbi:before,
 .icon-cny:before {
-  content: "\f158";
+  content: "";
 }
 
 .icon-won:before,
 .icon-krw:before {
-  content: "\f159";
+  content: "";
 }
 
 .icon-bitcoin:before,
 .icon-btc:before {
-  content: "\f15a";
+  content: "";
 }
 
 .icon-file:before {
-  content: "\f15b";
+  content: "";
 }
 
 .icon-file-text:before {
-  content: "\f15c";
+  content: "";
 }
 
 .icon-sort-by-alphabet:before {
-  content: "\f15d";
+  content: "";
 }
 
 .icon-sort-by-alphabet-alt:before {
-  content: "\f15e";
+  content: "";
 }
 
 .icon-sort-by-attributes:before {
-  content: "\f160";
+  content: "";
 }
 
 .icon-sort-by-attributes-alt:before {
-  content: "\f161";
+  content: "";
 }
 
 .icon-sort-by-order:before {
-  content: "\f162";
+  content: "";
 }
 
 .icon-sort-by-order-alt:before {
-  content: "\f163";
+  content: "";
 }
 
 .icon-thumbs-up:before {
-  content: "\f164";
+  content: "";
 }
 
 .icon-thumbs-down:before {
-  content: "\f165";
+  content: "";
 }
 
 .icon-youtube-sign:before {
-  content: "\f166";
+  content: "";
 }
 
 .icon-youtube:before {
-  content: "\f167";
+  content: "";
 }
 
 .icon-xing:before {
-  content: "\f168";
+  content: "";
 }
 
 .icon-xing-sign:before {
-  content: "\f169";
+  content: "";
 }
 
 .icon-youtube-play:before {
-  content: "\f16a";
+  content: "";
 }
 
 .icon-dropbox:before {
-  content: "\f16b";
+  content: "";
 }
 
 .icon-stackexchange:before {
-  content: "\f16c";
+  content: "";
 }
 
 .icon-instagram:before {
-  content: "\f16d";
+  content: "";
 }
 
 .icon-flickr:before {
-  content: "\f16e";
+  content: "";
 }
 
 .icon-adn:before {
-  content: "\f170";
+  content: "";
 }
 
 .icon-bitbucket:before {
-  content: "\f171";
+  content: "";
 }
 
 .icon-bitbucket-sign:before {
-  content: "\f172";
+  content: "";
 }
 
 .icon-tumblr:before {
-  content: "\f173";
+  content: "";
 }
 
 .icon-tumblr-sign:before {
-  content: "\f174";
+  content: "";
 }
 
 .icon-long-arrow-down:before {
-  content: "\f175";
+  content: "";
 }
 
 .icon-long-arrow-up:before {
-  content: "\f176";
+  content: "";
 }
 
 .icon-long-arrow-left:before {
-  content: "\f177";
+  content: "";
 }
 
 .icon-long-arrow-right:before {
-  content: "\f178";
+  content: "";
 }
 
 .icon-apple:before {
-  content: "\f179";
+  content: "";
 }
 
 .icon-windows:before {
-  content: "\f17a";
+  content: "";
 }
 
 .icon-android:before {
-  content: "\f17b";
+  content: "";
 }
 
 .icon-linux:before {
-  content: "\f17c";
+  content: "";
 }
 
 .icon-dribbble:before {
-  content: "\f17d";
+  content: "";
 }
 
 .icon-skype:before {
-  content: "\f17e";
+  content: "";
 }
 
 .icon-foursquare:before {
-  content: "\f180";
+  content: "";
 }
 
 .icon-trello:before {
-  content: "\f181";
+  content: "";
 }
 
 .icon-female:before {
-  content: "\f182";
+  content: "";
 }
 
 .icon-male:before {
-  content: "\f183";
+  content: "";
 }
 
 .icon-gittip:before {
-  content: "\f184";
+  content: "";
 }
 
 .icon-sun:before {
-  content: "\f185";
+  content: "";
 }
 
 .icon-moon:before {
-  content: "\f186";
+  content: "";
 }
 
 .icon-archive:before {
-  content: "\f187";
+  content: "";
 }
 
 .icon-bug:before {
-  content: "\f188";
+  content: "";
 }
 
 .icon-vk:before {
-  content: "\f189";
+  content: "";
 }
 
 .icon-weibo:before {
-  content: "\f18a";
+  content: "";
 }
 
 .icon-renren:before {
-  content: "\f18b";
+  content: "";
 }
 
 .list {
@@ -4655,7 +4774,7 @@ a [class*=" icon-"] {
 }
 
 .force-white {
-  background-color: white !important;
+  background-color: #fff !important;
 }
 
 .inline {
@@ -4688,18 +4807,4 @@ a [class*=" icon-"] {
 
 .tal {
   text-align: left;
-}
-
-.mbl {
-  margin-bottom: 24px;
-}
-
-.mll {
-  margin-left: 24px;
-}
-.afterwork .history-item-dot {
-  background-color: green;
-}
-.breakfast .history-item-dot {
-  background-color: #ff8c6b;
 }

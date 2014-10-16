@@ -16,12 +16,12 @@ $form-element-color: #666;
 	text-align: center;
 	text-decoration: none;
 	text-shadow: 0 1px 0 rgba(0,0,0,.2);
-	appearance: none;   
+	appearance: none;
 	user-select: none;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
-	
+
 	&:active {
 		@extend .button-state-active;
 	}
@@ -39,7 +39,7 @@ $form-element-color: #666;
 .button-attention {
 	background-color: $brandBlue;
 	color: $white;
-	
+
 	&:hover {
 		background-color: $brandBlueLight;
 	}
@@ -50,7 +50,7 @@ $form-element-color: #666;
 .button-validate {
 	background-color: $brandBlueLight;
 	color: $white;
-	
+
 	&:hover {
 		background-color: $brandBlueExtraLight;
 	}

@@ -23,8 +23,8 @@
     </div>
     <div class='container'>
       <div class='id'>
-        <h1><span>Evénements</span></h1>
-        <h2><span>Rejoignez-nous pour nos évenements</span></h2>
+        <h1><span>{{ 'events' | trans }}</span></h1>
+        <h2><span>{{ 'events_baseline' | trans }}</span></h2>
       </div>
     </div>
   </div>
@@ -34,13 +34,16 @@
         <div class='column three'>
           <ul class='list about-navigation'>
             <li>
-              <a href='#' class="event-filter" data-filter="breakfast">{{ 'Breakfasts' | trans }}</a>
+              <a href='#' class="event-filter" data-filter="breakfast">{{ 'events_breakfasts' | trans }}</a>
             </li>
             <li>
-              <a href='#' class="event-filter" data-filter="afterwork">{{ 'Afterworks' | trans }}</a>
+              <a href='#' class="event-filter" data-filter="afterwork">{{ 'events_afterworks' | trans }}</a>
             </li>
             <li>
-              <a href='#' class="event-filter" data-filter="webinar">{{ 'Webinars' | trans }}</a>
+              <a href='#' class="event-filter" data-filter="webinar">{{ 'events_webinars' | trans }}</a>
+            </li>
+            <li>
+              <a href='#' class="event-filter" data-filter="passed">{{ 'events_passed' | trans }}</a>
             </li>
           </ul>
         </div>
@@ -54,15 +57,37 @@
                 <div class='history-item {{ event.type }}'>
                   <b class='history-item-dot'></b>
                   <h2 class='calendar-item-title'>{{ event.title }}</h2>
-                  <div class='calendar-item-date type-light clearfix'>
+                  <div class='calendar-item-date type-light clearfix mbm'>
                     <div class='calendar-item-day pull'><i class='icon icon-calendar' style='display:inline-block'></i>{{ event.date }}</div>
                     <div class='calendar-item-time push'><i class='icon icon-time' style='display:inline-block'></i>{{ event.time }}</div>
                   </div>
                   {% if event.address %}
-                  <div class='calendar-item-address type-light pvm'><i class='icon icon-map-marker' style='display:inline-block'></i>{{ event.address }}</div>
+                  <div class='calendar-item-address type-light'><i class='icon icon-map-marker' style='display:inline-block'></i>{{ event.address }}</div>
                   {% endif %}
-                  <div class='calendar-item-description mbl'>{{ event.description }}</div>
-                  <a href='{{ event.url }}' class='button mbl'>{{ 'im_interested' | trans }}</a>
+                  <div class='row'>
+                    <div class='column nine'>
+                      <div class='column-inner'>
+                        <p class='calendar-item-description mbl'>{{ event.description }}</p>
+                      </div>
+                    </div>
+                    {% if event.type != 'passed' %}
+                      {% if event.url %}
+                        <div class='column three'>
+                          <div class='column-inner'>
+                            <a href='{{ event.url }}' class='button button-call mtm'>{{ 'is_interested' | trans }}</a>
+                          </div>
+                        </div>
+                      {% endif %}
+                    {% else %}
+                      {% if event.url %}
+                        <div class='column three'>
+                          <div class='column-inner'>
+                            <a href='{{ event.url }}' class='button button-validate mtm'>{{ 'read_summary' | trans }}</a>
+                          </div>
+                        </div>
+                      {% endif %}
+                    {% endif %}
+                  </div>
                 </div>
               {% endfor %}
 
