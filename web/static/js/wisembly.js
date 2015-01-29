@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
-	$('.try_freemium_analytics_action').on('click', function () {
-			_gaq.push(['_trackEvent','Call_to_action', 'user_click', 'freemium_created']);
-		});
+	$('.try_freemium_analytics_action').on('click', function (event) {
+		ga('send', 'Call_to_action', 'user_click', 'freemium_created');
+	});
 
 	window.config = {
 		apiUrl: window.api_url,
