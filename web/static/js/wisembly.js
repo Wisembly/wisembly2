@@ -1,7 +1,13 @@
 $(document).ready(function () {
 
 	$('.try_freemium_analytics_action').on('click', function (event) {
+		event.preventDefault();
 		ga('send', 'Call_to_action', 'user_click', 'freemium_created');
+		var goTo = this.getAttribute('href');
+
+		setTimeout(function() {
+			window.location = goTo;
+		}, 300);
 	});
 
 	window.config = {
@@ -263,7 +269,7 @@ var joinAnEvent = {
 		e.preventDefault();
 		if (!this.keywordExists)
 			return;
-		window.open(config.apiUrl + '/' + this.$el.find('input').val());
+		window.open(config.appUrl + '/' + this.$el.find('input').val());
 	},
 
 	updateStatus: function () {
