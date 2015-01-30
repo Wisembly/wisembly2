@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 	$('.try_freemium_analytics_action').on('click', function (event) {
 		event.preventDefault();
-		ga('send', 'Call_to_action', 'user_click', 'freemium_created');
+		ga('send', 'event', 'Call_to_action', 'user_click', 'freemium_created');
 		var goTo = this.getAttribute('href');
 
 		setTimeout(function() {
