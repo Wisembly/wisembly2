@@ -60,3 +60,26 @@
         mixpanel.init("{{ app['third_party'].mixpanel }}");</script>
     {% endif %}
 {% endblock %}
+
+{% block azalead %}
+    {% if app['third_party'].azalead is not none %}
+        <script type="text/javascript">
+            var _paq = _paq || [];
+            _paq.push(["trackPageView"]);
+            _paq.push(["enableLinkTracking"]);
+
+            (function() {
+            var u=(("https:" == document.location.protocol) ? "https" : "http") + "://trker1.azalead.com/azalead_tracker/";
+            _paq.push(["setTrackerUrl", u+"piwik.php"]);
+            _paq.push(["setSiteId", "{{ app['third_party'].azalead }}"]);
+            var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+            g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+            })();
+        </script>
+        <!-- End Azalead tracker Code -->
+
+        <noscript>
+            <img src="http://trker1.azalead.com/azalead_tracker/piwik.php?idsite={{ app['third_party'].azalead }}&amp;rec=1" style="border:0" alt="" />
+        </noscript>
+    {% endif %}
+{% endblock %}
