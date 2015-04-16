@@ -12,6 +12,7 @@ third_party:
   iadvize:   null
   azalead:   null
   hubspot:   null
+  trackcmp:  null
   wisembly:
     app_url: 'https://app.wisembly.com'
     api_url: 'https://app.wisembly.com'
